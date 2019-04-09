@@ -1,0 +1,46 @@
+{
+  "NIGHTWATCH_LIB_PATH": "",
+  "NIGHTWATCH_DOCS_PATH": "",
+  "OUTPUT_FOLDER": "",
+  "NIGHTWATCH_VERSION": "1.0.18",
+  "apiFileList": [
+    ["api/expect/element/", "expect"],
+    ["api/expect/elements/", "expect"],
+    ["api/expect/cookie.js", "expect"],
+    ["api/expect/title.js", "expect"],
+    ["api/expect/url.js", "expect"],
+
+    ["api/element-commands/", "commands"],
+    ["api/assertions/", "assertions"],
+    ["api/client-commands.js", "commands"],
+    ["api/client-commands/pause.js", "commands"],
+    ["api/client-commands/end.js", "commands"],
+    ["api/client-commands/useCss.js", "commands"],
+    ["api/client-commands/useXpath.js", "commands"],
+    ["api/client-commands/perform.js", "commands"],
+    ["api/protocol.js", "protocol"]
+  ],
+
+  "sections": {
+    "guide" : {
+      "pageTitle" : "Developer Guide | Nightwatch.js",
+      "title" : "Developer Guide",
+      "description" : "In depth guides on how to use Nightwatch to write and execute tests."
+    },
+    "api" : {
+      "pageTitle" : "API Reference | Nightwatch.js",
+      "title" : "API Reference",
+      "description" : "Complete reference of the Nightwatch commands and assertions."
+    },
+    "contact" : {
+      "pageTitle" : "Contact | Nightwatch.js",
+      "title" : "Contact",
+      "description" : "How to get in touch with the team, and where to submit bugs and feature requests."
+    },
+    "gettingstarted" : {
+      "pageTitle" : "Getting Started | Nightwatch.js",
+      "title" : "Getting Started",
+      "description" : "Everything you need in order to get started with Nightwatch.js, step-by-step, with configuration guides for various browsers."
+    }
+  }
+}

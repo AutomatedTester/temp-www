@@ -1,0 +1,107 @@
+<div class="jumbotron">
+  <div class="container" style="height:130px">
+    <div class="row">
+      <div class="col-md-8">
+        <h1>Getting Started</h1>
+      </div>
+      <div class="col-md-4">
+        <div class="carbonad"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="background">
+  <div class="container bs-docs-container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="bs-sidebar hidden-print" role="complementary" data-spy="affix" data-offset-top="60" data-offset-bottom="100">
+          <ul class="nav bs-sidenav">
+            <li>
+              <a href="#guide">Overview</a>
+              <ul class="nav">
+                <li><a href="#what-is-nightwatch-">What is Nightwatch?</a></li>
+                <li><a href="#overview-of-webdriver">Overview of WebDriver</a></li>
+                <li><a href="#theory-of-operation">Theory of Operation</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#installation">Installation</a>
+              <ul class="nav">
+                <li><a href="#install-node-js">Install Node.js</a></li>
+                <li><a href="#install-nightwatch">Install Nightwatch</a></li>
+                <li><a href="#webdriver-service">Install WebDriver</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#settings-file">Configuration</a>
+              <ul class="nav">
+                <li><a href="#nightwatch-json">nightwatch.json</a></li>
+                <li><a href="#base-settings">Base Settings</a></li>
+                <li><a href="#webdriver-settings">WebDriver Settings</a></li>
+                <li><a href="#test-settings">Test Settings</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#browser-drivers-setup">Browser Drivers Setup</a>
+              <ul class="nav">
+                <li><a href="#geckodriver">GeckoDriver (Firefox)</a></li>
+                <li><a href="#chromedriver">ChromeDriver</a></li>
+                <li><a href="#microsoft-webdriver">Microsoft WebDriver</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-9" role="main">
+        <div class="docs-section">
+          <div class="migrating-guide"><a target="_blank" href="https://github.com/nightwatchjs/nightwatch/wiki/Migrating-to-Nightwatch-1.0">Migrating from v0.9?</a></div>
+          <div class="page-header" id="guide">
+            <h2>Overview</h2>
+          </div>
+
+          <%- content['whatis-nightwatch'] %>
+          <%- content['selenium-overview'] %>
+          <%- content['theory-of-operation'] %>
+        </div>
+
+        <div class="docs-section">
+          <div class="page-header">
+            <h2 id="installation">Installation</h2>
+          </div>
+
+          <%- content['install-nodejs'] %>
+          <%- content['install-nightwatch'] %>
+          <%- content['install-webdriver'] %>
+        </div>
+
+        <div class="docs-section">
+          <div class="page-header">
+            <h2 id="settings-file">Configuration</h2>
+          </div>
+          <br>
+          <%- content['settings-file'] %>
+          <%- content['config-basic-settings'] %>
+          <%- content['config-webdriver-settings'] %>
+          <%- content['config-test-settings'] %>
+        </div>
+
+        <div class="docs-section">
+          <div class="page-header">
+            <h2 id="browser-drivers-setup">Browser Drivers Setup</h2>
+          </div>
+          <br>
+          <%- content['browser-setup'] %>
+          <%- content['gecko-driver'] %>
+          <%- content['chromedriver'] %>
+          <%- content['edgedriver'] %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

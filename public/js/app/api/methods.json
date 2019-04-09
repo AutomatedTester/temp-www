@@ -1,0 +1,358 @@
+{
+"assertions": [
+{
+  "name": "attributeContains",
+  "parameters": [
+    {
+      "name": "selector",
+      "type": "string",
+      "descr": "The selector (CSS / Xpath) used to locate the element.",
+      "optional": false
+    },
+    {
+      "name": "attribute",
+      "type": "string",
+      "descr": "The attribute name",
+      "optional": false
+    },
+    {
+      "name": "expected",
+      "type": "string",
+      "descr": "The expected contained value of the attribute to check.",
+      "optional": false
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "descr": "Optional log message to display in the output. If missing, one is displayed by default.",
+      "optional": true
+    }
+  ],
+  "descr": "Checks if the given attribute of an element contains the expected value.",
+  "usage": "browser.assert.attributeContains('#someElement', 'href', 'google.com');"
+},
+{
+  "name" : "attributeEquals",
+  "descr": "Checks if the given attribute of an element has the expected value.",
+  "parameters":[
+    {
+      "name" : "cssSelector",
+      "type" : "string",
+      "descr" : "The CSS selector used to locate the element.",
+      "optional" : false
+    },
+    {
+      "name" : "attribute",
+      "type" : "string",
+      "descr" : "The attribute name",
+      "optional" : false
+    },
+    {
+      "name" : "expected",
+      "type" : "string",
+      "descr" : "The expected value of the attribute to check.",
+      "optional" : false
+    },
+    {
+      "name" : "msg",
+      "type" : "string",
+      "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
+      "optional" : true
+    }
+  ],
+  "usage": "browser.assert.attributeEquals(\"body\", \"data-attr\", \"some value\");"
+},
+{
+  "name" : "containsText",
+  "descr": "Checks if the given element contains the specified text.",
+  "parameters":[
+    {
+      "name" : "cssSelector",
+      "type" : "string",
+      "descr" : "The CSS selector used to locate the element.",
+      "optional" : false
+    },
+    {
+      "name" : "expectedText",
+      "type" : "string",
+      "descr" : "The text to look for.",
+      "optional" : false
+    },
+        {
+      "name" : "msg",
+      "type" : "string",
+      "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
+      "optional" : true
+    }
+  ],
+  "usage": "browser.assert.containsText(\"#main\", \"The Night Watch\");"
+},
+{
+  "name" : "cssClassPresent",
+  "descr": "Checks if the given element has the specified CSS class.",
+  "parameters":[
+    {
+      "name" : "cssSelector",
+      "type" : "string",
+      "descr" : "The CSS selector used to locate the element.",
+      "optional" : false
+    },
+    {
+      "name" : "className",
+      "type" : "string",
+      "descr" : "The CSS class to look for.",
+      "optional" : false
+    },
+        {
+      "name" : "msg",
+      "type" : "string",
+      "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
+      "optional" : true
+    }
+  ],
+  "usage": "browser.assert.cssClassPresent(\"#main\", \"container\");"
+},
+{
+  "name" : "cssClassNotPresent",
+  "descr": "Checks if the given element does not have the specified CSS class.",
+  "parameters":[
+    {
+      "name" : "cssSelector",
+      "type" : "string",
+      "descr" : "The CSS selector used to locate the element.",
+      "optional" : false
+    },
+    {
+      "name" : "className",
+      "type" : "string",
+      "descr" : "The CSS class to look for.",
+      "optional" : false
+    },
+        {
+      "name" : "msg",
+      "type" : "string",
+      "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
+      "optional" : true
+    }
+  ],
+  "usage": "browser.assert.cssClassNotPresent(\"#main\", \"container\");"
+},
+{
+  "name" : "cssProperty",
+  "descr": "Checks if the specified css property of a given element has the expected value.",
+  "parameters":[
+    {
+      "name" : "cssSelector",
+      "type" : "string",
+      "descr" : "The CSS selector used to locate the element.",
+      "optional" : false
+    },
+    {
+      "name" : "cssProperty",
+      "type" : "string",
+      "descr" : "The CSS property.",
+      "optional" : false
+    },
+    {
+      "name" : "expected",
+      "type" : "string|number",
+      "descr" : "The expected value of the css property to check.",
+      "optional" : false
+    },
+    {
+      "name" : "msg",
+      "type" : "string",
+      "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
+      "optional" : true
+    }
+  ],
+  "usage": "browser.assert.cssProperty(\"#main\", \"display\", \"block\");"
+},
+{
+  "name" : "elementPresent",
+  "descr": "Checks if the given element exists in the DOM.",
+  "parameters":[
+    {
+      "name" : "cssSelector",
+      "type" : "string",
+      "descr" : "The CSS selector used to locate the element.",
+      "optional" : false
+    },
+    {
+      "name" : "msg",
+      "type" : "string",
+      "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
+      "optional" : true
+    }
+  ],
+  "usage": "browser.assert.elementPresent(\"#main\");"
+},
+{
+  "name" : "elementNotPresent",
+  "descr": "Checks if the given element does not exist in the DOM.",
+  "parameters":[
+    {
+      "name" : "cssSelector",
+      "type" : "string",
+      "descr" : "The CSS selector used to locate the element.",
+      "optional" : false
+    },
+    {
+      "name" : "msg",
+      "type" : "string",
+      "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
+      "optional" : true
+    }
+  ],
+  "usage": "browser.assert.elementNotPresent(\".should_not_exist\");"
+},
+{
+  "name" : "hidden",
+  "descr": "Checks if the given element is not visible on the page.",
+  "parameters":[
+    {
+      "name" : "cssSelector",
+      "type" : "string",
+      "descr" : "The CSS selector used to locate the element.",
+      "optional" : false
+    },
+    {
+      "name" : "msg",
+      "type" : "string",
+      "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
+      "optional" : true
+    }
+  ],
+  "usage": "browser.assert.hidden(\".should_not_be_visible\");"
+},
+{
+  "name" : "title",
+  "descr": "Checks if the page title equals the given value.",
+  "parameters":[
+    {
+      "name" : "expected",
+      "type" : "string",
+      "descr" : "The expected page title.",
+      "optional" : false
+    },
+    {
+      "name" : "msg",
+      "type" : "string",
+      "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
+      "optional" : true
+    }
+  ],
+  "usage": "browser.assert.title(\"Nightwatch.js\");"
+},
+{
+  "name" : "urlContains",
+  "descr": "Checks if the current URL contains the given value.",
+  "parameters":[
+    {
+      "name" : "expectedText",
+      "type" : "string",
+      "descr" : "The value expected to exist within the current URL.",
+      "optional" : false
+    },
+    {
+      "name" : "msg",
+      "type" : "string",
+      "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
+      "optional" : true
+    }
+  ],
+  "usage": "browser.assert.urlContains('google');",
+  "since": "v0.5.1"
+},
+{
+  "name" : "urlEquals",
+  "descr": "Checks if the current url equals the given value.",
+  "parameters":[
+    {
+      "name" : "expected",
+      "type" : "string",
+      "descr" : "The expected url.",
+      "optional" : false
+    },
+    {
+      "name" : "msg",
+      "type" : "string",
+      "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
+      "optional" : true
+    }
+  ],
+  "usage": "browser.assert.urlEquals('http://www.google.com');",
+  "since": "v0.5.1"
+},
+{
+  "name" : "value",
+  "descr": "Checks if the given form element's value equals the expected value.",
+  "parameters":[
+    {
+      "name" : "cssSelector",
+      "type" : "string",
+      "descr" : "The CSS selector used to locate the element.",
+      "optional" : false
+    },
+    {
+      "name" : "expectedText",
+      "type" : "string",
+      "descr" : "The expected text.",
+      "optional" : false
+    },
+    {
+      "name" : "msg",
+      "type" : "string",
+      "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
+      "optional" : true
+    }
+  ],
+  "usage": "browser.assert.value(\"form.login input[type=text]\", \"username\");"
+},
+{
+  "name" : "valueContains",
+  "descr": "Checks if the given form element's value contains the expected value.",
+  "parameters":[
+    {
+      "name" : "cssSelector",
+      "type" : "string",
+      "descr" : "The CSS selector used to locate the element.",
+      "optional" : false
+    },
+    {
+      "name" : "expectedText",
+      "type" : "string",
+      "descr" : "The expected text.",
+      "optional" : false
+    },
+    {
+      "name" : "msg",
+      "type" : "string",
+      "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
+      "optional" : true
+    }
+  ],
+  "usage": "browser.assert.valueContains(\"form.login input[type=text]\", \"username\");"
+},
+{
+  "name" : "visible",
+  "descr": "Checks if the given element is visible on the page.",
+  "parameters":[
+    {
+      "name" : "cssSelector",
+      "type" : "string",
+      "descr" : "The CSS selector used to locate the element.",
+      "optional" : false
+    },
+    {
+      "name" : "msg",
+      "type" : "string",
+      "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
+      "optional" : true
+    }
+  ],
+  "usage": "browser.assert.visible(\".should_be_visible\");"
+}
+]
+}
+

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%- content['_pages_']['header'] %>
+</head>
+<body>
+<%- content['_includes_']['navbar'] %>
+
+<div class="parallax">
+  <div class="parallax__layer parallax__layer--3">
+    <div id="stars" class="top-stars">&nbsp;</div>
+  </div>
+
+  <div class="parallax__layer parallax__layer--2">
+    <div id="moon" class="top-moon">&nbsp;</div>
+  </div>
+
+  <div class="parallax__layer parallax__layer--1">
+    <div id="clouds" class="top-clouds">&nbsp;</div>
+  </div>
+
+  <div class="parallax__layer parallax__layer--0">
+    <section id="navigation">
+      <div class="container">
+        <nav class="navbar">
+          <div class="container-fluid">
+            <div class="navbar-header" style="min-width: 130px">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                      data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">
+                <div class="logo-home"></div>
+              </a>
+              <div class="version-select-dropdown">
+                <select class="version-dropdown">
+                  <option value="/"><%= version %></option>
+                  <option value="/v0.9.21/">v0.9.21</option>
+                </select>
+              </div>
+            </div>
+            <div id="navbar" class="navbar-header navbar-right nav-box navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/gettingstarted">Getting Started</a></li>
+                <li><a href="/guide">Developer Guide</a></li>
+                <li><a href="/api">API Reference</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </section>
+    <section id="index-container" data-page-uri="/">
+      <div id="top-section" class="top-text">
+        <div class="houses-left">
+          <div class="houses-right">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                  <h1>Nightwatch<span>.js</span></h1>
+                  <p>Browser automated testing, the easy way.</p>
+                </div>
+                <div class="col-md-6">
+                  <img class="code-top" src="/images/code-top.svg" width=525px height=372px>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="download">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7 col-md-7 col-sm-4 download">
+              <a href="http://new.nightwatchjs.org/gettingstarted#installation"
+                 class="btn btn-primary btn-lg btn-download">INSTALL (<%= version %>)</a>
+              <a href="https://github.com/nightwatchjs/nightwatch" target="_blank"
+                 class="btn btn-primary btn-lg btn-github">VIEW ON GITHUB</a>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-8">
+              <div class="carbonad"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="index-features">
+        <div class="container">
+          <div class="horizontal-line" style="width:100%"></div>
+          <div class="row overview">
+            <div class="col-sm-8 col-lg-10" style="margin: 0 auto; float: none; text-align: center;">
+              <h2>Browser Automation</h2>
+              <p style="font-weight: 100; font-size:22px">
+                <span style="font-weight: 300">Nightwatch.js</span> is an integrated, easy to use <span
+                style="font-weight: 300">End-to-End</span> testing solution for browser based apps and
+                websites, written on Node.js. It uses the <a href="https://www.w3.org/TR/webdriver/"
+                                                             target="_blank">W3C WebDriver API</a> to perform
+                commands and assertions on DOM elements.
+              </p>
+            </div>
+          </div>
+
+          <div class="horizontal-line"></div>
+          <div class="row features-container">
+            <div class="col-md-5 col-lg-5 col-sm-5 col-xs-5" style="text-align: right; padding-right: 40px;">
+              <ul class="features">
+                <li class="syntax">
+                  <h3>Clean Syntax</h3>
+                  <p>
+                    Simple but powerful syntax which enables you to write tests very quickly, using only
+                    Javascript (Node.js) and CSS or Xpath selectors.
+                  </p>
+                </li>
+
+                <li class="cloudtesting">
+                  <h3>Cloud Testing Support</h3>
+                  <p>
+                    Comes with its own cloud testing platform - <a href="https://nightcloud.io"
+                                                                   target="_blank">NightCloud.io</a> (TBA).
+                    Works with other cloud testing providers, such as <a href="https://saucelabs.com/"
+                                                                         target="_blank">SauceLabs</a> and
+                    <a href="http://www.browserstack.com/" target="_blank">BrowserStack</a>.
+                  </p>
+                </li>
+
+                <li class="selectors">
+                  <h3>Page Objects Support</h3>
+                  <p>
+                    Fluent and easy to work with Page Object Model support to better organise elements and
+                    sections, with support for both CSS or Xpath selectors.
+                  </p>
+                </li>
+
+                <li class="plugins">
+                  <h3>Easy to Extend</h3>
+                  <p>
+                    Flexible command and assertion framework which makes it easy to extend to implement your
+                    application custom commands and assertions.
+                  </p>
+                </li>
+
+              </ul>
+            </div>
+            <div class="col-md-2 col-lg-2 col-sm-2 col-xs-2" style="text-align: center;">
+              <div class="vertical-line"></div>
+              <div class="feature-icon syntax"></div>
+              <div class="vertical-line"></div>
+              <div class="feature-icon testrunner"></div>
+              <div class="vertical-line"></div>
+              <div class="feature-icon cloudtesting"></div>
+              <div class="vertical-line"></div>
+              <div class="feature-icon selenium"></div>
+              <div class="vertical-line"></div>
+              <div class="feature-icon selectors"></div>
+              <div class="vertical-line"></div>
+              <div class="feature-icon junit"></div>
+              <div class="vertical-line"></div>
+
+              <div class="feature-icon plugin"></div>
+              <div class="vertical-line"></div>
+            </div>
+
+            <div class="col-md-5 col-lg-5 col-sm-5 col-xs-5" style="text-align: left; padding-right: 0">
+              <ul class="features">
+                <li class="testrunner">
+                  <h3>Built-in Test Runner</h3>
+                  <p>
+                    Built-in command-line test runner which can run the tests either sequentially or in
+                    parallel, together, by group, tags or single. Also, support for <a
+                    href="https://mochajs.org/" target="_blank">Mocha</a> runner is built-in.
+                  </p>
+                </li>
+
+                <li class="selenium">
+                  <h3>WebDriver Service</h3>
+                  <p>
+                    Manages automatically Selenium or WebDriver services (ChromeDriver, GeckoDriver, Edge,
+                    Safari) in a separate child process.
+                  </p>
+                </li>
+
+                <li class="junit">
+                  <h3>Continuous Integration</h3>
+                  <p>
+                    JUnit XML reporting is built-in so you can integrate your tests in your build process
+                    with systems such as Teamcity, Jenkins, Hudson etc.
+                  </p>
+                </li>
+
+              </ul>
+            </div><!--/span-->
+          </div><!--/row-->
+          <div class="horizontal-line"></div>
+
+          <div class="row">
+            <div class="social" style="margin-top:30px; margin-bottom:50px; width:300px">
+              <ul>
+                <li style="padding-top:2px"><a data-via="nightwatchjs"
+                                               data-text="Nightwatch.js - node.js powered automated testing framework."
+                                               href="https://twitter.com/share" class="twitter-share-button"
+                                               data-lang="en" data-size="large">Tweet</a></li>
+                <li>
+                  <iframe
+                    src="http://ghbtns.com/github-btn.html?user=nightwatchjs&repo=nightwatch&type=watch&count=true&size=large"
+                    allowtransparency="true" frameborder="0" scrolling="0" width="160"
+                    height="30"></iframe>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div><!--/.container-->
+      </div><!--/.container-->
+
+<!-- START .example -->
+      <div class="example">
+        <div class="container">
+          <div class="row" style="padding-left: 50px;">
+            <h2>Demo Test</h2>
+            <p>The test below navigates to google.com and searches for "rembrandt van rijn", then verifies if the
+              term first result is the Wikipedia page of Rembrandt.</p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="sample-test">
+<pre data-language="javascript"><code class="language-javascript">
+module.exports = {
+  'Demo test Google' : function (client) {
+    client
+      .url('http://www.google.com')
+      .waitForElementVisible('body', 1000)
+      .assert.title('Google')
+      .assert.visible('input[type=text]')
+      .setValue('input[type=text]', 'rembrandt van rijn')
+      .waitForElementVisible('button[name=btnG]', 1000)
+      .click('button[name=btnG]')
+      .pause(1000)
+      .assert.containsText('ol#rso li:first-child',
+        'Rembrandt - Wikipedia')
+      .end();
+  }
+};</code></pre>
+            </div>
+            </div>
+
+            <div class="col-lg-6 sampleoutput">
+              <div class="screenshot"></div>
+            </div>
+
+          </div>
+        </div> <!-- /.container-->
+
+        <div class="nightcloud-container">
+          <div class="container">
+            <div class="row intro">
+              <p>
+                Run and manage your Nightwatch tests<br/>with absolutely no hassle, no config, no nonsense.
+              </p>
+              <p>
+                <a href="http://nightcloud.io" target="_blank" class="btn btn-primary btn-lg btn-twitter">Learn
+                  More</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- END .example -->
+
+    <div class="twitter">
+      <div class="container">
+        <div class="row" style="max-width: 780px; text-align: center; margin: 0 auto">
+          <h2>Stay Updated</h2>
+          <p>
+            Follow <a href="https://twitter.com/nightwatchjs" target="_blank">@nightwatchjs</a> on Twitter to
+            receive updates or to get in touch.
+          </p>
+          <p style="margin-top: 20px">
+            <a href="https://twitter.com/nightwatchjs" target="_blank"
+               class="btn btn-primary btn-lg btn-twitter">Follow on Twitter</a>
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<%- content['_includes_']['footer'] %>
+
+</div>
+</div>
+
+<section id="gettingstarted-container" data-page-uri="/gettingstarted" class="secondary"></section>
+<section id="guide-container" data-page-uri="/guide" class="secondary"></section>
+<section id="apimethod-container" data-page-uri="/api/$method" class="secondary"></section>
+<section id="api-container" data-page-uri="/api" class="secondary"></section>
+
+<%- content['_includes_']['scripts'] %>
+</body>
+</html>

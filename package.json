@@ -1,0 +1,23 @@
+{
+  "name": "nightwatchjs.org",
+  "version": "0.0.1",
+  "description": "Nightwatch.js website - https://nightwatchjs.org",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:apidocs": "node build/apidocs.js",
+    "build:pages": "node build/pages.js"
+  },
+  "author": "Andrei Rusu <andrei@pineview.io>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^7.0.0",
+    "ejs": "2.5.5",
+    "marked": "0.3.6",
+    "mkdirp": "^0.5.1",
+    "swig": "1.4.2"
+  },
+  "devDependencies": {
+    "dox": "^0.9.0"
+  }
+}
