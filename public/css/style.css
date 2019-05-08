@@ -138,6 +138,9 @@ body.navbar-visible .navbar-default {
   display: block;
 }
 
+#index-container footer p {
+  color: #aaa;
+}
 .top-stars {
   margin-top: 0;
   height: 100vh;
