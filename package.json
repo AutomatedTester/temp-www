@@ -4,9 +4,12 @@
   "description": "Nightwatch.js website - https://nightwatchjs.org",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "cross-env DEV_TEST_URL=http://localhost:3001 nightwatch",
     "build:apidocs": "node build/apidocs.js",
-    "build:pages": "node build/pages.js"
+    "build:pages": "node build/pages.js",
+    "build:static": "node build/static.js",
+    "dev:server": "node lib/server.js",
+    "build": "npm run build:static && npm run build:apidocs && npm run build:pages"
   },
   "author": "Andrei Rusu <andrei@pineview.io>",
   "license": "MIT",
@@ -15,9 +18,16 @@
     "ejs": "2.5.5",
     "marked": "0.3.6",
     "mkdirp": "^0.5.1",
+    "ncp": "^2.0.0",
+    "nightwatch": "git://github.com/nightwatchjs/nightwatch.git#master",
+    "nightwatch-docs": "git://github.com/nightwatchjs/nightwatch-docs.git#master",
     "swig": "1.4.2"
   },
   "devDependencies": {
-    "dox": "^0.9.0"
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.4",
+    "cross-env": "^5.2.0",
+    "dox": "^0.9.0",
+    "express": "^4.16.4"
   }
 }

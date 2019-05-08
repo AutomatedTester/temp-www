@@ -1,18 +1,14 @@
 {
   "Overview" : {
-    "whatis-nightwatch" : "gettingstarted/overview/whatis-nightwatch.md",
-    "selenium-overview" : "gettingstarted/overview/selenium-overview.md",
-    "theory-of-operation" : "gettingstarted/overview/theory-of-operation.md"
+    "overview" : "gettingstarted/overview/overview.md"
   },
 
   "Installation" : {
-    "install-nodejs" : "gettingstarted/installation/install-nodejs.md",
-    "install-nightwatch" : "gettingstarted/installation/install-nightwatch.md",
-    "install-webdriver" : "gettingstarted/installation/install-webdriver.md"
+    "installation" : "gettingstarted/installation/install.md"
   },
 
   "Configuration" : {
-    "settings-file" : "gettingstarted/configuration/settings-file.md",
+    "configuration" : "gettingstarted/configuration/configuration.md",
     "config-basic-settings" : "gettingstarted/configuration/config-basic-settings.md",
     "config-webdriver-settings" : "gettingstarted/configuration/config-webdriver-settings.md",
     "config-test-settings" : "gettingstarted/configuration/config-test-settings.md"
@@ -26,9 +22,7 @@
   },
 
   "Using-nightwatch" : {
-    "write-tests" : "guide/using-nightwatch/write-tests.md",
-    "chai-expect-assertions" : "guide/using-nightwatch/chai-expect-assertions.md",
-    "using-xpath-selectors" : "guide/using-nightwatch/using-xpath-selectors.md",
+    "using-nightwatch" : "guide/using-nightwatch/using-nightwatch.md",
     "test-hooks" : "guide/using-nightwatch/test-hooks.md",
     "async-setup-teardown" : "guide/using-nightwatch/async-setup-teardown.md",
     "global-setup-teardown" : "guide/using-nightwatch/global-setup-teardown.md",
@@ -43,7 +37,7 @@
   },
 
   "Running-tests" : {
-    "test-runner" : "guide/running-tests/test-runner.md",
+    "running-tests" : "guide/running-tests/running-tests.md",
     "runner-options" : "guide/running-tests/runner-options.md",
     "test-environments" : "guide/running-tests/test-environments.md",
     "test-groups" : "guide/running-tests/test-groups.md",
@@ -62,9 +56,18 @@
   },
 
   "Unit-testing" : {
-    "writing-unit-tests" : "guide/unit-testing/writing-unit-tests.md",
-    "async-unit-testing" : "guide/unit-testing/async-unit-testing.md",
-    "code-coverage" : "guide/unit-testing/code-coverage.md",
-    "combined-config" : "guide/unit-testing/combined-config.md"
+    "writing-unit-tests" : "guide/unit-testing/writing-unit-tests.md"
+  },
+
+  "Api-reference": {
+    "expect-api": "api/expect.md",
+    "assert-api": "api/assertions.md",
+    "commands-api": "api/commands.md",
+    "page-api": "api/page.md",
+    "expect-cookie": "api/expect/cookie.md",
+    "expect-element": "api/expect/element.md",
+    "expect-elements": "api/expect/elements.md",
+    "expect-title": "api/expect/title.md",
+    "expect-url": "api/expect/url.md"
   }
 }

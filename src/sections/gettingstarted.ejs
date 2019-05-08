@@ -36,7 +36,7 @@
             </li>
 
             <li>
-              <a href="#settings-file">Configuration</a>
+              <a href="#configuration">Configuration</a>
               <ul class="nav">
                 <li><a href="#nightwatch-json">nightwatch.json</a></li>
                 <li><a href="#base-settings">Base Settings</a></li>
@@ -52,6 +52,7 @@
                 <li><a href="#chromedriver">ChromeDriver</a></li>
                 <li><a href="#microsoft-webdriver">Microsoft WebDriver</a></li>
               </ul>
+              <div class="migrating-guide"><a target="_blank" href="https://github.com/nightwatchjs/nightwatch/wiki/Migrating-to-Nightwatch-1.0">Migrating from v0.9?</a></div>
             </li>
           </ul>
         </div>
@@ -59,32 +60,15 @@
 
       <div class="col-md-9" role="main">
         <div class="docs-section">
-          <div class="migrating-guide"><a target="_blank" href="https://github.com/nightwatchjs/nightwatch/wiki/Migrating-to-Nightwatch-1.0">Migrating from v0.9?</a></div>
-          <div class="page-header" id="guide">
-            <h2>Overview</h2>
-          </div>
-
-          <%- content['whatis-nightwatch'] %>
-          <%- content['selenium-overview'] %>
-          <%- content['theory-of-operation'] %>
+          <%- content['overview'] %>
         </div>
 
         <div class="docs-section">
-          <div class="page-header">
-            <h2 id="installation">Installation</h2>
-          </div>
-
-          <%- content['install-nodejs'] %>
-          <%- content['install-nightwatch'] %>
-          <%- content['install-webdriver'] %>
+          <%- content['installation'] %>
         </div>
 
         <div class="docs-section">
-          <div class="page-header">
-            <h2 id="settings-file">Configuration</h2>
-          </div>
-          <br>
-          <%- content['settings-file'] %>
+          <%- content['configuration'] %>
           <%- content['config-basic-settings'] %>
           <%- content['config-webdriver-settings'] %>
           <%- content['config-test-settings'] %>

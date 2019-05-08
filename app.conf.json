@@ -1,8 +1,13 @@
 {
-  "NIGHTWATCH_LIB_PATH": "",
-  "NIGHTWATCH_DOCS_PATH": "",
-  "OUTPUT_FOLDER": "",
-  "NIGHTWATCH_VERSION": "1.0.18",
+  "NIGHTWATCH_LIB_PATH": "./node_modules/nightwatch/lib/",
+  "NIGHTWATCH_DOCS_PATH": "./node_modules/nightwatch-docs/",
+  "OUTPUT_FOLDER": "./output",
+  "NIGHTWATCH_VERSION": "1.1.3",
+
+  "docsRepoUrl": "https://github.com/nightwatchjs/nightwatch-docs/",
+  "apiRepoUrl": "https://github.com/nightwatchjs/nightwatch/",
+  "devServerPort": "3001",
+
   "apiFileList": [
     ["api/expect/element/", "expect"],
     ["api/expect/elements/", "expect"],
@@ -12,12 +17,7 @@
 
     ["api/element-commands/", "commands"],
     ["api/assertions/", "assertions"],
-    ["api/client-commands.js", "commands"],
-    ["api/client-commands/pause.js", "commands"],
-    ["api/client-commands/end.js", "commands"],
-    ["api/client-commands/useCss.js", "commands"],
-    ["api/client-commands/useXpath.js", "commands"],
-    ["api/client-commands/perform.js", "commands"],
+    ["api/client-commands/", "commands"],
     ["api/protocol.js", "protocol"]
   ],
 
@@ -41,6 +41,16 @@
       "pageTitle" : "Getting Started | Nightwatch.js",
       "title" : "Getting Started",
       "description" : "Everything you need in order to get started with Nightwatch.js, step-by-step, with configuration guides for various browsers."
+    },
+    "releases" : {
+      "pageTitle" : "Releases | Nightwatch.js",
+      "title" : "Releases",
+      "description" : "Release history and chagelog information."
+    },
+    "index" : {
+      "pageTitle" : "Nightwatch.js |  Node.js powered End-to-End testing framework",
+      "title" : "Nightwatch.js",
+      "description" : "Write efficient end-to-end tests in Node.js and run them against W3C WebDriver."
     }
   }
 }

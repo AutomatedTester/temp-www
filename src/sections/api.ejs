@@ -1,3 +1,506 @@
+<div class="jumbotron">
+    <div class="container" style="height:130px">
+        <div class="row">
+            <div class="col-md-8 col-xs-6">
+                <h1>API Reference</h1>
+            </div>
+            <div class="col-md-4 col-xs-6">
+                <div class="carbonad"></div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="background">
-  <%- apiDocs %>
+  <div class="container bs-docs-container">
+     <div class="row">
+       <div class="col-md-3">
+         <div class="bs-sidebar hidden-print" role="complementary">
+           <ul class="nav bs-sidenav">
+             <li>
+               <a href="#expect-api">Expect</a>
+               <ul class="nav">
+                 <li><a href="#expect-chains">language chains</a></li>
+                 <li><a href="#expect-matchers">equal / contain / match</a></li>
+                 <li><a href="#expect-startend">startWith / endWith</a></li>
+                 <li><a href="#expect-negation">not</a></li>
+                 <li><a href="#expect-before">before / after</a></li>
+                 <li>
+                   <h5><a href="#expect-cookie-">cookie</a></h5>
+                 </li>
+                 <li>
+                   <h5><a href="#expect-element-">element</a></h5>
+                 </li>
+                 <%
+                 api['expect.element'] = api['expect.element'].reduce(function (prev, val) {
+                   if (prev[val.name]) {
+                     return prev;
+                   }
+                   prev[val.name] = val;
+                   return prev;
+                 }, {});
+                 api['expect.element'] = Object.keys(api['expect.element']).sort().reduce(function (prev, val) {
+                   prev[val] = api['expect.element'][val];
+
+                   return prev;
+                 }, {});
+                 %>
+                 <% for (var methodName in api['expect.element']) { %>
+                 <li><a href="#expect-<%- methodName %>"><%- methodName %><% if (api['expect.element'][methodName].aliases && api['expect.element'][methodName].aliases.length) { %> / <%- api['expect.element'][methodName].aliases.join('/') %><% } %></a></li>
+                 <% } %>
+                 <li>
+                   <h5><a href="#expect-elements-">elements</a></h5>
+                 </li>
+                 <li><a href="#expect-elements-count">count</a></li>
+                 <li>
+                   <h5><a href="#expect-title-">title</a></h5>
+                 </li>
+                 <li>
+                   <h5><a href="#expect-url-">url</a></h5>
+                 </li>
+
+                 </ul>
+            </li>
+
+             <li>
+               <a href="#assertions">Assert</a>
+               <ul class="nav">
+                 <% for (var i = 0; i < methods.assertions.length; i++) { %>
+                 <li><a href="#assert-<%- methods.assertions[i].name %>"><%- methods.assertions[i].name %></a></li>
+                 <% } %>
+               </ul>
+             </li>
+
+             <li>
+               <a href="#page-object-api">Page</a>
+               <ul class="nav">
+                 <li><a href="#page-object-instance">instance</a></li>
+                 <li><a href="#page-commands">commands</a></li>
+               </ul>
+             </li>
+
+             <li>
+               <a href="#api-commands">API Commands/Protocol</a>
+               <ul class="nav">
+                 <li>
+                   <h5><a href="#elements-headline">Finding Elements</a></h5>
+                 </li>
+                 <li><a href="#waitForElementVisible">waitForElementVisible</a></li>
+                 <li><a href="#waitForElementNotVisible">waitForElementNotVisible</a></li>
+                 <li><a href="#waitForElementPresent">waitForElementPresent</a></li>
+                 <li><a href="#waitForElementNotPresent">waitForElementNotPresent</a></li>
+                 <li><a href="#element">element</a></li>
+                 <li><a href="#elements">elements</a></li>
+                 <li><a href="#elementIdEquals">elementIdEquals</a></li>
+                 <li><a href="#elementIdElement">elementIdElement</a></li>
+                 <li><a href="#elementIdElements">elementIdElements</a></li>
+
+
+                 <li>
+                   <h5><a href="#elementinteraction-headline">Element Interaction</a></h5>
+                 </li>
+
+                 <li><a href="#click">click</a></li>
+                 <li><a href="#clearValue">clearValue</a></li>
+                 <li><a href="#moveToElement">moveToElement</a></li>
+                 <li><a href="#setValue">setValue</a></li>
+                 <li><a href="#submitForm">submitForm</a></li>
+                 <li><a href="#keys">keys</a></li>
+
+                 <li>
+                   <h5><a href="#elementstate-headline">Element State</a></h5>
+                 </li>
+
+                 <li><a href="#getAttribute">getAttribute</a></li>
+                 <li><a href="#getCssProperty">getCssProperty</a></li>
+                 <li><a href="#getElementSize">getElementSize</a></li>
+                 <li><a href="#getTagName">getTagName</a></li>
+                 <li><a href="#getText">getText</a></li>
+                 <li><a href="#getValue">getValue</a></li>
+                 <li><a href="#isVisible">isVisible</a></li>
+                 <li><a href="#elementActive">elementActive</a></li>
+
+
+                 <li>
+                   <h5><a href="#elementlocation-headline">Element Location</a></h5>
+                 </li>
+
+                 <li><a href="#getLocation">getLocation</a></li>
+                 <li><a href="#getLocationInView">getLocationInView</a></li>
+
+                 <li>
+                   <h5><a href="#elementinternal-headline">Protocol Actions</a></h5>
+                 </li>
+                 <li><a href="#elementIdAttribute">elementIdAttribute</a></li>
+                 <li><a href="#elementIdClear">elementIdClear</a></li>
+                 <li><a href="#elementIdClick">elementIdClick</a></li>
+                 <li><a href="#elementIdCssProperty">elementIdCssProperty</a></li>
+                 <li><a href="#elementIdDisplayed">elementIdDisplayed</a></li>
+                 <li><a href="#elementIdEnabled">elementIdEnabled</a></li>
+                 <li><a href="#elementIdLocationInView">elementIdLocationInView</a></li>
+                 <li><a href="#elementIdLocation">elementIdLocation</a></li>
+                 <li><a href="#elementIdName">elementIdName</a></li>
+                 <li><a href="#elementIdSelected">elementIdSelected</a></li>
+                 <li><a href="#elementIdSize">elementIdSize</a></li>
+                 <li><a href="#elementIdText">elementIdText</a></li>
+                 <li><a href="#elementIdValue">elementIdValue</a></li>
+                 <li><a href="#submit">submit</a></li>
+
+                 <li>
+                   <h5><a href="#document-headline">Document Handling</a></h5>
+                 </li>
+                 <li><a href="#injectScript">injectScript</a></li>
+                 <li><a href="#execute">execute</a></li>
+                 <li><a href="#executeAsync">executeAsync</a></li>
+                 <li><a href="#source">source</a></li>
+
+                 <li>
+                   <h5><a href="#sessions-headline">Session Related</a></h5>
+                 </li>
+                 <li><a href="#getLogTypes">getLogTypes</a></li>
+                 <li><a href="#getLog">getLog</a></li>
+                 <li><a href="#isLogAvailable">isLogAvailable</a></li>
+                 <li><a href="#end">end</a></li>
+                 <li><a href="#session">session</a></li>
+                 <li><a href="#sessions">sessions</a></li>
+                 <li><a href="#timeouts">timeouts</a></li>
+                 <li><a href="#timeoutsAsyncScript">timeoutsAsyncScript</a></li>
+                 <li><a href="#timeoutsImplicitWait">timeoutsImplicitWait</a></li>
+                 <li><a href="#status">status</a></li>
+                 <li><a href="#sessionLog">sessionLog</a></li>
+                 <li><a href="#sessionLogTypes">sessionLogTypes</a></li>
+
+                 <li>
+                   <h5><a href="#navigation-headline">Navigation</a></h5>
+                 </li>
+
+                 <li><a href="#getTitle">getTitle</a></li>
+                 <li><a href="#init">init</a></li>
+                 <li><a href="#urlHash">urlHash</a></li>
+                 <li><a href="#url">url</a></li>
+                 <li><a href="#back">back</a></li>
+                 <li><a href="#forward">forward</a></li>
+                 <li><a href="#refresh">refresh</a></li>
+                 <li><a href="#title">title</a></li>
+
+                 <li>
+                   <h5><a href="#contexts-headline">Window Related</a></h5>
+                 </li>
+
+                 <li><a href="#switchWindow">switchWindow</a></li>
+                 <li><a href="#resizeWindow">resizeWindow</a></li>
+                 <li><a href="#setWindowPosition">setWindowPosition</a></li>
+                 <li><a href="#maximizeWindow">maximizeWindow</a></li>
+                 <li><a href="#closeWindow">closeWindow</a></li>
+                 <li><a href="#window">window</a></li>
+                 <li><a href="#windowHandle">windowHandle</a></li>
+                 <li><a href="#windowHandles">windowHandles</a></li>
+                 <li><a href="#windowMaximize">windowMaximize</a></li>
+                 <li><a href="#windowPosition">windowPosition</a></li>
+                 <li><a href="#windowSize">windowSize</a></li>
+                 <li><a href="#frame">frame</a></li>
+                 <li><a href="#frameParent">frameParent</a></li>
+
+                 <li>
+                   <h5><a href="#cookies-headline">Cookies</a></h5>
+                 </li>
+                 <li><a href="#getCookies">getCookies</a></li>
+                 <li><a href="#getCookie">getCookie</a></li>
+                 <li><a href="#setCookie">setCookie</a></li>
+                 <li><a href="#deleteCookie">deleteCookie</a></li>
+                 <li><a href="#deleteCookies">deleteCookies</a></li>
+                 <li><a href="#cookie">cookie</a></li>
+
+                 <li>
+                   <h5><a href="#useractions-headline">User Actions</a></h5>
+                 </li>
+
+                 <li><a href="#doubleClick">doubleClick</a></li>
+                 <li><a href="#mouseButtonClick">mouseButtonClick</a></li>
+                 <li><a href="#mouseButtonDown">mouseButtonDown</a></li>
+                 <li><a href="#mouseButtonUp">mouseButtonUp</a></li>
+                 <li><a href="#moveTo">moveTo</a></li>
+
+                 <li>
+                   <h5><a href="#userprompts-headline">User Prompts</a></h5>
+                 </li>
+                 <li><a href="#acceptAlert">acceptAlert</a></li>
+                 <li><a href="#dismissAlert">dismissAlert</a></li>
+                 <li><a href="#getAlertText">getAlertText</a></li>
+                 <li><a href="#setAlertText">setAlertText</a></li>
+
+                 <li>
+                   <h5><a href="#screens-headline">Screen Capture</a></h5>
+                 </li>
+                 <li><a href="#saveScreenshot">saveScreenshot</a></li>
+                 <li><a href="#screenshot">screenshot</a></li>
+
+                 <li>
+                   <h5><a href="#mobile-headline">Mobile Related</a></h5>
+                 </li>
+
+                 <li><a href="#getOrientation">getOrientation</a></li>
+                 <li><a href="#setOrientation">setOrientation</a></li>
+                 <li><a href="#contexts">contexts</a></li>
+                 <li><a href="#currentContext">currentContext</a></li>
+                 <li><a href="#setContext">setContext</a></li>
+
+                 <li>
+                   <h5><a href="#utilities-headline">Utilities/Debugging</a></h5>
+                 </li>
+
+                 <li><a href="#pause">pause</a></li>
+                 <li><a href="#useCss">useCss</a></li>
+                 <li><a href="#useXpath">useXpath</a></li>
+                 <li><a href="#perform">perform</a></li>
+
+               </ul>
+             </li>
+           </ul>
+         </div>
+       </div>
+
+      <div class="col-md-9" role="main">
+        <div class="docs-section">
+        <%- content['expect-api'] %>
+
+          <div class="commands">
+            <%- content['expect-cookie'] %>
+            <%- content['expect-element'] %>
+
+            <%
+            for (var methodName in api['expect.element']) {
+              var method = api['expect.element'][methodName];
+            %>
+            <div class="apimethod">
+              <h3 id="expect-<%- method.name %>"><%- method.display %><a title="Suggest edits" class="edit-source" href="<%- method.editLink %>">Suggest edits</a></h3>
+              <p><%- method.descr %></p>
+              <% if (method.params.length) { %>
+              <h5>Parameters:</h5>
+              <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th style="width: 100px;">Name</th>
+                    <th style="width: 100px;">Type</th>
+                    <th>description</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <%
+                  for (var j = 0; j < method.params.length; j++) {
+                    var param = method.params[j];
+                  %>
+                  <tr>
+                    <td><code><%- param.name %></code><% if (param.optional) { %><br><span class="optional">Optional</span><% } %></td>
+                    <td><%- param.types %></td>
+                    <td><%- param.descr %></td>
+                  </tr>
+                  <% } %>
+                  </tbody>
+                </table>
+              </div>
+              <% } %>
+              <% if (method.example) { %>
+              <h5>Usage:</h5>
+              <div class="sample-test">
+<pre class="line-numbers" data-language="javascript"><code class="language-javascript"><%- method.example %></code></pre>
+              </div>
+              <% } %>
+            </div>  <!-- end .apimethod -->
+            <% } %>
+
+            <%- content['expect-elements'] %>
+            <%- content['expect-title'] %>
+            <%- content['expect-url'] %>
+          </div>
+        </div>
+
+        <div class="docs-section assertions-api">
+          <%- content['assert-api'] %>
+
+          <div class="assertions">
+            <%
+            for (var i = 0; i < methods.assertions.length; i++) {
+              var method = methods.assertions[i];
+            %>
+            <div class="apimethod">
+              <a name="assert-<%- method.name %>"></a>
+              <h3 id="assert-<%- method.name %>">assert.<%- method.name %>()</h3>
+              <p><%- method.descr %></p>
+
+              <h5>Parameters:</h5>
+              <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th style="width: 100px;">Name</th>
+                    <th style="width: 100px;">Type</th>
+                    <th>description</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <% for (var j = 0; j < method.parameters.length; j++) {
+                      var param = method.parameters[j]; %>
+                  <tr>
+                    <td><code><%- param.name %></code><% if (param.optional) { %><br><span class="optional">Optional</span><% } %></td>
+                    <td><%- param.type %></td>
+                    <td><%- param.descr %></td>
+                  </tr>
+                  <% } %>
+                  </tbody>
+                </table>
+              </div>
+
+              <h5>Usage:</h5>
+              <div class="sample-test">
+<pre class="line-numbers" data-language="javascript"><code class="language-javascript">this.demoTest = function (browser) {
+  <%- method.usage %>
+};</code></pre>
+              </div>
+            </div> <!-- end .apimethod -->
+            <% } %>
+          </div>
+          <!-- ============================================================
+          // END Assertions
+          ============================================================ -->
+        </div>
+
+        <div class="docs-section">
+          <%- content['page-api'] %>
+        </div>
+
+        <div class="docs-section commands">
+          <%- content['commands-api'] %>
+        <%
+      var sectionsData = {
+        'protocol.elements' : [
+          'elements-headline', 'Finding Elements', [
+            'The commands listed below allow lookup of individual elements and collections of elements. Element retrieval searches are performed using a provided selector specified usually as a CSS selector or, less often, as an Xpath selector.',
+            'More info on <a href="https://www.w3.org/TR/webdriver/#locator-strategies" target="_blank">locator strategy</a> can be found on the WebDriver page.',
+            'Each element has an internal associated <a href="https://www.w3.org/TR/webdriver1/#dfn-web-elements" target="_blank">Web Element</a> reference (a UUID) that uniquely identifies the element across all browsing contexts.'
+          ]
+        ],
+
+        'protocol.elementinteraction' : [
+          'elementinteraction-headline',
+          'Element Interaction'
+        ],
+
+        'protocol.elementstate' : [
+          'elementstate-headline',
+          'Element State',
+          'Details on how WebDriver checks if the element is displayed are available <a href="https://www.w3.org/TR/webdriver/#h-element-displayedness" target="_blank">Element Displayedness</a> page.'
+        ],
+
+        'protocol.elementlocation' : [
+          'elementlocation-headline', 'Element Location'
+        ],
+        'protocol.elementinternal' : [
+          'elementinternal-headline', 'Protocol Element Commands',
+          'The commands in this section operate on a low-level HTTP protocol level and are only accepting <a href="https://www.w3.org/TR/webdriver1/#dfn-web-elements">Web Element IDs</a> as parameters. ' +
+          'These commands are usually only useful in more complex scenarios, such as building custom commands or custom assertions. <br>' +
+          'To retrieve the Web Element ID use either the <code>.element()</code> or the <code>.elements()</code> commands.'
+        ],
+
+        'protocol.document' : ['document-headline', 'Document Handling'],
+        'protocol.sessions' : [
+          'sessions-headline',
+          'Sessions',
+          'A WebDriver session represents the connection between a client and a remote WebDriver server. Read more on <a href="https://www.w3.org/TR/webdriver/#sessions" target="_blank">WebDriver page</a>.'
+        ],
+
+        'protocol.navigation' : [
+          'navigation-headline', 'Navigation',
+          'The commands in this section allow navigation to new URLs and introspection of the currently loaded url.'
+        ],
+
+        'protocol.contexts' : ['contexts-headline', 'Window Related'],
+        'protocol.cookies' : ['cookies-headline', 'Cookies'],
+        'protocol.useractions' : ['useractions-headline', 'User Actions'],
+        'protocol.userprompts' : ['userprompts-headline', 'User Prompts'],
+        'protocol.screens' : ['screens-headline', 'Screen Capture'],
+        'protocol.mobile' : ['mobile-headline', 'Mobile Related'],
+        'protocol.utilities': ['utilities-headline', 'Utilities / Debugging'],
+        'protocol' : ''
+      };
+
+      for (var section in sectionsData) { %>
+        <div class="page-header"><h2 class="section" id="<%- sectionsData[section][0] %>"><%- sectionsData[section][1] %></h2></div>
+      <%
+      if (Array.isArray(sectionsData[section][2])) {
+        var sectionEntry = sectionsData[section][2] || [];
+        for (var i = 0; i < sectionEntry.length; i++) {%>
+            <p><%- sectionEntry[i] %></p>
+        <% }
+      } else if (sectionsData[section][2]) { %>
+      <p><%- sectionsData[section][2] %></p>
+      <% } %>
+  <% if (api[section]) { %>
+
+  <% for (var i = 0; i < api[section].length; i++) {
+      var method = api[section][i]; %>
+      <div class="apimethod">
+        <h3 id="<%- method.name %>"><a href="/api/<%- method.name %>.html" title="go to .<%- method.name %>()">.<%- method.name %>()</a>
+          <a title="Suggest edits" class="edit-source" href="<%- method.editLink %>">Suggest edits</a></h3>
+
+        <%- method.descr %>
+
+        <% if (method.params) {%>
+          <h5>Parameters:</h5>
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+              <thead>
+              <tr>
+                <th style="width: 100px;">Name</th>
+                <th style="width: 100px;">Type</th>
+                <th>description</th>
+              </tr>
+              </thead>
+              <tbody>
+              <%
+              for (var j = 0; j < method.params.length; j++) {
+                var param = method.params[j]; %>
+              <tr>
+                <td><code><%- param.name %></code>
+                  <% if (param.optional) { %><br><span class="optional">Optional</span><% } %>
+                </td>
+                <td><%- param.types %></td>
+                <td><%- param.descr %></td>
+              </tr>
+              <% } %>
+              </tbody>
+            </table>
+          </div>
+        <% } %>
+
+        <% if (method.returns) { %>
+          <h5>Returns</h5>
+          <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+              <thead>
+              <tr>
+                <th style="width: 200px;">Type</th>
+                <th>description</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td><%- method.returns.type %></td>
+                <td><%- method.returns.descr %></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        <% } %>
+      </div>
+    <% } %>
+
+    <% } %>
+    <% } %>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
 </div>

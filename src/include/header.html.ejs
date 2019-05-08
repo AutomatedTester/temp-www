@@ -15,12 +15,81 @@
 <meta name="twitter:creator" content="@nightwatchjs">
 <meta name="google-site-verification" content="LGNZ66nvi-gru5DR_bV3jry2hqvlMoijhdWZkVT41ZM" />
 
-<script>(function(p,h) {var q=p.split('/');q.shift();q=q.map(function(a){return a.replace(/.+\.html$/,'$method')});h.setAttribute('data-uri',(p!='/'?'/'+q.join('/'):p));if(p==='/cloud'){document.querySelector('meta[name="twitter:image"]').content='http://nightwatchjs.org/img/cloud-banner.png';}})(location.pathname,document.documentElement);</script>
+<script>(function(p,h) {var q=p.split('/');q.shift();q=q.map(function(a){return a.replace(/.+\.html$/,'$method')});h.setAttribute('data-uri',(p!='/'?'/'+q.join('/'):p));})(location.pathname,document.documentElement);</script>
 <link href="/css/themes/prism.css" rel="stylesheet">
-
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="/css/main.css" rel="stylesheet">
 <link href="/css/sidebar.css" rel="stylesheet">
 <link href="/css/style.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500"/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,200"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+
+<noscript><style>
+<%if (section == 'index') { %>#index-container {display: block}<% } %>
+<%if (section == 'guide') { %>#guide-container {display: block}<% } %>
+<%if (section == 'gettingstarted') { %>#gettingstarted-container {display: block}<% } %>
+<%if (section == 'api') { %>#api-container {display: block}<% } %>
+<%if (section == 'contact') { %>#contact-container {display: block}<% } %>
+<%if (section == 'apimethod') { %>#apimethod-container {display: block}<% } %>
+<%if (section != 'index') { %>
+#moon {
+  display: none;
+}
+.parallax{
+  height: 302px;
+  margin-top: -180px;
+}
+<% } %>
+<%if (section == 'index') { %>
+.parallax {
+  height: auto;
+}
+<% } %>
+#index-container .sample-test pre {
+  background: #fff;
+  text-align: left;
+}
+pre::before {
+  content: ''!important;
+  z-index: auto;
+}
+#parallax-main {
+  height: auto;
+}
+.parallax__layer.parallax__layer--0 {
+  position: static;
+}
+.navbar.navbar-default.navbar-fixed-top {
+  background: #222;
+}
+code[class*="language-"], pre[class*="language-"] {
+  color:#111;
+}
+.bs-sidebar .nav .nav {
+  display: inherit;
+}
+.bs-sidebar .nav .nav > li > a {
+  color: #DDA562;
+}
+.bs-sidebar .nav .nav > li > a:hover {
+  color: #c7254e;
+  text-decoration: underline
+}
+section.secondary {
+  margin-top: 0;
+}
+.secondary .jumbotron {
+  padding-top: 0;
+  margin-top: -130px;
+}
+@media (min-width: 992px) {
+  .bs-sidebar {
+    position: static;
+    width: 330px;
+  }
+}
+.secondary pre, .secondary pre.language-bash, .secondary pre.language-javascript {
+    background: #fff;
+}
+</style></noscript>

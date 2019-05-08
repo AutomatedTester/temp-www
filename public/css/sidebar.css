@@ -1,0 +1,156 @@
+/* By default it's not affixed in mobile views, so undo that */
+.bs-sidebar.affix {
+  position: static;
+}
+
+/* First level of nav */
+.bs-sidenav {
+  margin-top: 30px;
+  /*margin-bottom: 30px;*/
+  font-size: 16px;
+}
+
+/* All levels of nav */
+.bs-sidebar .nav > li > a {
+  display: block;
+  padding: 5px 10px;
+  font-weight: 400;
+  font-size: 18px;
+  color: #c7254e;
+}
+.bs-sidebar .nav > li > a:hover,
+.bs-sidebar .nav > li > a:focus {
+  color: #444444;
+}
+.bs-sidebar .nav > .active > a,
+.bs-sidebar .nav > .active:hover > a,
+.bs-sidebar .nav > .active:focus > a {
+  font-weight: 400;
+  color: #222;
+  background: #f2f2f2;
+}
+.bs-sidenav h5 a {
+  color: #c7254e;
+  font-size: 18px;
+}
+.bs-sidenav h5:hover a {
+  color: #111
+}
+
+/* Nav: second level (shown on .active) */
+.bs-sidebar .nav .nav {
+  display: none; /* Hide by default, but at >768px, show it */
+  margin-bottom: 8px;
+  border-left:1px solid #eee;
+  margin-left:12px;
+}
+.bs-sidebar .nav .nav > li > a {
+  padding-top:    4px;
+  padding-bottom: 4px;
+  padding-left: 25px;
+  font-size: 85%;
+  color: #DDA562
+}
+.bs-sidebar .nav .nav > li.active > a {
+  color:#444
+}
+.bs-sidebar .nav .nav > li > a span.internal {
+  font-size: 90%;
+  display: inline-block;
+  margin: 0 0 5px 5px;
+  background: #f2f2f2;
+  padding: 0 2px;
+}
+
+.bs-sidebar .nav>li>a {
+  font-weight: 400;
+}
+.nav.bs-sidenav h5 {
+  margin-bottom: 2px;
+  margin-left: 11px;
+  margin-top: 15px;
+  color:#222;
+  font-weight: 400;
+}
+.nav.bs-sidenav h5:hover {
+  background: #f2f2f2;
+}
+ul.nav.bs-sidenav a:hover {
+  background: transparent;
+  background: #f2f2f2;
+  color: #222;
+}
+/* Show and affix the side nav when space allows it */
+@media (min-width: 992px) {
+  .bs-sidebar .nav > .active > ul {
+    display: block;
+  }
+  /* Widen the fixed sidebar */
+  .bs-sidebar.affix,
+  .bs-sidebar.affix-bottom {
+    width: 213px;
+  }
+  .bs-sidebar {
+    border-right:1px solid #eee;
+  }
+  .bs-sidebar.affix {
+    position: fixed; /* Undo the static from mobile first approach */
+    top: 75px;
+    bottom: 0;
+    overflow-y: auto;
+  }
+  [data-uri="/gettingstarted"] .bs-sidebar.affix, [data-uri="/guide"]  .bs-sidebar.affix{
+    bottom: 56px;
+  }
+  .bs-sidebar.affix-bottom {
+    position: absolute; /* Undo the static from mobile first approach */
+  }
+  .bs-sidebar.affix-bottom .bs-sidenav,
+  .bs-sidebar.affix .bs-sidenav {
+    margin-top: 0;
+    padding-bottom: 15px;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1200px) {
+  /* Widen the fixed sidebar again */
+  .bs-sidebar.affix-bottom,
+  .bs-sidebar.affix {
+    width: 330px;
+  }
+
+  .bs-sidenav {
+    font-size: 18px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+}
+.bs-sidebar.affix-top {
+  margin-bottom: 50px;
+}
+/*.docs-section h3[id] {*/
+  /*border-bottom: 1px solid #ccc;*/
+  /*line-height: 1.5;*/
+/*}*/
+/*.docs-section h3[id] a:hover {*/
+  /*text-decoration: none;*/
+/*}*/
+/*.docs-section h3[id] a:hover code{*/
+  /*color:#111;*/
+/*}*/
+/*.docs-section h2[id],*/
+/*.docs-section h3[id],*/
+/*.docs-section h4[id] {*/
+  /*padding-top: 60px; !* this is a hack to fix the anchor scrolling *!*/
+  /*padding-top: -60px;*/
+  /*margin-top: -30px;*/
+/*}*/
+
+/*.docs-section h2[id] {*/
+  /*margin-top: 0;*/
+
+/*}*/
+/*.page-header {*/
+  /*border-bottom-color: #aaaccc;*/
+/*}*/

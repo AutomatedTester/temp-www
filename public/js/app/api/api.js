@@ -1,5 +1,4 @@
 domino.controllers.define('api', function($api, $protocol) {
-
   this.indexAction = function() {
     //this.$view.methods = $api.getAll();
     //this.$view.api = $protocol.getAll();
@@ -18,7 +17,6 @@ domino.controllers.define('api', function($api, $protocol) {
           }
         }
       }
-
     });
 
     this.$view.methodName = this.params.method_name;
@@ -47,8 +45,5 @@ domino.controllers.define('blog', function($api, $protocol) {
   this.init = function() {
     window.location.href = '/blog';
   };
-
-  this.indexAction = function() {
-
-  };
+  this.indexAction = function() {};
 });
