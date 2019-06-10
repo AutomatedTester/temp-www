@@ -64,9 +64,6 @@ html, body {
   background: none;
 }
 
-.active {
-  color: #fff !important;
-}
 .navbar-default {
   height: 65px;
   background: none;
@@ -413,9 +410,7 @@ pre[class*="language-javascript"]:before{
     z-index: 100;
   }
 }
-#navbartop {
-  background: #222;
-}
+
 @media (max-width: 992px), screen and (orientation: portrait) {
   img.code-top {
     display: none;

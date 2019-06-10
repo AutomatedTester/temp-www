@@ -281,7 +281,7 @@
       "optional" : true
     }
   ],
-  "usage": "browser.assert.urlEquals('http://www.google.com');",
+  "usage": "browser.assert.urlEquals('https://www.google.com');",
   "since": "v0.5.1"
 },
 {

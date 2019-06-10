@@ -1,10 +1,10 @@
 <script src="https://code.jquery.com/jquery.js"></script>
-<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="/js/third-party/prism.js"></script>
 
 <script src="/js/third-party/underscore-min.js"></script>
 <script src="/js/third-party/swig.min.js"></script>
-<script src="/js/third-party/dominomvc-0.1.0.min.js"></script>
+<script src="/js/third-party/dominomvc-0.1.0.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <script src="/js/app/views.js"></script>
 <script src="/js/app/api/api.js"></script>
@@ -24,5 +24,13 @@
       return;
     }
     window.location.href = this.value;
+  });
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script type="text/javascript"> docsearch({
+    apiKey: '37c74f46d0eab021bc430dc17ebfc089',
+    indexName: 'nightwatchjs',
+    inputSelector: 'input[type=search].search-input',
+    debug: false
   });
 </script>

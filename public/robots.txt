@@ -1,1 +1,1 @@
-Sitemap: http://nightwatchjs.org/sitemap.xml
+Sitemap: https://nightwatchjs.org/sitemap.xml
