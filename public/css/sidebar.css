@@ -90,9 +90,7 @@ ul.nav.bs-sidenav a:hover {
   .bs-sidebar.affix-bottom {
     width: 213px;
   }
-  .bs-sidebar {
-    border-right:1px solid #eee;
-  }
+
   .bs-sidebar.affix {
     position: fixed; /* Undo the static from mobile first approach */
     top: 75px;

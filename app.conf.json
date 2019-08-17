@@ -2,7 +2,7 @@
   "NIGHTWATCH_LIB_PATH": "./node_modules/nightwatch/lib/",
   "NIGHTWATCH_DOCS_PATH": "./node_modules/nightwatch-docs/",
   "OUTPUT_FOLDER": "./output",
-  "NIGHTWATCH_VERSION": "1.1.3",
+  "NIGHTWATCH_VERSION": "1.1.13",
 
   "docsRepoUrl": "https://github.com/nightwatchjs/nightwatch-docs/",
   "apiRepoUrl": "https://github.com/nightwatchjs/nightwatch/",

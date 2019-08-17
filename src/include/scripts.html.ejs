@@ -1,10 +1,10 @@
 <script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="/js/third-party/prism.js"></script>
 
 <script src="/js/third-party/underscore-min.js"></script>
 <script src="/js/third-party/swig.min.js"></script>
-<script src="/js/third-party/dominomvc-0.1.0.js"></script>
-<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="/js/third-party/dominomvc-0.1.0.min.js"></script>
 
 <script src="/js/app/views.js"></script>
 <script src="/js/app/api/api.js"></script>
@@ -19,11 +19,15 @@
   ga('create', 'UA-92784163-1', 'auto');
   ga('send', 'pageview');
   $('.version-select-dropdown').on('change', '.version-dropdown', function(e) {
-    if (this.value == '/v0.9.21/') {
+    if (this.value == '1.1.13') {
+      window.location.href = 'https://v11.nightwatchjs.org';
+      return;
+    }
+    if (this.value == '0.9.21') {
       window.location.href = 'http://v09.nightwatchjs.org';
       return;
     }
-    window.location.href = this.value;
+
   });
 </script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>

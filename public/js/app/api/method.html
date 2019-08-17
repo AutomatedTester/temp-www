@@ -52,17 +52,19 @@
               <h5><a href="https://nightwatchjs.org/api#elementinteraction-headline">Element Interaction</a></h5>
             </li>
 
-            <li name="click" {% if method.name == 'click' %}class="active"{% endif %}><a href="/api/click.html">click</a></li>
             <li name="clearValue" {% if method.name == 'clearValue' %}class="active"{% endif %}><a href="/api/clearValue.html">clearValue</a></li>
+            <li name="click" {% if method.name == 'click' %}class="active"{% endif %}><a href="/api/click.html">click</a></li>
+            <li name="keys" {% if method.name == 'keys' %}class="active"{% endif %}><a href="/api/keys.html">keys</a></li>
             <li name="moveToElement" {% if method.name == 'moveToElement' %}class="active"{% endif %}><a href="/api/moveToElement.html">moveToElement</a></li>
             <li name="setValue" {% if method.name == 'setValue' %}class="active"{% endif %}><a href="/api/setValue.html">setValue</a></li>
             <li name="submitForm" {% if method.name == 'submitForm' %}class="active"{% endif %}><a href="/api/submitForm.html">submitForm</a></li>
-            <li name="keys" {% if method.name == 'keys' %}class="active"{% endif %}><a href="/api/keys.html">keys</a></li>
+
 
             <li>
               <h5><a href="https://nightwatchjs.org/api#elementstate-headline">Element State</a></h5>
             </li>
 
+            <li name="elementActive" {% if method.name == 'elementActive' %}class="active"{% endif %}><a href="/api/elementActive.html">elementActive</a></li>
             <li name="getAttribute" {% if method.name == 'getAttribute' %}class="active"{% endif %}><a href="/api/getAttribute.html">getAttribute</a></li>
             <li name="getCssProperty" {% if method.name == 'getCssProperty' %}class="active"{% endif %}><a href="/api/getCssProperty.html">getCssProperty</a></li>
             <li name="getElementSize" {% if method.name == 'getElementSize' %}class="active"{% endif %}><a href="/api/getElementSize.html">getElementSize</a></li>
@@ -79,57 +81,57 @@
             <li name="getLocationInView" {% if method.name == 'getLocationInView' %}class="active"{% endif %}><a href="/api/getLocationInView.html">getLocationInView</a></li>
 
             <li>
-              <h5><a href="#elementinternal-headline">Protocol Actions</a></h5>
+              <h5><a href="https://nightwatchjs.org/api#elementinternal-headline">Protocol Actions</a></h5>
             </li>
-            <li><a href="#elementIdAttribute" {% if method.name == 'getTitle' %}class="active"{% endif %}>elementIdAttribute</a></li>
-            <li><a href="#elementIdClear" {% if method.name == 'elementIdClear' %}class="active"{% endif %}>elementIdClear</a></li>
-            <li><a href="#elementIdClick" {% if method.name == 'elementIdClick' %}class="active"{% endif %}>elementIdClick</a></li>
-            <li><a href="#elementIdCssProperty" {% if method.name == 'elementIdCssProperty' %}class="active"{% endif %}>elementIdCssProperty</a></li>
-            <li><a href="#elementIdDisplayed" {% if method.name == 'elementIdDisplayed' %}class="active"{% endif %}>elementIdDisplayed</a></li>
-            <li><a href="#elementIdEnabled" {% if method.name == 'elementIdEnabled' %}class="active"{% endif %}>elementIdEnabled</a></li>
-            <li><a href="#elementIdLocationInView" {% if method.name == 'elementIdLocationInView' %}class="active"{% endif %}>elementIdLocationInView</a></li>
-            <li><a href="#elementIdLocation" {% if method.name == 'elementIdLocation' %}class="active"{% endif %}>elementIdLocation</a></li>
-            <li><a href="#elementIdName" {% if method.name == 'elementIdName' %}class="active"{% endif %}>elementIdName</a></li>
-            <li><a href="#elementIdSelected" {% if method.name == 'elementIdSelected' %}class="active"{% endif %}>elementIdSelected</a></li>
-            <li><a href="#elementIdSize" {% if method.name == 'elementIdSize' %}class="active"{% endif %}>elementIdSize</a></li>
-            <li><a href="#elementIdText" {% if method.name == 'elementIdText' %}class="active"{% endif %}>elementIdText</a></li>
-            <li><a href="#elementIdValue" {% if method.name == 'elementIdValue' %}class="active"{% endif %}>elementIdValue</a></li>
-            <li><a href="#submit" {% if method.name == 'submit' %}class="active"{% endif %}>submit</a></li>
+            <li name="elementIdAttribute"><a href="/api/elementIdAttribute.html" {% if method.name == 'elementIdAttribute' %}class="active"{% endif %}>elementIdAttribute</a></li>
+            <li name="elementIdClear"><a href="/api/elementIdClear.html" {% if method.name == 'elementIdClear' %}class="active"{% endif %}>elementIdClear</a></li>
+            <li name="elementIdClick"><a href="/api/elementIdClick.html" {% if method.name == 'elementIdClick' %}class="active"{% endif %}>elementIdClick</a></li>
+            <li name="elementIdCssProperty"><a href="/api/elementIdCssProperty.html" {% if method.name == 'elementIdCssProperty' %}class="active"{% endif %}>elementIdCssProperty</a></li>
+            <li name="elementIdDisplayed"><a href="/api/elementIdDisplayed.html" {% if method.name == 'elementIdDisplayed' %}class="active"{% endif %}>elementIdDisplayed</a></li>
+            <li name="elementIdEnabled"><a href="/api/elementIdEnabled.html" {% if method.name == 'elementIdEnabled' %}class="active"{% endif %}>elementIdEnabled</a></li>
+            <li name="elementIdLocation"><a href="/api/elementIdLocation.html" {% if method.name == 'elementIdLocation' %}class="active"{% endif %}>elementIdLocation</a></li>
+            <li name="elementIdLocationInView"><a href="/api/elementIdLocationInView.html" {% if method.name == 'elementIdLocationInView' %}class="active"{% endif %}>elementIdLocationInView</a></li>
+            <li name="elementIdName"><a href="/api/elementIdName.html" {% if method.name == 'elementIdName' %}class="active"{% endif %}>elementIdName</a></li>
+            <li name="elementIdSelected"><a href="/api/elementIdSelected.html" {% if method.name == 'elementIdSelected' %}class="active"{% endif %}>elementIdSelected</a></li>
+            <li name="elementIdSize"><a href="/api/elementIdSize.html" {% if method.name == 'elementIdSize' %}class="active"{% endif %}>elementIdSize</a></li>
+            <li name="elementIdText"><a href="/api/elementIdText.html" {% if method.name == 'elementIdText' %}class="active"{% endif %}>elementIdText</a></li>
+            <li name="elementIdValue"><a href="/api/elementIdValue.html" {% if method.name == 'elementIdValue' %}class="active"{% endif %}>elementIdValue</a></li>
+            <li name="submit"><a href="/api/submit.html" {% if method.name == 'submit' %}class="active"{% endif %}>submit</a></li>
 
             <li>
               <h5><a href="https://nightwatchjs.org/api#document-headline">Document Handling</a></h5>
             </li>
-            <li name="injectScript" {% if method.name == 'injectScript' %}class="active"{% endif %}><a href="/api/injectScript.html">injectScript</a></li>
             <li name="execute" {% if method.name == 'execute' %}class="active"{% endif %}><a href="/api/execute.html">execute</a></li>
             <li name="executeAsync" {% if method.name == 'executeAsync' %}class="active"{% endif %}><a href="/api/executeAsync.html">executeAsync</a></li>
+            <li name="injectScript" {% if method.name == 'injectScript' %}class="active"{% endif %}><a href="/api/injectScript.html">injectScript</a></li>
             <li name="source" {% if method.name == 'source' %}class="active"{% endif %}><a href="/api/source.html">source</a></li>
 
             <li>
               <h5><a href="https://nightwatchjs.org/api#sessions-headline">Session Related</a></h5>
             </li>
-            <li name="getLogTypes" {% if method.name == 'getLogTypes' %}class="active"{% endif %}><a href="/api/getLogTypes.html">getLogTypes</a></li>
-            <li name="getLog" {% if method.name == 'getLog' %}class="active"{% endif %}><a href="/api/getLog.html">getLog</a></li>
-            <li name="isLogAvailable" {% if method.name == 'isLogAvailable' %}class="active"{% endif %}><a href="/api/isLogAvailable.html">isLogAvailable</a></li>
             <li name="end" {% if method.name == 'end' %}class="active"{% endif %}><a href="/api/end.html">end</a></li>
+            <li name="getLog" {% if method.name == 'getLog' %}class="active"{% endif %}><a href="/api/getLog.html">getLog</a></li>
+            <li name="getLogTypes" {% if method.name == 'getLogTypes' %}class="active"{% endif %}><a href="/api/getLogTypes.html">getLogTypes</a></li>
+            <li name="isLogAvailable" {% if method.name == 'isLogAvailable' %}class="active"{% endif %}><a href="/api/isLogAvailable.html">isLogAvailable</a></li>
             <li name="session" {% if method.name == 'session' %}class="active"{% endif %}><a href="/api/session.html">session</a></li>
+            <li name="sessionLog" {% if method.name == 'sessionLog' %}class="active"{% endif %}><a href="/api/sessionLog.html">sessionLog</a></li>
+            <li name="sessionLogTypes" {% if method.name == 'sessionLogTypes' %}class="active"{% endif %}><a href="/api/sessionLogTypes.html">sessionLogTypes</a></li>
             <li name="sessions" {% if method.name == 'sessions' %}class="active"{% endif %}><a href="/api/sessions.html">sessions</a></li>
+            <li name="status" {% if method.name == 'status' %}class="active"{% endif %}><a href="/api/status.html">status</a></li>
             <li name="timeouts" {% if method.name == 'timeouts' %}class="active"{% endif %}><a href="/api/timeouts.html">timeouts</a></li>
             <li name="timeoutsAsyncScript" {% if method.name == 'timeoutsAsyncScript' %}class="active"{% endif %}><a href="/api/timeoutsAsyncScript.html">timeoutsAsyncScript</a></li>
             <li name="timeoutsImplicitWait" {% if method.name == 'timeoutsImplicitWait' %}class="active"{% endif %}><a href="/api/timeoutsImplicitWait.html">timeoutsImplicitWait</a></li>
-            <li name="status" {% if method.name == 'status' %}class="active"{% endif %}><a href="/api/status.html">status</a></li>
-            <li name="sessionLog" {% if method.name == 'sessionLog' %}class="active"{% endif %}><a href="/api/sessionLog.html">sessionLog</a></li>
-            <li name="sessionLogTypes" {% if method.name == 'sessionLogTypes' %}class="active"{% endif %}><a href="/api/sessionLogTypes.html">sessionLogTypes</a></li>
 
             <li>
               <h5><a href="https://nightwatchjs.org/api#navigation-headline">Navigation</a></h5>
             </li>
 
-            <li name="getTitle" {% if method.name == 'getTitle' %}class="active"{% endif %}><a href="/api/getTitle.html">getTitle</a></li>
-            <li name="init" {% if method.name == 'init' %}class="active"{% endif %}><a href="/api/init.html">init</a></li>
-            <li name="urlHash" {% if method.name == 'urlHash' %}class="active"{% endif %}><a href="/api/urlHash.html">urlHash</a></li>
-            <li name="url" {% if method.name == 'url' %}class="active"{% endif %}><a href="/api/url.html">url</a></li>
             <li name="back" {% if method.name == 'back' %}class="active"{% endif %}><a href="/api/back.html">back</a></li>
             <li name="forward" {% if method.name == 'forward' %}class="active"{% endif %}><a href="/api/forward.html">forward</a></li>
+            <li name="getTitle" {% if method.name == 'getTitle' %}class="active"{% endif %}><a href="/api/getTitle.html">getTitle</a></li>
+            <li name="init" {% if method.name == 'init' %}class="active"{% endif %}><a href="/api/init.html">init</a></li>
+            <li name="url" {% if method.name == 'url' %}class="active"{% endif %}><a href="/api/url.html">url</a></li>
+            <li name="urlHash" {% if method.name == 'urlHash' %}class="active"{% endif %}><a href="/api/urlHash.html">urlHash</a></li>
             <li name="refresh" {% if method.name == 'refresh' %}class="active"{% endif %}><a href="/api/refresh.html">refresh</a></li>
             <li name="title" {% if method.name == 'title' %}class="active"{% endif %}><a href="/api/title.html">title</a></li>
 
@@ -137,29 +139,44 @@
               <h5><a href="https://nightwatchjs.org/api#contexts-headline">Window Related</a></h5>
             </li>
 
-            <li name="switchWindow" {% if method.name == 'switchWindow' %}class="active"{% endif %}><a href="/api/switchWindow.html">switchWindow</a></li>
-            <li name="resizeWindow" {% if method.name == 'resizeWindow' %}class="active"{% endif %}><a href="/api/resizeWindow.html">resizeWindow</a></li>
-            <li name="setWindowPosition" {% if method.name == 'setWindowPosition' %}class="active"{% endif %}><a href="/api/setWindowPosition.html">setWindowPosition</a></li>
-            <li name="maximizeWindow" {% if method.name == 'maximizeWindow' %}class="active"{% endif %}><a href="/api/maximizeWindow.html">maximizeWindow</a></li>
             <li name="closeWindow" {% if method.name == 'closeWindow' %}class="active"{% endif %}><a href="/api/closeWindow.html">closeWindow</a></li>
+            <li name="fullscreenWindow" {% if method.name == 'fullscreenWindow' %}class="active"{% endif %}><a href="/api/fullscreenWindow.html">fullscreenWindow</a></li>
+            <li name="getWindowPosition" {% if method.name == 'getWindowPosition' %}class="active"{% endif %}><a href="/api/getWindowPosition.html">getWindowPosition</a></li>
+            <li name="getWindowRect" {% if method.name == 'getWindowRect' %}class="active"{% endif %}><a href="/api/getWindowRect.html">getWindowRect</a></li>
+            <li name="getWindowSize" {% if method.name == 'getWindowSize' %}class="active"{% endif %}><a href="/api/getWindowSize.html">getWindowSize</a></li>
+            <li name="maximizeWindow" {% if method.name == 'maximizeWindow' %}class="active"{% endif %}><a href="/api/maximizeWindow.html">maximizeWindow</a></li>
+            <li name="minimizeWindow" {% if method.name == 'minimizeWindow' %}class="active"{% endif %}><a href="/api/minimizeWindow.html">minimizeWindow</a></li>
+            <li name="openNewWindow" {% if method.name == 'openNewWindow' %}class="active"{% endif %}><a href="/api/openNewWindow.html">openNewWindow</a></li>
+            <li name="resizeWindow" {% if method.name == 'resizeWindow' %}class="active"{% endif %}><a href="/api/resizeWindow.html">resizeWindow</a></li>
+
+            <li name="setWindowPosition" {% if method.name == 'setWindowPosition' %}class="active"{% endif %}><a href="/api/setWindowPosition.html">setWindowPosition</a></li>
+            <li name="setWindowRect" {% if method.name == 'setWindowRect' %}class="active"{% endif %}><a href="/api/setWindowRect.html">setWindowRect</a></li>
+            <li name="setWindowSize" {% if method.name == 'setWindowSize' %}class="active"{% endif %}><a href="/api/setWindowSize.html">setWindowSize</a></li>
+            <li name="switchWindow" {% if method.name == 'switchWindow' %}class="active"{% endif %}><a href="/api/switchWindow.html">switchWindow</a></li>
+
             <li name="window" {% if method.name == 'window' %}class="active"{% endif %}><a href="/api/window.html">window</a></li>
             <li name="windowHandle" {% if method.name == 'windowHandle' %}class="active"{% endif %}><a href="/api/windowHandle.html">windowHandle</a></li>
             <li name="windowHandles" {% if method.name == 'windowHandles' %}class="active"{% endif %}><a href="/api/windowHandles.html">windowHandles</a></li>
             <li name="windowMaximize" {% if method.name == 'windowMaximize' %}class="active"{% endif %}><a href="/api/windowMaximize.html">windowMaximize</a></li>
             <li name="windowPosition" {% if method.name == 'windowPosition' %}class="active"{% endif %}><a href="/api/windowPosition.html">windowPosition</a></li>
             <li name="windowSize" {% if method.name == 'windowSize' %}class="active"{% endif %}><a href="/api/windowSize.html">windowSize</a></li>
+
+            <li>
+              <h5><a href="https://nightwatchjs.org/api#frames-headline">Frames</a></h5>
+            </li>
+
             <li name="frame" {% if method.name == 'frame' %}class="active"{% endif %}><a href="/api/frame.html">frame</a></li>
             <li name="frameParent" {% if method.name == 'frameParent' %}class="active"{% endif %}><a href="/api/frameParent.html">frameParent</a></li>
 
             <li>
               <h5><a href="https://nightwatchjs.org/api#cookies-headline">Cookies</a></h5>
             </li>
+            <li name="cookie" {% if method.name == 'cookie' %}class="active"{% endif %}><a href="/api/cookie.html">cookie</a></li>
+            <li name="deleteCookie" {% if method.name == 'deleteCookie' %}class="active"{% endif %}><a href="/api/deleteCookie.html">deleteCookie</a></li>
+            <li name="deleteCookies" {% if method.name == 'deleteCookies' %}class="active"{% endif %}><a href="/api/deleteCookies.html">deleteCookies</a></li>
             <li name="getCookies" {% if method.name == 'getCookies' %}class="active"{% endif %}><a href="/api/getCookies.html">getCookies</a></li>
             <li name="getCookie" {% if method.name == 'getCookie' %}class="active"{% endif %}><a href="/api/getCookie.html">getCookie</a></li>
             <li name="setCookie" {% if method.name == 'setCookie' %}class="active"{% endif %}><a href="/api/setCookie.html">setCookie</a></li>
-            <li name="deleteCookie" {% if method.name == 'deleteCookie' %}class="active"{% endif %}><a href="/api/deleteCookie.html">deleteCookie</a></li>
-            <li name="deleteCookies" {% if method.name == 'deleteCookies' %}class="active"{% endif %}><a href="/api/deleteCookies.html">deleteCookies</a></li>
-            <li name="cookie" {% if method.name == 'cookie' %}class="active"{% endif %}><a href="/api/cookie.html">cookie</a></li>
 
             <li>
               <h5><a href="https://nightwatchjs.org/api#useractions-headline">User Actions</a></h5>
@@ -200,9 +217,10 @@
             </li>
 
             <li name="pause" {% if method.name == 'pause' %}class="active"{% endif %}><a href="/api/pause.html">pause</a></li>
+            <li name="perform" {% if method.name == 'perform' %}class="active"{% endif %}><a href="/api/perform.html">perform</a></li>
             <li name="useCss" {% if method.name == 'useCss' %}class="active"{% endif %}><a href="/api/useCss.html">useCss</a></li>
             <li name="useXpath" {% if method.name == 'useXpath' %}class="active"{% endif %}><a href="/api/useXpath.html">useXpath</a></li>
-            <li name="perform" {% if method.name == 'perform' %}class="active"{% endif %}><a href="/api/perform.html">perform</a></li>
+
           </ul>
         </li>
       </ul>

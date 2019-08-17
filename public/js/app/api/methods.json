@@ -36,7 +36,7 @@
   "descr": "Checks if the given attribute of an element has the expected value.",
   "parameters":[
     {
-      "name" : "cssSelector",
+      "name" : "selector",
       "type" : "string",
       "descr" : "The CSS selector used to locate the element.",
       "optional" : false
@@ -67,7 +67,7 @@
   "descr": "Checks if the given element contains the specified text.",
   "parameters":[
     {
-      "name" : "cssSelector",
+      "name" : "selector",
       "type" : "string",
       "descr" : "The CSS selector used to locate the element.",
       "optional" : false
@@ -92,9 +92,9 @@
   "descr": "Checks if the given element has the specified CSS class.",
   "parameters":[
     {
-      "name" : "cssSelector",
+      "name" : "selector",
       "type" : "string",
-      "descr" : "The CSS selector used to locate the element.",
+      "descr" : "TThe selector (CSS / Xpath) used to locate the element. Can either be a string or an object which specifies <a href=\"https://nightwatchjs.org/guide#element-properties\">element properties</a>.",
       "optional" : false
     },
     {
@@ -117,9 +117,9 @@
   "descr": "Checks if the given element does not have the specified CSS class.",
   "parameters":[
     {
-      "name" : "cssSelector",
+      "name" : "selector",
       "type" : "string",
-      "descr" : "The CSS selector used to locate the element.",
+      "descr" : "The selector (CSS / Xpath) used to locate the element. Can either be a string or an object which specifies <a href=\"https://nightwatchjs.org/guide#element-properties\">element properties</a>.",
       "optional" : false
     },
     {
@@ -142,9 +142,9 @@
   "descr": "Checks if the specified css property of a given element has the expected value.",
   "parameters":[
     {
-      "name" : "cssSelector",
+      "name" : "selector",
       "type" : "string",
-      "descr" : "The CSS selector used to locate the element.",
+      "descr" : "The selector (CSS / Xpath) used to locate the element. Can either be a string or an object which specifies <a href=\"https://nightwatchjs.org/guide#element-properties\">element properties</a>.",
       "optional" : false
     },
     {
@@ -173,9 +173,9 @@
   "descr": "Checks if the given element exists in the DOM.",
   "parameters":[
     {
-      "name" : "cssSelector",
+      "name" : "selector",
       "type" : "string",
-      "descr" : "The CSS selector used to locate the element.",
+      "descr" : "The selector (CSS / Xpath) used to locate the element. Can either be a string or an object which specifies <a href=\"https://nightwatchjs.org/guide#element-properties\">element properties</a>.",
       "optional" : false
     },
     {
@@ -192,9 +192,9 @@
   "descr": "Checks if the given element does not exist in the DOM.",
   "parameters":[
     {
-      "name" : "cssSelector",
+      "name" : "selector",
       "type" : "string",
-      "descr" : "The CSS selector used to locate the element.",
+      "descr" : "The selector (CSS / Xpath) used to locate the element. Can either be a string or an object which specifies <a href=\"https://nightwatchjs.org/guide#element-properties\">element properties</a>.",
       "optional" : false
     },
     {
@@ -211,9 +211,9 @@
   "descr": "Checks if the given element is not visible on the page.",
   "parameters":[
     {
-      "name" : "cssSelector",
+      "name" : "selector",
       "type" : "string",
-      "descr" : "The CSS selector used to locate the element.",
+      "descr" : "The selector (CSS / Xpath) used to locate the element. Can either be a string or an object which specifies <a href=\"https://nightwatchjs.org/guide#element-properties\">element properties</a>.",
       "optional" : false
     },
     {
@@ -261,7 +261,7 @@
       "optional" : true
     }
   ],
-  "usage": "browser.assert.urlContains('google');",
+  "usage": "browser.assert.urlContains('nightwatchjs.org');",
   "since": "v0.5.1"
 },
 {
@@ -289,9 +289,9 @@
   "descr": "Checks if the given form element's value equals the expected value.",
   "parameters":[
     {
-      "name" : "cssSelector",
+      "name" : "selector",
       "type" : "string",
-      "descr" : "The CSS selector used to locate the element.",
+      "descr" : "The selector (CSS / Xpath) used to locate the element. Can either be a string or an object which specifies <a href=\"https://nightwatchjs.org/guide#element-properties\">element properties</a>.",
       "optional" : false
     },
     {
@@ -314,9 +314,9 @@
   "descr": "Checks if the given form element's value contains the expected value.",
   "parameters":[
     {
-      "name" : "cssSelector",
+      "name" : "selector",
       "type" : "string",
-      "descr" : "The CSS selector used to locate the element.",
+      "descr" : "The selector (CSS / Xpath) used to locate the element. Can either be a string or an object which specifies <a href=\"https://nightwatchjs.org/guide#element-properties\">element properties</a>.",
       "optional" : false
     },
     {
@@ -339,9 +339,9 @@
   "descr": "Checks if the given element is visible on the page.",
   "parameters":[
     {
-      "name" : "cssSelector",
+      "name" : "selector",
       "type" : "string",
-      "descr" : "The CSS selector used to locate the element.",
+      "descr" : "The selector (CSS / Xpath) used to locate the element. Can either be a string or an object which specifies <a href=\"https://nightwatchjs.org/guide#element-properties\">element properties</a>.",
       "optional" : false
     },
     {
@@ -351,7 +351,7 @@
       "optional" : true
     }
   ],
-  "usage": "browser.assert.visible(\".should_be_visible\");"
+  "usage": "browser.assert.visible('.should_be_visible');\n  browser.assert.visible({selector: '.should_be_visible'});\n  browser.assert.visible({selector: '.should_be_visible', supressNotFoundErrors: true});"
 }
 ]
 }

@@ -152,7 +152,6 @@ section.secondary h2 {
   color: #333;
   padding: 0;
   margin: 30px 0 10px;
-  font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding-top: 65px;
   margin-top: -27px;
   font-weight: 300;
@@ -161,7 +160,7 @@ section.secondary h2 {
 
 section.secondary h3,
 .secondary h4 {
-  font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;*/
 }
 section.secondary h3 span{
   background: #f2f2f2;
@@ -320,7 +319,109 @@ a:hover .mat-icon {
 .search-input:focus {
   width: 200px;
 }
+[data-uri="/"] body {
+  padding-top: 0;
+}
+[data-uri="/"] .parallax {
+  margin-top: 0;
+}
 
+[data-uri="/"] body > .container.navigation {
+  display: none;
+}
+
+[data-uri="/"] body > .parallax {
+  display: none;
+}
+
+[data-uri="/"] body > footer {
+  display: none;
+}
+
+#navigation {
+  display: none;
+}
+
+[data-uri="/"] #navigation {
+  display: block;
+}
+
+section[data-page-uri] {
+  display: none;
+}
+
+[data-uri="/"] section[data-page-uri="/"],
+[data-uri="/guide"] section[data-page-uri="/guide"],
+[data-uri="/api"] section[data-page-uri="/api"],
+[data-uri="/blog"] section[data-page-uri="/blog"],
+[data-uri="/contact"] section[data-page-uri="/contact"],
+[data-uri="/cloud"] section[data-page-uri="/cloud"],
+[data-uri="/gettingstarted"] section[data-page-uri="/gettingstarted"],
+[data-uri="/releases"] section[data-page-uri="/releases"],
+[data-uri="/api/$method"] section[data-page-uri="/api/$method"] {
+  display: block;
+}
+
+[data-uri="/"] .parallax {
+  height: 100vh;
+}
+
+[data-uri="/guide"] .parallax,
+[data-uri="/api"] .parallax,
+[data-uri="/blog"] .parallax,
+[data-uri="/contact"] .parallax,
+[data-uri="/cloud"] .parallax,
+[data-uri="/gettingstarted"] .parallax,
+[data-uri="/releases"] .parallax,
+[data-uri="/api/$method"] .parallax {
+  height: 21vh;
+}
+
+[data-uri="/guide"] .secondary,
+[data-uri="/api"] .secondary,
+[data-uri="/blog"] .secondary,
+[data-uri="/contact"] .secondary,
+[data-uri="/releases"] .secondary,
+[data-uri="/gettingstarted"] .secondary,
+[data-uri="/api/$method"] .secondary {
+  margin-top: -174px;
+}
+
+[data-uri="/"] .top-moon {
+  background-size: 100%;
+  background-position: calc(50% + 650px) -600px;
+}
+
+[data-uri="/guide"] .top-moon,
+[data-uri="/api"] .top-moon,
+[data-uri="/blog"] .top-moon,
+[data-uri="/contact"] .top-moon,
+[data-uri="/releases"] .top-moon,
+[data-uri="/gettingstarted"] .top-moon,
+[data-uri="/api/$method"] .top-moon {
+  background-size: 1200px;
+  background-position: calc(50% + 650px) -450px;
+}
+
+[data-uri="/"] .top-clouds {
+  background-size: 100%;
+  background-position: calc(50% - 100px) 100px;
+}
+
+[data-uri="/guide"] .top-clouds,
+[data-uri="/api"] .top-clouds,
+[data-uri="/blog"] .top-clouds,
+[data-uri="/contact"] .top-clouds,
+[data-uri="/releases"] .top-clouds,
+[data-uri="/gettingstarted"] .top-clouds,
+[data-uri="/api/$method"] .top-clouds {
+  background-size: 80%;
+  background-position: calc(101% - 100px) 48px;
+}
+
+[data-uri="/api"] footer {
+  display: none;
+}
 @media (max-width: 990px) {
 
 }
@@ -481,6 +582,25 @@ ul.features {
   background-size: 100%;
 }
 
+#api-container .api-container {
+  padding: 0;
+  margin: 0 -15px;
+}
+#api-container .api-container .docs-section {
+  padding: 15px;
+}
+#api-container .api-container .docs-section.commands {
+  padding: 0;
+}
+#api-container .api-container .docs-section.commands .page-header{
+  margin-left: -15px;
+}
+#api-container .api-container .docs-section.commands .page-header h2{
+  padding-left: 15px;
+}
+.docs-section code {
+  padding: 0;
+}
 .page-header {
   margin: 25px 0 10px;
 }
@@ -490,10 +610,10 @@ ul.features {
 }
 .docs-section .page-header h2 {
   padding-top: 78px;
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 300;
   border-bottom: 1px solid #ccc;
-  font-family: 'Source Sans Pro', sans-serif;
+  /*font-family: 'Source Sans Pro', sans-serif;*/
 }
 .docs-section h3 {
   padding-top: 78px;
@@ -560,8 +680,8 @@ span.since {
 }
 .apimethod h3 a {
   color: #DDA562;
-  font-weight: 400;
-  padding: 2px 5px;
+  font-weight: 300;
+  padding: 2px 8px;
   font-size: 32px;
 }
 
@@ -574,6 +694,33 @@ span.since {
 .assertions-api .apimethod h4 {
   border-bottom: 1px solid #ccc;
 }
+.api-container .content {
+  margin-top: -70px;
+  padding-top: 70px;
+  padding-left: 30px;
+  padding-right: 10px;
+}
+
+.apimethod h3 {
+  padding-left: 10px;
+  padding-bottom: 5px;
+}
+
+.apimethod .content p.see-more {
+  text-align: right;
+}
+.apimethod .content p code {
+
+}
+
+.apimethod h5 {
+  font-weight: 400;
+  font-size: 22px;
+}
+.apimethod .table-responsive th {
+  font-weight: 500;
+}
+
 /*
 .commands .apimethod a::after,
 .protocolcommands .apimethod a::after {
@@ -1141,7 +1288,12 @@ code {
   background-color: #F1F1F1;
 }
 
-.sample-test pre[class*="language-"], pre[class*="language-"] .default-theme {
+
+.sample-test pre:not([class*="language-javascript"]) code[class*="language-javascript"] {
+  color: #000111;
+}
+.sample-test pre[class*="language-"],
+pre[class*="language-"] .default-theme {
   color: #999;
 }
 pre[class*="language-"], pre[class*="language-"] .default-theme {
