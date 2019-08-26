@@ -24,13 +24,6 @@ body {
   overflow-y: auto;
 }
 
-footer {
-  margin-top: 20px;
-  padding: 15px 0;
-  color: #444444;
-  font-size: 14px;
-}
-
 select.version-dropdown {
   background: transparent;
   width:65px;
@@ -319,6 +312,7 @@ a:hover .mat-icon {
 .search-input:focus {
   width: 200px;
 }
+
 [data-uri="/"] body {
   padding-top: 0;
 }
@@ -346,82 +340,7 @@ a:hover .mat-icon {
   display: block;
 }
 
-section[data-page-uri] {
-  display: none;
-}
 
-[data-uri="/"] section[data-page-uri="/"],
-[data-uri="/guide"] section[data-page-uri="/guide"],
-[data-uri="/api"] section[data-page-uri="/api"],
-[data-uri="/blog"] section[data-page-uri="/blog"],
-[data-uri="/contact"] section[data-page-uri="/contact"],
-[data-uri="/cloud"] section[data-page-uri="/cloud"],
-[data-uri="/gettingstarted"] section[data-page-uri="/gettingstarted"],
-[data-uri="/releases"] section[data-page-uri="/releases"],
-[data-uri="/api/$method"] section[data-page-uri="/api/$method"] {
-  display: block;
-}
-
-[data-uri="/"] .parallax {
-  height: 100vh;
-}
-
-[data-uri="/guide"] .parallax,
-[data-uri="/api"] .parallax,
-[data-uri="/blog"] .parallax,
-[data-uri="/contact"] .parallax,
-[data-uri="/cloud"] .parallax,
-[data-uri="/gettingstarted"] .parallax,
-[data-uri="/releases"] .parallax,
-[data-uri="/api/$method"] .parallax {
-  height: 21vh;
-}
-
-[data-uri="/guide"] .secondary,
-[data-uri="/api"] .secondary,
-[data-uri="/blog"] .secondary,
-[data-uri="/contact"] .secondary,
-[data-uri="/releases"] .secondary,
-[data-uri="/gettingstarted"] .secondary,
-[data-uri="/api/$method"] .secondary {
-  margin-top: -174px;
-}
-
-[data-uri="/"] .top-moon {
-  background-size: 100%;
-  background-position: calc(50% + 650px) -600px;
-}
-
-[data-uri="/guide"] .top-moon,
-[data-uri="/api"] .top-moon,
-[data-uri="/blog"] .top-moon,
-[data-uri="/contact"] .top-moon,
-[data-uri="/releases"] .top-moon,
-[data-uri="/gettingstarted"] .top-moon,
-[data-uri="/api/$method"] .top-moon {
-  background-size: 1200px;
-  background-position: calc(50% + 650px) -450px;
-}
-
-[data-uri="/"] .top-clouds {
-  background-size: 100%;
-  background-position: calc(50% - 100px) 100px;
-}
-
-[data-uri="/guide"] .top-clouds,
-[data-uri="/api"] .top-clouds,
-[data-uri="/blog"] .top-clouds,
-[data-uri="/contact"] .top-clouds,
-[data-uri="/releases"] .top-clouds,
-[data-uri="/gettingstarted"] .top-clouds,
-[data-uri="/api/$method"] .top-clouds {
-  background-size: 80%;
-  background-position: calc(101% - 100px) 48px;
-}
-
-[data-uri="/api"] footer {
-  display: none;
-}
 @media (max-width: 990px) {
 
 }
@@ -474,23 +393,6 @@ h5 {
 
 .jumbotron .row .download {
   text-align: right;
-}
-
-footer {
-  background: #1B1614;
-  color:#aaa;
-}
-
-footer .align-left {
-  float: left;
-}
-
-footer .align-right {
-  float: right;
-}
-
-footer a {
-  color: #337ab7;
 }
 
 #index-container .btn-github, #index-container .btn-download {
@@ -577,7 +479,7 @@ ul.features {
 }
 */
 .screenshot {
-  background: url(../images/demo-output.svg) no-repeat;
+  background: url(../images/demo-output.png) no-repeat;
   height: 360px;
   background-size: 100%;
 }
@@ -1313,4 +1215,113 @@ a:focus, a:hover {
 }
 .navbar-toggle {
 
+}
+
+footer {
+  background: #222;
+  color:#aaa;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 15px 0;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+footer .align-left {
+  float: left;
+}
+
+footer .align-right {
+  float: right;
+}
+
+footer .logo-home {
+  float: left;
+}
+
+footer .footer-content {
+  padding-top: 50px;
+}
+
+footer .logo-home {
+  float: left;
+}
+
+footer .footer-text {
+  float: left;
+  width: 550px;
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+footer .logo-home {
+  margin-top: 0px;
+  background-image: url("../images/logo-pvs.svg");
+  background-size: auto;
+  height: 80px;
+  width: 81px;
+  background-repeat: no-repeat;
+  padding-top: 0px;
+  padding-left: 50px;
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .logo-home:hover {
+  color: #fff;
+  text-decoration: none;
+}
+footer a {
+  color: #DDA562;
+}
+footer a:hover {
+  color: #FF9E5C
+}
+footer .social-links {
+  padding-top: 0;
+  padding-bottom: 10px;
+}
+footer .social {
+  width: 32px;
+  height: 32px;
+  padding: 2px;
+  margin: 0;
+  background-color: transparent;
+}
+footer .social a{
+  text-indent: 9999px;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  margin:2px;
+}
+footer .social.twitter a{
+  background: url(../images/twitter.png) no-repeat transparent;
+}
+footer .social.github a{
+  background: url(../images/github.png) no-repeat transparent;
+}
+footer h4 {
+  color:#7ec699;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+footer ul li a {
+  display: block;
+  font-size: 16px;
+  padding: 2px 0;
+  max-width: 170px;
+}
+footer ul li a:hover {
+  color:#f2f2f2;
+}
+footer .col-md-2,
+footer .col-md-4 {
+  padding-top: 55px;
 }

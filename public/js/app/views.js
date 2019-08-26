@@ -4,7 +4,7 @@ domino.views.metaTagContent = domino.views.metaTagEl.content;
 
 domino.views.metaTagTwitterImg = $('meta[name="twitter:image"]').attr('content');
 
-domino.views.sections = ['index', 'gettingstarted', 'guide', 'contact', 'api', 'releases'];
+domino.views.sections = ['index', 'gettingstarted', 'guide', 'about', 'api', 'releases'];
 domino.views.__sectionsData__ = {};
 function getSectionData(currentView) {
   domino.views.sections.forEach(function(section) {
@@ -31,9 +31,7 @@ domino.views.define('index', function(view) {
     this.initHelper('transition').render();
     this.initHelper('carbonad').render('#index-container');
     domino.views.currentView = 'index';
-    if (document.documentElement.getAttribute('data-uri') != '/') {
-      document.documentElement.setAttribute('data-uri', '/');
-    }
+    document.documentElement.setAttribute('data-uri', '/');
   };
 
 });
@@ -42,94 +40,144 @@ $('.carbonad').on('click', 'a', function(ev) {
   ev.stopPropagation();
 });
 
+domino.views.__runSubSection = function(view_script, mainSection, subSection, contentFn) {
+  var sectionPath = subSection;
+  if (sectionPath !== '') {
+    sectionPath = '/' + sectionPath;
+  }
+
+  if (domino.views.currentView == mainSection + sectionPath) {
+    return;
+  }
+
+  window.scrollTo(0, 0);
+  getSectionData(mainSection);
+  var sidebar = domino.views.__buildSidebar(mainSection, subSection, contentFn);
+  var data = sidebar.data;
+
+  view_script.$container = '#'+ mainSection +'-container';
+  view_script.no_render = true;
+  document.title = sidebar.title + ' | Nightwatch.js';
+
+  this.initHelper('transition').render(null, {
+    pathname: '/' + mainSection,
+    fadeIn: false,
+    currentSectionPath: '/' + mainSection
+  });
+
+  $('#' + mainSection + '-container .bs-sidebar').html(sidebar.content);
+
+  var scrollTarget = '#'+ mainSection + '-container .bs-sidenav > li:nth-child('+ data.nthChildIndex +')';
+  this.initHelper('bs.scrollspy').render({
+    target : scrollTarget,
+    offset : 85
+  });
+
+  this.initHelper('sidebar').render('#' + mainSection + '-container');
+  this.initHelper('carbonad').render('#' + mainSection + '-container');
+
+  domino.views.currentView = mainSection + sectionPath;
+  if (document.documentElement.getAttribute('data-uri') != '/' + mainSection + sectionPath) {
+    document.documentElement.setAttribute('data-uri', '/' + mainSection + sectionPath);
+  }
+};
+
 domino.views.define('gettingstarted', function(view) {
-  this.indexView = function(view_script) {
-    if (domino.views.currentView == 'gettingstarted') {
-      return;
-    }
-    getSectionData('gettingstarted');
-    view_script.$container = '#gettingstarted-container';
-    view_script.no_render = true;
-    document.title = 'Getting Started | Nightwatch.js';
-
-    this.initHelper('transition').render();
-    this.initHelper('bs.scrollspy').render({
-      target : '#gettingstarted-container .bs-sidebar',
-      offset : 85
-    });
-
-    this.initHelper('sidebar').render('#gettingstarted-container');
-    this.initHelper('carbonad').render('#gettingstarted-container');
-    domino.views.currentView = 'gettingstarted';
-    if (document.documentElement.getAttribute('data-uri') != '/gettingstarted') {
-      document.documentElement.setAttribute('data-uri', '/gettingstarted');
-    }
+  this.installationView = function(view_script) {
+    domino.views.__runSubSection.call(this, view_script,  'gettingstarted', 'installation');
   };
+
+  this.indexView = function(view_script) {
+    domino.views.__runSubSection.call(this, view_script, 'gettingstarted', '');
+  };
+
+  this.configurationView = function(view_script) {
+    domino.views.__runSubSection.call(this, view_script, 'gettingstarted', 'configuration');
+  };
+
+  this['browser-drivers-setupView'] = function(view_script) {
+    domino.views.__runSubSection.call(this, view_script, 'gettingstarted', 'browser-drivers-setup');
+  };
+});
+
+domino.views.define('about', function(view) {
+  this.contributeView = function(view_script) {
+    domino.views.__runSubSection.call(this, view_script,  'about', 'contribute');
+  };
+
+  this.indexView = function(view_script) {
+    domino.views.__runSubSection.call(this, view_script, 'about', '');
+  };
+
+  this.communityView = function(view_script) {
+    domino.views.__runSubSection.call(this, view_script, 'about', 'community');
+  };
+
 });
 
 domino.views.define('guide', function(view) {
 
   this.init = function() {};
 
-  this.indexView = function(view_script) {
-    if (domino.views.currentView == 'guide') {
-      return;
-    }
-    getSectionData('guide');
-    view_script.$container = '#guide-container';
-    view_script.no_render = true;
-    document.title = 'Developer Guide | Nightwatch.js';
-
-    this.initHelper('transition').render();
-    this.initHelper('bs.scrollspy').render({
-      target : '#guide-container .bs-sidebar',
-      offset : 50
-    });
-
-    this.initHelper('sidebar').render('#guide-container');
-    this.initHelper('carbonad').render('#guide-container');
-    domino.views.currentView = 'guide';
-    if (document.documentElement.getAttribute('data-uri') != '/guide') {
-      document.documentElement.setAttribute('data-uri', '/guide');
-    }
+  this['running-testsView'] = function(view_script) {
+    domino.views.__runSubSection.call(this, view_script, 'guide', 'running-tests');
   };
 
-});
+  this['extending-nightwatchView'] = function(view_script) {
+    domino.views.__runSubSection.call(this, view_script, 'guide', 'extending-nightwatch');
+  };
 
-domino.views.define('releases', function(view) {
+  this['working-with-page-objectsView'] = function(view_script) {
+    domino.views.__runSubSection.call(this, view_script, 'guide', 'working-with-page-objects');
+  };
 
-  this.init = function() {};
+  this['unit-testing-with-nightwatchView'] = function(view_script) {
+    domino.views.__runSubSection.call(this, view_script, 'guide', 'unit-testing-with-nightwatch');
+  };
 
   this.indexView = function(view_script) {
-    if (domino.views.currentView == 'releases') {
-      return;
-    }
-    getSectionData('releases');
-    view_script.$container = '#releases-container';
-    view_script.no_render = true;
-    document.title = 'Releases | Nightwatch.js';
-
-    this.initHelper('transition').render();
-    this.initHelper('bs.scrollspy').render({
-      target : '#releases-container .bs-sidebar',
-      offset : 50
-    });
-
-    this.initHelper('sidebar').render('#releases-container');
-    this.initHelper('carbonad').render('#releases-container');
-    domino.views.currentView = 'releases';
-    if (document.documentElement.getAttribute('data-uri') != '/releases') {
-      document.documentElement.setAttribute('data-uri', '/releases');
-    }
+    domino.views.__runSubSection.call(this, view_script, 'guide', '');
   };
 
 });
 
 domino.views.define('api', function(view) {
+  var sidenavData = {
+    '': [],
+    expect: [],
+    pageobject: [],
+    commands: []
+  };
+  var sidenavReady = false;
+
+  function populateSidenavData() {
+    Object.keys(sidenavData).forEach(function(key, index) {
+      $('#api-container .bs-sidebar li:nth-child(' + (index + 1) + ') ul li').each(function(i, el) {
+        var element = el.firstChild;
+        var entry = [];
+
+        if (element && element && element.tagName && element.tagName.toLocaleLowerCase() === 'h5') {
+          entry.push('h5');
+          element = element.firstChild;
+        }
+
+        var link = element.href || '';
+        if (link) {
+          link = link.substring(element.href.indexOf('#'));
+        }
+        entry.push(link, element.innerHTML);
+        sidenavData[key].push(entry);
+      });
+    });
+    sidenavReady = true;
+  }
+
   this.init = function() {
     this.transition = this.initHelper('transition');
     this.carbonAds = this.initHelper('carbonad');
-    this.sourcecolor = this.initHelper('sourcecolor')
+    this.sourcecolor = this.initHelper('sourcecolor');
+
+    if (!sidenavReady) populateSidenavData();
   };
 
   function api(view_script, scollspy) {
@@ -146,10 +194,32 @@ domino.views.define('api', function(view) {
         this.initHelper('sourcecolor').render();
         this.initHelper('sidebar').render('#api-container');
       }
-
-
     }, view_script);
   }
+
+  this.expectView = function(view_script) {
+    domino.views.__runSubSection.call(this, view_script, 'api', 'expect', function() {
+      return sidenavData.expect;
+    });
+  };
+
+  this.commandsView = function(view_script) {
+    domino.views.__runSubSection.call(this, view_script, 'api', 'commands', function() {
+      return sidenavData.commands;
+    });
+  };
+
+  this.pageobjectView = function(view_script) {
+    domino.views.__runSubSection.call(this, view_script, 'api', 'pageobject', function() {
+      return sidenavData.pageobject;
+    });
+  };
+
+  this.indexView = function(view_script) {
+    domino.views.__runSubSection.call(this, view_script, 'api', '', function() {
+      return sidenavData[''];
+    });
+  };
 
   this.methodView = function(view_script) {
     window.scrollTo(0, 0);
@@ -185,7 +255,6 @@ domino.views.define('api', function(view) {
       });
     }
 
-
     if (this.$scope.method && this.$scope.method.descr) {
       domino.views.metaTagEl.content = this.$scope.method.descr.replace(/<\/?[^>]+(>|$)/g, '') + ' | API Reference - Nightwatch.js';
     }
@@ -193,30 +262,33 @@ domino.views.define('api', function(view) {
     if (document.documentElement.getAttribute('data-uri') != '/api/$method') {
       document.documentElement.setAttribute('data-uri', '/api/$method');
     }
-
   };
+});
+
+domino.views.define('releases', function(view) {
+
+  this.init = function() {};
 
   this.indexView = function(view_script) {
-    if (domino.views.currentView == 'api') {
+    if (domino.views.currentView == 'releases') {
       return;
     }
-    getSectionData('api');
-    domino.views.currentView = 'api';
-    view_script.$container = '#api-container';
-    document.title = 'API Reference | Nightwatch.js';
+    getSectionData('releases');
+    view_script.$container = '#releases-container';
     view_script.no_render = true;
+    document.title = 'Releases | Nightwatch.js';
 
     this.initHelper('transition').render();
     this.initHelper('bs.scrollspy').render({
-      target : '#api-container .bs-sidebar',
+      target : '#releases-container .bs-sidebar',
       offset : 50
     });
 
-    this.initHelper('sidebar').render('#api-container');
-    this.initHelper('carbonad').render('#api-container');
-
-    if (document.documentElement.getAttribute('data-uri') != '/api') {
-      document.documentElement.setAttribute('data-uri', '/api');
+    this.initHelper('sidebar').render('#releases-container');
+    this.initHelper('carbonad').render('#releases-container');
+    domino.views.currentView = 'releases';
+    if (document.documentElement.getAttribute('data-uri') != '/releases') {
+      document.documentElement.setAttribute('data-uri', '/releases');
     }
   };
 
@@ -251,16 +323,11 @@ domino.viewhelpers.define('sidebar', function() {
   };
 
   this.render = function(container) {
-    if (this.sideBar) {
-      this.sideBar.data('bs.affix', null);
-      this.sideBar = null;
-    }
-
     this.sideBar = $(container).find('.bs-sidebar');
     this.sideBar.affix({
       offset: {
         top: 280,
-        bottom: 100
+        bottom: 330
       }
     });
   };
@@ -323,7 +390,8 @@ domino.viewhelpers.define('carbonad', function() {
 
 
     setTimeout(function() {
-      carbonAd.setAttribute('src', 'http://cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=nightwatchjsorg');
+      carbonAd.setAttribute('src', 'https://cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=nightwatchjsorg');
+      carbonAd.setAttribute('crossorigin', 'anonymous');
       $(selector + ' .carbonad').append(carbonAd);
     }.bind(this), 0);
   };
@@ -334,7 +402,11 @@ domino.viewhelpers.define('transition', function() {
     var pathname = location.pathname;
     var currentSectionPath = '/';
 
-    if (pathname != "/") {
+    opts = opts || {};
+    if (opts.pathname && opts.currentSectionPath) {
+      pathname = opts.pathname;
+      currentSectionPath = opts.currentSectionPath;
+    } else if (pathname != '/') {
       var parts = pathname.split('/');
       parts.shift();
       parts = parts.map(function(a){
@@ -372,11 +444,17 @@ domino.viewhelpers.define('transition', function() {
 
     currentSection.hide();
     window.scrollTo(0, 0);
-    element.fadeIn('normal', function() {
-      if (typeof callback == 'function') {
-        return callback.call($view);
-      }
-    });
+    if (opts.fadeIn || typeof opts.fadeIn == 'undefined') {
+      element.fadeIn('normal', function() {
+        if (typeof callback == 'function') {
+          return callback.call($view);
+        }
+      });
+    } else {
+      element.show();
+      if (callback) callback.call($view);
+    }
+
   };
 });
 

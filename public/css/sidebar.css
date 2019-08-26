@@ -32,6 +32,10 @@
 .bs-sidenav h5 a {
   color: #c7254e;
   font-size: 18px;
+  padding-bottom: 6px;
+  padding-left: 11px;
+  padding-top: 8px;
+  display: block;
 }
 .bs-sidenav h5:hover a {
   color: #111
@@ -66,11 +70,11 @@
   font-weight: 400;
 }
 .nav.bs-sidenav h5 {
-  margin-bottom: 2px;
-  margin-left: 11px;
-  margin-top: 15px;
-  color:#222;
+  padding: 0;
+  color: #222;
   font-weight: 400;
+  margin-top: 2px;
+  margin-bottom: 0;
 }
 .nav.bs-sidenav h5:hover {
   background: #f2f2f2;

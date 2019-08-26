@@ -15,7 +15,16 @@
 <meta name="twitter:creator" content="@nightwatchjs">
 <meta name="google-site-verification" content="LGNZ66nvi-gru5DR_bV3jry2hqvlMoijhdWZkVT41ZM" />
 
-<script>(function(p,h) {var q=p.split('/');q.shift();q=q.map(function(a){return a.replace(/.+\.html$/,'$method')});h.setAttribute('data-uri',(p!='/'?'/'+q.join('/'):p));})(location.pathname,document.documentElement);</script>
+<script>(function(p,h) {
+  var q = p.split('/');
+  console.log('q', q);
+  q.shift();
+  q=q.map(function(a){
+    return a.replace(/.+\.html$/,'$method')
+  });
+  h.setAttribute('data-uri',(p!='/'?'/'+q.join('/'):p));
+})(location.pathname,document.documentElement);
+</script>
 <link href="/css/themes/prism.css" rel="stylesheet">
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
@@ -32,6 +41,7 @@
 <%if (section == 'gettingstarted') { %>#gettingstarted-container {display: block}<% } %>
 <%if (section == 'api') { %>#api-container {display: block}<% } %>
 <%if (section == 'contact') { %>#contact-container {display: block}<% } %>
+<%if (section == 'about') { %>#about-container {display: block}<% } %>
 <%if (section == 'apimethod') { %>#apimethod-container {display: block}<% } %>
 <%if (section != 'index') { %>
 #moon {

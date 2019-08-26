@@ -4,6 +4,10 @@ domino.controllers.define('api', function($api, $protocol) {
     //this.$view.api = $protocol.getAll();
   };
 
+  this.expectAction = function() {};
+  this.commandsAction = function() {};
+  this.pageobjectAction = function() {};
+
   this.methodAction = function() {
     this.$view.methods = $api.getAll();
     this.$view.api = $protocol.getAll().result(function(data) {

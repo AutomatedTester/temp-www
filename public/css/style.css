@@ -443,3 +443,242 @@ pre[class*="language-javascript"]:before{
 .edit-source:hover {
   background-color: #f3f3f3;
 }
+
+[data-uri^="/api"] .docs-section,
+[data-uri^="/gettingstarted"] .docs-section,
+[data-uri^="/about"] .docs-section,
+[data-uri^="/guide"] .docs-section {
+  display:none
+}
+
+section[data-page-uri] {
+  display: none;
+}
+
+[data-uri="/"] section[data-page-uri="/"],
+[data-uri="/blog"] section[data-page-uri="/blog"],
+[data-uri="/contact"] section[data-page-uri="/contact"],
+[data-uri^="/gettingstarted"] section[data-page-uri^="/gettingstarted"],
+[data-uri^="/guide"] section[data-page-uri^="/guide"],
+[data-uri^="/api"] section[data-page-uri^="/api"],
+[data-uri^="/about"] section[data-page-uri^="/about"],
+[data-uri="/releases"] section[data-page-uri="/releases"],
+[data-uri="/api/$method"] section[data-page-uri="/api/$method"] {
+  display: block;
+}
+
+[data-uri="/api/$method"] section[data-page-uri="/api"] {
+  display: none;
+}
+[data-uri="/gettingstarted"] section [data-page-uri="/gettingstarted"],
+[data-uri^="/gettingstarted/installation"] section [data-page-uri^="/gettingstarted/installation"],
+[data-uri^="/gettingstarted/configuration"] section [data-page-uri^="/gettingstarted/configuration"],
+[data-uri^="/gettingstarted/browser-drivers-setup"] section [data-page-uri^="/gettingstarted/browser-drivers-setup"] {
+  display: block;
+}
+
+[data-uri="/api"] section [data-page-uri="/api"],
+[data-uri="/api/"] section [data-page-uri="/api"],
+[data-uri^="/api"] section [data-page-uri="/api/$method"],
+[data-uri^="/api/commands"] section [data-page-uri^="/api/commands"],
+[data-uri^="/api/pageobject"] section [data-page-uri^="/api/pageobject"],
+[data-uri^="/api/expect"] section [data-page-uri^="/api/expect"] {
+  display: block;
+}
+
+[data-uri="/guide"] section [data-page-uri="/guide"],
+[data-uri="/guide/"] section [data-page-uri="/guide"],
+[data-uri^="/guide/running-tests"] section [data-page-uri^="/guide/running-tests"],
+[data-uri^="/guide/extending-nightwatch"] section [data-page-uri^="/guide/extending-nightwatch"],
+[data-uri^="/guide/working-with-page-objects"] section [data-page-uri^="/guide/working-with-page-objects"],
+[data-uri^="/guide/unit-testing-with-nightwatch"] section [data-page-uri^="/guide/unit-testing-with-nightwatch"] {
+  display: block;
+}
+
+[data-uri="/about"] section [data-page-uri="/about"],
+[data-uri="/about/"] section [data-page-uri="/about"],
+[data-uri^="/about/contribute"] section [data-page-uri^="/about/contribute"],
+[data-uri^="/about/community"] section [data-page-uri^="/about/community"] {
+  display: block;
+}
+
+[data-uri="/"] .parallax {
+  height: 100vh;
+}
+
+[data-uri="/blog"] .parallax,
+[data-uri="/contact"] .parallax,
+[data-uri^="/api"] .parallax,
+[data-uri^="/gettingstarted"] .parallax,
+[data-uri^="/guide"] .parallax,
+[data-uri^="/about"] .parallax,
+[data-uri="/releases"] .parallax,
+[data-uri="/api/$method"] .parallax {
+  height: 21vh;
+}
+
+[data-uri="/blog"] .secondary,
+[data-uri="/contact"] .secondary,
+[data-uri="/releases"] .secondary,
+[data-uri^="/api"] .secondary,
+[data-uri^="/gettingstarted"] .secondary,
+[data-uri^="/guide"] .secondary,
+[data-uri^="/about"] .secondary,
+[data-uri="/api/$method"] .secondary {
+  margin-top: -174px;
+}
+
+[data-uri="/"] .top-moon {
+  background-size: 100%;
+  background-position: calc(50% + 650px) -600px;
+}
+
+[data-uri="/blog"] .top-moon,
+[data-uri="/contact"] .top-moon,
+[data-uri="/releases"] .top-moon,
+[data-uri^="/api"] .top-moon,
+[data-uri^="/about"] .top-moon,
+[data-uri^="/gettingstarted"] .top-moon,
+[data-uri^="/guide"] .top-moon,
+[data-uri="/api/$method"] .top-moon {
+  background-size: 1200px;
+  background-position: calc(50% + 650px) -450px;
+}
+
+[data-uri="/"] .top-clouds {
+  background-size: 100%;
+  background-position: calc(50% - 100px) 100px;
+}
+
+[data-uri^="/guide"] .top-clouds,
+[data-uri^="/api"] .top-clouds,
+[data-uri^="/about"] .top-clouds,
+[data-uri="/blog"] .top-clouds,
+[data-uri="/contact"] .top-clouds,
+[data-uri="/releases"] .top-clouds,
+[data-uri^="/gettingstarted"] .top-clouds,
+[data-uri="/api/$method"] .top-clouds {
+  background-size: 80%;
+  background-position: calc(101% - 100px) 48px;
+}
+
+[data-uri="/api/commands"] footer {
+  display: none;
+}
+
+#about-container p {
+  font-size: 18px;
+  margin: 20px 0
+}
+#about-container .sponsor {
+  background: #f8f8f8;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 1px 1px 12px rgba(0,0,0,.3);
+}
+
+#about-container .sponsor p,
+#about-container .vision p {
+  margin: 30px 0;
+}
+#about-container .vision p:first-child,
+#about-container .sponsor p:first-child {
+  margin-top: 10px;
+}
+#about-container .vision p:last-child,
+#about-container .sponsor p:last-child {
+  margin-bottom: 10px;
+}
+#about-container h3 span {
+  display: block;
+  padding: 10px;
+  background-color: #eee;
+  border: 0
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-size: 150px;
+  margin: 0 auto;
+}
+.oanabotezat .profile-pic{
+  background-image: url(https://avatars2.githubusercontent.com/u/3843009?s=260&v=4);
+}
+.andreirusu .profile-pic{
+  background-image: url(https://avatars2.githubusercontent.com/u/419506?s=260&v=4);
+}
+.domenico .profile-pic{
+  background-image: url(https://avatars1.githubusercontent.com/u/1260402?s=260&v=4);
+}
+
+#team h4 {
+  text-align: center;
+  padding-top: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#team h6 {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+#team p {
+  text-align: center;
+  height: 40px;
+}
+#team .social {
+  display: inline-block;
+  margin:2px;
+  background-color: transparent;
+  padding: 5px;
+  width: 42px;
+}
+#team .social a {
+  text-indent: -9999px;
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+#team .social.twitter a {
+  background: url(../images/twitter.png) no-repeat;
+}
+#team .social.github a {
+  background: url(../images/github.png) no-repeat;
+}
+#team .profile {
+  margin: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #f2f2f2;
+}
+#about-container .roadmap h4 {
+  font-size: 22px;
+  font-weight: 500;
+}
+#community-content article {
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  margin: 30px 0;
+  padding-top:10px;
+}
+#community-content article h3 {
+  margin: 0;
+  padding-top: 0;
+  font-size: 24px;
+}
+#community-content article h4 {
+  margin: 5px 0;
+  color:#777;
+  font-size:16px;
+}
+
+#community-content article img {
+  max-width: 100%;
+}
+#community-content article p {
+  font-size: 16px;
+}

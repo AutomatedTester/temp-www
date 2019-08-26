@@ -16,20 +16,25 @@
        <div class="col-md-3">
          <div class="bs-sidebar hidden-print" role="complementary">
            <ul class="nav bs-sidenav">
+           <li>
+             <a href="/api/">Assert</a>
+             <ul class="nav">
+               <% for (var i = 0; i < methods.assertions.length; i++) { %>
+               <li><a href="#assert-<%- methods.assertions[i].name %>"><%- methods.assertions[i].name %></a></li>
+               <% } %>
+             </ul>
+           </li>
+
              <li>
-               <a href="#expect-api">Expect</a>
+               <a href="/api/expect/">Expect</a>
                <ul class="nav">
                  <li><a href="#expect-chains">language chains</a></li>
                  <li><a href="#expect-matchers">equal / contain / match</a></li>
                  <li><a href="#expect-startend">startWith / endWith</a></li>
                  <li><a href="#expect-negation">not</a></li>
                  <li><a href="#expect-before">before / after</a></li>
-                 <li>
-                   <h5><a href="#expect-cookie-">cookie</a></h5>
-                 </li>
-                 <li>
-                   <h5><a href="#expect-element-">element</a></h5>
-                 </li>
+                 <li><h5><a href="#expect-cookie-">cookie</a></h5></li>
+                 <li><h5><a href="#expect-element-">element</a></h5></li>
                  <%
                  api['expect.element'] = api['expect.element'].reduce(function (prev, val) {
                    if (prev[val.name]) {
@@ -45,33 +50,18 @@
                  }, {});
                  %>
                  <% for (var methodName in api['expect.element']) { %>
-                 <li><a href="#expect-<%- methodName %>"><%- methodName %><% if (api['expect.element'][methodName].aliases && api['expect.element'][methodName].aliases.length) { %> / <%- api['expect.element'][methodName].aliases.join('/') %><% } %></a></li>
+                   <li><a href="#expect-<%- methodName %>"><%- methodName %><% if (api['expect.element'][methodName].aliases && api['expect.element'][methodName].aliases.length) { %> / <%- api['expect.element'][methodName].aliases.join('/') %><% } %></a></li>
                  <% } %>
-                 <li>
-                   <h5><a href="#expect-elements-">elements</a></h5>
-                 </li>
+                 <li><h5><a href="#expect-elements-">elements</a></h5></li>
                  <li><a href="#expect-elements-count">count</a></li>
-                 <li>
-                   <h5><a href="#expect-title-">title</a></h5>
-                 </li>
-                 <li>
-                   <h5><a href="#expect-url-">url</a></h5>
-                 </li>
+                 <li><h5><a href="#expect-title-">title</a></h5></li>
+                 <li><h5><a href="#expect-url-">url</a></h5></li>
 
-                 </ul>
-            </li>
-
-             <li>
-               <a href="#assertions">Assert</a>
-               <ul class="nav">
-                 <% for (var i = 0; i < methods.assertions.length; i++) { %>
-                 <li><a href="#assert-<%- methods.assertions[i].name %>"><%- methods.assertions[i].name %></a></li>
-                 <% } %>
                </ul>
              </li>
 
              <li>
-               <a href="#page-object-api">Page</a>
+               <a href="/api/page-object-api/">Page</a>
                <ul class="nav">
                  <li><a href="#page-object-instance">instance</a></li>
                  <li><a href="#page-commands">commands</a></li>
@@ -79,11 +69,9 @@
              </li>
 
              <li>
-               <a href="#api-commands">API Commands/Protocol</a>
+               <a href="/api/api-commands/">API Commands/Protocol</a>
                <ul class="nav">
-                 <li>
-                   <h5><a href="#elements-headline">Finding Elements</a></h5>
-                 </li>
+                 <li><h5><a href="#elements-headline">Finding Elements</a></h5></li>
                  <li><a href="#element">element</a></li>
                  <li><a href="#elements">elements</a></li>
                  <li><a href="#elementIdEquals">elementIdEquals</a></li>
@@ -94,9 +82,7 @@
                  <li><a href="#waitForElementPresent">waitForElementPresent</a></li>
                  <li><a href="#waitForElementNotPresent">waitForElementNotPresent</a></li>
 
-                 <li>
-                   <h5><a href="#elementinteraction-headline">Element Interaction</a></h5>
-                 </li>
+                 <li><h5><a href="#elementinteraction-headline">Element Interaction</a></h5></li>
 
                  <li><a href="#clearValue">clearValue</a></li>
                  <li><a href="#click">click</a></li>
@@ -105,9 +91,7 @@
                  <li><a href="#setValue">setValue</a></li>
                  <li><a href="#submitForm">submitForm</a></li>
 
-                 <li>
-                   <h5><a href="#elementstate-headline">Element State</a></h5>
-                 </li>
+                 <li><h5><a href="#elementstate-headline">Element State</a></h5></li>
 
                  <li><a href="#elementActive">elementActive</a></li>
                  <li><a href="#getAttribute">getAttribute</a></li>
@@ -118,16 +102,12 @@
                  <li><a href="#getValue">getValue</a></li>
                  <li><a href="#isVisible">isVisible</a></li>
 
-                 <li>
-                   <h5><a href="#elementlocation-headline">Element Location</a></h5>
-                 </li>
+                 <li><h5><a href="#elementlocation-headline">Element Location</a></h5></li>
 
                  <li><a href="#getLocation">getLocation</a></li>
                  <li><a href="#getLocationInView">getLocationInView</a></li>
 
-                 <li>
-                   <h5><a href="#elementinternal-headline">Protocol Actions</a></h5>
-                 </li>
+                 <li><h5><a href="#elementinternal-headline">Protocol Actions</a></h5></li>
                  <li><a href="#elementIdAttribute">elementIdAttribute</a></li>
                  <li><a href="#elementIdClear">elementIdClear</a></li>
                  <li><a href="#elementIdClick">elementIdClick</a></li>
@@ -143,17 +123,13 @@
                  <li><a href="#elementIdValue">elementIdValue</a></li>
                  <li><a href="#submit">submit</a></li>
 
-                 <li>
-                   <h5><a href="#document-headline">Document Handling</a></h5>
-                 </li>
+                 <li><h5><a href="#document-headline">Document Handling</a></h5></li>
                  <li><a href="#execute">execute</a></li>
                  <li><a href="#executeAsync">executeAsync</a></li>
                  <li><a href="#injectScript">injectScript</a></li>
                  <li><a href="#source">source</a></li>
 
-                 <li>
-                   <h5><a href="#sessions-headline">Session Related</a></h5>
-                 </li>
+                 <li><h5><a href="#sessions-headline">Session Related</a></h5></li>
                  <li><a href="#end">end</a></li>
                  <li><a href="#getLog">getLog</a></li>
                  <li><a href="#getLogTypes">getLogTypes</a></li>
@@ -167,11 +143,7 @@
                  <li><a href="#timeoutsAsyncScript">timeoutsAsyncScript</a></li>
                  <li><a href="#timeoutsImplicitWait">timeoutsImplicitWait</a></li>
 
-
-
-                 <li>
-                   <h5><a href="#navigation-headline">Navigation</a></h5>
-                 </li>
+                 <li><h5><a href="#navigation-headline">Navigation</a></h5></li>
 
                  <li><a href="#back">back</a></li>
                  <li><a href="#forward">forward</a></li>
@@ -182,9 +154,7 @@
                  <li><a href="#url">url</a></li>
                  <li><a href="#urlHash">urlHash</a></li>
 
-                 <li>
-                   <h5><a href="#contexts-headline">Window Related</a></h5>
-                 </li>
+                 <li><h5><a href="#contexts-headline">Window Related</a></h5></li>
 
                  <li><a href="#closeWindow">closeWindow</a></li>
                  <li><a href="#fullscreenWindow">fullscreenWindow</a></li>
@@ -200,9 +170,7 @@
                  <li><a href="#setWindowSize">setWindowSize</a></li>
                  <li><a href="#switchWindow">switchWindow</a></li>
 
-                 <li>
-                   <h5><a href="#window-protocol-headline">Window Protocol</a></h5>
-                 </li>
+                 <li><h5><a href="#window-protocol-headline">Window Protocol</a></h5></li>
                  <li><a href="#window">window</a></li>
                  <li><a href="#windowHandle">windowHandle</a></li>
                  <li><a href="#windowHandles">windowHandles</a></li>
@@ -211,16 +179,11 @@
                  <li><a href="#windowRect">windowRect</a></li>
                  <li><a href="#windowSize">windowSize</a></li>
 
-                 <li>
-                   <h5><a href="#frames-headline">Frames</a></h5>
-                 </li>
+                 <li><h5><a href="#frames-headline">Frames</a></h5></li>
                  <li><a href="#frame">frame</a></li>
                  <li><a href="#frameParent">frameParent</a></li>
 
-
-                 <li>
-                   <h5><a href="#cookies-headline">Cookies</a></h5>
-                 </li>
+                 <li><h5><a href="#cookies-headline">Cookies</a></h5></li>
                  <li><a href="#cookie">cookie</a></li>
                  <li><a href="#deleteCookie">deleteCookie</a></li>
                  <li><a href="#deleteCookies">deleteCookies</a></li>
@@ -228,9 +191,7 @@
                  <li><a href="#getCookie">getCookie</a></li>
                  <li><a href="#setCookie">setCookie</a></li>
 
-                 <li>
-                   <h5><a href="#useractions-headline">User Actions</a></h5>
-                 </li>
+                 <li><h5><a href="#useractions-headline">User Actions</a></h5></li>
 
                  <li><a href="#doubleClick">doubleClick</a></li>
                  <li><a href="#mouseButtonClick">mouseButtonClick</a></li>
@@ -238,23 +199,17 @@
                  <li><a href="#mouseButtonUp">mouseButtonUp</a></li>
                  <li><a href="#moveTo">moveTo</a></li>
 
-                 <li>
-                   <h5><a href="#userprompts-headline">User Prompts</a></h5>
-                 </li>
+                 <li><h5><a href="#userprompts-headline">User Prompts</a></h5></li>
                  <li><a href="#acceptAlert">acceptAlert</a></li>
                  <li><a href="#dismissAlert">dismissAlert</a></li>
                  <li><a href="#getAlertText">getAlertText</a></li>
                  <li><a href="#setAlertText">setAlertText</a></li>
 
-                 <li>
-                   <h5><a href="#screens-headline">Screen Capture</a></h5>
-                 </li>
+                 <li><h5><a href="#screens-headline">Screen Capture</a></h5></li>
                  <li><a href="#saveScreenshot">saveScreenshot</a></li>
                  <li><a href="#screenshot">screenshot</a></li>
 
-                 <li>
-                   <h5><a href="#mobile-headline">Mobile Related</a></h5>
-                 </li>
+                 <li><h5><a href="#mobile-headline">Mobile Related</a></h5></li>
 
                  <li><a href="#getOrientation">getOrientation</a></li>
                  <li><a href="#setOrientation">setOrientation</a></li>
@@ -262,9 +217,7 @@
                  <li><a href="#currentContext">currentContext</a></li>
                  <li><a href="#setContext">setContext</a></li>
 
-                 <li>
-                   <h5><a href="#utilities-headline">Utilities/Debugging</a></h5>
-                 </li>
+                 <li><h5><a href="#utilities-headline">Utilities/Debugging</a></h5></li>
 
                  <li><a href="#pause">pause</a></li>
                  <li><a href="#perform">perform</a></li>
@@ -278,62 +231,7 @@
        </div>
 
       <div class="col-md-9 api-container" role="main">
-        <div class="docs-section">
-        <%- content['expect-api'] %>
-
-          <div class="commands">
-            <%- content['expect-cookie'] %>
-            <%- content['expect-element'] %>
-
-            <%
-            for (var methodName in api['expect.element']) {
-              var method = api['expect.element'][methodName];
-            %>
-            <div class="apimethod">
-              <h3 id="expect-<%- method.name %>"><%- method.display %><a title="Suggest edits" class="edit-source" href="<%- method.editLink %>">Suggest edits</a></h3>
-              <p><%- method.descr %></p>
-              <% if (method.params.length) { %>
-              <h5>Parameters:</h5>
-              <div class="table-responsive">
-                <table class="table table-bordered table-striped">
-                  <thead>
-                  <tr>
-                    <th style="width: 100px;">Name</th>
-                    <th style="width: 100px;">Type</th>
-                    <th>description</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <%
-                  for (var j = 0; j < method.params.length; j++) {
-                    var param = method.params[j];
-                  %>
-                  <tr>
-                    <td><code><%- param.name %></code><% if (param.optional) { %><br><span class="optional">Optional</span><% } %></td>
-                    <td><%- param.types %></td>
-                    <td><%- param.descr %></td>
-                  </tr>
-                  <% } %>
-                  </tbody>
-                </table>
-              </div>
-              <% } %>
-              <% if (method.example) { %>
-              <h5>Usage:</h5>
-              <div class="sample-test">
-<pre class="line-numbers" data-language="javascript"><code class="language-javascript"><%- method.example %></code></pre>
-              </div>
-              <% } %>
-            </div>  <!-- end .apimethod -->
-            <% } %>
-
-            <%- content['expect-elements'] %>
-            <%- content['expect-title'] %>
-            <%- content['expect-url'] %>
-          </div>
-        </div>
-
-        <div class="docs-section assertions-api">
+        <div class="docs-section assertions-api" data-page-uri="/api">
           <%- content['assert-api'] %>
 
           <div class="assertions">
@@ -383,11 +281,66 @@
           ============================================================ -->
         </div>
 
-        <div class="docs-section">
+        <div class="docs-section" data-page-uri="/api/expect">
+          <%- content['expect-api'] %>
+
+          <div class="commands">
+            <%- content['expect-cookie'] %>
+            <%- content['expect-element'] %>
+
+            <%
+            for (var methodName in api['expect.element']) {
+              var method = api['expect.element'][methodName];
+            %>
+            <div class="apimethod">
+              <h3 id="expect-<%- method.name %>"><%- method.display %><a title="Suggest edits" class="edit-source" href="<%- method.editLink %>">Suggest edits</a></h3>
+              <p><%- method.descr %></p>
+              <% if (method.params.length) { %>
+                <h5>Parameters:</h5>
+                <div class="table-responsive">
+                  <table class="table table-bordered table-striped">
+                    <thead>
+                    <tr>
+                      <th style="width: 100px;">Name</th>
+                      <th style="width: 100px;">Type</th>
+                      <th>description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <%
+                    for (var j = 0; j < method.params.length; j++) {
+                      var param = method.params[j];
+                    %>
+                    <tr>
+                      <td><code><%- param.name %></code><% if (param.optional) { %><br><span class="optional">Optional</span><% } %></td>
+                      <td><%- param.types %></td>
+                      <td><%- param.descr %></td>
+                    </tr>
+                    <% } %>
+                    </tbody>
+                  </table>
+                </div>
+              <% } %>
+              <% if (method.example) { %>
+                <h5>Usage:</h5>
+                <div class="sample-test">
+                  <pre class="line-numbers" data-language="javascript"><code class="language-javascript"><%- method.example %></code></pre>
+                </div>
+              <% } %>
+            </div>  <!-- end .apimethod -->
+            <% } %>
+
+            <%- content['expect-elements'] %>
+            <%- content['expect-title'] %>
+            <%- content['expect-url'] %>
+          </div>
+        </div>
+
+        <div class="docs-section" data-page-uri="/api/pageobject">
           <%- content['page-api'] %>
         </div>
 
-        <div class="docs-section commands">
+        <div class="docs-section commands" data-page-uri="/api/commands">
           <div class="content">
           <%- content['commands-api'] %>
           </div>

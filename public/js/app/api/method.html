@@ -19,19 +19,19 @@
     <div class="bs-sidebar hidden-print" role="complementary" style="overflow-y: auto; margin-top: 10px">
       <ul class="nav bs-sidenav" style="margin-top: 10px">
         <li>
-          <a href="https://nightwatchjs.org/api#expect">Expect</a>
+          <a href="https://nightwatchjs.org/api">Assertions</a>
         </li>
 
         <li>
-          <a href="https://nightwatchjs.org/api#assertions">Assertions</a>
+          <a href="https://nightwatchjs.org/api/expect">Expect</a>
         </li>
 
         <li>
-          <a href="https://nightwatchjs.org/api#page-api">Page</a>
+          <a href="https://nightwatchjs.org/api/pageobject">Page</a>
         </li>
 
         <li class="active">
-          <a href="https://nightwatchjs.org/api#protocol">Commands/Protocol</a>
+          <a href="https://nightwatchjs.org/api/commands">API Commands</a>
 
           <ul class="nav" id="protocol-menu">
             <li>
@@ -229,7 +229,7 @@
 
   <div class="col-md-9" role="main">
     {% if method %}
-    <div class="docs-section">
+    <div class="docs-section" data-page-uri="/api/$method">
       <div class="page-header">
         <h2>.{{method.name}}() <a title="Suggest edits" target="_blank" class="edit-source" href="{{method.editLink}}">Suggest edits</a></h2>
       </div>

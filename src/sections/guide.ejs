@@ -15,11 +15,11 @@
   <div class="container bs-docs-container">
     <div class="row">
       <div class="col-md-3">
-        <div class="bs-sidebar hidden-print" role="complementary" data-spy="affix" data-offset-top="60" data-offset-bottom="100">
+        <div class="bs-sidebar hidden-print" role="complementary" data-spy="affix" data-offset-top="60" data-offset-bottom="330">
           <ul class="nav bs-sidenav">
 
             <li>
-              <a href="#using-nightwatch">Using Nightwatch</a>
+              <a href="/guide/">Using Nightwatch</a>
               <ul class="nav">
                 <li><a href="#writing-tests">Writing Tests</a></li>
                 <li><a href="#using-es6-async-await-beta-">Using ES6 Async/Await</a></li>
@@ -32,7 +32,7 @@
             </li>
 
             <li>
-              <a href="#running-tests">Running Tests</a>
+              <a href="/guide/running-tests/">Running Tests</a>
               <ul class="nav">
                 <li><a href="#nightwatch-runner">Nightwatch Runner</a></li>
                 <li><a href="#command-line-options">Command-line Options</a></li>
@@ -47,7 +47,7 @@
             </li>
 
             <li>
-              <a href="#extending-nightwatch">Extending Nightwatch</a>
+              <a href="/guide/extending-nightwatch/">Extending Nightwatch</a>
               <ul class="nav">
                 <li><a href="#writing-custom-commands">Custom commands</a></li>
                 <li><a href="#writing-custom-assertions">Custom assertions</a></li>
@@ -56,7 +56,7 @@
             </li>
 
             <li>
-              <a href="#working-with-page-objects">Working with Page Objects</a>
+              <a href="/guide/working-with-page-objects/">Working with Page Objects</a>
               <ul class="nav">
                 <li><a href="#using-page-objects">Using Page Objects</a></li>
                 <li><a href="#defining-elements">Defining Elements</a></li>
@@ -67,7 +67,7 @@
             </li>
 
             <li>
-              <a href="#unit-testing-with-nightwatch">Unit Testing</a>
+              <a href="/guide/unit-testing-with-nightwatch/">Unit Testing</a>
               <ul class="nav">
                 <li><a href="#writing-unit-tests">Writing Unit Tests</a></li>
                 <li><a href="#asynchronous-unit-tests">Asynchronous Tests</a></li>
@@ -80,7 +80,7 @@
       </div>
 
       <div class="col-md-9" role="main">
-        <div class="docs-section">
+        <div class="docs-section" data-page-uri="/guide">
           <%- content['using-nightwatch'] %>
           <%- content['test-hooks'] %>
           <%- content['async-setup-teardown'] %>
@@ -88,7 +88,7 @@
           <%- content['external-globals'] %>
         </div>
 
-        <div class="docs-section">
+        <div class="docs-section" data-page-uri="/guide/running-tests">
           <%- content['running-tests'] %>
           <%- content['runner-options'] %>
           <%- content['test-environments'] %>
@@ -100,21 +100,21 @@
           <%- content['programmatic-api'] %>
         </div>
 
-        <div class="docs-section">
+        <div class="docs-section" data-page-uri="/guide/extending-nightwatch">
           <%- content['custom-commands'] %>
           <%- content['custom-assertions'] %>
           <%- content['custom-reporter'] %>
 
         </div>
 
-        <div class="docs-section">
+        <div class="docs-section" data-page-uri="/guide/working-with-page-objects">
           <%- content['using-page-objects'] %>
           <%- content['po-elements'] %>
           <%- content['po-sections'] %>
           <%- content['po-mixins'] %>
         </div>
 
-        <div class="docs-section">
+        <div class="docs-section" data-page-uri="/guide/unit-testing-with-nightwatch">
           <%- content['writing-unit-tests'] %>
         </div>
       </div>

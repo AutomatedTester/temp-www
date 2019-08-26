@@ -23,21 +23,25 @@
 
   "sections": {
     "guide" : {
+      "subsections": ["running-tests", "extending-nightwatch", "working-with-page-objects", "unit-testing-with-nightwatch"],
       "pageTitle" : "Developer Guide | Nightwatch.js",
       "title" : "Developer Guide",
       "description" : "In depth guides on how to use Nightwatch to write and execute tests."
     },
     "api" : {
+      "subsections": ["commands", "pageobject", "expect"],
       "pageTitle" : "API Reference | Nightwatch.js",
       "title" : "API Reference",
       "description" : "Complete reference of the Nightwatch commands and assertions."
     },
-    "contact" : {
-      "pageTitle" : "Contact | Nightwatch.js",
-      "title" : "Contact",
+    "about" : {
+      "subsections": ["contribute", "community"],
+      "pageTitle" : "About | Nightwatch.js",
+      "title" : "About",
       "description" : "How to get in touch with the team, and where to submit bugs and feature requests."
     },
     "gettingstarted" : {
+      "subsections": ["installation", "configuration", "browser-drivers-setup"],
       "pageTitle" : "Getting Started | Nightwatch.js",
       "title" : "Getting Started",
       "description" : "Everything you need in order to get started with Nightwatch.js, step-by-step, with configuration guides for various browsers."
