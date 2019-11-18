@@ -85,11 +85,11 @@
             <div class="col-lg-7 col-md-7 col-sm-4 download">
               <a href="/gettingstarted#installation"
                  class="btn btn-primary btn-lg btn-download">INSTALL (<%= version %>)</a>
-              <a href="https://github.com/nightwatchjs/nightwatch" target="_blank"
+              <a href="https://github.com/nightwatchjs/nightwatch" rel="noreferrer" target="_blank"
                  class="btn btn-primary btn-lg btn-github">VIEW ON GITHUB</a>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-8">
-              <div class="carbonad"></div>
+              <div class="container-carbon"></div>
             </div>
           </div>
         </div>
@@ -104,7 +104,7 @@
               <h2>Browser Automation</h2>
               <p style="font-weight: 100; font-size:22px">
                 <span style="font-weight: 300">Nightwatch.js</span> is an integrated, easy to use <span style="font-weight: 300">End-to-End</span> testing solution for web applications and websites, written in Node.js.
-                It uses the <a href="https://www.w3.org/TR/webdriver/" target="_blank">W3C WebDriver API</a> to drive browsers in order to perform commands and assertions on DOM elements.
+                It uses the <a href="https://www.w3.org/TR/webdriver/" target="_blank" rel="noreferrer">W3C WebDriver API</a> to drive browsers in order to perform commands and assertions on DOM elements.
               </p>
             </div>
           </div>
@@ -125,9 +125,9 @@
                 <li class="cloudtesting">
                   <h3>Cloud Testing Support</h3>
                   <p>
-                    Comes with its own cloud testing platform - <a href="https://nightcloud.io" target="_blank">NightCloud.io</a>
-                    (TBA). Works with other cloud testing providers, such as <a href="https://saucelabs.com/" target="_blank">SauceLabs</a> and
-                    <a href="https://www.browserstack.com" target="_blank">BrowserStack</a>.
+                    Comes with its own cloud testing platform - <a href="https://nightcloud.io" rel="noopener" target="_blank">NightCloud.io</a>
+                    (TBA). Works with other cloud testing providers, such as <a href="https://saucelabs.com/" rel="noreferrer" target="_blank">SauceLabs</a> and
+                    <a href="https://www.browserstack.com" target="_blank" rel="noreferrer">BrowserStack</a>.
                   </p>
                 </li>
 
@@ -199,16 +199,16 @@
           <div class="row">
             <div class="social" style="margin-top:30px; margin-bottom:50px; width:300px">
               <ul>
-                <li style="padding-top:2px"><a data-via="nightwatchjs"
-                                               data-text="Nightwatch.js allows you to write intuitive end-to-end tests using Node.js and WebDriver that run cross-browser."
-                                               href="https://twitter.com/share"
-                                               class="twitter-share-button"
-                                               data-lang="en" data-size="large">Tweet</a></li>
                 <li>
-                  <iframe
-                    src="https://ghbtns.com/github-btn.html?user=nightwatchjs&repo=nightwatch&type=watch&count=true&size=large"
-                    allowtransparency="true" frameborder="0" scrolling="0" width="160"
-                    height="30"></iframe>
+                  <div class="btn-tweet" style="width: 88px;">
+                    <a id="tweet-btn" href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Fnew.nightwatchjs.org%2F&ref_src=twsrc%5Etfw&text=Nightwatch.js%20allows%20you%20to%20write%20intuitive%20end-to-end%20tests%20using%20Node.js%20and%20WebDriver%20that%20run%20cross-browser.&tw_p=tweetbutton&url=https%3A%2F%2Fnightwatchjs.org%2F&via=nightwatchjs" class="btn"><i></i><span class="label">Tweet</span></a>
+                  </div>
+                <li>
+                  <span class="github-btn github-stargazers github-btn-large" id="github-btn">
+                    <a class="gh-btn" id="gh-btn" href="https://github.com/nightwatchjs/nightwatch/" rel="noreferrer" target="_blank" aria-label="Star on GitHub"><span class="gh-ico" aria-hidden="true"></span>
+                    <span class="gh-text" id="gh-text">Star</span></a>
+                    <a class="gh-count" href="https://github.com/nightwatchjs/nightwatch/stargazers" target="_blank" aria-label="9,713 stargazers on GitHub" style="display: block;" id="stargazers-count"></a>
+                  </span>
                 </li>
               </ul>
             </div>
@@ -261,7 +261,7 @@ module.exports = {
                 nonsense.
               </p>
               <p>
-                <a href="https://nightcloud.io" target="_blank"
+                <a href="https://nightcloud.io" target="_blank" rel="noopener"
                    class="btn btn-primary btn-lg btn-twitter">Learn
                   More</a>
               </p>
@@ -276,10 +276,10 @@ module.exports = {
           <div class="row" style="max-width: 780px; text-align: center; margin: 0 auto">
             <h2>Stay Updated</h2>
             <p style="margin-top:50px">
-              Follow <a href="https://twitter.com/nightwatchjs" target="_blank">@nightwatchjs</a> on Twitter to stay updated to new version release updates, announcements, and tutorials from our community.
+              Follow <a href="https://twitter.com/nightwatchjs" rel="noreferrer" target="_blank">@nightwatchjs</a> on Twitter to stay updated to new version release updates, announcements, and tutorials from our community.
             </p>
             <p style="margin-top: 50px">
-              <a href="https://twitter.com/nightwatchjs" target="_blank"
+              <a href="https://twitter.com/nightwatchjs" rel="noreferrer" target="_blank"
                  class="btn btn-primary btn-lg btn-twitter">Follow on Twitter</a>
             </p>
           </div>

@@ -5,7 +5,7 @@
         <h1>API Reference</h1>
       </div>
       <div class="col-md-4">
-        <div class="carbonad"></div>
+        <div class="container-carbon"></div>
       </div>
     </div>
   </div>
@@ -35,7 +35,7 @@
 
           <ul class="nav" id="protocol-menu">
             <li>
-              <h5><a href="https://nightwatchjs.org/api#elements-headline">Finding Elements</a></h5>
+              <h5><a href="https://nightwatchjs.org/api/commands/#elements-headline">Finding Elements</a></h5>
             </li>
             <li name="waitForElementVisible" {% if method.name == 'waitForElementVisible' %}class="active"{% endif %}><a href="/api/waitForElementVisible.html">waitForElementVisible</a></li>
             <li name="waitForElementNotVisible" {% if method.name == 'waitForElementNotVisible' %}class="active"{% endif %}><a href="/api/waitForElementNotVisible.html">waitForElementNotVisible</a></li>
@@ -49,7 +49,7 @@
 
 
             <li>
-              <h5><a href="https://nightwatchjs.org/api#elementinteraction-headline">Element Interaction</a></h5>
+              <h5><a href="https://nightwatchjs.org/api/commands/#elementinteraction-headline">Element Interaction</a></h5>
             </li>
 
             <li name="clearValue" {% if method.name == 'clearValue' %}class="active"{% endif %}><a href="/api/clearValue.html">clearValue</a></li>
@@ -61,7 +61,7 @@
 
 
             <li>
-              <h5><a href="https://nightwatchjs.org/api#elementstate-headline">Element State</a></h5>
+              <h5><a href="https://nightwatchjs.org/api/commands/#elementstate-headline">Element State</a></h5>
             </li>
 
             <li name="elementActive" {% if method.name == 'elementActive' %}class="active"{% endif %}><a href="/api/elementActive.html">elementActive</a></li>
@@ -74,14 +74,14 @@
             <li name="isVisible" {% if method.name == 'isVisible' %}class="active"{% endif %}><a href="/api/isVisible.html">isVisible</a></li>
 
             <li>
-              <h5><a href="https://nightwatchjs.org/api#elementlocation-headline">Element Location</a></h5>
+              <h5><a href="https://nightwatchjs.org/api/commands/#elementlocation-headline">Element Location</a></h5>
             </li>
 
             <li name="getLocation" {% if method.name == 'getLocation' %}class="active"{% endif %}><a href="/api/getLocation.html">getLocation</a></li>
             <li name="getLocationInView" {% if method.name == 'getLocationInView' %}class="active"{% endif %}><a href="/api/getLocationInView.html">getLocationInView</a></li>
 
             <li>
-              <h5><a href="https://nightwatchjs.org/api#elementinternal-headline">Protocol Actions</a></h5>
+              <h5><a href="https://nightwatchjs.org/api/commands/#elementinternal-headline">Protocol Actions</a></h5>
             </li>
             <li name="elementIdAttribute"><a href="/api/elementIdAttribute.html" {% if method.name == 'elementIdAttribute' %}class="active"{% endif %}>elementIdAttribute</a></li>
             <li name="elementIdClear"><a href="/api/elementIdClear.html" {% if method.name == 'elementIdClear' %}class="active"{% endif %}>elementIdClear</a></li>
@@ -99,7 +99,7 @@
             <li name="submit"><a href="/api/submit.html" {% if method.name == 'submit' %}class="active"{% endif %}>submit</a></li>
 
             <li>
-              <h5><a href="https://nightwatchjs.org/api#document-headline">Document Handling</a></h5>
+              <h5><a href="https://nightwatchjs.org/api/commands/#document-headline">Document Handling</a></h5>
             </li>
             <li name="execute" {% if method.name == 'execute' %}class="active"{% endif %}><a href="/api/execute.html">execute</a></li>
             <li name="executeAsync" {% if method.name == 'executeAsync' %}class="active"{% endif %}><a href="/api/executeAsync.html">executeAsync</a></li>
@@ -107,7 +107,7 @@
             <li name="source" {% if method.name == 'source' %}class="active"{% endif %}><a href="/api/source.html">source</a></li>
 
             <li>
-              <h5><a href="https://nightwatchjs.org/api#sessions-headline">Session Related</a></h5>
+              <h5><a href="https://nightwatchjs.org/api/commands/#sessions-headline">Session Related</a></h5>
             </li>
             <li name="end" {% if method.name == 'end' %}class="active"{% endif %}><a href="/api/end.html">end</a></li>
             <li name="getLog" {% if method.name == 'getLog' %}class="active"{% endif %}><a href="/api/getLog.html">getLog</a></li>
@@ -123,7 +123,7 @@
             <li name="timeoutsImplicitWait" {% if method.name == 'timeoutsImplicitWait' %}class="active"{% endif %}><a href="/api/timeoutsImplicitWait.html">timeoutsImplicitWait</a></li>
 
             <li>
-              <h5><a href="https://nightwatchjs.org/api#navigation-headline">Navigation</a></h5>
+              <h5><a href="https://nightwatchjs.org/api/commands/#navigation-headline">Navigation</a></h5>
             </li>
 
             <li name="back" {% if method.name == 'back' %}class="active"{% endif %}><a href="/api/back.html">back</a></li>
@@ -136,7 +136,7 @@
             <li name="title" {% if method.name == 'title' %}class="active"{% endif %}><a href="/api/title.html">title</a></li>
 
             <li>
-              <h5><a href="https://nightwatchjs.org/api#contexts-headline">Window Related</a></h5>
+              <h5><a href="https://nightwatchjs.org/api/commands/#contexts-headline">Window Related</a></h5>
             </li>
 
             <li name="closeWindow" {% if method.name == 'closeWindow' %}class="active"{% endif %}><a href="/api/closeWindow.html">closeWindow</a></li>
@@ -162,14 +162,14 @@
             <li name="windowSize" {% if method.name == 'windowSize' %}class="active"{% endif %}><a href="/api/windowSize.html">windowSize</a></li>
 
             <li>
-              <h5><a href="https://nightwatchjs.org/api#frames-headline">Frames</a></h5>
+              <h5><a href="https://nightwatchjs.org/api/commands/#frames-headline">Frames</a></h5>
             </li>
 
             <li name="frame" {% if method.name == 'frame' %}class="active"{% endif %}><a href="/api/frame.html">frame</a></li>
             <li name="frameParent" {% if method.name == 'frameParent' %}class="active"{% endif %}><a href="/api/frameParent.html">frameParent</a></li>
 
             <li>
-              <h5><a href="https://nightwatchjs.org/api#cookies-headline">Cookies</a></h5>
+              <h5><a href="https://nightwatchjs.org/api/commands/#cookies-headline">Cookies</a></h5>
             </li>
             <li name="cookie" {% if method.name == 'cookie' %}class="active"{% endif %}><a href="/api/cookie.html">cookie</a></li>
             <li name="deleteCookie" {% if method.name == 'deleteCookie' %}class="active"{% endif %}><a href="/api/deleteCookie.html">deleteCookie</a></li>
@@ -179,7 +179,7 @@
             <li name="setCookie" {% if method.name == 'setCookie' %}class="active"{% endif %}><a href="/api/setCookie.html">setCookie</a></li>
 
             <li>
-              <h5><a href="https://nightwatchjs.org/api#useractions-headline">User Actions</a></h5>
+              <h5><a href="https://nightwatchjs.org/api/commands/#useractions-headline">User Actions</a></h5>
             </li>
 
             <li name="doubleClick" {% if method.name == 'doubleClick' %}class="active"{% endif %}><a href="/api/doubleClick.html">doubleClick</a></li>
@@ -189,7 +189,7 @@
             <li name="moveTo" {% if method.name == 'moveTo' %}class="active"{% endif %}><a href="/api/moveTo.html">moveTo</a></li>
 
             <li>
-              <h5><a href="https://nightwatchjs.org/api#userprompts-headline">User Prompts</a></h5>
+              <h5><a href="https://nightwatchjs.org/api/commands/#userprompts-headline">User Prompts</a></h5>
             </li>
             <li name="acceptAlert" {% if method.name == 'acceptAlert' %}class="active"{% endif %}><a href="/api/acceptAlert.html">acceptAlert</a></li>
             <li name="dismissAlert" {% if method.name == 'dismissAlert' %}class="active"{% endif %}><a href="/api/dismissAlert.html">dismissAlert</a></li>
@@ -197,13 +197,13 @@
             <li name="setAlertText" {% if method.name == 'setAlertText' %}class="active"{% endif %}><a href="/api/setAlertText.html">setAlertText</a></li>
 
             <li>
-              <h5><a href="https://nightwatchjs.org/api#screens-headline">Screen Capture</a></h5>
+              <h5><a href="https://nightwatchjs.org/api/commands/#screens-headline">Screen Capture</a></h5>
             </li>
             <li name="saveScreenshot" {% if method.name == 'saveScreenshot' %}class="active"{% endif %}><a href="/api/saveScreenshot.html">saveScreenshot</a></li>
             <li name="screenshot" {% if method.name == 'screenshot' %}class="active"{% endif %}><a href="/api/screenshot.html">screenshot</a></li>
 
             <li>
-              <h5><a href="https://nightwatchjs.org/api#mobile-headline">Mobile Related</a></h5>
+              <h5><a href="https://nightwatchjs.org/api/commands/#mobile-headline">Mobile Related</a></h5>
             </li>
 
             <li name="getOrientation" {% if method.name == 'getOrientation' %}class="active"{% endif %}><a href="/api/getOrientation.html">getOrientation</a></li>
@@ -213,7 +213,7 @@
             <li name="setContext" {% if method.name == 'setContext' %}class="active"{% endif %}><a href="/api/setContext.html">setContext</a></li>
 
             <li>
-              <h5><a href="https://nightwatchjs.org/api#utilities-headline">Utilities/Debugging</a></h5>
+              <h5><a href="https://nightwatchjs.org/api/commands/#utilities-headline">Utilities/Debugging</a></h5>
             </li>
 
             <li name="pause" {% if method.name == 'pause' %}class="active"{% endif %}><a href="/api/pause.html">pause</a></li>
@@ -236,11 +236,19 @@
     <br>
 
     {% autoescape false %}{{method.descr}}{% endautoescape %}
+    {% if method.api == 'protocol.elementinteraction' || method.api == 'protocol.elementstate' || method.api == 'protocol.elementlocation' %}
+    {% autoescape false %}
+      <p class="alert alert-info"><code>{{method.name}}()</code> will automatically wait for the element to be present (until the specified timeout). If the element is not found, an error is thrown which will cause the test to fail. Starting with <code>v1.2</code> you can suppress element not found errors by specifying the <code>suppressNotFoundErrors</code> option.</p>
+    {% endautoescape %}{% endif %}
     {% if method.internal %}
     {% autoescape false %}<p class="alert alert-warning">Please note that this command operates on a protocol level and accepts the <a href="https://www.w3.org/TR/webdriver1/#dfn-web-elements">Web Element ID</a> as the parameter.
     To retrieve it, use either the <code>.element()</code> or <code>.elements()</code> command. Read more on <a href="https://www.w3.org/TR/webdriver1/#element-retrieval">Element retrieval</a>.</p>
     {% endautoescape %}{% endif %}
-
+    {% if method.jsonwire %}
+    {% autoescape false %}<p class="alert alert-warning">This command has been deprecated and it's not available when using <a href="https://www.w3.org/TR/webdriver1/">W3C Webdriver</a> clients (such as GeckoDriver).
+      It's only available when using the Selenium <a href="https://github.com/SeleniumHQ/selenium/wiki/JsonWireProtocol" target="_blank">JSONWire Protocol</a>.
+    </p>
+    {% endautoescape %}{% endif %}
     {% if method.syntax %}
     <h3>Syntax</h3>
 <div class="sample-test">

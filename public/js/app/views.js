@@ -36,7 +36,7 @@ domino.views.define('index', function(view) {
 
 });
 
-$('.carbonad').on('click', 'a', function(ev) {
+$('.container-carbon').on('click', 'a', function(ev) {
   ev.stopPropagation();
 });
 
@@ -239,7 +239,7 @@ domino.views.define('api', function(view) {
       }
     }.bind(this), 100);
 
-    if ($('#apimethod-container .carbonad').length) {
+    if ($('#apimethod-container .container-carbon').length) {
       setTimeout(function() {
         this.sourcecolor.render();
         this.carbonAds.render('#apimethod-container');
@@ -371,7 +371,7 @@ domino.viewhelpers.define('carbonad', function() {
 
   this.render = function(selector) {
     try {
-      $('.carbonad').html('');
+      $('.container-carbon').html('');
       $('#_carbonads_projs').remove();
 
       $('link').eq(5).nextAll('script').each(function() {
@@ -388,11 +388,11 @@ domino.viewhelpers.define('carbonad', function() {
 
     }
 
-
     setTimeout(function() {
       carbonAd.setAttribute('src', 'https://cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=nightwatchjsorg');
       carbonAd.setAttribute('crossorigin', 'anonymous');
-      $(selector + ' .carbonad').append(carbonAd);
+      carbonAd.setAttribute('async', '');
+      $(selector + ' .container-carbon').append(carbonAd);
     }.bind(this), 0);
   };
 });
@@ -461,7 +461,26 @@ domino.viewhelpers.define('transition', function() {
 let scrollpos = window.scrollY;
 const header = document.querySelector('nav');
 const headerHeight = 70;
-
+$('#tweet-btn').on('click', function(e) {
+  e.preventDefault();
+  var url = this.getAttribute('href');
+  window.open(url, 'twitter-intent', 'width=640,height=480,status=1,menubar=no,location=yes,resizable=yes,scrollbars=yes,status=yes')
+});
+$('.version-select-dropdown').on('change', '.version-dropdown', function(e) {
+  if (this.value == '1.1.13') {
+    window.location.href = 'https://v11.nightwatchjs.org';
+    return;
+  }
+  if (this.value == '0.9.21') {
+    window.location.href = 'http://v09.nightwatchjs.org';
+    return;
+  }
+});
+window.onGithubResponse = function(response) {
+  if (response && response.data) {
+    $('#stargazers-count').text(response.data.stargazers_count || '');
+  }
+};
 window.addEventListener('scroll', function() {
   scrollpos = window.scrollY;
 
