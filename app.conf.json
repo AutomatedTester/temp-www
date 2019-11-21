@@ -1,5 +1,5 @@
 {
-  "NIGHTWATCH_LIB_PATH": "./node_modules/nightwatch/lib/",
+  "NIGHTWATCH_LIB_PATH": "./node_modules/nightwatch-public/lib/",
   "NIGHTWATCH_DOCS_PATH": "./node_modules/nightwatch-docs/",
   "OUTPUT_FOLDER": "./output",
   "NIGHTWATCH_VERSION": "1.1.13",
@@ -9,16 +9,18 @@
   "devServerPort": "3001",
 
   "apiFileList": [
-    ["api/expect/element/", "expect"],
-    ["api/expect/elements/", "expect"],
+    ["api/expect/assertions/element/", "expect"],
+    ["api/expect/assertions/elements/", "expect"],
     ["api/expect/cookie.js", "expect"],
+    ["api/expect/element.js", "expect"],
+    ["api/expect/elements.js", "expect"],
     ["api/expect/title.js", "expect"],
     ["api/expect/url.js", "expect"],
 
     ["api/element-commands/", "commands"],
     ["api/assertions/", "assertions"],
     ["api/client-commands/", "commands"],
-    ["api/protocol.js", "protocol"]
+    ["api/protocol/", "protocol"]
   ],
 
   "sections": {
@@ -41,7 +43,7 @@
       "description" : "How to get in touch with the team, and where to submit bugs and feature requests."
     },
     "gettingstarted" : {
-      "subsections": ["installation", "configuration", "browser-drivers-setup"],
+      "subsections": ["installation", "concepts", "configuration", "browser-drivers-setup"],
       "pageTitle" : "Getting Started | Nightwatch.js",
       "title" : "Getting Started",
       "description" : "Everything you need in order to get started with Nightwatch.js, step-by-step, with configuration guides for various browsers."

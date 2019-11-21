@@ -1,5 +1,5 @@
 html, body {
-  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: -apple-system, 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background-color: #1E1917;
 }
 
@@ -473,6 +473,7 @@ section[data-page-uri] {
 [data-uri="/gettingstarted"] section [data-page-uri="/gettingstarted"],
 [data-uri^="/gettingstarted/installation"] section [data-page-uri^="/gettingstarted/installation"],
 [data-uri^="/gettingstarted/configuration"] section [data-page-uri^="/gettingstarted/configuration"],
+[data-uri^="/gettingstarted/concepts"] section [data-page-uri^="/gettingstarted/concepts"],
 [data-uri^="/gettingstarted/browser-drivers-setup"] section [data-page-uri^="/gettingstarted/browser-drivers-setup"] {
   display: block;
 }

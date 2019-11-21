@@ -13,7 +13,8 @@
           sidenavData: [
             ['#what-is-nightwatch-', 'What is Nightwatch?'],
             ['#overview-of-webdriver', 'Overview of WebDriver'],
-            ['#theory-of-operation', 'Theory of Operation']
+            ['#theory-of-operation', 'Theory of Operation'],
+            ['#nightwatch-selenium-server', 'Nightwatch &amp; Selenium Server']
           ]
         },
 
@@ -24,7 +25,13 @@
           sidenavData: [
             ['#install-node-js', 'Install Node.js'],
             ['#install-nightwatch', 'Install Nightwatch'],
-            ['#webdriver-service', 'Install WebDriver']
+            ['#install-webdriver', 'Install WebDriver', [
+              ['#install-geckodriver', 'GeckoDriver'],
+              ['#install-chromedriver', 'ChromeDriver'],
+              ['#install-microsoftedge', 'Microsoft Webdriver'],
+              ['#install-safaridriver', 'SafariDriver']
+            ]],
+            ['#install-selenium-server', 'Install Selenium Server']
           ]
         },
 
@@ -35,15 +42,31 @@
           sidenavData: [
             ['#nightwatch-json', 'nightwatch.json'],
             ['#base-settings', 'Base Settings'],
+            ['#extended-settings', 'Extended Settings', [
+              ['#test-runner-settings', 'Test Runner Settings'],
+              ['#test-session-settings', 'Test Session Settings'],
+              ['#filtering-settings', 'Filtering Settings'],
+              ['#output-settings', 'Output Settings']
+            ]],
             ['#webdriver-settings', 'WebDriver Settings'],
-            ['#test-settings', 'Test Settings']
+            ['#selenium-server-settings', 'Selenium Settings']
+          ]
+        },
+
+        'concepts': {
+          title: 'Concepts | ',
+          linkTitle: 'Concepts',
+          nthChildIndex: 4,
+          sidenavData: [
+            ['#defining-test-environments', 'Test Environments'],
+            ['#using-test-globals', 'Globals']
           ]
         },
 
         'browser-drivers-setup': {
           title: 'Browser Drivers Setup | ',
           linkTitle: 'Browser Drivers Setup',
-          nthChildIndex: 4,
+          nthChildIndex: 5,
           sidenavData: [
             ['#geckodriver', 'GeckoDriver (Firefox)'],
             ['#chromedriver', 'ChromeDriver'],
@@ -61,6 +84,9 @@
           linkTitle: 'Using Nightwatch',
           sidenavData: [
             ['#writing-tests', 'Writing Tests'],
+            ['#finding-amp-interacting-with-elements', 'Finding &amp; Interacting with Elements'],
+            ['#writing-assertions', 'Writing Assertions'],
+            ['#using-bdd-describe-beta-', 'Using BDD describe'],
             ['#using-es6-async-await-beta-', 'Using ES6 Async/Await'],
             ['#using-xpath-selectors', 'Using Xpath'],
             ['#expect-assertions', 'BDD Expect Assertions'],
@@ -200,6 +226,7 @@
     var sections = __subSections__[mainSection];
     var sectionData;
     var sidenavContent;
+    var content;
 
     Object.keys(sections.content).forEach(function(sectionName) {
       sectionData = sections.content[sectionName];
@@ -211,12 +238,26 @@
         }
 
         sidenavContent.push('<ul class="nav">');
+
         for (var i = 0; i < sectionData.sidenavData.length; i++) {
           sidenavContent.push('<li>');
-          if (sectionData.sidenavData[i].length === 3) {
-            sidenavContent.push('<h5><a href="' + sectionData.sidenavData[i][1] +'">'+ sectionData.sidenavData[i][2] +'</a></h5>');
+
+          content = sectionData.sidenavData[i];
+
+          if (content.length === 3 && !Array.isArray(content[2])) {
+            sidenavContent.push('<h5><a href="' + content[1] +'">'+ content[2] +'</a></h5>');
           } else {
-            sidenavContent.push('<a href="' + sectionData.sidenavData[i][0] +'">'+ sectionData.sidenavData[i][1] +'</a>');
+            sidenavContent.push('<a href="' + content[0] +'">'+ content[1] + '</a>');
+
+            if (Array.isArray(content[2])) {
+              sidenavContent.push('<ul class="nav">');
+
+              content[2].forEach(function(data) {
+                sidenavContent.push('<li><a href="' + data[0] +'">'+ data[1] +'</a></li>');
+              });
+
+              sidenavContent.push('</ul>');
+            }
           }
 
           sidenavContent.push('</li>');
@@ -226,7 +267,8 @@
         sidenavContent = [];
       }
 
-      html.push('<li' + (subSection === sectionName ? ' class="active"' : '') + '><a href="/'+ mainSection +'/' + sectionName + (sectionName ? '/': '') + '">'+ sectionData.linkTitle +'</a>' +
+      html.push('<li' + (subSection === sectionName ? ' class="active"' : '') + '><a href="/'+ mainSection +'/' +
+        sectionName + (sectionName ? '/': '') + '">'+ sectionData.linkTitle +'</a>' +
         sidenavContent.join('') + '</li>');
     });
 

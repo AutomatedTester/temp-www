@@ -39,6 +39,9 @@ domino.views.define('index', function(view) {
 $('.container-carbon').on('click', 'a', function(ev) {
   ev.stopPropagation();
 });
+$('[data-page-uri="/gettingstarted/installation"] table').on('click', 'a', function(ev) {
+  ev.stopPropagation();
+});
 
 domino.views.__runSubSection = function(view_script, mainSection, subSection, contentFn) {
   var sectionPath = subSection;
@@ -93,6 +96,10 @@ domino.views.define('gettingstarted', function(view) {
 
   this.configurationView = function(view_script) {
     domino.views.__runSubSection.call(this, view_script, 'gettingstarted', 'configuration');
+  };
+
+  this.conceptsView = function(view_script) {
+    domino.views.__runSubSection.call(this, view_script, 'gettingstarted', 'concepts');
   };
 
   this['browser-drivers-setupView'] = function(view_script) {

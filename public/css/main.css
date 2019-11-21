@@ -519,7 +519,7 @@ ul.features {
 }
 .docs-section h3 {
   padding-top: 78px;
-  margin-top: -29px;
+  margin-top: -70px;
   font-weight: 300;
 }
 
@@ -536,8 +536,13 @@ ul.features {
   text-align: center;
 }
 
+.docs-section p {
+  line-height: 1.3;
+}
+
 blockquote {
   font-style: italic;
+  padding: 0 20px;
 }
 
 blockquote p {
@@ -1121,10 +1126,13 @@ ul.features li.introspect {
   /*width:100%;*/
   /*background-color: #1B1614;*/
 }
-
+[data-page-uri="/gettingstarted"] .docs-section p:not([class]),
+[data-page-uri="/guide"] .docs-section p:not([class]) {
+  margin: 15px 0;
+}
 @media only screen and (min-width: 1200px) {
   body {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .index-features.container {
@@ -1139,6 +1147,10 @@ ul.features li.introspect {
 
   .sample-test pre {
     font-size: 13px;
+  }
+  [data-page-uri="/gettingstarted"] .docs-section p:not([class]),
+  [data-page-uri="/guide"] .docs-section p:not([class]) {
+    margin: 25px 0;
   }
 }
 
@@ -1489,3 +1501,91 @@ footer .col-md-4 {
   border-width: 7px 7px 7px 0
 }
 
+.alert.nightwatch {
+  margin-top: 30px;
+}
+.alert.nightwatch i {
+  color: #777;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.4;
+  font-size: 16px;
+}
+
+.docs-section a {
+  /*color: #c7254e;*/
+}
+.docs-section p img:not([class]) {
+  width: 100%;
+  margin-top:-20px;
+  margin-bottom:-20px;
+}
+h3#what-is-nightwatch- {
+  margin-top: -25px;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+h3#what-is-nightwatch- span {
+  padding-bottom: 4px;
+  margin-right: 100px;
+}
+h3#overview-of-webdriver span {
+  margin-right: 40px;
+}
+#gettingstarted-container .docs-section h3 {
+  margin-left: 0;
+  margin-right: 0;
+}
+#gettingstarted-container .docs-section h3 span{
+  padding: 5px;
+}
+h3#install-webdriver {
+  margin-top: -30px;
+}
+p.whatis-logo {
+  border-bottom: 8px solid #222;
+  height: 150px;
+  margin-top: -158px;
+  margin-right: 50px;
+}
+p.whatis-logo img {
+  float: right;
+  height: 150px;
+}
+p.whatis-logo.w3c-logo img {
+  height: 60px;
+  border-color: #1a5e9a;
+  border-style: solid;
+  border-width: .65rem .7rem .6rem;
+  border-radius: .4rem;
+  background: #1a5e9a;
+  display: block;
+}
+
+p.whatis-logo.w3c-logo {
+  border-bottom: 0;
+  margin-right: 20px;
+  height: 70px;
+  margin-top: -74px;
+}
+p.whatis-logo + p {
+  clear:both;
+}
+
+#guide-container .test-output {
+  text-align: center;
+}
+#guide-container .test-output img {
+  max-width: 700px;
+}
+
+#gettingstarted-container h4[id] {
+  padding-top: 78px;
+  margin-top: -70px;
+}
+
+.alert h5 {
+  margin-top: 0;
+  font-weight: 600;
+  font-size: 20px;
+}
