@@ -3,12 +3,6 @@ html, body {
   background-color: #1E1917;
 }
 
-#navigation {
-  float: left;
-  width: 100%;
-  background: none;
-}
-
 #mh, #mp {
   opacity: 1;
 }
@@ -51,7 +45,6 @@ html, body {
   padding: 4px 9px;
   font-size: 17px;
   font-weight: 300;
-  color: #DDA562;
 }
 
 .nav>li>a:hover {
@@ -59,18 +52,57 @@ html, body {
   background: none;
 }
 
-.nav>li>a:focus {
+.nav > li >a:focus {
   color: #fff;
   background: none;
 }
 
-.navbar-default {
+
+#gettingstarted-container {
+  position: relative;
+}
+.nw-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1071;
+  padding: 0;
   height: 65px;
   background: none;
   border: 0;
 }
-body.navbar-visible .navbar-default {
+.nw-navbar .container {
+  width: 100%;
+}
+
+body.navbar-visible .nw-navbar {
   background: #000;
+}
+body.navbar-visible .bs-sidebar {
+  position: sticky;
+  top: 3rem;
+  height: 600px;
+}
+
+[data-uri^="/api"] body.navbar-visible .bs-sidebar,
+[data-uri^="/gettingstarted"] body.navbar-visible .bs-sidebar,
+[data-uri^="/about"] body.navbar-visible .bs-sidebar {
+  top: 5rem;
+}
+
+[data-uri^="/api/commands"] body.navbar-visible .bs-sidebar {
+  overflow-y: auto;
+  height: 79vh;
+}
+[data-uri^="/api/$method"] body.navbar-visible .bs-sidebar {
+  top: 5rem;
+}
+.navbar-nav.ml-md-auto {
+  padding-right: 50px;
+}
+.dropdown-item.active, .dropdown-item:active {
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23292b2c' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") no-repeat .4rem .6rem/.75rem .75rem;
+  font-weight: 600;
+  color: #222;
 }
 
 .parallax {
@@ -79,6 +111,7 @@ body.navbar-visible .navbar-default {
   overflow-y: hidden;
   -webkit-perspective: 1px;
   perspective: 1px;
+  margin-top: -74px;
 }
 
 [data-uri="/"] .parallax {
@@ -455,6 +488,15 @@ section[data-page-uri] {
   display: none;
 }
 
+[data-uri="/"] .navbar-collapse .nav > li > a[href="/"],
+[data-uri^="/gettingstarted"] .navbar-collapse .nav > li > a[href^="/gettingstarted"],
+[data-uri^="/guide"] .navbar-collapse .nav > li > a[href^="/guide"],
+[data-uri^="/api"] .navbar-collapse .nav > li > a[href^="/api"],
+[data-uri^="/about"] .navbar-collapse .nav > li > a[href^="/about"] {
+  color: #fff;
+  background: none;
+}
+
 [data-uri="/"] section[data-page-uri="/"],
 [data-uri="/blog"] section[data-page-uri="/blog"],
 [data-uri="/contact"] section[data-page-uri="/contact"],
@@ -470,7 +512,8 @@ section[data-page-uri] {
 [data-uri="/api/$method"] section[data-page-uri="/api"] {
   display: none;
 }
-[data-uri="/gettingstarted"] section [data-page-uri="/gettingstarted"],
+[data-uri="/gettingstarted"] section [data-page-uri="/gettingstarted/"],
+[data-uri="/gettingstarted/"] section [data-page-uri="/gettingstarted/"],
 [data-uri^="/gettingstarted/installation"] section [data-page-uri^="/gettingstarted/installation"],
 [data-uri^="/gettingstarted/configuration"] section [data-page-uri^="/gettingstarted/configuration"],
 [data-uri^="/gettingstarted/concepts"] section [data-page-uri^="/gettingstarted/concepts"],
@@ -488,7 +531,10 @@ section[data-page-uri] {
 }
 
 [data-uri="/guide"] section [data-page-uri="/guide"],
-[data-uri="/guide/"] section [data-page-uri="/guide"],
+[data-uri="/guide/"] section [data-page-uri="/guide/"],
+[data-uri="/guide"] [data-page-uri^="/guide"],
+[data-uri="/guide/"] [data-page-uri^="/guide/"],
+[data-uri^="/guide/using-nightwatch"] section [data-page-uri^="/guide/using-nightwatch"],
 [data-uri^="/guide/running-tests"] section [data-page-uri^="/guide/running-tests"],
 [data-uri^="/guide/extending-nightwatch"] section [data-page-uri^="/guide/extending-nightwatch"],
 [data-uri^="/guide/working-with-page-objects"] section [data-page-uri^="/guide/working-with-page-objects"],
@@ -531,7 +577,8 @@ section[data-page-uri] {
 
 [data-uri="/"] .top-moon {
   background-size: 100%;
-  background-position: calc(50% + 650px) -600px;
+  /*background-position: calc(50% + 650px) -600px;*/
+  background-position: calc(50% + 592px) -486px;
 }
 
 [data-uri="/blog"] .top-moon,
@@ -678,8 +725,19 @@ section[data-page-uri] {
 }
 
 #community-content article img {
-  max-width: 100%;
+  max-width: 250px;
+  margin-top: 28px;
+  margin-left: 10px;
+}
+#community-content article.featured img {
+  max-width: 480px;
+  margin-bottom: 28px;
 }
 #community-content article p {
   font-size: 16px;
+}
+#community-content article strong {
+  font-weight: 200;
+  color: #004444;
+  font-size: 20px;
 }

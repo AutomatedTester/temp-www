@@ -2,7 +2,7 @@
 <meta name="description" content="<%- pageDescription %>"/>
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="canonical" href="https://nightwatchjs.org/" />
 <meta charset="utf-8">
 <meta property="og:title" content="Nightwatch.js" />
@@ -19,16 +19,16 @@
   var q = p.split('/');
   q.shift();
   q=q.map(function(a){
-    return a.replace(/.+\.html$/,'$method')
+    return a.replace(/\api\/.+\.html$/,'/api/$method')
   });
   h.setAttribute('data-uri',(p!='/'?'/'+q.join('/'):p));
 })(location.pathname,document.documentElement);
 </script>
 <link href="/css/themes/prism.css" rel="stylesheet">
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
-<link href="/css/main.css" rel="stylesheet">
+<link href="/css/main.css?t=1" rel="stylesheet">
 <link href="/css/sidebar.css" rel="stylesheet">
 <link href="/css/style.css" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500"/>

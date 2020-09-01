@@ -4,26 +4,39 @@ domino.views.metaTagContent = domino.views.metaTagEl.content;
 
 domino.views.metaTagTwitterImg = $('meta[name="twitter:image"]').attr('content');
 
-domino.views.sections = ['index', 'gettingstarted', 'guide', 'about', 'api', 'releases'];
+domino.views.sections = ['index', 'gettingstarted', 'about', 'api', 'releases', 'guide'];
 domino.views.__sectionsData__ = {};
-function getSectionData(currentView) {
+
+domino.views.getSectionData = function(currentView) {
   domino.views.sections.forEach(function(section) {
     if (section !== currentView && !domino.views.__sectionsData__[section]) {
       $.get('/js/app/sections/' + section + '.txt', function(data) {
         domino.views.__sectionsData__[section] = data;
         $('#' + section + '-container').html(data);
-        Prism.highlightAll();
-      })
+
+        setTimeout(function() {
+          Prism.highlightAll();
+        }, 0);
+      });
     }
   });
-}
+};
 
 domino.views.define('index', function(view) {
   this.indexView = function(view_script) {
     if (domino.views.currentView == 'index') {
       return;
     }
-    getSectionData('index');
+
+    var videoContainer = $('#video-container');
+    window.setTimeout(function() {
+      if (videoContainer.is(':empty')) {
+        videoContainer.html('<iframe src="https://player.vimeo.com/video/376838936?loop=1&byline=0&portrait=0&title=0" ' +
+          'style="width:100%;height:560px" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>');
+      }
+    }, 500);
+
+    domino.views.getSectionData('index');
     view_script.no_render = true;
     view_script.$container = '#index-container';
     document.title = 'Nightwatch.js | Node.js powered End-to-End testing framework';
@@ -54,8 +67,8 @@ domino.views.__runSubSection = function(view_script, mainSection, subSection, co
   }
 
   window.scrollTo(0, 0);
-  getSectionData(mainSection);
-  var sidebar = domino.views.__buildSidebar(mainSection, subSection, contentFn);
+  domino.views.getSectionData(mainSection);
+  var sidebar = domino.views.sidebar.build(mainSection, subSection, contentFn);
   var data = sidebar.data;
 
   view_script.$container = '#'+ mainSection +'-container';
@@ -71,6 +84,7 @@ domino.views.__runSubSection = function(view_script, mainSection, subSection, co
   $('#' + mainSection + '-container .bs-sidebar').html(sidebar.content);
 
   var scrollTarget = '#'+ mainSection + '-container .bs-sidenav > li:nth-child('+ data.nthChildIndex +')';
+
   this.initHelper('bs.scrollspy').render({
     target : scrollTarget,
     offset : 85
@@ -86,6 +100,10 @@ domino.views.__runSubSection = function(view_script, mainSection, subSection, co
 };
 
 domino.views.define('gettingstarted', function(view) {
+  function renderPage(view_script, params, cb) {
+    $('#gettingstarted-container').scrollspy({target: '#nav-sidebar'});
+  }
+
   this.installationView = function(view_script) {
     domino.views.__runSubSection.call(this, view_script,  'gettingstarted', 'installation');
   };
@@ -122,156 +140,6 @@ domino.views.define('about', function(view) {
 
 });
 
-domino.views.define('guide', function(view) {
-
-  this.init = function() {};
-
-  this['running-testsView'] = function(view_script) {
-    domino.views.__runSubSection.call(this, view_script, 'guide', 'running-tests');
-  };
-
-  this['extending-nightwatchView'] = function(view_script) {
-    domino.views.__runSubSection.call(this, view_script, 'guide', 'extending-nightwatch');
-  };
-
-  this['working-with-page-objectsView'] = function(view_script) {
-    domino.views.__runSubSection.call(this, view_script, 'guide', 'working-with-page-objects');
-  };
-
-  this['unit-testing-with-nightwatchView'] = function(view_script) {
-    domino.views.__runSubSection.call(this, view_script, 'guide', 'unit-testing-with-nightwatch');
-  };
-
-  this.indexView = function(view_script) {
-    domino.views.__runSubSection.call(this, view_script, 'guide', '');
-  };
-
-});
-
-domino.views.define('api', function(view) {
-  var sidenavData = {
-    '': [],
-    expect: [],
-    pageobject: [],
-    commands: []
-  };
-  var sidenavReady = false;
-
-  function populateSidenavData() {
-    Object.keys(sidenavData).forEach(function(key, index) {
-      $('#api-container .bs-sidebar li:nth-child(' + (index + 1) + ') ul li').each(function(i, el) {
-        var element = el.firstChild;
-        var entry = [];
-
-        if (element && element && element.tagName && element.tagName.toLocaleLowerCase() === 'h5') {
-          entry.push('h5');
-          element = element.firstChild;
-        }
-
-        var link = element.href || '';
-        if (link) {
-          link = link.substring(element.href.indexOf('#'));
-        }
-        entry.push(link, element.innerHTML);
-        sidenavData[key].push(entry);
-      });
-    });
-    sidenavReady = true;
-  }
-
-  this.init = function() {
-    this.transition = this.initHelper('transition');
-    this.carbonAds = this.initHelper('carbonad');
-    this.sourcecolor = this.initHelper('sourcecolor');
-
-    if (!sidenavReady) populateSidenavData();
-  };
-
-  function api(view_script, scollspy) {
-    view_script.$container = '#api-container';
-
-    this.initHelper('transition').render(function() {
-      if (scollspy) {
-        this.initHelper('bs.scrollspy').render({
-          target : '#api-container .bs-sidebar',
-          offset : 580,
-          spyAttribute : 'data-spy'
-        });
-
-        this.initHelper('sourcecolor').render();
-        this.initHelper('sidebar').render('#api-container');
-      }
-    }, view_script);
-  }
-
-  this.expectView = function(view_script) {
-    domino.views.__runSubSection.call(this, view_script, 'api', 'expect', function() {
-      return sidenavData.expect;
-    });
-  };
-
-  this.commandsView = function(view_script) {
-    domino.views.__runSubSection.call(this, view_script, 'api', 'commands', function() {
-      return sidenavData.commands;
-    });
-  };
-
-  this.pageobjectView = function(view_script) {
-    domino.views.__runSubSection.call(this, view_script, 'api', 'pageobject', function() {
-      return sidenavData.pageobject;
-    });
-  };
-
-  this.indexView = function(view_script) {
-    domino.views.__runSubSection.call(this, view_script, 'api', '', function() {
-      return sidenavData[''];
-    });
-  };
-
-  this.methodView = function(view_script) {
-    window.scrollTo(0, 0);
-    getSectionData('api');
-
-    domino.views.currentView = '$method';
-    view_script.$container = '#apimethod-container';
-    document.title = (this.$scope && this.$scope.methodName ? this.$scope.methodName + ' | ' : '') + 'API Reference | Nightwatch.js';
-    this.transition.render();
-
-    setTimeout(function() {
-      if ($('ul li[name="'+ this.$scope.methodName +'"]').length > 0) {
-        var $top = $('ul li[name="'+ this.$scope.methodName +'"]')[0].offsetTop - 90;
-        if ($top > 100) {
-          $('#protocol-menu')[0].scrollTop = $top;
-        }
-      }
-    }.bind(this), 100);
-
-    if ($('#apimethod-container .container-carbon').length) {
-      setTimeout(function() {
-        this.sourcecolor.render();
-        this.carbonAds.render('#apimethod-container');
-      }.bind(this), 200);
-    } else {
-      var self = this;
-      $('body').on('DOMNodeInserted', '#apimethod-container', function listener(ev) {
-        if (ev.target === $('#apimethod-container .jumbotron')[0]) {
-          self.carbonAds.render('#apimethod-container');
-          self.sourcecolor.render();
-          $('body').off('DOMNodeInserted', '#apimethod-container');
-        }
-      });
-    }
-
-    if (this.$scope.method && this.$scope.method.descr) {
-      domino.views.metaTagEl.content = this.$scope.method.descr.replace(/<\/?[^>]+(>|$)/g, '') + ' | API Reference - Nightwatch.js';
-    }
-
-    if (document.documentElement.getAttribute('data-uri') != '/api/$method') {
-      document.documentElement.setAttribute('data-uri', '/api/$method');
-    }
-  };
-});
-
 domino.views.define('releases', function(view) {
 
   this.init = function() {};
@@ -280,7 +148,7 @@ domino.views.define('releases', function(view) {
     if (domino.views.currentView == 'releases') {
       return;
     }
-    getSectionData('releases');
+    domino.views.getSectionData('releases');
     view_script.$container = '#releases-container';
     view_script.no_render = true;
     document.title = 'Releases | Nightwatch.js';
@@ -307,7 +175,7 @@ domino.views.define('contact', function(view) {
     if (domino.views.currentView == 'contact') {
       return;
     }
-    getSectionData('contact');
+    domino.views.getSectionData('contact');
     window.scrollTo(0, 0);
     view_script.$container = '#contact-container';
     view_script.no_render = true;
@@ -330,13 +198,13 @@ domino.viewhelpers.define('sidebar', function() {
   };
 
   this.render = function(container) {
-    this.sideBar = $(container).find('.bs-sidebar');
-    this.sideBar.affix({
-      offset: {
-        top: 280,
-        bottom: 330
-      }
-    });
+    // this.sideBar = $(container).find('.bs-sidebar');
+    // this.sideBar.affix({
+    //   offset: {
+    //     top: 280,
+    //     bottom: 330
+    //   }
+    // });
   };
 
 });
@@ -355,7 +223,6 @@ domino.viewhelpers.define('bs.scrollspy', function() {
       $(opts.target).off('click');
       this.spyElem.data('bs.scrollspy', null);
     }
-
 
     $(opts.target).on('click', 'a', function(ev) {
       ev.stopPropagation();
@@ -380,26 +247,26 @@ domino.viewhelpers.define('carbonad', function() {
     try {
       $('.container-carbon').html('');
       $('#_carbonads_projs').remove();
+      $('#carbonads_1').remove();
 
       $('link').eq(5).nextAll('script').each(function() {
         if (this.src.indexOf('twitter.com') === -1) {
           $(this).remove();
         }
-      })
+      });
 
-      var carbonAd = document.createElement('script');
-      carbonAd.async = true;
-      carbonAd.setAttribute('type', 'text/javascript');
-      carbonAd.setAttribute('id', '_carbonads_js');
+      // var carbonAd = document.createElement('script');
+      // carbonAd.async = true;
+      // carbonAd.setAttribute('type', 'text/javascript');
+      // carbonAd.setAttribute('id', '_carbonads_js');
     } catch (err) {
 
     }
 
     setTimeout(function() {
-      carbonAd.setAttribute('src', 'https://cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=nightwatchjsorg');
-      carbonAd.setAttribute('crossorigin', 'anonymous');
-      carbonAd.setAttribute('async', '');
-      $(selector + ' .container-carbon').append(carbonAd);
+      //carbonAd.setAttribute('src', '/js/app/carbonad.js');
+      //$(selector + ' .container-carbon').append(carbonAd);
+      _carbonads.init(document.querySelector(selector + ' .container-carbon'));
     }.bind(this), 0);
   };
 });
@@ -411,9 +278,8 @@ domino.viewhelpers.define('transition', function() {
 
     opts = opts || {};
     if (opts.pathname && opts.currentSectionPath) {
-      pathname = opts.pathname;
       currentSectionPath = opts.currentSectionPath;
-    } else if (pathname != '/') {
+    } else if (pathname !== '/') {
       var parts = pathname.split('/');
       parts.shift();
       parts = parts.map(function(a){
@@ -425,16 +291,15 @@ domino.viewhelpers.define('transition', function() {
         return prev;
       }, []);
 
-      pathname = '/' + parts[0];
       currentSectionPath = '/' + parts.join('/');
     }
 
-    var currentMenuItem = $('.navbar ul li.active');
-    var activeMenuItem = $('.navbar ul li a[href="'+ pathname +'"]').parent();
-    if (currentMenuItem !== activeMenuItem) {
-      currentMenuItem.removeClass('active');
-      activeMenuItem.addClass('active');
-    }
+    // var currentMenuItem = $('.navbar ul li.active');
+    // var activeMenuItem = $('.navbar ul li a[href="'+ pathname +'"]').parent();
+    // if (currentMenuItem !== activeMenuItem) {
+    //   currentMenuItem.removeClass('active');
+    //   activeMenuItem.addClass('active');
+    // }
 
     var $view = this.view;
     var currentSection = $('section[data-page-uri]:visible');
@@ -459,7 +324,9 @@ domino.viewhelpers.define('transition', function() {
       });
     } else {
       element.show();
-      if (callback) callback.call($view);
+      if (callback) {
+        callback.call($view);
+      }
     }
 
   };
@@ -473,9 +340,14 @@ $('#tweet-btn').on('click', function(e) {
   var url = this.getAttribute('href');
   window.open(url, 'twitter-intent', 'width=640,height=480,status=1,menubar=no,location=yes,resizable=yes,scrollbars=yes,status=yes')
 });
+
 $('.version-select-dropdown').on('change', '.version-dropdown', function(e) {
   if (this.value == '1.1.13') {
     window.location.href = 'https://v11.nightwatchjs.org';
+    return;
+  }
+  if (this.value == '1.2.4') {
+    window.location.href = 'https://v12.nightwatchjs.org';
     return;
   }
   if (this.value == '0.9.21') {
@@ -483,11 +355,7 @@ $('.version-select-dropdown').on('change', '.version-dropdown', function(e) {
     return;
   }
 });
-window.onGithubResponse = function(response) {
-  if (response && response.data) {
-    $('#stargazers-count').text(response.data.stargazers_count || '');
-  }
-};
+
 window.addEventListener('scroll', function() {
   scrollpos = window.scrollY;
 

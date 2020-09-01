@@ -233,7 +233,7 @@
 
       <div class="col-md-9 api-container" role="main">
         <div class="docs-section assertions-api" data-page-uri="/api">
-          <%- content['assert-api'] %>
+          <%- content['api']['assertions'] %>
 
           <div class="assertions">
             <%
@@ -283,11 +283,11 @@
         </div>
 
         <div class="docs-section" data-page-uri="/api/expect">
-          <%- content['expect-api'] %>
+          <%- content['api']['expect'] %>
 
           <div class="commands">
-            <%- content['expect-cookie'] %>
-            <%- content['expect-element'] %>
+            <%- content['api']['expect-api']['cookie'] %>
+            <%- content['api']['expect-api']['element'] %>
 
             <%
             for (var methodName in api['expect.element']) {
@@ -331,19 +331,19 @@
             </div>  <!-- end .apimethod -->
             <% } %>
 
-            <%- content['expect-elements'] %>
-            <%- content['expect-title'] %>
-            <%- content['expect-url'] %>
+            <%- content['api']['expect-api']['elements'] %>
+            <%- content['api']['expect-api']['title'] %>
+            <%- content['api']['expect-api']['url'] %>
           </div>
         </div>
 
         <div class="docs-section" data-page-uri="/api/pageobject">
-          <%- content['page-api'] %>
+          <%- content['api']['page'] %>
         </div>
 
         <div class="docs-section commands" data-page-uri="/api/commands">
-          <div class="content">
-          <%- content['commands-api'] %>
+          <div class="content" style="margin-top: 0">
+          <%- content['api']['commands'] %>
           </div>
         <%
       var sectionsData = {
@@ -431,6 +431,14 @@
           <a title="Suggest edits" class="edit-source" href="<%- method.editLink %>">Suggest edits</a></h3>
         <div class="content">
         <%- method.descr %>
+        <% if (method.syntax) {%>
+          <h5>Syntax</h5>
+          <div class="sample-test">
+            <pre data-language="javascript" style="padding-top: 10px"
+                 class="default-theme language-javascript"><code class="default-theme language-javascript"><%- method.syntax %></code></pre>
+          </div>
+        <% } %>
+
         <% if (method.params) {%>
           <h5>Parameters:</h5>
           <div class="table-responsive">
@@ -478,7 +486,7 @@
             </table>
           </div>
         <% } %>
-          <p class="see-more"><a href="/api/<%- method.name %>.html" title="go to .<%- method.name %>()">See more...</a></p>
+
         </div>
 
       </div>

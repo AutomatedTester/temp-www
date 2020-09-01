@@ -8,19 +8,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="canonical" href="https://nightwatchjs.org/" />
   <meta charset="utf-8">
+  <link href="/css/themes/prism.css" rel="stylesheet">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
-
   <link href="/css/main.css" rel="stylesheet">
   <link href="/css/sidebar.css" rel="stylesheet">
   <link href="/css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,200"/>
-
+  <style>
+    #releases-container {
+      margin-top: 0;
+    }
+  </style>
 </head>
 
 <body>
-<div class="container navigation">
+<div class="container navigation" style="height: 100vh;">
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
@@ -64,81 +67,55 @@
       </div>
     </div>
   </nav>
-</div>
 
-
-<div class="parallax">
-  <div class="parallax__layer parallax__layer--3">
-    <div id="stars" class="top-stars">&nbsp;</div>
-  </div>
-  <div class="parallax__layer parallax__layer--2">
-    <div id="moon" class="top-moon">&nbsp;</div>
-  </div>
-  <div class="parallax__layer parallax__layer--1">
-    <div id="clouds" class="top-clouds">&nbsp;</div>
-  </div>
-</div>
-
-
-<section id="index-container" data-page-uri="/"></section>
-<section id="gettingstarted-container" data-page-uri="/gettingstarted" class="secondary"></section>
-<section id="guide-container" data-page-uri="/guide" class="secondary"></section>
-<section id="apimethod-container" data-page-uri="/api/$method" class="secondary"></section>
-<section id="api-container" data-page-uri="/api" class="secondary"></section>
-<section id="contact-container" data-page-uri="/contact" class="secondary"></section>
-<section id="releases-container" data-page-uri="/releases" class="secondary">
-  <div class="jumbotron">
-    <div class="container" style="height:130px">
-      <div class="row">
-        <div class="col-md-8">
-          <h1>Sample E2E Tests</h1>
-        </div>
-        <div class="col-md-4">
-          <div class="carbonad"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="background">
-    <div class="container bs-docs-container">
-      <div class="row">
-        <div class="col-md-3"></div>
-
-        <div class="col-md-9" role="main">
-          <div class="docs-section">
-            <div class="page-header">
-              <h2>Window</h2>
-            </div>
-
+  <section id="releases-container" data-page-uri="/releases" class="secondary">
+    <div class="jumbotron">
+      <div class="container" style="height:130px">
+        <div class="row">
+          <div class="col-md-8">
+            <h1>Sample E2E Tests</h1>
           </div>
-
-          <div class="docs-section">
-            <div class="container bs-docs-container" style="padding-top: 50px">
-              <form>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                  <small id="emailHelp" class="form-text text-muted">Email help text.</small>
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Stay signed in</label>
-                </div>
-                <button type="submit" class="btn btn-primary" onclick="window.close();">Submit</button>
-              </form>
-            </div>
+          <div class="col-md-4">
+            <div class="carbonad"></div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-</section>
+    <div class="background">
+      <div class="container bs-docs-container">
+        <div class="row">
+          <div class="col-md-3"></div>
+
+          <div class="col-md-6" role="main">
+            <div class="docs-section">
+              <div class="page-header">
+                <h2>Search Test Page</h2>
+              </div>
+            </div>
+
+            <div class="docs-section">
+              <div class="container bs-docs-container" style="padding-top: 50px; min-height: 400px">
+                <form method="get">
+                  <div class="form-group">
+                    <label for="exampleInputSearch">Search</label>
+                    <input type="search" name="input" class="form-control" id="exampleInputSearch" aria-describedby="emailHelp" placeholder="Enter search text">
+                    <small id="emailHelp" class="form-text text-muted"></small>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</div>
 
 <footer>
   <div class="container">
@@ -148,7 +125,6 @@
 
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
 </body>
 </html>
 

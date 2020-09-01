@@ -8,17 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="canonical" href="https://nightwatchjs.org/" />
   <meta charset="utf-8">
-  <meta property="og:title" content="Nightwatch.js" />
-  <meta name="twitter:title" content="Nightwatch.js">
-  <meta name="twitter:description" content="Write efficient end-to-end tests in Node.js and run them against W3C WebDriver.">
-  <meta name="twitter:image" content="https://nightwatchjs.org/img/banner.png">
-  <meta property="og:image" content="https://nightwatchjs.org/img/banner.png" />
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@nightwatchjs">
-  <meta name="twitter:creator" content="@nightwatchjs">
-  <meta name="google-site-verification" content="LGNZ66nvi-gru5DR_bV3jry2hqvlMoijhdWZkVT41ZM" />
 
-  <link href="/css/themes/prism.css" rel="stylesheet">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
@@ -90,13 +80,6 @@
   </div>
 </div>
 
-
-<section id="index-container" data-page-uri="/"></section>
-<section id="gettingstarted-container" data-page-uri="/gettingstarted" class="secondary"></section>
-<section id="guide-container" data-page-uri="/guide" class="secondary"></section>
-<section id="apimethod-container" data-page-uri="/api/$method" class="secondary"></section>
-<section id="api-container" data-page-uri="/api" class="secondary"></section>
-<section id="contact-container" data-page-uri="/contact" class="secondary"></section>
 <section id="releases-container" data-page-uri="/releases" class="secondary">
   <div class="jumbotron">
     <div class="container" style="height:130px">
@@ -116,7 +99,7 @@
       <div class="row">
         <div class="col-md-3"></div>
 
-        <div class="col-md-9" role="main">
+        <div class="col-md-9" role="main" id="main">
           <div class="docs-section">
             <div class="page-header">
               <h2>Window</h2>
@@ -137,21 +120,12 @@
 
 <footer>
   <div class="container">
-    <p class="align-left">Developed by <a href="https://pineview.io">PineView</a> • &copy; 2014-2019 • Code licensed under the <a href="https://github.com/nightwatchjs/nightwatch/blob/master/LICENSE.md">MIT License</a>.</p>
+    <p class="align-left">Developed by <a href="https://pineview.io">PineView</a> • &copy; 2014-2020 • Code licensed under the <a href="https://github.com/nightwatchjs/nightwatch/blob/master/LICENSE.md">MIT License</a>.</p>
   </div>
 </footer>
 
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<script>
-  $('.version-select-dropdown').on('change', '.version-dropdown', function(e) {
-    if (this.value == '/v0.9.21/') {
-      window.location.href = 'http://v09.nightwatchjs.org';
-      return;
-    }
-    window.location.href = this.value;
-  });
-</script>
 </body>
 </html>

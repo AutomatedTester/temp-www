@@ -4,7 +4,6 @@
   <title>Nightwatch.js E2E Sample Tests</title>
 
   <meta name="description" content="Write efficient end-to-end tests in Node.js and run them against W3C WebDriver."/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="canonical" href="https://nightwatchjs.org/" />
   <meta charset="utf-8">
@@ -105,35 +104,27 @@
       <div class="row">
         <div class="col-md-3"></div>
 
-        <div class="col-md-9" role="main">
+        <div class="col-md-6" role="main">
           <div class="docs-section">
             <div class="page-header">
-              <h2>Window</h2>
+              <h2>Search Test Page</h2>
             </div>
-
           </div>
 
           <div class="docs-section">
-            <div class="container bs-docs-container" style="padding-top: 50px">
-              <form>
+            <div class="container bs-docs-container" style="padding-top: 50px; min-height: 400px">
+              <form method="get">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                  <small id="emailHelp" class="form-text text-muted">Email help text.</small>
+                  <label for="exampleInputSearch">Search</label>
+                  <input type="search" name="input" class="form-control" id="exampleInputSearch" aria-describedby="emailHelp" placeholder="Enter search text">
+                  <small id="emailHelp" class="form-text text-muted"></small>
                 </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Stay signed in</label>
-                </div>
-                <button type="submit" class="btn btn-primary" onclick="window.close();">Submit</button>
+                <button type="submit" class="btn btn-primary">Search</button>
               </form>
             </div>
           </div>
         </div>
+        <div class="col-md-3"></div>
       </div>
     </div>
   </div>
@@ -148,7 +139,6 @@
 
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
 </body>
 </html>
 

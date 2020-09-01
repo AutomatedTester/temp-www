@@ -1,11 +1,12 @@
 {
-  "NIGHTWATCH_LIB_PATH": "./node_modules/nightwatch-public/lib/",
+  "NIGHTWATCH_LIB_PATH": "./node_modules/nightwatch-current/lib/",
   "NIGHTWATCH_DOCS_PATH": "./node_modules/nightwatch-docs/",
   "OUTPUT_FOLDER": "./output",
   "NIGHTWATCH_VERSION": "1.1.13",
 
   "docsRepoUrl": "https://github.com/nightwatchjs/nightwatch-docs/",
-  "apiRepoUrl": "https://github.com/nightwatchjs/nightwatch/",
+  "githubRepo": "nightwatchjs/nightwatch",
+  "apiRepoUrl": "https://github.com",
   "devServerPort": "3001",
 
   "apiFileList": [
@@ -25,7 +26,69 @@
 
   "sections": {
     "guide" : {
-      "subsections": ["running-tests", "extending-nightwatch", "working-with-page-objects", "unit-testing-with-nightwatch"],
+      "subsections": {
+        "using-nightwatch": {
+          "pages": [
+            "writing-tests",
+            "using-bdd-describe",
+            "using-es6-async",
+            "finding-and-interacting-with-elements",
+            "writing-assertions",
+            "using-xpath-selectors",
+            "expect-assertions",
+            "using-test-hooks",
+            "external-globals"
+          ],
+          "vars": {
+            "pageHeader": "Using Nightwatch"
+          }
+        },
+        "running-tests": {
+          "pages": [
+            "nightwatch-runner",
+            "command-line-options",
+            "test-environments",
+            "test-groups",
+            "test-tags",
+            "disabling-tests",
+            "parallel-running",
+            "programmatic-api",
+            "using-mocha"
+          ],
+          "vars": {
+            "pageHeader": "Running Tests"
+          }
+        },
+        "extending-nightwatch": {
+          "pages": [
+            "custom-assertions",
+            "custom-commands",
+            "custom-reporter"
+          ],
+          "vars": {
+            "pageHeader": "Using Nightwatch"
+          }
+        },
+        "working-with-page-objects": {
+          "pages": [
+            "using-page-objects",
+            "defining-elements",
+            "defining-sections",
+            "writing-commands"
+          ],
+          "vars": {
+            "pageHeader": "Using Nightwatch"
+          }
+        },
+        "unit-testing-with-nightwatch": {
+          "pages": [
+            "writing-unit-tests"
+          ],
+          "vars": {
+            "pageHeader": "Using Nightwatch"
+          }
+        }
+      },
       "pageTitle" : "Developer Guide | Nightwatch.js",
       "title" : "Developer Guide",
       "description" : "In depth guides on how to use Nightwatch to write and execute tests."
@@ -58,5 +121,89 @@
       "title" : "Nightwatch.js",
       "description" : "Write efficient end-to-end tests in Node.js and run them against W3C WebDriver."
     }
+  },
+
+  "pageSrcFolders" : ["guide", "api", "gettingstarted"],
+  "pages": {
+    "Overview" : {
+      "overview" : "gettingstarted/overview/overview.md"
+    },
+
+    "Installation" : {
+      "installation" : "gettingstarted/installation/install.md"
+    },
+
+    "Configuration" : {
+      "configuration" : "gettingstarted/configuration/configuration.md",
+      "config-basic-settings" : "gettingstarted/configuration/config-basic-settings.md",
+      "config-webdriver-settings" : "gettingstarted/configuration/config-webdriver-settings.md",
+      "config-selenium-settings" : "gettingstarted/configuration/config-selenium-settings.md",
+      "config-test-settings" : "gettingstarted/configuration/config-test-settings.md"
+    },
+
+    "Concepts" : {
+      "concepts-globals" : "gettingstarted/concepts/globals.md",
+      "concepts-test_environments" : "gettingstarted/concepts/test_environments.md"
+    },
+
+    "browser-drivers-setup" : {
+      "browser-setup" : "gettingstarted/browser-setup/browser-setup.md",
+      "gecko-driver" : "gettingstarted/browser-setup/gecko-driver.md",
+      "chromedriver" : "gettingstarted/browser-setup/chromedriver.md",
+      "edgedriver" : "gettingstarted/browser-setup/edgedriver.md"
+    },
+
+    "Using-nightwatch" : {
+      "using-nightwatch" : "guide/using-nightwatch/using-nightwatch.md",
+      "writing-tests" : "guide/using-nightwatch/writing-tests.md",
+      "using-bdd-describe" : "guide/using-nightwatch/using-bdd-describe.md",
+      "test-hooks" : "guide/using-nightwatch/test-hooks.md",
+      "async-setup-teardown" : "guide/using-nightwatch/async-setup-teardown.md",
+      "global-setup-teardown" : "guide/using-nightwatch/global-setup-teardown.md",
+      "external-globals" : "guide/using-nightwatch/external-globals.md"
+    },
+
+    "Working-with-page-objects" : {
+      "using-page-objects" : "guide/working-with-page-objects/using-page-objects.md",
+      "po-elements" : "guide/working-with-page-objects/po-elements.md",
+      "po-sections" : "guide/working-with-page-objects/po-sections.md",
+      "po-mixins" : "guide/working-with-page-objects/po-mixins.md"
+    },
+
+    "Running-tests" : {
+      "running-tests" : "guide/running-tests/running-tests.md",
+      "runner-options" : "guide/running-tests/runner-options.md",
+      "test-environments" : "guide/running-tests/test-environments.md",
+      "test-groups" : "guide/running-tests/test-groups.md",
+      "test-tags" : "guide/running-tests/test-tags.md",
+      "disabling-tests" : "guide/running-tests/disabling-tests.md",
+      "run-parallel" : "guide/running-tests/run-parallel.md",
+      "using-grunt" : "guide/running-tests/using-grunt.md",
+      "using-mocha" : "guide/running-tests/using-mocha.md",
+      "programmatic-api" : "guide/running-tests/programmatic-api.md"
+    },
+
+    "Extending" : {
+      "custom-commands" : "guide/extending-nightwatch/custom-commands.md",
+      "custom-assertions" : "guide/extending-nightwatch/custom-assertions.md",
+      "custom-reporter" : "guide/extending-nightwatch/custom-reporter.md"
+    },
+
+    "Unit-testing" : {
+      "writing-unit-tests" : "guide/unit-testing/writing-unit-tests.md"
+    },
+
+    "Api-reference": {
+      "expect-api": "api/expect.md",
+      "assert-api": "api/assertions.md",
+      "commands-api": "api/commands.md",
+      "page-api": "api/page.md",
+      "expect-cookie": "api/expect/cookie.md",
+      "expect-element": "api/expect/element.md",
+      "expect-elements": "api/expect/elements.md",
+      "expect-title": "api/expect/title.md",
+      "expect-url": "api/expect/url.md"
+    }
   }
+
 }

@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="canonical" href="https://nightwatchjs.org/" />
   <meta charset="utf-8">
+
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
 
@@ -79,13 +80,6 @@
   </div>
 </div>
 
-
-<section id="index-container" data-page-uri="/"></section>
-<section id="gettingstarted-container" data-page-uri="/gettingstarted" class="secondary"></section>
-<section id="guide-container" data-page-uri="/guide" class="secondary"></section>
-<section id="apimethod-container" data-page-uri="/api/$method" class="secondary"></section>
-<section id="api-container" data-page-uri="/api" class="secondary"></section>
-<section id="contact-container" data-page-uri="/contact" class="secondary"></section>
 <section id="releases-container" data-page-uri="/releases" class="secondary">
   <div class="jumbotron">
     <div class="container" style="height:130px">
@@ -105,33 +99,29 @@
       <div class="row">
         <div class="col-md-3"></div>
 
-        <div class="col-md-9" role="main">
+        <div class="col-md-9" role="main" id="main">
           <div class="docs-section">
             <div class="page-header">
-              <h2>Window</h2>
+              <h2>Alerts</h2>
             </div>
 
-          </div>
+            <div class="docs-section">
+              <div class="container bs-docs-container" style="padding-top: 50px">
+                <form>
+                  <div class="form-group">
+                    <button id="show-alert" class="btn btn-primary" onclick="window.alert('Alert test');">Show alert</button>
+                  </div>
+                  <div class="form-group">
+                    <button id="show-prompt" class="btn btn-primary" onclick="window.prompt('Prompt text');">Show prompt</button>
+                  </div>
 
-          <div class="docs-section">
-            <div class="container bs-docs-container" style="padding-top: 50px">
-              <form>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                  <small id="emailHelp" class="form-text text-muted">Email help text.</small>
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Stay signed in</label>
-                </div>
-                <button type="submit" class="btn btn-primary" onclick="window.close();">Submit</button>
-              </form>
+                  <div class="form-group">
+                    <button id="show-confirm" class="btn btn-primary" onclick="window.prompt('Are you sure?');">Show confirm</button>
+                  </div>
+                </form>
+              </div>
             </div>
+
           </div>
         </div>
       </div>
@@ -151,4 +141,3 @@
 
 </body>
 </html>
-

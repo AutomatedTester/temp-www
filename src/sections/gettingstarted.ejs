@@ -15,35 +15,35 @@
   <div class="container bs-docs-container">
     <div class="row">
       <div class="col-md-3">
-        <div class="bs-sidebar hidden-print" role="complementary" data-spy="affix" data-offset-top="60" data-offset-bottom="330">
+        <div class="bs-sidebar hidden-print" role="complementary">
           <ul class="nav bs-sidenav">
             <li>
-              <a href="/gettingstarted/">Overview</a>
+              <a class="nav-link" href="/gettingstarted/">Overview</a>
               <ul class="nav">
-                <li><a href="#what-is-nightwatch-">What is Nightwatch?</a></li>
-                <li><a href="#overview-of-webdriver">Overview of WebDriver</a></li>
-                <li><a href="#theory-of-operation">Theory of Operation</a></li>
-                <li><a href="#nightwatch-selenium-server">Nightwatch &amp;amp; Selenium Server</a></li>
+                <li class="nav-item"><a class="nav-link" href="#what-is-nightwatch-">What is Nightwatch?</a></li>
+                <li class="nav-item"><a class="nav-link" href="#overview-of-webdriver">Overview of WebDriver</a></li>
+                <li class="nav-item"><a class="nav-link" href="#theory-of-operation">Theory of Operation</a></li>
+                <li class="nav-item"><a class="nav-link" href="#nightwatch-selenium-server">Nightwatch &amp;amp; Selenium Server</a></li>
               </ul>
             </li>
 
             <li>
               <a href="/gettingstarted/installation/">Installation</a>
               <ul class="nav">
-                <li><a href="#install-node-js">Install Node.js</a></li>
-                <li><a href="#install-nightwatch">Install Nightwatch</a></li>
-                <li><a href="#install-webdriver">Install WebDriver</a></li>
+                <li class="nav-item"><a class="nav-link" href="#install-node-js">Install Node.js</a></li>
+                <li class="nav-item"><a class="nav-link" href="#install-nightwatch">Install Nightwatch</a></li>
+                <li class="nav-item"><a class="nav-link" href="#install-webdriver">Install WebDriver</a></li>
               </ul>
             </li>
 
             <li>
               <a href="/gettingstarted/configuration/">Configuration</a>
               <ul class="nav">
-                <li><a href="#nightwatch-json">nightwatch.json</a></li>
-                <li><a href="#base-settings">Base Settings</a></li>
-                <li><a href="#extended-settings">Extended Settings</a></li>
-                <li><a href="#webdriver-settings">WebDriver Settings</a></li>
-                <li><a href="#selenium-server-settings">Selenium Settings</a></li>
+                <li class="nav-item"><a class="nav-link" href="#nightwatch-json">nightwatch.json</a></li>
+                <li class="nav-item"><a class="nav-link" href="#base-settings">Base Settings</a></li>
+                <li class="nav-item"><a class="nav-link" href="#extended-settings">Extended Settings</a></li>
+                <li class="nav-item"><a class="nav-link" href="#webdriver-settings">WebDriver Settings</a></li>
+                <li class="nav-item"><a class="nav-link" href="#selenium-server-settings">Selenium Settings</a></li>
               </ul>
             </li>
 
@@ -69,37 +69,52 @@
       </div>
 
       <div class="col-md-9" role="main">
-        <div class="docs-section" data-page-uri="/gettingstarted">
-          <%- content['overview'] %>
+        <div class="docs-section" data-page-uri="/gettingstarted/">
+          <%- content['gettingstarted']['overview']['overview'] %>
         </div>
 
-        <div class="docs-section" data-page-uri="/gettingstarted/installation">
-          <%- content['installation'] %>
+        <div class="docs-section" data-page-uri="/gettingstarted/installation/">
+          <%- content['gettingstarted']['installation']['install'] %>
+          <div class="alert alert-info twitter-box">
+            <p>Follow <strong>@nightwatchjs</strong> on Twitter to get the latest release updates, tutorials, and find out what we're working on.</p>
+            <div class="twitter-follow"><a href="https://twitter.com/nightwatchjs" class="twitter-follow-button" data-size="large" data-lang="en" data-dnt="true" data-show-count="true">Follow @nightwatchjs</a></div>
+          </div>
         </div>
 
-        <div class="docs-section" data-page-uri="/gettingstarted/concepts">
-          <%- content['concepts-test_environments'] %>
-          <%- content['concepts-globals'] %>
+        <div class="docs-section" data-page-uri="/gettingstarted/concepts/">
+          <%- content['gettingstarted']['concepts']['test_environments'] %>
+          <%- content['gettingstarted']['concepts']['globals'] %>
+          <div class="alert alert-info twitter-box">
+            <p>Follow <strong>@nightwatchjs</strong> on Twitter to get the latest release updates, tutorials, and find out what we're working on.</p>
+            <div class="twitter-follow"><a href="https://twitter.com/nightwatchjs" class="twitter-follow-button" data-size="large" data-lang="en" data-dnt="true" data-show-count="true">Follow @nightwatchjs</a></div>
+          </div>
         </div>
 
-        <div class="docs-section" data-page-uri="/gettingstarted/configuration">
-          <%- content['configuration'] %>
-          <%- content['config-basic-settings'] %>
-          <%- content['config-test-settings'] %>
-          <%- content['config-webdriver-settings'] %>
-          <%- content['config-selenium-settings'] %>
+        <div class="docs-section" data-page-uri="/gettingstarted/configuration/">
+          <%- content['gettingstarted']['configuration']['configuration'] %>
+          <%- content['gettingstarted']['configuration']['config-basic-settings'] %>
+          <%- content['gettingstarted']['configuration']['config-test-settings'] %>
+          <%- content['gettingstarted']['configuration']['config-webdriver-settings'] %>
+          <%- content['gettingstarted']['configuration']['config-selenium-settings'] %>
+          <div class="alert alert-info twitter-box">
+            <p>Follow <strong>@nightwatchjs</strong> on Twitter to get the latest release updates, tutorials, and find out what we're working on.</p>
+            <div class="twitter-follow"><a href="https://twitter.com/nightwatchjs" class="twitter-follow-button" data-size="large" data-lang="en" data-dnt="true" data-show-count="true">Follow @nightwatchjs</a></div>
+          </div>
         </div>
 
-        <div class="docs-section" data-page-uri="/gettingstarted/browser-drivers-setup">
+        <div class="docs-section" data-page-uri="/gettingstarted/browser-drivers-setup/">
           <div class="page-header">
             <h2 id="browser-drivers-setup">Browser Drivers Setup</h2>
           </div>
           <br>
-          <%- content['browser-setup'] %>
-          <%- content['gecko-driver'] %>
-          <%- content['chromedriver'] %>
-          <%- content['edgedriver'] %>
-
+          <%- content['gettingstarted']['browser-setup']['browser-setup'] %>
+          <%- content['gettingstarted']['browser-setup']['gecko-driver'] %>
+          <%- content['gettingstarted']['browser-setup']['chromedriver'] %>
+          <%- content['gettingstarted']['browser-setup']['edgedriver'] %>
+          <div class="alert alert-info twitter-box">
+            <p>Follow <strong>@nightwatchjs</strong> on Twitter to get the latest release updates, tutorials, and find out what we're working on.</p>
+            <div class="twitter-follow"><a href="https://twitter.com/nightwatchjs" class="twitter-follow-button" data-size="large" data-lang="en" data-dnt="true" data-show-count="true">Follow @nightwatchjs</a></div>
+          </div>
         </div>
       </div>
     </div>

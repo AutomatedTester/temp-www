@@ -8,6 +8,7 @@
   margin-top: 30px;
   /*margin-bottom: 30px;*/
   font-size: 16px;
+  display: block;
 }
 
 /* All levels of nav */
@@ -21,6 +22,11 @@
 .bs-sidebar .nav > li > a:hover,
 .bs-sidebar .nav > li > a:focus {
   color: #444444;
+}
+
+.bs-sidebar .nav .nav > li > a.active {
+  color: #222;
+  background: #f2f2f2;
 }
 .bs-sidebar .nav > .active > a,
 .bs-sidebar .nav > .active:hover > a,
@@ -138,6 +144,10 @@ ul.nav.bs-sidenav a:hover {
 }
 .bs-sidebar.affix-top {
   margin-bottom: 50px;
+}
+
+.bs-sidebar > ul.bs-sidenav >li {
+  display: block;
 }
 /*.docs-section h3[id] {*/
   /*border-bottom: 1px solid #ccc;*/

@@ -45,6 +45,130 @@ domino.models.provide('protocol', function() {
   });
 });
 
+domino.views.define('api', function(view) {
+  var sidenavData = {
+    '': [],
+    expect: [],
+    pageobject: [],
+    commands: []
+  };
+  var sidenavReady = false;
+
+  function populateSidenavData() {
+    Object.keys(sidenavData).forEach(function(key, index) {
+      $('#api-container .bs-sidebar li:nth-child(' + (index + 1) + ') ul li').each(function(i, el) {
+        var element = el.firstChild;
+        var entry = [];
+
+        if (element && element && element.tagName && element.tagName.toLocaleLowerCase() === 'h5') {
+          entry.push('h5');
+          element = element.firstChild;
+        }
+
+        var link = element.href || '';
+        if (link) {
+          link = link.substring(element.href.indexOf('#'));
+        }
+        entry.push(link, element.innerHTML);
+        sidenavData[key].push(entry);
+      });
+    });
+    sidenavReady = true;
+  }
+
+  this.init = function() {
+    this.transition = this.initHelper('transition');
+    this.carbonAds = this.initHelper('carbonad');
+    this.sourcecolor = this.initHelper('sourcecolor');
+
+    if (!sidenavReady) populateSidenavData();
+  };
+
+  function api(view_script, scollspy) {
+    view_script.$container = '#api-container';
+
+    this.initHelper('transition').render(function() {
+      if (scollspy) {
+        this.initHelper('bs.scrollspy').render({
+          target : '#api-container .bs-sidebar',
+          offset : 580,
+          spyAttribute : 'data-spy'
+        });
+
+        this.initHelper('sourcecolor').render();
+        this.initHelper('sidebar').render('#api-container');
+      }
+    }, view_script);
+  }
+
+  this.expectView = function(view_script) {
+    domino.views.__runSubSection.call(this, view_script, 'api', 'expect', function() {
+      return sidenavData.expect;
+    });
+  };
+
+  this.commandsView = function(view_script) {
+    domino.views.__runSubSection.call(this, view_script, 'api', 'commands', function() {
+      return sidenavData.commands;
+    });
+  };
+
+  this.pageobjectView = function(view_script) {
+    domino.views.__runSubSection.call(this, view_script, 'api', 'pageobject', function() {
+      return sidenavData.pageobject;
+    });
+  };
+
+  this.indexView = function(view_script) {
+    domino.views.__runSubSection.call(this, view_script, 'api', '', function() {
+      return sidenavData[''];
+    });
+  };
+
+  this.methodView = function(view_script) {
+    window.scrollTo(0, 0);
+    getSectionData('api');
+
+    domino.views.currentView = '$method';
+    view_script.$container = '#apimethod-container';
+    document.title = (this.$scope && this.$scope.methodName ? this.$scope.methodName + ' | ' : '') + 'API Reference | Nightwatch.js';
+    this.transition.render();
+
+    setTimeout(function() {
+      if ($('ul li[name="'+ this.$scope.methodName +'"]').length > 0) {
+        var $top = $('ul li[name="'+ this.$scope.methodName +'"]')[0].offsetTop - 90;
+        if ($top > 100) {
+          $('#protocol-menu')[0].scrollTop = $top;
+        }
+      }
+    }.bind(this), 100);
+
+    if ($('#apimethod-container .container-carbon').length) {
+      setTimeout(function() {
+        this.sourcecolor.render();
+        this.carbonAds.render('#apimethod-container');
+      }.bind(this), 200);
+    } else {
+      var self = this;
+      $('body').on('DOMNodeInserted', '#apimethod-container', function listener(ev) {
+        if (ev.target === $('#apimethod-container .jumbotron')[0]) {
+          self.carbonAds.render('#apimethod-container');
+          self.sourcecolor.render();
+          $('body').off('DOMNodeInserted', '#apimethod-container');
+        }
+      });
+    }
+
+    if (this.$scope.method && this.$scope.method.descr) {
+      domino.views.metaTagEl.content = this.$scope.method.descr.replace(/<\/?[^>]+(>|$)/g, '') + ' | API Reference - Nightwatch.js';
+    }
+
+    if (document.documentElement.getAttribute('data-uri') != '/api/$method') {
+      document.documentElement.setAttribute('data-uri', '/api/$method');
+    }
+  };
+});
+
 domino.controllers.define('blog', function($api, $protocol) {
   this.init = function() {
     window.location.href = '/blog';

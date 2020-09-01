@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en" data-uri="/guide">
 <head>
   <%- content['_includes_']['header'] %>
 </head>
@@ -7,13 +7,12 @@
 <%- content['_includes_']['navbar'] %>
 <%- content['_includes_']['parallax'] %>
 
-<section id="index-container" data-page-uri="/"></section>
-<section id="gettingstarted-container" data-page-uri="/gettingstarted" class="secondary"></section>
-
-<section id="guide-container" data-page-uri="/guide" class="secondary">
+<section id="guide-container" data-page-uri="/guide" class="secondary background">
   <%- content['_sections_']['guide'] %>
 </section>
 
+<section id="index-container" data-page-uri="/"></section>
+<section id="gettingstarted-container" data-page-uri="/gettingstarted" class="secondary"></section>
 <section id="apimethod-container" data-page-uri="/api/$method" class="secondary"></section>
 <section id="api-container" data-page-uri="/api" class="secondary"></section>
 <section id="about-container" data-page-uri="/about" class="secondary"></section>
