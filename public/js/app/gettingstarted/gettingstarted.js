@@ -46,7 +46,6 @@ domino.views.define('gettingstarted', function(view) {
     var currentUriAttr = sectionName ? (sectionName + '/') : '';
     var sectionContainer = $('#gettingstarted-container');
     var docsContainer = sectionContainer.find('.docs-section[data-page-uri="/gettingstarted/'+ currentUriAttr +'"]');
-    console.warn('currentUri', currentUri);
 
     // the location.href has changed, update the page-uri attribute
     var newUriAttr = '/gettingstarted/' + sectionName;

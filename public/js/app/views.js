@@ -181,6 +181,7 @@ domino.views.define('contact', function(view) {
     view_script.no_render = true;
     document.title = 'Contact | Nightwatch.js';
     domino.views.metaTagEl.content = 'Contact - ' + domino.views.metaTagContent;
+
     this.initHelper('transition').render();
     this.initHelper('carbonad').render('#contact-container');
     domino.views.currentView = 'contact';
@@ -198,13 +199,6 @@ domino.viewhelpers.define('sidebar', function() {
   };
 
   this.render = function(container) {
-    // this.sideBar = $(container).find('.bs-sidebar');
-    // this.sideBar.affix({
-    //   offset: {
-    //     top: 280,
-    //     bottom: 330
-    //   }
-    // });
   };
 
 });
@@ -255,17 +249,10 @@ domino.viewhelpers.define('carbonad', function() {
         }
       });
 
-      // var carbonAd = document.createElement('script');
-      // carbonAd.async = true;
-      // carbonAd.setAttribute('type', 'text/javascript');
-      // carbonAd.setAttribute('id', '_carbonads_js');
     } catch (err) {
-
     }
 
     setTimeout(function() {
-      //carbonAd.setAttribute('src', '/js/app/carbonad.js');
-      //$(selector + ' .container-carbon').append(carbonAd);
       _carbonads.init(document.querySelector(selector + ' .container-carbon'));
     }.bind(this), 0);
   };
@@ -293,13 +280,6 @@ domino.viewhelpers.define('transition', function() {
 
       currentSectionPath = '/' + parts.join('/');
     }
-
-    // var currentMenuItem = $('.navbar ul li.active');
-    // var activeMenuItem = $('.navbar ul li a[href="'+ pathname +'"]').parent();
-    // if (currentMenuItem !== activeMenuItem) {
-    //   currentMenuItem.removeClass('active');
-    //   activeMenuItem.addClass('active');
-    // }
 
     var $view = this.view;
     var currentSection = $('section[data-page-uri]:visible');
@@ -335,25 +315,9 @@ domino.viewhelpers.define('transition', function() {
 let scrollpos = window.scrollY;
 const header = document.querySelector('nav');
 const headerHeight = 70;
-$('#tweet-btn').on('click', function(e) {
-  e.preventDefault();
-  var url = this.getAttribute('href');
-  window.open(url, 'twitter-intent', 'width=640,height=480,status=1,menubar=no,location=yes,resizable=yes,scrollbars=yes,status=yes')
-});
 
-$('.version-select-dropdown').on('change', '.version-dropdown', function(e) {
-  if (this.value == '1.1.13') {
-    window.location.href = 'https://v11.nightwatchjs.org';
-    return;
-  }
-  if (this.value == '1.2.4') {
-    window.location.href = 'https://v12.nightwatchjs.org';
-    return;
-  }
-  if (this.value == '0.9.21') {
-    window.location.href = 'http://v09.nightwatchjs.org';
-    return;
-  }
+$('#bd-versions').on('click', function(e) {
+  e.preventDefault();
 });
 
 window.addEventListener('scroll', function() {

@@ -1,16 +1,12 @@
 domino.controllers.define('guide', function($guide) {
   this.indexAction = function() {
-    console.log('INDEX ACTION', this.params)
   };
 
   this.sectionAction = function() {
-    console.log('SECTION ACTION', this.params)
-
     this.$view.sectionName = this.params.section;
   };
 
   this.pageAction = function() {
-    console.log('PAGE ACTION', this.params)
     this.$view.sectionName = this.params.section;
     this.$view.pageName = this.params.pageName;
   };
@@ -45,8 +41,6 @@ domino.views.define('guide', function(view) {
       }
       return;
     }
-
-    console.warn('currentUri', currentUri);
 
     var subSectionPath = '/' + mainSection + '/' + subSection;
     var subSectionTitle;
@@ -134,9 +128,6 @@ domino.views.define('guide', function(view) {
 
   this.sectionView = function(view_script) {
     view_script.no_render = true;
-
-    console.log('SECTION VIEW', this.$scope)
-
     var currentUriAttr = document.documentElement.getAttribute('data-uri');
     var currentUri = document.location.protocol + '//' + document.location.hostname + currentUriAttr;
 
@@ -146,8 +137,6 @@ domino.views.define('guide', function(view) {
   };
 
   this.indexView = function(view_script) {
-    console.log('INDEX VIEW', this.$scope)
-
     renderGuidePage.call(this, view_script, {
       renderCarbon: false
     }, function() {

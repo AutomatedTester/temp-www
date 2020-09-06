@@ -127,7 +127,7 @@ domino.views.define('api', function(view) {
 
   this.methodView = function(view_script) {
     window.scrollTo(0, 0);
-    getSectionData('api');
+    domino.views.getSectionData('api');
 
     domino.views.currentView = '$method';
     view_script.$container = '#apimethod-container';

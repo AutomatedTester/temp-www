@@ -149,7 +149,7 @@ pre.language-javascript {
 
 .secondary .jumbotron {
   background: transparent;
-  padding-top: 20px;
+  padding-top: 0;
 }
 
 section .background {
@@ -210,11 +210,15 @@ section.secondary h3 span{
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 100;
   font-size: 65px;
-  letter-spacing: -2px
+  letter-spacing: -2px;
 }
 
 .secondary .jumbotron {
   margin-bottom: 0;
+}
+
+.navbar-nav.navbar-right {
+  flex-direction: row;
 }
 
 .navbar .navbar-nav > li > a:hover,
@@ -344,7 +348,7 @@ header .navbar-right .nav-item:nth-child(3) .mat-icon {
   margin-top: 5px;
 }
 header .navbar-right .nav-item.dropdown {
-  padding: 4px;
+  padding: 4px 40px 0 4px;
 }
 .search-input:focus {
   width: 200px;
@@ -386,12 +390,17 @@ header .navbar-right .nav-item.dropdown {
   display: none;
 }
 
-#navigation {
+
+#navigation.collapse:not(.show) {
   display: none;
 }
 
+#navigation.collapse.show {
+  float: none;
+}
+
 [data-uri="/"] #navigation {
-  display: block !important;
+  /*display: block !important;*/
 }
 
 #navigation {
@@ -448,12 +457,12 @@ h2, .h2 {
 }
 
 h5 {
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 500;
   margin-top: 23px;
 }
 .jumbotron .row {
-  margin-top: 26px;
+
 }
 
 .jumbotron .row .download {
@@ -1165,7 +1174,7 @@ ul.features li.introspect {
 @media screen and (min-width: 992px) {
   .jumbotron .container-carbon {
     margin-left: -150px;
-    margin-top: 0;
+    margin-top: 40px;
   }
 }
 .jumbotron .container-carbon a {

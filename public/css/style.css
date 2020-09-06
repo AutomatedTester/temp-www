@@ -66,7 +66,7 @@ html, body {
   top: 0;
   z-index: 1071;
   padding: 0;
-  height: 65px;
+  /*height: 65px;*/
   background: none;
   border: 0;
 }
@@ -96,8 +96,10 @@ body.navbar-visible .bs-sidebar {
 [data-uri^="/api/$method"] body.navbar-visible .bs-sidebar {
   top: 5rem;
 }
-.navbar-nav.ml-md-auto {
-  padding-right: 50px;
+
+
+#navigation.collapse.show + .navbar-nav.ml-md-auto {
+  display: none;
 }
 .dropdown-item.active, .dropdown-item:active {
   background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23292b2c' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") no-repeat .4rem .6rem/.75rem .75rem;
@@ -252,7 +254,7 @@ body.navbar-visible .bs-sidebar {
   font-family: 'Roboto',sans-serif;
   font-weight: 100;
   background-image: none;
-  margin-top: 15px;
+  margin-top: 80px;
   padding:0;
   font-size:64px;
   height: auto;
@@ -352,96 +354,6 @@ pre.windows-cmd:before {
 pre[data-language="javascript"]:before,
 pre[class*="language-javascript"]:before{
   content: none;
-}
-
-@media screen and (max-width: 992px) {
-  ul.features h3 {
-    font-size: 25px;
-    font-weight: 300;
-  }
-  ul.features li p, .twitter .container p, .twitter .container form legend {
-    font-size: 15px;
-    line-height: normal;
-  }
-  .feature-icon {
-    width: 126px;
-    height: 165px;
-  }
-  .vertical-line {
-    display: none;
-  }
-  ul.features li.syntax {
-    padding-top: 10px;
-  }
-  ul.features li.testrunner {
-    padding-top: 156px;
-  }
-  ul.features li.cloudtesting {
-    padding-top: 165px;
-  }
-  ul.features li.selenium {
-    padding-top: 200px;
-  }
-  ul.features li.selectors {
-    padding-top: 180px;
-  }
-  ul.features li.selectors {
-    padding-top: 180px;
-  }
-  ul.features li.junit {
-    padding-top: 190px;
-  }
-  ul.features li.plugins {
-    padding-top: 160px;
-  }
-  #index-container .example p {
-    padding: 0;
-  }
-  .row.overview {
-    padding: 0;
-  }
-  .jumbotron > .container .col-lg-5 {
-    display: none;
-  }
-
-  .jumbotron > .container .col-md-7 span {
-    font-size: 78px;
-    margin-top: 20px;
-  }
-  #top-section {
-    margin-top: 0;
-  }
-  #index-container .btn-github,
-  #index-container .btn-download {
-    margin: 10px 10px 0 0
-  }
-  .jumbotron .container-carbon {
-    margin-left: 0;
-    margin-top: 40px;
-    float: right;
-    background: #222;
-    margin-right: -50px;
-    padding-right: 10px;
-  }
-  #top-section h1,
-  .secondary .jumbotron h1 {
-    background-image: none;
-    padding-left: 0;
-    margin-top: 0;
-    padding-top: 0;
-  }
-  #top-section .houses-right h1 {
-    font-size: 70px;
-    margin-top: -20px;
-    height: auto;
-  }
-  #top-section h1 + p {
-    line-height: normal;
-  }
-  #navbar {
-    position: relative;
-    z-index: 100;
-  }
 }
 
 @media (max-width: 992px), screen and (orientation: portrait) {
@@ -561,7 +473,7 @@ section[data-page-uri] {
 [data-uri^="/about"] .parallax,
 [data-uri="/releases"] .parallax,
 [data-uri="/api/$method"] .parallax {
-  height: 21vh;
+  height: 250px;
 }
 
 [data-uri="/blog"] .secondary,
