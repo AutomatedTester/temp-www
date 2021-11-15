@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" data-uri="/blog">
+<head>
+    <title>A First Look at Nightwatch v2.0 | Nightwatch.js Blog</title>
+<meta name="description" content="A new chapter for Nightwatch.js awaits."/>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="canonical" href="https://nightwatchjs.org/" />
+<meta charset="utf-8">
+<meta property="og:title" content="A First Look at Nightwatch v2.0 | Nightwatch.js Blog" />
+<meta name="twitter:title" content="A First Look at Nightwatch v2.0 | Nightwatch.js Blog">
+<meta name="twitter:description" content="A new chapter for Nightwatch.js awaits.">
+<meta name="twitter:image" content="https://nightwatchjs.org/img/banner.png">
+<meta property="og:image" content="https://nightwatchjs.org/img/banner.png" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@nightwatchjs">
+<meta name="twitter:creator" content="@nightwatchjs">
+<meta name="google-site-verification" content="LGNZ66nvi-gru5DR_bV3jry2hqvlMoijhdWZkVT41ZM" />
+
+<script>(function(p,h) {
+  p=p.replace(/\/api\/.+\.html$/,'/api/$method');
+  p=p.replace(/\/blog\/.+\.html$/,'/blog/article');
+  var q = p.split('/'); q.shift();
+  h.setAttribute('data-uri',(p!='/'?'/'+q.join('/'):p));
+})(location.pathname,document.documentElement);
+</script>
+<link href="/css/themes/prism.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,100"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700" />
+
+<link href="/css/main.css?t=1" rel="stylesheet">
+<link href="/css/sidebar.css" rel="stylesheet">
+<link href="/css/style.css" rel="stylesheet">
+<link href="/css/mobile.css" rel="stylesheet">
+
+<noscript><style>
+
+
+
+
+
+
+
+#blog-container {display: block}
+#blog-container.article .jumbotron h1 {
+  margin-top: 120px !important;
+}
+[data-uri^="/blog"] .docs-section {
+  display: block !important;
+}
+
+
+
+
+#moon {
+  display: none;
+}
+
+.parallax{
+  height: 302px !important;
+  margin-top: -180px;
+}
+
+
+#index-container .sample-test pre {
+  background: #fff;
+  text-align: left;
+}
+pre::before {
+  content: ''!important;
+  z-index: auto;
+}
+#parallax-main {
+  height: auto;
+}
+.parallax__layer.parallax__layer--0 {
+  position: static;
+}
+.navbar.navbar-default.navbar-fixed-top {
+  background: #222;
+}
+code[class*="language-"], pre[class*="language-"] {
+  color:#111;
+}
+.bs-sidebar .nav .nav {
+  display: inherit;
+}
+.bs-sidebar .nav .nav > li > a {
+  color: #DDA562;
+}
+.bs-sidebar .nav .nav > li > a:hover {
+  color: #c7254e;
+  text-decoration: underline
+}
+section.secondary {
+  margin-top: 0;
+}
+.secondary .jumbotron {
+  padding-top: 0;
+  margin-top: -130px;
+}
+@media (min-width: 992px) {
+  .bs-sidebar {
+    position: static;
+    width: 330px;
+  }
+}
+.secondary pre, .secondary pre.language-bash, .secondary pre.language-javascript {
+  background: #fff;
+}
+</style></noscript>
+
+</head>
+<body>
+
+<div style="position: fixed; width: 1200px; height: 600px; border-right:2px solid #fff; border-bottom:2px solid #fff;top:0px; left: 0px;"></div>
+
+<header class="navbar navbar-expand-lg navbar-dark nw-navbar flex-column flex-md-row">
+  <div class="container">
+
+  <a class="navbar-brand" href="/">
+    <div class="logo-home" style="background-size: 100%; top: 50px; height: 240px; position: absolute; width: 240px; left: 50%; margin-left: -180px;"></div>
+  </a>
+  </div>
+</header>
+
+
+
+<div class="parallax" style="height: 900px">
+    <div class="parallax__layer parallax__layer--3">
+        <div id="stars" class="top-stars">&nbsp;</div>
+    </div>
+    <div class="parallax__layer parallax__layer--2">
+        <div id="moon" style="background-size: 1200px;background-position: calc(50% + 720px) -400px" class="top-moon">&nbsp;</div>
+    </div>
+    <div class="parallax__layer parallax__layer--1">
+        <div id="clouds" class="top-clouds">&nbsp;</div>
+    </div>
+</div>
+
+
+<section style="margin-top: -550px; display: block" id="blog-container" data-page-uri="/blog/a-first-look-at-nightwatch-v2.html" class="secondary article background">
+    <div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <h1 style="font-size: 80px; font-family: 'Helvetica Neue'; margin-top: 30px; font-weight: 200"><a href="#">Nightwatch v2.0-alpha is Released</a></h1>
+                <div class="metadata">
+                    <em class="article-date" style="padding-left: 90px">Sep 8, 2021</em>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="container-carbon"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="background">
+    <div class="container bs-docs-container">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10" role="main">
+
+                <div class="docs-section">
+                    <p>Welcome to the new Nightwatch engineering blog, which will contain the latest updates and developments around the Nightwatch project. It will also serve as a resource for tutorials and other kinds of related material. The content will be written and curated by the Nightwatch team, but it may also feature occasional guests posts written by our friends and collaborators.</p>
+<h3 id="background">Background</h3>
+<p>Nightwatch was published at the beginning of 2014 and was created as a complete and integrated framework which would enable engineers to write end-to-end tests quickly and without headaches. While writing it, the authors were guided by the belief that writing and running automated UI tests should be a straightforward and pleasant task, and should require as little configuration and maintenance as possible. </p>
+<p>The task of interacting with browser internals was already handled by the <a href="https://selenium.dev">Selenium</a> project and working with the Selenium server via an HTTP based api was a straightforward task. And so Nightwatch was born by bringing together various existing tools and techniques into one easy-to-use integrated solution.</p>
+<p>Seven years later, the open-source testing space for Node.js looks quite different. Several new frameworks appeared over the past few years, each of which is bringing their own set of capabilities to the table and their own interpretation over how automated testing should be done. </p>
+<p>Meanwhile, the (now obsolete) Selenium <a href="https://github.com/SeleniumHQ/selenium/wiki/JsonWireProtocol">json-wire protocol</a> has transition into the <a href="https://www.w3.org/TR/webdriver/">W3C Webdriver</a> standard which is now implemented by all major  browsers. As far as Nightwatch is concerned, the strategy hasn’t changed that much. In fact, I personally am even more confident to say that, as an open-source project, Nightwatch has now entered the next major phase in its development and maturity.</p>
+<p>The strategy for Nightwatch still remains that we should build the solution using tried-and-tested existing tools and techniques in the automation space instead of going our separate way. The Selenium project (which also includes Webdriver) has been around for more than a decade and has consistently refined and evolved how browser automation works, both on local development environments but also at scale, on large distributed cloud infrastructures. That’s why working within the Selenium ecosystem makes me confident to say that Nightwatch will not only deliver on its promises but will even surpass expectations.</p>
+<h3 id="nightcloud-io">Nightcloud.io</h3>
+<p>But first... Another important update perhaps is that we have stopped developing our own cloud testing platform – <a href="https://nightcloud.io">Nightcloud.io</a>. We&#39;ve pulled the plug on it I&#39;m afraid. This is due to various reasons but the main one is that the team at <a href="https://pineview.io">Pineview.io</a> didn&#39;t see enough demand for it to justify the investment. We decided to focus on Nightwatch alone and try and make it the most sophisticated and user-friendly open-source testing framework out there.</p>
+<h3 id="nightwatch-v2">Nightwatch V2</h3>
+<p>Which brings me to the most exciting part of this article I believe. Work is already under way for the next major update – Nightwatch v2 and should land in the public NPM channel by this fall. An alpha version will be available this August. </p>
+<p>We are completely reworking the transport layer to use the official <a href="https://www.npmjs.com/package/selenium-webdriver">Selenium Webdriver</a> bindings for Node.js which means more seamless browser integration, better and more reliable DOM element handling, and overall more stable and faster tests. Nightwatch v1.x will still be supported and we’ll issue regular patch updates for critical issues. We’ll also try to make the upgrade from Nightwatch v1.5 or higher to v2 as smooth as possible so we’ll try to not introduce any major breaking changes.</p>
+<p>Here’s some of the new features in v2 which you might find attractive:</p>
+<h5 id="-support-for-actions-api">• Support for Actions API</h5>
+<p>The <a href="https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/input_exports_Actions.html">Actions api</a> provides a more reliable method for generating complex user gestures and will be a built-in feature in Nightwatch (via the existing <code>.perform()</code> command).</p>
+<h5 id="-expanded-automatic-command-retries">• Expanded automatic command retries</h5>
+<p>In the current version, Nightwatch only supports retrying failed element retrieval operations, but in v2 it will also retry failed element commands (such as when click encounters errors like <code>element click intercepted</code>).</p>
+<h5 id="-new-relative-element-locators">• New relative element locators</h5>
+<p>The new Selenium 4 <a href="https://www.selenium.dev/documentation/en/webdriver/locating_elements/#relative-locators">relative locators</a> will be available by default in Nightwatch as well as improved existing locators via the Selenium <a href="https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_By.html">By()</a> api. </p>
+<h5 id="-built-in-support-for-working-with-file-uploads">• Built-in support for working with file uploads</h5>
+<p>Currently uploading files with Nightwatch can be cumbersome, but in v2 we’ll add a built-in command which works with the <a href="https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/input_exports_FileDetector.html">FileDetector api</a>.</p>
+<h5 id="-support-for-extended-capabilities-objects">• Support for extended Capabilities objects</h5>
+<p>The primary way of defining capabilities will still be as part of the <code>nightwatch.conf.js</code> config file, but in v2, all capabilities objects created with the Selenium <a href="https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Capabilities.html">Capabilities</a> api will be also be supported by default. </p>
+<h5 id="-setting-network-conditions-in-chrome">• Setting network conditions in Chrome</h5>
+<p>Manipulating network conditions is a regularly needed feature when working with browser automation and we’ll be able to support it in v2 for Chrome and Edge initially.</p>
+<h5 id="-support-for-working-with-devtools-protocol">• Support for working with Devtools Protocol</h5>
+<p>The <a href="https://chromedevtools.github.io/devtools-protocol/">Chrome DevTools Protocol</a> allows for tools to instrument, inspect, debug and profile Chromium-based browsers, such as Chrome and Edge, and we’ll add this capability in Nightwatch v2. </p>
+<h5 id="-ready-for-webdriver-bidi">• Ready for Webdriver BiDi</h5>
+<p>The new <a href="https://w3c.github.io/webdriver-bidi/">BiDirectional WebDriver Protocol</a> is by far one of the most exciting recent developments in the Selenium project and it likely to deliver improvements in speed and stability that far outweigh expectations. As soon as it is available, it will become part of Nightwatch as well. You can follow the development on the <a href="https://www.selenium.dev/documentation/en/webdriver/bidi_apis/">Selenium website</a>. </p>
+<h5 id="-test-runner-improvements">• Test runner improvements</h5>
+<p>Nightwatch v2 will also bring some improvements to the test runner, like ability to re-run only failed tests and improved support for parallel test execution.</p>
+<p>The list above is not exhaustive and it might change until the initial public release of version 2. You can also review the updates published in <a href="https://github.com/nightwatchjs/nightwatch/releases/tag/v1.7.3">Nightwatch v1.7</a> in case you may have missed anything. </p>
+<h3 id="tell-us-your-opinion">Tell Us Your Opinion</h3>
+<p>We are also considering other new features, APIs, and integration with other tools like Appium or Playwright. It would be very helpful if you’d take the time to fill in <a href="https://forms.gle/ahi2bTk7Kz4og8VK9">this short survey</a> and tell us about features you are using or would like to see in the new version. Please do share it with your team.</p>
+<p>Thanks for reading. Please make sure to <a href="https://github.com/nightwatchjs/nightwatch">star the project</a> on Github and also to follow us on Twitter; we&#39;re at <a href="https://twitter.com/nightwatchjs">@nightwatchjs</a>.</p>
+<a class="improve-article-bottom" href="https://github.com/nightwatchjs/nightwatch-docs/tree/master/blog/a-first-look-at-nightwatch-v2.md" target="_blank">Improve this article</a>
+                </div>
+
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+
+<script src="/js/third-party/jquery-3.5.1.min.js"></script>
+<script src="/js/third-party/popper.min.js"></script>
+<script src="/js/third-party/bootstrap.min.js"></script>
+<script src="/js/third-party/prism.js"></script>
+
+<script src="/js/third-party/underscore-min.js"></script>
+<script src="/js/third-party/swig.min.js"></script>
+<script src="/js/third-party/dominomvc-0.1.0.js"></script>
+<script src="/js/third-party/uuidv4.min.js"></script>
+
+<script src="/js/app/views.js"></script>
+<script src="/js/app/sidebar.js"></script>
+
+<script src="/js/app/api/api.js"></script>
+<script src="/js/app/guide/guide.js"></script>
+<script src="/js/app/blog/blog.js"></script>
+<script src="/js/app/app.js"></script>
+
+<script src="https://player.vimeo.com/api/player.js" async defer></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92784163-1"></script>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {dataLayer.push(arguments);}
+  gtag('js', new Date());
+  const GA_LOCAL_STORAGE_KEY = 'ga:clientId';
+
+  if (window.localStorage) {
+    if (!localStorage.getItem('v2-banner-shown')) {
+      $('#survey-banner-index').addClass('show');
+      $('#survey-banner-section').addClass('show');
+    }
+
+    if (localStorage.getItem(GA_LOCAL_STORAGE_KEY)) {
+      gtag('js', new Date());
+      gtag('config', 'UA-92784163-1', {
+        send_page_view: true,
+        client_storage: 'none',
+        client_id: localStorage.getItem(GA_LOCAL_STORAGE_KEY),
+      });
+    } else {
+      window.localStorage.setItem(GA_LOCAL_STORAGE_KEY, uuidv4());
+      gtag('js', new Date());
+      gtag('config', 'UA-92784163-1', {
+        send_page_view: true,
+        client_storage: 'none',
+        client_id: localStorage.getItem(GA_LOCAL_STORAGE_KEY),
+      });
+    }
+  }
+</script>
+
+<script>
+// (function() {
+//   window.dataLayer = window.dataLayer || [];
+//   function gtag(){dataLayer.push(arguments);}
+//   gtag('js', new Date());
+//   gtag('config', 'UA-92784163-1');
+// })();
+</script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script type="text/javascript">docsearch({
+    apiKey: '37c74f46d0eab021bc430dc17ebfc089',
+    indexName: 'nightwatchjs',
+    inputSelector: 'input[type=search].search-input',
+    debug: false
+  });
+</script>
+
+</body>
+</html>

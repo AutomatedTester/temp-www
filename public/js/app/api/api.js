@@ -78,7 +78,6 @@ domino.views.define('api', function(view) {
 
   this.init = function() {
     this.transition = this.initHelper('transition');
-    this.carbonAds = this.initHelper('carbonad');
     this.sourcecolor = this.initHelper('sourcecolor');
 
     if (!sidenavReady) populateSidenavData();
@@ -146,13 +145,11 @@ domino.views.define('api', function(view) {
     if ($('#apimethod-container .container-carbon').length) {
       setTimeout(function() {
         this.sourcecolor.render();
-        this.carbonAds.render('#apimethod-container');
       }.bind(this), 200);
     } else {
       var self = this;
       $('body').on('DOMNodeInserted', '#apimethod-container', function listener(ev) {
         if (ev.target === $('#apimethod-container .jumbotron')[0]) {
-          self.carbonAds.render('#apimethod-container');
           self.sourcecolor.render();
           $('body').off('DOMNodeInserted', '#apimethod-container');
         }
@@ -169,9 +166,3 @@ domino.views.define('api', function(view) {
   };
 });
 
-domino.controllers.define('blog', function($api, $protocol) {
-  this.init = function() {
-    window.location.href = '/blog';
-  };
-  this.indexAction = function() {};
-});

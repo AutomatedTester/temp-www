@@ -5,30 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="canonical" href="https://nightwatchjs.org/" />
 <meta charset="utf-8">
-<meta property="og:title" content="Nightwatch.js" />
-<meta name="twitter:title" content="Nightwatch.js">
+<meta property="og:title" content="<%- pageTitle %>" />
+<meta name="twitter:title" content="<%- pageTitle %>">
 <meta name="twitter:description" content="<%- pageDescription %>">
-<meta name="twitter:image" content="https://nightwatchjs.org/img/banner.png">
-<meta property="og:image" content="https://nightwatchjs.org/img/banner.png" />
+<meta name="twitter:image" content="<%- pageImage %>">
+<meta property="og:image" content="<%- pageImage %>" />
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@nightwatchjs">
 <meta name="twitter:creator" content="@nightwatchjs">
 <meta name="google-site-verification" content="LGNZ66nvi-gru5DR_bV3jry2hqvlMoijhdWZkVT41ZM" />
 
 <script>(function(p,h) {
-  var q = p.split('/');
-  q.shift();
-  q=q.map(function(a){
-    return a.replace(/\api\/.+\.html$/,'/api/$method')
-  });
+  p=p.replace(/\/api\/.+\.html$/,'/api/$method');
+  p=p.replace(/\/blog\/.+\.html$/,'/blog/article');
+  var q = p.split('/'); q.shift();
   h.setAttribute('data-uri',(p!='/'?'/'+q.join('/'):p));
 })(location.pathname,document.documentElement);
 </script>
 <link href="/css/themes/prism.css" rel="stylesheet">
 <link rel="stylesheet" href="/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/reset-min.css" integrity="sha256-t2ATOGCtAIZNnzER679jwcFcKYfLlw01gli6F6oszk8=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500"/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,200"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,100"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700" />
 
 <link href="/css/main.css?t=1" rel="stylesheet">
 <link href="/css/sidebar.css" rel="stylesheet">
@@ -42,13 +41,24 @@
 <%if (section == 'api') { %>#api-container {display: block}<% } %>
 <%if (section == 'contact') { %>#contact-container {display: block}<% } %>
 <%if (section == 'about') { %>#about-container {display: block}<% } %>
+<%if (section == 'blog') { %>
+#blog-container {display: block}
+#blog-container.article .jumbotron h1 {
+  margin-top: 120px !important;
+}
+[data-uri^="/blog"] .docs-section {
+  display: block !important;
+}
+<% } %>
+
 <%if (section == 'apimethod') { %>#apimethod-container {display: block}<% } %>
 <%if (section != 'index') { %>
 #moon {
   display: none;
 }
+
 .parallax{
-  height: 302px;
+  height: 302px !important;
   margin-top: -180px;
 }
 <% } %>

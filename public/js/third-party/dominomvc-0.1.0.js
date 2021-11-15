@@ -3005,7 +3005,7 @@ domino.eventmanager.EventBus.prototype = {
       if (!supportsPushState) {
         return;
       }
-      if (ev.isDefaultPrevented()) {
+      if (ev.isDefaultPrevented() || ev.isPropagationStopped()) {
         return;
       }
       var href = $(this).attr('href');

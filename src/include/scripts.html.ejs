@@ -1,4 +1,3 @@
-<script src="/js/third-party/carbonad.js" id="_carbonads_js" async></script>
 <script src="/js/third-party/jquery-3.5.1.min.js"></script>
 <script src="/js/third-party/popper.min.js"></script>
 <script src="/js/third-party/bootstrap.min.js"></script>
@@ -7,30 +6,85 @@
 <script src="/js/third-party/underscore-min.js"></script>
 <script src="/js/third-party/swig.min.js"></script>
 <script src="/js/third-party/dominomvc-0.1.0.js"></script>
+<script src="/js/third-party/uuidv4.min.js"></script>
 
 <script src="/js/app/views.js"></script>
 <script src="/js/app/sidebar.js"></script>
 
 <script src="/js/app/api/api.js"></script>
 <script src="/js/app/guide/guide.js"></script>
+<script src="/js/app/blog/blog.js"></script>
 <script src="/js/app/app.js"></script>
 
 <script src="https://player.vimeo.com/api/player.js" async defer></script>
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-92784163-1"></script>
+
 <script>
-(function() {
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() {dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'UA-92784163-1');
-})();
+  const GA_LOCAL_STORAGE_KEY = 'ga:clientId';
+
+  if (window.localStorage) {
+    if (!localStorage.getItem('v2-banner-shown')) {
+      $('#survey-banner-index').addClass('show');
+      $('#survey-banner-section').addClass('show');
+    }
+
+    if (localStorage.getItem(GA_LOCAL_STORAGE_KEY)) {
+      gtag('js', new Date());
+      gtag('config', 'UA-92784163-1', {
+        send_page_view: true,
+        client_storage: 'none',
+        client_id: localStorage.getItem(GA_LOCAL_STORAGE_KEY),
+      });
+    } else {
+      window.localStorage.setItem(GA_LOCAL_STORAGE_KEY, uuidv4());
+      gtag('js', new Date());
+      gtag('config', 'UA-92784163-1', {
+        send_page_view: true,
+        client_storage: 'none',
+        client_id: localStorage.getItem(GA_LOCAL_STORAGE_KEY),
+      });
+    }
+  }
 </script>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-<script type="text/javascript">docsearch({
-    apiKey: '37c74f46d0eab021bc430dc17ebfc089',
-    indexName: 'nightwatchjs',
-    inputSelector: 'input[type=search].search-input',
-    debug: false
+
+<script>
+// (function() {
+//   window.dataLayer = window.dataLayer || [];
+//   function gtag(){dataLayer.push(arguments);}
+//   gtag('js', new Date());
+//   gtag('config', 'UA-92784163-1');
+// })();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js" integrity="sha256-EXPXz4W6pQgfYY3yTpnDa3OH8/EPn16ciVsPQ/ypsjk=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.8.3/dist/instantsearch.production.min.js" integrity="sha256-LAGhRRdtVoD6RLo2qDQsU2mp+XVSciKRC8XPOBWmofM=" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+  const searchClient = algoliasearch('nightwatchjs', '37c74f46d0eab021bc430dc17ebfc089');
+
+  const search = instantsearch({
+    indexName: 'nightwatch-docs',
+    searchClient,
   });
+
+  search.addWidgets([
+    instantsearch.widgets.searchBox({
+      container: 'input[type=search].search-input',
+    }),
+
+  ]);
+
+  search.start();
+
+  // docsearch({
+  //   apiKey: '37c74f46d0eab021bc430dc17ebfc089',
+  //   indexName: 'nightwatchjs',
+  //   inputSelector: 'input[type=search].search-input',
+  //   debug: false
+  // });
 </script>
+

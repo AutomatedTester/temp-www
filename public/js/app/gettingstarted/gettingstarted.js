@@ -56,8 +56,6 @@ domino.views.define('gettingstarted', function(view) {
     domino.views.currentView = 'gettingstarted' + (sectionName === '' ? '' : ('/' + sectionName))  + '/';
     window.scrollTo(0, 0);
 
-    this.initHelper('carbonad').render('#gettingstarted-container');
-
     if (!__page_data && needsPageData('gettingstarted')) {
       var fileName = '/js/app/sections/gettingstarted.txt';
       var self = this;

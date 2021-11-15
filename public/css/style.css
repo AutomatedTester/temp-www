@@ -1,5 +1,5 @@
 html, body {
-  font-family: -apple-system, 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background-color: #1E1917;
 }
 
@@ -251,7 +251,7 @@ body.navbar-visible .bs-sidebar {
 }
 
 .secondary .jumbotron h1 {
-  font-family: 'Roboto',sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 100;
   background-image: none;
   margin-top: 80px;
@@ -389,6 +389,7 @@ pre[class*="language-javascript"]:before{
   background-color: #f3f3f3;
 }
 
+[data-uri^="/blog"] .docs-section,
 [data-uri^="/api"] .docs-section,
 [data-uri^="/gettingstarted"] .docs-section,
 [data-uri^="/about"] .docs-section,
@@ -404,6 +405,7 @@ section[data-page-uri] {
 [data-uri^="/gettingstarted"] .navbar-collapse .nav > li > a[href^="/gettingstarted"],
 [data-uri^="/guide"] .navbar-collapse .nav > li > a[href^="/guide"],
 [data-uri^="/api"] .navbar-collapse .nav > li > a[href^="/api"],
+[data-uri^="/blog"] .navbar-collapse .nav > li > a[href^="/blog"],
 [data-uri^="/about"] .navbar-collapse .nav > li > a[href^="/about"] {
   color: #fff;
   background: none;
@@ -442,6 +444,10 @@ section[data-page-uri] {
   display: block;
 }
 
+[data-uri="/blog"] section [data-page-uri="/blog"],
+[data-uri="/blog/"] section [data-page-uri="/blog/"],
+[data-uri="/blog"] [data-page-uri^="/blog"],
+[data-uri="/blog/"] [data-page-uri^="/blog/"],
 [data-uri="/guide"] section [data-page-uri="/guide"],
 [data-uri="/guide/"] section [data-page-uri="/guide/"],
 [data-uri="/guide"] [data-page-uri^="/guide"],
@@ -465,23 +471,27 @@ section[data-page-uri] {
   height: 100vh;
 }
 
-[data-uri="/blog"] .parallax,
 [data-uri="/contact"] .parallax,
 [data-uri^="/api"] .parallax,
 [data-uri^="/gettingstarted"] .parallax,
 [data-uri^="/guide"] .parallax,
+[data-uri^="/blog"] .parallax,
 [data-uri^="/about"] .parallax,
 [data-uri="/releases"] .parallax,
 [data-uri="/api/$method"] .parallax {
   height: 250px;
 }
 
-[data-uri="/blog"] .secondary,
+[data-uri^="/blog/article"] .parallax {
+  height: 400px;
+}
+
 [data-uri="/contact"] .secondary,
 [data-uri="/releases"] .secondary,
 [data-uri^="/api"] .secondary,
 [data-uri^="/gettingstarted"] .secondary,
 [data-uri^="/guide"] .secondary,
+[data-uri^="/blog"] .secondary,
 [data-uri^="/about"] .secondary,
 [data-uri="/api/$method"] .secondary {
   margin-top: -174px;
@@ -493,13 +503,13 @@ section[data-page-uri] {
   background-position: calc(50% + 592px) -486px;
 }
 
-[data-uri="/blog"] .top-moon,
 [data-uri="/contact"] .top-moon,
 [data-uri="/releases"] .top-moon,
 [data-uri^="/api"] .top-moon,
 [data-uri^="/about"] .top-moon,
 [data-uri^="/gettingstarted"] .top-moon,
 [data-uri^="/guide"] .top-moon,
+[data-uri^="/blog"] .top-moon,
 [data-uri="/api/$method"] .top-moon {
   background-size: 1200px;
   background-position: calc(50% + 650px) -450px;
@@ -511,6 +521,7 @@ section[data-page-uri] {
 }
 
 [data-uri^="/guide"] .top-clouds,
+[data-uri^="/blog"] .top-clouds,
 [data-uri^="/api"] .top-clouds,
 [data-uri^="/about"] .top-clouds,
 [data-uri="/blog"] .top-clouds,
@@ -573,7 +584,15 @@ section[data-page-uri] {
 .domenico .profile-pic{
   background-image: url(https://avatars1.githubusercontent.com/u/1260402?s=260&v=4);
 }
-
+.vaibhav .profile-pic{
+  background-image: url(https://avatars.githubusercontent.com/u/8705386?v=4);
+}
+.ravi .profile-pic{
+  background-image: url(https://avatars.githubusercontent.com/u/28780767?v=4);
+}
+.dharin .profile-pic{
+  background-image: url(https://avatars.githubusercontent.com/u/8616130?v=4);
+}
 #team h4 {
   text-align: center;
   padding-top: 10px;
@@ -652,4 +671,38 @@ section[data-page-uri] {
   font-weight: 200;
   color: #004444;
   font-size: 20px;
+}
+@media screen and (max-width: 1370px) {
+  [data-uri^="/blog/article"] .parallax {
+    height: 360px;
+  }
+  #blog-container.article {
+    margin-top: -320px;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  #blog-container.article .docs-section {
+    padding-left: 50px;
+  }
+}
+
+.article hr {
+  margin-top:40px;
+}
+.article .improve-article-bottom {
+  font-size: 90%;
+  display: block;
+  background: #fff;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 182px;
+  margin: 50px auto 20px;
+}
+
+@media screen and (max-width: 1600px) {
+  body.navbar-visible .bs-sidebar {
+    height: 850px;
+  }
 }

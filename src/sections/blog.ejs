@@ -1,0 +1,65 @@
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10">
+        <h1>Engineering Blog</h1>
+      </div>
+      <div class="col-md-2">
+        <div class="container-carbon"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="background">
+  <div class="container bs-docs-container">
+    <div class="row">
+      <div class="col-md-2">
+        <div class="bs-sidebar hidden-print" role="complementary">
+
+        </div>
+      </div>
+
+      <div class="col-md-8" role="main">
+        <div class="docs-section">
+          <div class="list-group">
+            <% content['blog']
+                    .sort((a, b) => (b.metadata.date - a.metadata.date))
+                    .filter(article => !article.metadata.draft)
+            .forEach(function(article) { %>
+              <div class="list-group-item">
+                <h2 class="mb-1"><a href="/blog/<%- article['link'] %>.html"><%- article['metadata']['title'] %></a></h2>
+                <div class="metadata">
+                  <a href="<%- article['metadata']['author_url'] %>" target="_blank">
+                    <span class="author-img">
+                      <img src="<%- article['metadata']['author_image_url'] %>" alt="<%- article['metadata']['author'] %>">
+                    </span>
+                    <span class="author-name"><%- article['metadata']['author'] %></span>
+                  </a>
+
+                  <em class="article-date">&bullet; <%- article['date'] %></em>
+                </div>
+                <% if (article['metadata']['image'] && article['metadata']['show_main_image'] !== false) { %>
+                <div class="post-card">
+                  <a href="/blog/<%- article['link'] %>.html"><img src="<%- article['metadata']['image'] %>"></a>
+                </div>
+                <% } %>
+
+                <%- article['content'].split(/(<p?>)/g).slice(0,8).join('') %>
+
+                <p><a href="/blog/<%- article['link'] %>.html">Read more &bullet; <%- (function() {
+                  return Math.ceil(article['content'].replace(/<[^>]*>?/gm, '').trim().split(/\s+/).length / 225);
+                })() %> min read</a><% if (article['metadata']['link_to_discussions']) {%> &bullet; <a href="<%- article['metadata']['link_to_discussions']%>" target="_blank">💬 Write a Comment</a><% } %></p>
+              </div>
+            <% }); %>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-2">
+      </div>
+    </div>
+  </div>
+</div>
+

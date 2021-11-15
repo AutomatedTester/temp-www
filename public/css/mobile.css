@@ -1,4 +1,13 @@
 @media screen and (max-width: 992px) {
+  #index-container .survey-banner {
+    margin-left: 0;
+    left: 0;
+    top: 70px
+  }
+
+  #survey-banner-section {
+    display: none !important;
+  }
   #index-container .download {
     text-align: center;
   }
@@ -43,32 +52,42 @@
     display: none;
   }
   .features-container .col-md-2 {
-    position: absolute;
+    display: none;
   }
   ul.features li {
     padding-left: 100px;
     text-align: left;
+    background-repeat: no-repeat;
+    background-size: 94px;
+    background-position: 0 36px;
   }
   ul.features li.syntax {
     padding-top: 10px;
+    background-image: url(../images/features-illustration1.svg);
   }
   ul.features li.testrunner {
     padding-top: 10px;
+    background-image: url(../images/features-illustration2.svg);
   }
   ul.features li.cloudtesting {
     padding-top: 10px;
+    background-image: url(../images/features-illustration4.svg);
   }
   ul.features li.selenium {
     padding-top: 10px;
+    background-image: url(../images/features-illustration3.svg);
   }
   ul.features li.selectors {
     padding-top: 10px;
+    background-image: url(../images/features-illustration5.svg);
   }
   ul.features li.junit {
     padding-top: 10px;
+    background-image: url(../images/features-illustration6.svg);
   }
   ul.features li.plugins {
     padding-top: 10px;
+    background-image: url(../images/features-illustration7.svg);
   }
   .feature-icon.syntax {
     margin-top: 30px;
@@ -97,22 +116,25 @@
   }
   .jumbotron .container-carbon {
     margin-left: auto;
-    margin-top: 30px;
+    margin-top: 20px;
     background: #222;
     margin-right: auto;
     padding-right: 10px;
   }
   .secondary .jumbotron {
-    height:260px
+    height:auto;
+  }
+  #blog-container.article {
+    margin-top: -280px;
   }
   #top-section h1,
   .secondary .jumbotron h1 {
     background-image: none;
     padding-left: 0;
     padding-top: 0;
-    font-size: 50px;
+    font-size: 42px;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 10px;
   }
   .jumbotron .row {
@@ -143,8 +165,12 @@
   }
   body.navbar-visible .bs-sidebar {
     height: auto;
+    position: static;
   }
-
+  .bs-sidebar .nav .active .nav {
+    display: block;
+    position: relative;
+  }
   #navbartop {
     position: absolute;
     top: 58px;
@@ -186,4 +212,32 @@
   [data-uri^="/api/commands"] body.navbar-visible .bs-sidebar {
     height: auto;
   }
+
+  .jumbotron .col-md-4 {
+    padding-left: 0;
+  }
+  .navbar-nav .dropdown-menu {
+    position: absolute;
+    float: none;
+    right: 10px;
+    left: 100px;
+    top: 63px;
+  }
+  header .navbar-right .nav-item.dropdown {
+    text-align: right;
+    position: static;
+  }
+  header .navbar-right .nav-item:nth-child(2) {
+    display: none;
+  }
+
+}
+
+/* iPhone 6, 7, & 8 in portrait */
+@media screen and (max-width: 768px) {
+  .jumbotron .container-carbon {
+    margin-left: 0;
+    width: auto;
+  }
+
 }

@@ -395,6 +395,7 @@ header .navbar-right .nav-item.dropdown {
   display: none;
 }
 
+#navigation.collapsing,
 #navigation.collapse.show {
   float: none;
 }
@@ -443,7 +444,7 @@ header .navbar-right .nav-item.dropdown {
 }
 
 h1, .h1, h2, .h2, h3, .h4, h4, .h4 {
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;;
   font-weight: 300;
 }
 
@@ -1786,4 +1787,226 @@ p.whatis-logo + p {
 .alert-info.twitter-box {
   padding-top: 5px;
   margin-bottom: 0;
+}
+
+.survey-banner {
+  text-align: center;
+  z-index: 2000;
+  position: absolute;
+  border-radius: 0 0 5px 5px;
+  font-size: 14px;
+  padding: 1px 28px 2px 10px;
+  left:50%;
+  margin-left: -432px;
+  width: 864px;
+  max-width: 100%;
+  top: 0
+}
+.survey-banner strong {
+  font-weight: 500;
+}
+.survey-banner a {
+  color: #0a0b0c;
+}
+.survey-banner a:hover {
+  text-decoration: underline;
+}
+#blog-container .docs-section {
+  padding-top: 20px;
+  display: block;
+}
+#blog-container .docs-section h2{
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 20px;
+}
+
+#blog-container .docs-section .list-group-item {
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,.125);
+  margin-bottom: 20px;
+  font-family: 'Merriweather', 'Georgia', serif;
+}
+#blog-container .docs-section .list-group-item p {
+  line-height: 1.5;
+  font-weight: 300;
+  font-size: 16px;
+}
+#blog-container .metadata {
+  display: flex;
+  font-size: 90%;
+  margin-bottom: 10px;
+}
+#blog-container .list-group-item .metadata {
+  padding-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#blog-container.article .metadata {
+  margin-left: 50%;
+  position: relative;
+  left: -150px;
+  color: #ccc;
+}
+#blog-container .metadata a{
+  display: flex;
+}
+#blog-container .post-card {
+  padding: 0 5px 30px;
+}
+
+#blog-container .metadata span.author-img {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+#blog-container.article .metadata span.author-img {
+  border: 1px solid #444;
+}
+
+#blog-container .metadata span.author-img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+#blog-container .metadata span.author-name {
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+#blog-container .metadata em.article-date {
+  font-style: normal;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+#blog-container.article {
+  margin-top: -300px;
+}
+
+#blog-container .jumbotron a {
+  color: #f1b0b7;
+}
+#blog-container .jumbotron a:hover {
+  color: #fff;
+}
+
+#blog-container .jumbotron h1 a {
+  color: #f5c6cb;
+}
+
+#blog-container.article .jumbotron h1 {
+  text-align: center;
+}
+#blog-container.article h5 {
+  font-size: 18px;
+}
+#blog-container.article .background{
+  background: #f8f8f8;
+  padding-bottom: 0;
+}
+#blog-container .sample-test pre.language-javascript {
+  margin: 0 10px 10px 25px;
+  padding-top: 0;
+}
+
+#blog-container.article .docs-section {
+  padding-bottom: 30px;
+}
+#blog-container .docs-section p,
+#blog-container .docs-section ul,
+#blog-container .docs-section ol {
+  font-family: 'Merriweather', 'Georgia', serif;
+  color: #333;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.6;
+}
+#blog-container.article .docs-section ul p {
+  padding-left: 10px;
+  font-size: 15px;
+}
+#blog-container.article .docs-section ul li {
+  font-size: 15px;
+}
+#blog-container.article .docs-section ul li ul {
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+#blog-container .article-footer {
+  width: 450px;
+  margin: 0 auto;
+}
+
+#blog-container .article-footer .improve-article-bottom {
+  display: inline-block;
+  width: 194px;
+  margin-left: 10px;
+}
+
+#blog-container .docs-section ol {
+  padding-left: 50px;
+}
+#blog-container.article .docs-section p {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+#blog-container sup {
+  top: -.3em;
+  font-size: 90%;
+}
+#footnotes {
+  margin-top: 50px;
+  font-size: 80%!important;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+}
+
+#blog-container.article .docs-section > p:first-child::first-letter {
+  padding-top: -6px;
+  padding-right: 10px;
+  padding-bottom: 6px;
+  margin-top: 0;
+  display: inline-block;
+  float: left;
+  font-size: 70px;
+}
+#blog-container .bs-docs-container .col-md-10 {
+  background: #fff;
+}
+#blog-container figure {
+  border-bottom: 1px solid #ccc;
+}
+#blog-container img {
+  max-width: 100%;
+}
+#blog-container figcaption {
+  text-align: center;
+  font-size: 85%;
+  padding-bottom: 10px;
+  color: #777;
+}
+#blog-container figure.github-card {
+  border: 0;
+  max-width: 600px;
+  display: block;
+  margin: 50px auto;
+}
+
+#blog-container .top-post-card {
+  margin-top: -20px; margin-left: -20px; margin-right: -20px; margin-bottom: 20px;
+}
+#blog-container .top-post-card img {
+  width: 100%
+}
+#blog-container .list-group-item .top-post-card {
+  display: none;
 }

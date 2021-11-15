@@ -1,5 +1,5 @@
 <div class="jumbotron">
-  <div class="container" style="height:130px">
+  <div class="container">
     <div class="row">
       <div class="col-md-8">
         <h1>API Reference</h1>
@@ -37,6 +37,8 @@
             <li>
               <h5><a href="https://nightwatchjs.org/api/commands/#elements-headline">Finding Elements</a></h5>
             </li>
+            <li name="findElement" {% if method.name == 'findElement' %}class="active"{% endif %}><a href="/api/findElement.html">findElement</a></li>
+            <li name="findElements" {% if method.name == 'findElements' %}class="active"{% endif %}><a href="/api/findElements.html">findElements</a></li>
             <li name="waitForElementVisible" {% if method.name == 'waitForElementVisible' %}class="active"{% endif %}><a href="/api/waitForElementVisible.html">waitForElementVisible</a></li>
             <li name="waitForElementNotVisible" {% if method.name == 'waitForElementNotVisible' %}class="active"{% endif %}><a href="/api/waitForElementNotVisible.html">waitForElementNotVisible</a></li>
             <li name="waitForElementPresent" {% if method.name == 'waitForElementPresent' %}class="active"{% endif %}><a href="/api/waitForElementPresent.html">waitForElementPresent</a></li>
@@ -56,8 +58,10 @@
             <li name="click" {% if method.name == 'click' %}class="active"{% endif %}><a href="/api/click.html">click</a></li>
             <li name="keys" {% if method.name == 'keys' %}class="active"{% endif %}><a href="/api/keys.html">keys</a></li>
             <li name="moveToElement" {% if method.name == 'moveToElement' %}class="active"{% endif %}><a href="/api/moveToElement.html">moveToElement</a></li>
-            <li name="setValue" {% if method.name == 'setValue' %}class="active"{% endif %}><a href="/api/setValue.html">setValue</a></li>
+            <li name="sendKeys" {% if method.name == 'sendKeys' %}class="active"{% endif %}><a href="/api/sendKeys.html">sendKeys</a></li>
+            <li name="setPassword" {% if method.name == 'setPassword' %}class="active"{% endif %}><a href="/api/setPassword.html">setPassword</a></li>
             <li name="submitForm" {% if method.name == 'submitForm' %}class="active"{% endif %}><a href="/api/submitForm.html">submitForm</a></li>
+            <li name="updateValue" {% if method.name == 'updateValue' %}class="active"{% endif %}><a href="/api/updateValue.html">updateValue</a></li>
 
 
             <li>

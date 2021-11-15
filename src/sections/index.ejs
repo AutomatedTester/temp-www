@@ -12,6 +12,12 @@
   </div>
 
   <div class="parallax__layer parallax__layer--0">
+    <div id="survey-banner-index" class="survey-banner alert alert-info alert-dismissible fade" role="alert">
+      <strong>📣 <a href="https://nightwatchjs.org/blog/nightwatch-v2-beta-is-available.html">Nightwatch v2.0-beta</a></strong> is available! Read the <a style="color: #DDA562" href="https://nightwatchjs.org/blog/nightwatch-v2-beta-is-available.html">blog post</a> about the new features and changes.
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="padding: 0 10px;">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
     <header class="navbar nw-navbar navbar-expand-lg navbar-dark flex-column flex-md-row">
       <div class="container">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
@@ -30,6 +36,7 @@
             <li class="nav-item"><a href="/guide/">Developer Guide</a></li>
             <li class="nav-item"><a href="/api/">API Reference</a></li>
             <li class="nav-item"><a href="/about/">About</a></li>
+            <li class="nav-item"><a href="/blog/">Blog</a></li>
           </ul>
         </div>
 
@@ -43,9 +50,7 @@
             <div class="dropdown-menu dropdown-menu-md-right" aria-labelledby="bd-versions">
               <a class="dropdown-item active" href="">Latest (<%= version %>)</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="https://v12.nightwatchjs.org/">v1.2</a>
-              <a class="dropdown-item" href="https://v11.nightwatchjs.org/">v1.1</a>
-              <a class="dropdown-item" href="https://v09.nightwatchjs.org/">v0.9</a>
+              <a class="dropdown-item" href="http://v09.nightwatchjs.org/">v0.9</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="/releases/">All versions</a>
             </div>
@@ -76,14 +81,11 @@
       <div class="download">
         <div class="container">
           <div class="row">
-            <div class="col-lg-7 col-md-7 col-sm-4 download">
-              <a href="/gettingstarted#installation"
+            <div class="col-lg-6 col-md-12 col-sm-8 download">
+              <a href="/gettingstarted/installation/"
                  class="btn btn-primary btn-lg btn-download">INSTALL (<%= version %>)</a>
               <a href="https://github.com/nightwatchjs/nightwatch" rel="noreferrer" target="_blank"
                  class="btn btn-primary btn-lg btn-github">VIEW ON GITHUB</a>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-8">
-              <div class="container-carbon"></div>
             </div>
           </div>
         </div>
@@ -94,11 +96,11 @@
         <div class="container">
           <div class="horizontal-line" style="width:100%"></div>
           <div class="row overview">
-            <div class="col-sm-8 col-lg-10" style="margin: 0 auto; float: none; text-align: center;">
+            <div class="col-sm-12 col-lg-10" style="margin: 10px auto; float: none; text-align: center;">
               <h2>Browser Automation</h2>
               <p style="font-weight: 100; font-size:22px">
                 <span style="font-weight: 300">Nightwatch.js</span> is an integrated, easy to use <span style="font-weight: 300">End-to-End</span> testing solution for web applications and websites, written in Node.js.
-                It uses the <a href="https://www.w3.org/TR/webdriver/" target="_blank" rel="noreferrer">W3C WebDriver API</a> to drive browsers in order to perform commands and assertions on DOM elements.
+                It uses the <a href="https://www.w3.org/TR/webdriver/" target="_blank" rel="noreferrer">W3C WebDriver API</a> to drive browsers and perform commands and assertions on DOM elements.
               </p>
             </div>
           </div>
@@ -111,33 +113,28 @@
                 <li class="syntax">
                   <h3>Clean Syntax</h3>
                   <p>
-                    Simple but powerful syntax which enables you to write tests very quickly, using
-                    only Javascript (Node.js) and CSS or Xpath selectors.
+                    Simple but powerful syntax which enables you to write tests very quickly, using Javascript (Node.js) and CSS or Xpath selectors. Typescript is supported as well.
                   </p>
                 </li>
 
                 <li class="cloudtesting">
                   <h3>Cloud Testing Support</h3>
                   <p>
-                    Comes with its own cloud testing platform – <a href="https://nightcloud.io" rel="noopener" target="_blank">NightCloud.io</a>
-                    (TBA). Works with other cloud testing providers, such as <a href="https://saucelabs.com/" rel="noreferrer" target="_blank">SauceLabs</a> and
-                    <a href="https://www.browserstack.com" target="_blank" rel="noreferrer">BrowserStack</a>.
+                    Works with <a href="https://www.browserstack.com" target="_blank" rel="noreferrer">BrowserStack</a> out of the box. Other cloud testing providers, such as <a href="https://saucelabs.com/" rel="noreferrer" target="_blank">SauceLabs</a> or <a href="https://www.lambdatest.com/" rel="noreferrer" target="_blank">LambdaTest</a> are easy to add.
                   </p>
                 </li>
 
                 <li class="selectors">
                   <h3>Page Objects Support</h3>
                   <p>
-                    Fluent and easy to work with Page Object Model support to better organise
-                    elements and sections, with support for both CSS or Xpath selectors.
+                    Fluent and easy to work with Page Object Model support to better organise elements and sections, with support for both CSS or Xpath selectors.
                   </p>
                 </li>
 
                 <li class="plugins">
                   <h3>Easy to Extend</h3>
                   <p>
-                    Flexible command and assertion framework which makes it easy to extend to
-                    implement your application custom commands and assertions.
+                    Flexible command and assertion framework which makes it easy to extend to implement your application custom commands and assertions.
                   </p>
                 </li>
 
@@ -165,7 +162,7 @@
             <div class="col-md-5 col-lg-5 col-sm-5 col-xs-5" style="text-align: left; padding-right: 0">
               <ul class="features">
                 <li class="testrunner">
-                  <h3>Built-in Test Runner</h3>
+                  <h3>Test Runner</h3>
                   <p>
                     Built-in command-line test runner which runs the tests either sequentially or in parallel, with retries and implicit waits. Also supports grouping of test suites and tags.
                   </p>
@@ -219,20 +216,20 @@
             <div class="col-lg-6">
               <div class="sample-test">
 <pre data-language="javascript"><code class="language-javascript">
-module.exports = {
-  'Demo test Ecosia.org': function (browser) {
+describe('Demo test Ecosia.org', function() {
+  test('search for nightwatch', function(browser) {
     browser
       .url('https://www.ecosia.org/')
       .waitForElementVisible('body')
       .assert.titleContains('Ecosia')
       .assert.visible('input[type=search]')
-      .setValue('input[type=search]', 'nightwatch')
+      .sendKeys('input[type=search]', 'nightwatch')
       .assert.visible('button[type=submit]')
       .click('button[type=submit]')
       .assert.containsText('.mainline-results', 'Nightwatch.js')
       .end();
-  }
-};</code></pre>
+  })
+});</code></pre>
               </div>
             </div>
 
@@ -246,7 +243,7 @@ module.exports = {
         <div class="index-features" style="background-color: #000; margin-top: 100px;">
           <div class="container">
             <div class="row">
-              <div class="col-sm-8 col-lg-10" style="max-width: 900px; margin: 0 auto; float: none; text-align: center;">
+              <div class="col-sm-12 col-lg-10" style="max-width: 900px; margin: 0 auto; float: none; text-align: center;">
                 <h2 style="margin-top: 50px">Ready in One Minute</h2>
                 <p style="text-align:left; font-weight: 100; font-size:22px; padding:0 100px; color: #f2f2f2;">
                   A demo of how you&#039;ll be up &amp; running in one minute with Nightwatch using Chrome and Firefox (assuming Node.js and NPM are installed).
@@ -272,18 +269,19 @@ module.exports = {
               <p style="margin-top:50px">
                 Follow <a href="https://twitter.com/nightwatchjs" rel="noreferrer" target="_blank">Nightwatch.js</a> on Twitter to reach out and stay updated to new release updates, announcements, and tutorials from our community.
               </p>
-              <p style="margin-top: 20px; width: 100%">
+              <p style="margin-top: 20px; width: 100%; position: relative;background: #fff;z-index: 1;">
                 <a href="https://twitter.com/intent/follow?region=follow_link&screen_name=nightwatchjs&tw_p=followbutton" rel="noreferrer" target="_blank"
                    class="btn btn-primary btn-lg btn-twitter"><mat-icon class="mat-icon" role="img" svgicon="logos:twitter" aria-hidden="true">
                     <svg focusable="false" viewBox="0 0 50 59" xmlns="http://www.w3.org/2000/svg"><path d="M50,9.3c-1.8,0.8-3.8,1.4-5.9,1.6c2.1-1.3,3.7-3.3,4.5-5.7c-2,1.2-4.2,2-6.5,2.5c-1.9-2-4.5-3.2-7.5-3.2c-5.7,0-10.3,4.6-10.3,10.3c0,0.8,0.1,1.6,0.3,2.3C16.1,16.7,8.5,12.6,3.5,6.4c-0.9,1.5-1.4,3.3-1.4,5.2c0,3.6,1.8,6.7,4.6,8.5C5,20,3.4,19.6,2,18.8c0,0,0,0.1,0,0.1c0,5,3.5,9.1,8.2,10.1c-0.9,0.2-1.8,0.4-2.7,0.4c-0.7,0-1.3-0.1-1.9-0.2c1.3,4.1,5.1,7,9.6,7.1c-3.5,2.8-7.9,4.4-12.7,4.4c-0.8,0-1.6,0-2.4-0.1c4.5,2.9,9.9,4.6,15.7,4.6c18.9,0,29.2-15.6,29.2-29.2c0-0.4,0-0.9,0-1.3C46.9,13.2,48.6,11.4,50,9.3z"></path>
                     </svg>
                   </mat-icon> Follow @nightwatchjs</a>
               </p>
+              <iframe src="https://nightwatch.substack.com/embed" width="100%" height="320" style="border:0; max-width: 350px; margin: -160px auto 0; background:#fff;" frameborder="0" scrolling="no"></iframe>
             </div>
           </div>
         </div>
 
-        <div class="nightcloud-container">
+        <%/* <div class="nightcloud-container">
           <div class="container">
             <div class="row intro">
               <h3><a href="https://nightcloud.io" target="_blank" title="NightCloud.io – Nightwatch.js dedicated cloud testing platform">NightCloud.io</a></h3>
@@ -300,19 +298,20 @@ module.exports = {
           </div>
         </div>
 
-      <div class="twitter">
-        <div class="container">
-          <div class="row twitter-card" style="background-color: transparent">
-            <h2>Join the Community</h2>
-            <p style="margin-top:50px">
-              There's a growing body of video guides and articles waiting to be discovered in our <a href="https://nightwatchjs.org/about/community/">Community Resources</a> section.<br>
+        <div class="twitter">
+          <div class="container">
+            <div class="row twitter-card" style="background-color: transparent">
+              <h2>Join the Community</h2>
+              <p style="margin-top:50px">
+                There's a growing body of video guides and articles waiting to be discovered in our <a href="https://nightwatchjs.org/about/community/">Community Resources</a> section.<br>
 
-              Join us on the <a href="https://groups.google.com/forum/#!forum/nightwatchjs" target="_blank">Mailing List</a>, <a href="https://twitter.com/nightwatchjs" target="_blank">Twitter</a>, and <a href="https://gitter.im/nightwatchjs/nightwatch" target="_blank">Gitter</a>.
-            </p>
+                Join us on the <a href="https://groups.google.com/forum/#!forum/nightwatchjs" target="_blank">Mailing List</a>, <a href="https://twitter.com/nightwatchjs" target="_blank">Twitter</a>, and <a href="https://gitter.im/nightwatchjs/nightwatch" target="_blank">Gitter</a>.
+              </p>
 
+            </div>
           </div>
-        </div>
-      </div>
+        </div>*/%>
+
       </div>
       <!-- END .example -->
 

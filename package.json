@@ -9,7 +9,6 @@
     "build:pages": "node build/pages.js",
     "build:static": "node build/static.js",
     "dev:server": "node lib/server.js",
-    "build": "npm run build:static && npm run build:apidocs && npm run build:pages",
     "build:web": "npm run build:static && npm run build:pages"
   },
   "author": "Andrei Rusu <andrei@pineview.io>",
@@ -21,8 +20,7 @@
     "marked": "0.3.6",
     "mkdirp": "^0.5.1",
     "ncp": "^2.0.0",
-    "nightwatch": "git://github.com/nightwatchjs/nightwatch.git#master",
-    "nightwatch-docs": "git://github.com/nightwatchjs/nightwatch-docs.git#master",
+    "parse-md": "^2.0.4",
     "swig": "1.4.2"
   },
   "devDependencies": {

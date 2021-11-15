@@ -28,7 +28,7 @@ domino.views.sidebar = new (function() {
             ['#install-webdriver', 'Install WebDriver', [
               ['#install-geckodriver', 'GeckoDriver'],
               ['#install-chromedriver', 'ChromeDriver'],
-              ['#install-microsoftedge', 'Microsoft Webdriver'],
+              ['#install-microsoftedge', 'Microsoft Edge Driver'],
               ['#install-safaridriver', 'SafariDriver']
             ]],
             ['#install-selenium-server', 'Install Selenium Server']
@@ -70,7 +70,7 @@ domino.views.sidebar = new (function() {
           sidenavData: [
             ['#geckodriver', 'GeckoDriver (Firefox)'],
             ['#chromedriver', 'ChromeDriver'],
-            ['#microsoft-webdriver', 'Microsoft WebDriver']
+            ['#microsoft-webdriver', 'Edge Driver']
           ]
         }
       }
@@ -123,7 +123,9 @@ domino.views.sidebar = new (function() {
           sidenavData: [
             ['custom-commands.html', 'Custom commands'],
             ['custom-assertions.html', 'Custom assertions'],
-            ['custom-reporter.html', 'Custom reporter']
+            ['custom-reporter.html', 'Custom reporter'],
+            ['using-with-selenium-webdriver.html', 'Using with selenium-webdriver'],
+            ['using-with-webdriverio.html', 'Using with WebdriverIO']
           ]
         },
 
@@ -191,7 +193,6 @@ domino.views.sidebar = new (function() {
           sidenavData: [
             ['#motivation', 'Motivation'],
             ['#roadmap', 'Roadmap'],
-            ['#support-us', 'Support Nightwatch'],
             ['#the-team', 'The Team']
           ]
         },

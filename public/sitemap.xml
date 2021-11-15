@@ -5,7 +5,8 @@
         <loc>https://nightwatchjs.org/contact/</loc>
         <loc>https://nightwatchjs.org/gettingstarted/</loc>
         <loc>https://nightwatchjs.org/guide/</loc>
-        <loc>https://nightwatchjs.org/blog</loc>
+        <loc>https://nightwatchjs.org/blog/</loc>
+        <loc>https://nightwatchjs.org/about/</loc>
         <loc>https://nightwatchjs.org/api/session.html</loc>
         <loc>https://nightwatchjs.org/api/sessions.html</loc>
         <loc>https://nightwatchjs.org/api/timeouts.html</loc>
@@ -97,7 +98,8 @@
         <loc>https://nightwatchjs.org/api/resizeWindow.html</loc>
         <loc>https://nightwatchjs.org/api/saveScreenshot.html</loc>
         <loc>https://nightwatchjs.org/api/setCookie.html</loc>
-        <loc>https://nightwatchjs.org/api/setValue.html</loc>
+        <loc>https://nightwatchjs.org/api/updateValue.html</loc>
+        <loc>https://nightwatchjs.org/api/sendKeys.html</loc>
         <loc>https://nightwatchjs.org/api/setWindowPosition.html</loc>
         <loc>https://nightwatchjs.org/api/submitForm.html</loc>
         <loc>https://nightwatchjs.org/api/switchWindow.html</loc>
@@ -108,5 +110,7 @@
         <loc>https://nightwatchjs.org/api/waitForElementNotVisible.html</loc>
         <loc>https://nightwatchjs.org/api/waitForElementPresent.html</loc>
         <loc>https://nightwatchjs.org/api/waitForElementVisible.html</loc>
+        <loc>https://nightwatchjs.org/api/findElement.html</loc>
+        <loc>https://nightwatchjs.org/api/findElements.html</loc>
     </url>
 </urlset>

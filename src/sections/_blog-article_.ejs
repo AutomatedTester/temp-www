@@ -1,0 +1,38 @@
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-8">
+                <h1><a href="/blog/<%- article['link'] %>.html"><%- article['metadata']['title'] %></a></h1>
+                <div class="metadata">
+                    <a href="<%- article['metadata']['author_url'] %>" target="_blank">
+                        <span class="author-img"><img src="<%- article['metadata']['author_image_url'] %>" alt="<%- article['metadata']['author'] %>"></span>
+                        <span class="author-name"><%- article['metadata']['author'] %></span>
+                    </a>
+                    <em class="article-date">&bullet; <%- article['date'] %></em>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="container-carbon"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="background">
+    <div class="container bs-docs-container">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10" role="main">
+
+                <div class="docs-section">
+                    <%- pageContent %>
+
+                    <%- articleFooter %>
+                </div>
+
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+</div>

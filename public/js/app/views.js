@@ -4,7 +4,7 @@ domino.views.metaTagContent = domino.views.metaTagEl.content;
 
 domino.views.metaTagTwitterImg = $('meta[name="twitter:image"]').attr('content');
 
-domino.views.sections = ['index', 'gettingstarted', 'about', 'api', 'releases', 'guide'];
+domino.views.sections = ['index', 'gettingstarted', 'about', 'api', 'releases', 'guide', 'blog'];
 domino.views.__sectionsData__ = {};
 
 domino.views.getSectionData = function(currentView) {
@@ -42,16 +42,12 @@ domino.views.define('index', function(view) {
     document.title = 'Nightwatch.js | Node.js powered End-to-End testing framework';
 
     this.initHelper('transition').render();
-    this.initHelper('carbonad').render('#index-container');
     domino.views.currentView = 'index';
     document.documentElement.setAttribute('data-uri', '/');
   };
 
 });
 
-$('.container-carbon').on('click', 'a', function(ev) {
-  ev.stopPropagation();
-});
 $('[data-page-uri="/gettingstarted/installation"] table').on('click', 'a', function(ev) {
   ev.stopPropagation();
 });
@@ -91,7 +87,6 @@ domino.views.__runSubSection = function(view_script, mainSection, subSection, co
   });
 
   this.initHelper('sidebar').render('#' + mainSection + '-container');
-  this.initHelper('carbonad').render('#' + mainSection + '-container');
 
   domino.views.currentView = mainSection + sectionPath;
   if (document.documentElement.getAttribute('data-uri') != '/' + mainSection + sectionPath) {
@@ -160,7 +155,7 @@ domino.views.define('releases', function(view) {
     });
 
     this.initHelper('sidebar').render('#releases-container');
-    this.initHelper('carbonad').render('#releases-container');
+
     domino.views.currentView = 'releases';
     if (document.documentElement.getAttribute('data-uri') != '/releases') {
       document.documentElement.setAttribute('data-uri', '/releases');
@@ -183,7 +178,7 @@ domino.views.define('contact', function(view) {
     domino.views.metaTagEl.content = 'Contact - ' + domino.views.metaTagContent;
 
     this.initHelper('transition').render();
-    this.initHelper('carbonad').render('#contact-container');
+
     domino.views.currentView = 'contact';
     if (document.documentElement.getAttribute('data-uri') != '/contact') {
       document.documentElement.setAttribute('data-uri', '/contact');
@@ -232,29 +227,6 @@ domino.viewhelpers.define('sourcecolor', function() {
     setTimeout(function() {
       Prism.highlightAll();
     }, 0);
-  };
-});
-
-domino.viewhelpers.define('carbonad', function() {
-
-  this.render = function(selector) {
-    try {
-      $('.container-carbon').html('');
-      $('#_carbonads_projs').remove();
-      $('#carbonads_1').remove();
-
-      $('link').eq(5).nextAll('script').each(function() {
-        if (this.src.indexOf('twitter.com') === -1) {
-          $(this).remove();
-        }
-      });
-
-    } catch (err) {
-    }
-
-    setTimeout(function() {
-      _carbonads.init(document.querySelector(selector + ' .container-carbon'));
-    }.bind(this), 0);
   };
 });
 
@@ -318,6 +290,16 @@ const headerHeight = 70;
 
 $('#bd-versions').on('click', function(e) {
   e.preventDefault();
+});
+$('a.local-nav').on('click', function(e) {
+  e.stopPropagation();
+});
+
+
+$('.survey-banner button.close').on('click', function() {
+  if (window.localStorage) {
+    window.localStorage.setItem('v2-banner-shown', '1');
+  }
 });
 
 window.addEventListener('scroll', function() {

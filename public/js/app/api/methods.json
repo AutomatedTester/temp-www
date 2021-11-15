@@ -226,13 +226,13 @@
   "usage": "browser.assert.elementPresent(\"#main\");"
 },
 {
-  "name" : "title",
-  "descr": "Checks if the page title equals the given value.",
+  "name" : "enabled",
+  "descr": "Checks if the given element is enabled (as indicated by the 'disabled' attribute).",
   "parameters":[
     {
-      "name" : "expected",
-      "type" : "string",
-      "descr" : "The expected page title.",
+      "name" : "definition",
+      "type" : "string|object",
+      "descr" : "The selector (CSS / Xpath) used to locate the element. Can either be a string or an object which specifies <a href=\"https://nightwatchjs.org/guide#element-properties\">element properties</a>.",
       "optional" : false
     },
     {
@@ -242,46 +242,27 @@
       "optional" : true
     }
   ],
-  "usage": "browser.assert.title(\"Nightwatch.js\");"
+  "usage": "browser.assert.enabled('.should_be_enabled');\n   browser.assert.enabled({selector: '.should_be_enabled'});\n  browser.assert.enabled({selector: '.should_be_enabled', supressNotFoundErrors: true});"
 },
-{
-  "name" : "urlContains",
-  "descr": "Checks if the current URL contains the given value.",
-  "parameters":[
-    {
-      "name" : "expectedText",
-      "type" : "string",
-      "descr" : "The value expected to exist within the current URL.",
-      "optional" : false
-    },
-    {
-      "name" : "msg",
-      "type" : "string",
-      "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
-      "optional" : true
-    }
-  ],
-  "usage": "browser.assert.urlContains('nightwatchjs.org');"
-},
-{
-  "name" : "urlEquals",
-  "descr": "Checks if the current url equals the given value.",
-  "parameters":[
-    {
-      "name" : "expected",
-      "type" : "string",
-      "descr" : "The expected url.",
-      "optional" : false
-    },
-    {
-      "name" : "msg",
-      "type" : "string",
-      "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
-      "optional" : true
-    }
-  ],
-  "usage": "browser.assert.urlEquals('https://www.google.com');"
-},
+  {
+    "name" : "selected",
+    "descr": "Checks if the given element is selected.",
+    "parameters":[
+      {
+        "name" : "definition",
+        "type" : "string|object",
+        "descr" : "The selector (CSS / Xpath) used to locate the element. Can either be a string or an object which specifies <a href=\"https://nightwatchjs.org/guide#element-properties\">element properties</a>.",
+        "optional" : false
+      },
+      {
+        "name" : "msg",
+        "type" : "string",
+        "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
+        "optional" : true
+      }
+    ],
+    "usage": "browser.assert.selected('#main select option.first');"
+  },
 {
   "name" : "value",
   "descr": "Checks if the given form element's value equals the expected value.",
@@ -350,7 +331,64 @@
     }
   ],
   "usage": "browser.assert.visible('.should_be_visible');\n  browser.assert.visible({selector: '.should_be_visible'});\n  browser.assert.visible({selector: '.should_be_visible', supressNotFoundErrors: true});"
-}
+},
+  {
+    "name" : "title",
+    "descr": "Checks if the page title equals the given value.",
+    "parameters":[
+      {
+        "name" : "expected",
+        "type" : "string",
+        "descr" : "The expected page title.",
+        "optional" : false
+      },
+      {
+        "name" : "msg",
+        "type" : "string",
+        "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
+        "optional" : true
+      }
+    ],
+    "usage": "browser.assert.title(\"Nightwatch.js\");"
+  },
+  {
+    "name" : "urlContains",
+    "descr": "Checks if the current URL contains the given value.",
+    "parameters":[
+      {
+        "name" : "expectedText",
+        "type" : "string",
+        "descr" : "The value expected to exist within the current URL.",
+        "optional" : false
+      },
+      {
+        "name" : "msg",
+        "type" : "string",
+        "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
+        "optional" : true
+      }
+    ],
+    "usage": "browser.assert.urlContains('nightwatchjs.org');"
+  },
+  {
+    "name" : "urlEquals",
+    "descr": "Checks if the current url equals the given value.",
+    "parameters":[
+      {
+        "name" : "expected",
+        "type" : "string",
+        "descr" : "The expected url.",
+        "optional" : false
+      },
+      {
+        "name" : "msg",
+        "type" : "string",
+        "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
+        "optional" : true
+      }
+    ],
+    "usage": "browser.assert.urlEquals('https://nightwatchjs.org');"
+  }
 ]
 }
 

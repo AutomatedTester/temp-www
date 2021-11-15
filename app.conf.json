@@ -1,6 +1,6 @@
 {
-  "NIGHTWATCH_LIB_PATH": "./node_modules/nightwatch-current/lib/",
-  "NIGHTWATCH_DOCS_PATH": "./node_modules/nightwatch-docs/",
+  "NIGHTWATCH_LIB_PATH": "/Users/andrei/workspace/nightwatch/lib/",
+  "NIGHTWATCH_DOCS_PATH": "/Users/andrei/workspace/nightwatch-docs-content/",
   "OUTPUT_FOLDER": "./output",
   "NIGHTWATCH_VERSION": "1.1.13",
 
@@ -25,6 +25,12 @@
   ],
 
   "sections": {
+    "blog": {
+      "pageTitle" : "Blog | Nightwatch.js",
+      "title" : "Blog",
+      "description" : "Updates and tutorials from the Nightwatch team",
+      "itemsList": true
+    },
     "guide" : {
       "subsections": {
         "using-nightwatch": {
@@ -63,10 +69,12 @@
           "pages": [
             "custom-assertions",
             "custom-commands",
-            "custom-reporter"
+            "custom-reporter",
+            "using-with-selenium-webdriver",
+            "using-with-webdriverio"
           ],
           "vars": {
-            "pageHeader": "Using Nightwatch"
+            "pageHeader": "Extending Nightwatch"
           }
         },
         "working-with-page-objects": {
@@ -77,7 +85,7 @@
             "writing-commands"
           ],
           "vars": {
-            "pageHeader": "Using Nightwatch"
+            "pageHeader": "Working with Page Objects"
           }
         },
         "unit-testing-with-nightwatch": {
@@ -85,7 +93,7 @@
             "writing-unit-tests"
           ],
           "vars": {
-            "pageHeader": "Using Nightwatch"
+            "pageHeader": "Writing Unit Tests"
           }
         }
       },
@@ -114,7 +122,7 @@
     "releases" : {
       "pageTitle" : "Releases | Nightwatch.js",
       "title" : "Releases",
-      "description" : "Release history and chagelog information."
+      "description" : "Release history and changelog information."
     },
     "index" : {
       "pageTitle" : "Nightwatch.js |  Node.js powered End-to-End testing framework",
@@ -123,7 +131,7 @@
     }
   },
 
-  "pageSrcFolders" : ["guide", "api", "gettingstarted"],
+  "pageSrcFolders" : ["blog","guide", "api", "gettingstarted"],
   "pages": {
     "Overview" : {
       "overview" : "gettingstarted/overview/overview.md"

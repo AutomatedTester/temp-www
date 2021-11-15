@@ -26,6 +26,14 @@
           "action"     : "page"
         }
       },
+
+      {
+        "route" : "/blog/:articleTitle.html",
+        "defaults" : {
+          "controller" : "blog",
+          "action"     : "page"
+        }
+      }
     ]
   });
 

@@ -71,10 +71,6 @@ domino.views.define('guide', function(view) {
     //   currentSectionPath: '/guide' + subSection + (pageName ? ('/' + pageName + '.html'): '')
     // });
 
-    if (renderCarbon) {
-      this.initHelper('carbonad').render('#guide-container');
-    }
-
     var self = this;
     var fileName = '/js/app/sections/guide';
 
@@ -171,7 +167,6 @@ domino.views.define('guide', function(view) {
     });
 
     $('#' + mainSection + '-container .bs-sidebar').html(sidebar.content);
-    this.initHelper('carbonad').render('#' + mainSection + '-container');
 
     domino.views.currentView = mainSection + sectionPath;
     if (document.documentElement.getAttribute('data-uri') != '/' + mainSection + sectionPath) {
