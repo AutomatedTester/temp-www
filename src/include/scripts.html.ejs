@@ -27,9 +27,10 @@
   const GA_LOCAL_STORAGE_KEY = 'ga:clientId';
 
   if (window.localStorage) {
-    if (!localStorage.getItem('v2-banner-shown')) {
+    if (!localStorage.getItem('v2-beta-banner-shown')) {
       $('#survey-banner-index').addClass('show');
       $('#survey-banner-section').addClass('show');
+      $('body').addClass('banner-visible');
     }
 
     if (localStorage.getItem(GA_LOCAL_STORAGE_KEY)) {
@@ -60,31 +61,15 @@
 // })();
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js" integrity="sha256-EXPXz4W6pQgfYY3yTpnDa3OH8/EPn16ciVsPQ/ypsjk=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.8.3/dist/instantsearch.production.min.js" integrity="sha256-LAGhRRdtVoD6RLo2qDQsU2mp+XVSciKRC8XPOBWmofM=" crossorigin="anonymous"></script>
-
+<!--<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"></script>-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script type="text/javascript">
-  const searchClient = algoliasearch('nightwatchjs', '37c74f46d0eab021bc430dc17ebfc089');
-
-  const search = instantsearch({
-    indexName: 'nightwatch-docs',
-    searchClient,
+  docsearch({
+    apiKey: '37c74f46d0eab021bc430dc17ebfc089',
+    indexName: 'nightwatchjs',
+    inputSelector: 'input[type=search].search-input',
+    debug: false
   });
 
-  search.addWidgets([
-    instantsearch.widgets.searchBox({
-      container: 'input[type=search].search-input',
-    }),
-
-  ]);
-
-  search.start();
-
-  // docsearch({
-  //   apiKey: '37c74f46d0eab021bc430dc17ebfc089',
-  //   indexName: 'nightwatchjs',
-  //   inputSelector: 'input[type=search].search-input',
-  //   debug: false
-  // });
 </script>
 

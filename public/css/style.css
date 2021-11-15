@@ -131,7 +131,12 @@ body.navbar-visible .bs-sidebar {
   right: 0;
   bottom: 0;
 }
+.banner-visible .parallax__layer {
 
+}
+.banner-visible .nw-navbar .container {
+  margin-top: 35px
+}
 .parallax__layer--0 {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);

@@ -296,9 +296,10 @@ $('a.local-nav').on('click', function(e) {
 });
 
 
-$('.survey-banner button.close').on('click', function() {
+$('.survey-banner-beta button.close').on('click', function() {
   if (window.localStorage) {
-    window.localStorage.setItem('v2-banner-shown', '1');
+    window.localStorage.setItem('v2-beta-banner-shown', '1');
+    $('body').removeClass('banner-visible');
   }
 });
 
