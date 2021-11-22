@@ -23,7 +23,9 @@
 .bs-sidebar .nav > li > a:focus {
   color: #444444;
 }
-
+.bs-sidebar .nav .nav > li > a.active + ul {
+  display: block;
+}
 .bs-sidebar .nav .nav > li > a.active {
   color: #222;
   background: #f2f2f2;
@@ -96,6 +98,10 @@
 }
 ul.nav.bs-sidenav a:hover {
   color: #222;
+  text-decoration: underline;
+}
+ul li ul li ul li a.active {
+  background-color: transparent!important;
   text-decoration: underline;
 }
 /* Show and affix the side nav when space allows it */

@@ -164,29 +164,6 @@ domino.views.define('releases', function(view) {
 
 });
 
-domino.views.define('contact', function(view) {
-
-  this.indexView = function(view_script) {
-    if (domino.views.currentView == 'contact') {
-      return;
-    }
-    domino.views.getSectionData('contact');
-    window.scrollTo(0, 0);
-    view_script.$container = '#contact-container';
-    view_script.no_render = true;
-    document.title = 'Contact | Nightwatch.js';
-    domino.views.metaTagEl.content = 'Contact - ' + domino.views.metaTagContent;
-
-    this.initHelper('transition').render();
-
-    domino.views.currentView = 'contact';
-    if (document.documentElement.getAttribute('data-uri') != '/contact') {
-      document.documentElement.setAttribute('data-uri', '/contact');
-    }
-  };
-
-});
-
 domino.viewhelpers.define('sidebar', function() {
 
   this.init = function() {
