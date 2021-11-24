@@ -1,0 +1,44 @@
+<%- content['api']['assertions'] %>
+
+<div class="assertions">
+<%
+for (var i = 0; i < methods.assertions.length; i++) {
+var method = methods.assertions[i];
+%>
+    <div class="apimethod">
+        <a name="assert-<%- method.name %>"></a>
+        <h3 id="assert-<%- method.name %>">assert[.not].<%- method.name %>()</h3>
+        <p><%- method.descr %></p>
+
+        <h5>Parameters:</h5>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th style="width: 100px;">Name</th>
+                    <th style="width: 100px;">Type</th>
+                    <th>description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <% for (var j = 0; j < method.parameters.length; j++) {
+                    var param = method.parameters[j]; %>
+                <tr>
+                    <td><code><%- param.name %></code><% if (param.optional) { %><br><span class="optional">Optional</span><% } %></td>
+                    <td><%- param.type %></td>
+                    <td><%- param.descr %></td>
+                </tr>
+                <% } %>
+                </tbody>
+            </table>
+        </div>
+
+        <h5>Usage:</h5>
+        <div class="sample-test">
+<pre class="line-numbers" data-language="javascript"><code class="language-javascript">this.demoTest = function (browser) {
+  <%- method.usage %>
+};</code></pre>
+        </div>
+    </div> <!-- end .apimethod -->
+    <% } %>
+</div>

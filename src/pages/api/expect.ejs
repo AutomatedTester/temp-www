@@ -1,0 +1,52 @@
+<%- content['api']['expect'] %>
+
+<div class="commands">
+    <%- content['api']['expect-api']['cookie'] %>
+    <%- content['api']['expect-api']['element'] %>
+
+    <%
+    for (var methodName in api['expect.element']) {
+        var method = api['expect.element'][methodName];
+    %>
+    <div class="apimethod">
+        <h3 id="expect-<%- method.name %>"><%- method.display %><a title="Suggest edits" class="edit-source" href="<%- method.editLink %>">Suggest edits</a></h3>
+        <p><%- method.descr %></p>
+        <% if (method.params.length) { %>
+            <h5>Parameters:</h5>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                    <tr>
+                        <th style="width: 100px;">Name</th>
+                        <th style="width: 100px;">Type</th>
+                        <th>description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <%
+                    for (var j = 0; j < method.params.length; j++) {
+                        var param = method.params[j];
+                    %>
+                    <tr>
+                        <td><code><%- param.name %></code><% if (param.optional) { %><br><span class="optional">Optional</span><% } %></td>
+                        <td><%- param.types %></td>
+                        <td><%- param.descr %></td>
+                    </tr>
+                    <% } %>
+                    </tbody>
+                </table>
+            </div>
+        <% } %>
+        <% if (method.example) { %>
+            <h5>Usage:</h5>
+            <div class="sample-test">
+                <pre class="line-numbers" data-language="javascript"><code class="language-javascript"><%- method.example %></code></pre>
+            </div>
+        <% } %>
+    </div>  <!-- end .apimethod -->
+    <% } %>
+
+    <%- content['api']['expect-api']['elements'] %>
+    <%- content['api']['expect-api']['title'] %>
+    <%- content['api']['expect-api']['url'] %>
+</div>

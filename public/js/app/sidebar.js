@@ -1,83 +1,62 @@
 domino.views.sidebar = new (function() {
   var __subSections__ = {
-    gettingstarted: {
-      title: 'Getting Started',
+    guide: {
       extraContent: [
         '<div class="migrating-guide"><a target="_blank" href="https://github.com/nightwatchjs/nightwatch/wiki/Migrating-to-Nightwatch-1.0">Migrating from v0.9?</a></div>'
       ],
+      title: 'Developer Guide',
       content: {
-        '': {
-          title: '',
+        ////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////
+        'getting-started': {
+          title: 'Getting Started',
+          // link: '',
           nthChildIndex: 1,
-          linkTitle: 'Overview',
+          linkTitle: 'Getting Started',
+          baseUrl: '/guide/getting-started/',
           sidenavData: [
-            ['#what-is-nightwatch-', 'What is Nightwatch?'],
-            ['#overview-of-webdriver', 'Overview of WebDriver'],
-            ['#theory-of-operation', 'Theory of Operation'],
-            ['#nightwatch-selenium-server', 'Nightwatch &amp; Selenium Server']
-          ]
-        },
-
-        'installation': {
-          title: 'Installation | ',
-          linkTitle: 'Installation',
-          nthChildIndex: 2,
-          sidenavData: [
-            ['#install-node-js', 'Install Node.js'],
-            ['#install-nightwatch', 'Install Nightwatch'],
-            ['#install-webdriver', 'Install WebDriver', [
-              ['#install-geckodriver', 'GeckoDriver'],
-              ['#install-chromedriver', 'ChromeDriver'],
-              ['#install-microsoftedge', 'Microsoft Edge Driver'],
-              ['#install-safaridriver', 'SafariDriver']
+            ['introduction.html', 'Introduction', [
+              ['introduction.html#what-is-nightwatch', 'What Is Nightwatch?'],
+              ['introduction.html#theory-of-operation', 'How Does It Work?'],
+              ['introduction.html#overview-of-webdriver', 'What is WebDriver?'],
+              ['introduction.html#browser-support-table', 'Browser Support'],
+              ['introduction.html#nightwatch-selenium-server', 'Nightwatch &amp; Selenium Server']
             ]],
-            ['#install-selenium-server', 'Install Selenium Server']
+            ['installation.html', 'Installing Nightwatch', [
+              ['installation.html#install-node-js', 'Install Node.js'],
+              ['installation.html#install-nightwatch', 'Install Nightwatch'],
+              ['installation.html#install-webdriver', 'Install Browser Drivers']
+            ]],
+            ['quickstart.html', 'Quickstart Tutorial']
           ]
         },
 
         'configuration': {
-          title: 'Configuration | ',
+          title: 'Configuration',
+          // link: '',
+          nthChildIndex: 1,
           linkTitle: 'Configuration',
-          nthChildIndex: 3,
+          baseUrl: '/guide/configuration/',
           sidenavData: [
-            ['#nightwatch-json', 'nightwatch.json'],
-            ['#base-settings', 'Base Settings'],
-            ['#extended-settings', 'Extended Settings', [
-              ['#test-runner-settings', 'Test Runner Settings'],
-              ['#test-session-settings', 'Test Session Settings'],
-              ['#filtering-settings', 'Filtering Settings'],
-              ['#output-settings', 'Output Settings']
+            ['overview.html', 'Overview', [
+              ['overview.html#nightwatch-json', 'nightwatch.json'],
+              ['overview.html#nightwatch-conf-js', 'nightwatch.conf.js']
             ]],
-            ['#webdriver-settings', 'WebDriver Settings'],
-            ['#selenium-server-settings', 'Selenium Settings']
+
+            ['defaults.html', 'Defaults'],
+
+            ['settings.html', 'All Settings', [
+              ['settings.html#base-settings', 'Base Settings'],
+              ['settings.html#test-runner-settings', 'Test Runner Settings'],
+              ['settings.html#test-session-settings', 'Test Session Settings'],
+              ['settings.html#filtering-settings', 'Filtering Settings'],
+              ['settings.html#output-settings', 'Output Settings'],
+              ['settings.html#webdriver-settings', 'WebDriver Settings'],
+              ['settings.html#selenium-server-settings', 'Selenium Settings']
+            ]]
           ]
         },
 
-        'concepts': {
-          title: 'Concepts | ',
-          linkTitle: 'Concepts',
-          nthChildIndex: 4,
-          sidenavData: [
-            ['#defining-test-environments', 'Test Environments'],
-            ['#using-test-globals', 'Globals']
-          ]
-        },
-
-        'browser-drivers-setup': {
-          title: 'Browser Drivers Setup | ',
-          linkTitle: 'Browser Drivers Setup',
-          nthChildIndex: 5,
-          sidenavData: [
-            ['#geckodriver', 'GeckoDriver (Firefox)'],
-            ['#chromedriver', 'ChromeDriver'],
-            ['#microsoft-webdriver', 'Edge Driver']
-          ]
-        }
-      }
-    },
-    guide: {
-      title: 'Developer Guide',
-      content: {
         'using-nightwatch': {
           title: '',
           // link: '',
@@ -85,15 +64,43 @@ domino.views.sidebar = new (function() {
           linkTitle: 'Using Nightwatch',
           baseUrl: '/guide/using-nightwatch/',
           sidenavData: [
-            ['writing-tests.html', 'Writing Tests'],
-            ['using-bdd-describe.html', 'Using BDD describe'],
-            ['using-es6-async.html', 'Using ES6 async/await'],
-            ['finding-and-interacting-with-elements.html', 'Finding &amp; Interacting with Elements'],
-            ['writing-assertions.html', 'Writing Assertions'],
-            ['expect-assertions.html', 'Using Expect Assertions'],
+            ['concepts.html', 'Core Concepts', [
+              ['concepts.html#defining-test-environments', 'Test Environments'],
+              ['concepts.html#using-test-globals', 'Test Globals']
+            ]],
+
+            ['finding-and-interacting-with-elements.html', 'Working with DOM Elements', [
+              ['finding-and-interacting-with-elements.html#finding-amp-interacting-with-elements', 'Locating Elements'],
+              ['finding-and-interacting-with-elements.html#element-properties', 'Element Properties'],
+            ]],
             ['using-xpath-selectors.html', 'Using XPath'],
-            ['using-test-hooks.html', 'Test Hooks'],
-            ['external-globals.html', 'External Globals']
+            ['using-test-hooks.html', 'Test Hooks', [
+              ['using-test-hooks.html#asynchronous-test-hooks', 'Asynchronous Test Hooks']
+            ]],
+            ['external-globals.html', 'External Globals', [
+              ['external-globals.html#global-test-settings', 'Global Test Settings'],
+              ['external-globals.html#global-test-hooks', 'Global Test Hooks'],
+              ['external-globals.html#global-reporter', 'Global Reporter']
+            ]]
+          ]
+        },
+
+        'writing-tests': {
+          title: 'Writing Tests',
+          // link: '',
+          nthChildIndex: 1,
+          linkTitle: 'Writing Tests',
+          baseUrl: '/guide/writing-tests/',
+          sidenavData: [
+            ['using-exports.html', 'exports interface'],
+            ['using-bdd-describe.html', 'describe() interface', [
+              ['using-bdd-describe.html#overview', 'Overview'],
+              ['using-bdd-describe.html#basic-example', 'Basic Example'],
+              ['using-bdd-describe.html#complete-syntax', 'Complete BDD Syntax']
+            ]],
+            ['using-es6-async.html', 'Using ES6 async/await'],
+            ['writing-assertions.html', 'Writing Assertions'],
+            ['expect-assertions.html', 'Using .expect() assertions'],
           ]
         },
 
@@ -112,6 +119,20 @@ domino.views.sidebar = new (function() {
             ['disabling-tests.html', 'Disabling / Skipping Tests'],
             ['programmatic-api.html', 'Programmatic API'],
             ['using-mocha.html', 'Using Mocha']
+          ]
+        },
+
+        'browser-drivers-setup': {
+          title: 'Browser Drivers Specific | ',
+          nthChildIndex: 2,
+          linkTitle: 'Browser Drivers Specific',
+          baseUrl: '/guide/browser-drivers-setup/',
+          sidenavData: [
+            ['overview.html', 'Overview'],
+            ['geckodriver.html', 'GeckoDriver (Firefox)'],
+            ['chromedriver.html', 'ChromeDriver'],
+            ['edgedriver.html', 'EdgeDriver'],
+            ['safaridriver.html', 'SafariDriver']
           ]
         },
 
@@ -179,6 +200,44 @@ domino.views.sidebar = new (function() {
           nthChildIndex: 4,
           linkTitle: 'API Commands',
           sidenavData: []
+        }
+      }
+    },
+
+    examples: {
+      title: 'Examples',
+      content: {
+        '': {
+          title: '',
+          nthChildIndex: 1,
+          linkTitle: 'About Nightwatch',
+          sidenavData: [
+            ['#motivation', 'Motivation'],
+            ['#roadmap', 'Roadmap'],
+            ['#the-team', 'The Team']
+          ]
+        },
+
+        'contribute': {
+          title: 'Contributing | ',
+          nthChildIndex: 2,
+          linkTitle: 'Contributing',
+          sidenavData: [
+            // ['#contributing-guidelines', 'Contributing Guidelines'],
+            // ['#writing-docs', 'Writing Docs &amp; Examples'],
+            // ['#become-a-contributor', 'Become a Contributor']
+          ]
+        },
+
+        'community': {
+          title: 'Community Resources | ',
+          nthChildIndex: 3,
+          linkTitle: 'Community Resources',
+          sidenavData: [
+            ['#community-assistance', 'Getting Assistance'],
+            ['#community-articles', 'Articles & Guides'],
+            ['#community-projects', 'Open-source Projects']
+          ]
         }
       }
     },

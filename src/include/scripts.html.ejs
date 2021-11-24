@@ -52,22 +52,26 @@
   }
 </script>
 
-<script>
-// (function() {
-//   window.dataLayer = window.dataLayer || [];
-//   function gtag(){dataLayer.push(arguments);}
-//   gtag('js', new Date());
-//   gtag('config', 'UA-92784163-1');
-// })();
-</script>
-
-<!--<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"></script>-->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"></script>
 <script type="text/javascript">
   docsearch({
+    container: '#docsearch',
     apiKey: '37c74f46d0eab021bc430dc17ebfc089',
     indexName: 'nightwatchjs',
-    inputSelector: 'input[type=search].search-input',
+    transformItems: function(items) {
+      return items.map(function(item) {
+        if (!item.content) {
+          item.content = item.url.replace('#apimethod-page', '');
+        }
+
+        if (item.hierarchy && !item.hierarchy.lvl1) {
+          item.hierarchy.lvl1 = item.content.replace('https://nightwatchjs.org/', '');
+          item.type = 'lvl1';
+        }
+
+        return item;
+      });
+    },
     debug: false
   });
 

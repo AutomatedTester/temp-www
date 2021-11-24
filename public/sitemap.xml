@@ -1,12 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://nightwatchjs.org/api/</loc>
-        <loc>https://nightwatchjs.org/contact/</loc>
-        <loc>https://nightwatchjs.org/gettingstarted/</loc>
+        <loc>https://nightwatchjs.org/guide/getting-started/</loc>
+        <loc>https://nightwatchjs.org/guide/getting-started/introduction.html</loc>
+        <loc>https://nightwatchjs.org/guide/getti ng-started/installation.html</loc>
+        <loc>https://nightwatchjs.org/guide/getting-started/quickstart.html</loc>
+        <loc>https://nightwatchjs.org/guide/configuration/</loc>
+        <loc>https://nightwatchjs.org/guide/configuration/overview.html</loc>
+        <loc>https://nightwatchjs.org/guide/configuration/defaults.html</loc>
+        <loc>https://nightwatchjs.org/guide/configuration/settings.html</loc>
+        <loc>https://nightwatchjs.org/guide/using-nightwatch/</loc>
+        <loc>https://nightwatchjs.org/guide/using-nightwatch/concepts.html</loc>
+        <loc>https://nightwatchjs.org/guide/using-nightwatch/finding-and-interacting-with-elements.html</loc>
+        <loc>https://nightwatchjs.org/guide/using-nightwatch/using-xpath-selectors.html</loc>
+        <loc>https://nightwatchjs.org/guide/using-nightwatch/using-test-hooks.html</loc>
+        <loc>https://nightwatchjs.org/guide/using-nightwatch/external-globals.html</loc>
+        <loc>https://nightwatchjs.org/guide/running-tests/</loc>
+        <loc>https://nightwatchjs.org/guide/running-tests/nightwatch-runner.html</loc>
+        <loc>https://nightwatchjs.org/guide/running-tests/command-line-options.html</loc>
+        <loc>https://nightwatchjs.org/guide/running-tests/test-environments.html</loc>
+        <loc>https://nightwatchjs.org/guide/running-tests/test-groups.html</loc>
+        <loc>https://nightwatchjs.org/guide/running-tests/test-tags.html</loc>
+        <loc>https://nightwatchjs.org/guide/running-tests/parallel-running.html</loc>
+        <loc>https://nightwatchjs.org/guide/running-tests/disabling-tests.html</loc>
+        <loc>https://nightwatchjs.org/guide/running-tests/programmatic-api.html</loc>
+        <loc>https://nightwatchjs.org/guide/running-tests/using-mocha.html</loc>
+
+        <loc>https://nightwatchjs.org/guide/writing-tests/</loc>
+        <loc>https://nightwatchjs.org/guide/writing-tests/using-exports.html</loc>
+        <loc>https://nightwatchjs.org/guide/writing-tests/using-bdd-describe.html</loc>
+        <loc>https://nightwatchjs.org/guide/writing-tests/using-es6-async.html</loc>
+        <loc>https://nightwatchjs.org/guide/writing-tests/writing-assertions.html</loc>
+        <loc>https://nightwatchjs.org/guide/writing-tests/expect-assertions.html</loc>
+
+        <loc>https://nightwatchjs.org/guide/extending-nightwatch/</loc>
+        <loc>https://nightwatchjs.org/guide/extending-nightwatch/custom-commands.html</loc>
+        <loc>https://nightwatchjs.org/guide/extending-nightwatch/custom-assertions.html</loc>
+        <loc>https://nightwatchjs.org/guide/extending-nightwatch/custom-reporter.html</loc>
+        <loc>https://nightwatchjs.org/guide/extending-nightwatch/using-with-selenium-webdriver.html</loc>
+        <loc>https://nightwatchjs.org/guide/extending-nightwatch/using-with-webdriverio.html</loc>
+
+        <loc>https://nightwatchjs.org/guide/working-with-page-objects/</loc>
+        <loc>https://nightwatchjs.org/guide/working-with-page-objects/using-page-objects.html</loc>
+        <loc>https://nightwatchjs.org/guide/working-with-page-objects/defining-elements.html</loc>
+        <loc>https://nightwatchjs.org/guide/working-with-page-objects/defining-sections.html</loc>
+        <loc>https://nightwatchjs.org/guide/working-with-page-objects/writing-commands.html</loc>
+
         <loc>https://nightwatchjs.org/guide/</loc>
+        <loc>https://nightwatchjs.org/guide/unit-testing-with-nightwatch/</loc>
+        <loc>https://nightwatchjs.org/guide/unit-testing-with-nightwatch/writing-unit-tests.html</loc>
+
         <loc>https://nightwatchjs.org/blog/</loc>
+        <loc>https://nightwatchjs.org/blog/nightwatch-user-survey-results-2021.html</loc>
+        <loc>https://nightwatchjs.org/blog/nightwatch-v2-beta-is-available.html</loc>
+        <loc>https://nightwatchjs.org/blog/nightwatch-v2-alpha-is-released.html</loc>
+        <loc>https://nightwatchjs.org/blog/test_engineering.html</loc>
+        <loc>https://nightwatchjs.org/blog/a-first-look-at-nightwatch-v2.html</loc>
+
+
         <loc>https://nightwatchjs.org/about/</loc>
+        <loc>https://nightwatchjs.org/about/contribute/</loc>
+        <loc>https://nightwatchjs.org/about/community/</loc>
+        <loc>https://nightwatchjs.org/releases/</loc>
+
+        <loc>https://nightwatchjs.org/api/</loc>
+        <loc>https://nightwatchjs.org/api/expect/</loc>
+        <loc>https://nightwatchjs.org/api/pageobject/</loc>
+        <loc>https://nightwatchjs.org/api/commands/</loc>
         <loc>https://nightwatchjs.org/api/session.html</loc>
         <loc>https://nightwatchjs.org/api/sessions.html</loc>
         <loc>https://nightwatchjs.org/api/timeouts.html</loc>
@@ -28,6 +88,7 @@
         <loc>https://nightwatchjs.org/api/windowSize.html</loc>
         <loc>https://nightwatchjs.org/api/frame.html</loc>
         <loc>https://nightwatchjs.org/api/frameParent.html</loc>
+
         <loc>https://nightwatchjs.org/api/element.html</loc>
         <loc>https://nightwatchjs.org/api/elements.html</loc>
         <loc>https://nightwatchjs.org/api/elementIdElement.html</loc>
@@ -45,6 +106,7 @@
         <loc>https://nightwatchjs.org/api/elementIdClear.html</loc>
         <loc>https://nightwatchjs.org/api/elementIdClick.html</loc>
         <loc>https://nightwatchjs.org/api/elementIdValue.html</loc>
+
         <loc>https://nightwatchjs.org/api/keys.html</loc>
         <loc>https://nightwatchjs.org/api/submit.html</loc>
         <loc>https://nightwatchjs.org/api/elementIdLocationInView.html</loc>

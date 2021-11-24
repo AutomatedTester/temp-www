@@ -14,10 +14,13 @@ domino.controllers.define('guide', function($guide) {
 
 domino.views.define('guide', function(view) {
 
+  var mainSection = 'guide';
+  var firstRender = true;
+  var defaultSection = 'getting-started';
+
   function renderGuidePage(view_script, params, cb) {
     view_script.no_render = true;
 
-    var renderCarbon = params.renderCarbon || typeof params.renderCarbon == 'undefined';
     var mainSection = 'guide';
     var sectionContainer = $('#'+ mainSection +'-container');
     var docsContainer = sectionContainer.find('.docs-section');
@@ -27,33 +30,52 @@ domino.views.define('guide', function(view) {
     var currentUriAttr = docsContainer.attr('data-page-uri') || '';
 
     var currentUri = document.location.protocol + '//' + document.location.hostname + currentUriAttr;
+    var innerSectionFromHash;
+    var locationHrefNoHash = document.location.href;
+    var hashChange = false;
 
-    if (sectionPath !== '') {
-      sectionPath = '/' + sectionPath + '/';
-    }
+    if (document.location.hash.length > 1) {
+      locationHrefNoHash = locationHrefNoHash.substring(0, locationHrefNoHash.indexOf('#'));
 
-    domino.views.getSectionData(mainSection);
+      innerSectionFromHash = document.location.hash.substring(1);
+      var element = $('#' + innerSectionFromHash);
+      $('#guide-container ul li ul li ul li a.nav-link').removeClass('active');
 
-    if (document.location.href === currentUri) {
-      // the page is already loaded, no need for a transition
-      if (typeof cb == 'function') {
-        cb();
+      var linkElement = $('#guide-container a.nav-link[href$="#'+ innerSectionFromHash +'"]');
+      linkElement.addClass('active');
+      hashChange = !firstRender;
+
+      if (element.length === 1) {
+        $([document.documentElement, document.body]).animate({
+          scrollTop: element.offset().top - 90
+        }, 200);
       }
-      return;
     }
 
+    var fileName = '/js/app/sections/guide';
     var subSectionPath = '/' + mainSection + '/' + subSection;
     var subSectionTitle;
+
+    domino.views.getSectionData(mainSection);
+    firstRender = false;
+
+    if (locationHrefNoHash === currentUri) {
+      // the page is already loaded, no need for a transition
+      if (hashChange) {
+        if (cb) {
+          cb();
+        }
+      } else {
+        renderSideBar.call(this, fileName, currentUriAttr, subSection, pageName, cb);
+      }
+
+      return;
+    }
 
     if (subSection) {
       subSectionTitle = sectionContainer.find('.bs-sidebar a[href="'+subSectionPath+'/"]').text();
       sectionContainer.find('.page-header h2').text(subSectionTitle);
     }
-
-    // else {
-    //   subSectionTitle = sectionContainer.find('.bs-sidebar > ul > li > a').eq(0).text();
-    //   sectionContainer.find('.page-header h2').text(subSectionTitle);
-    // }
 
     // the location.href has changed, update the page-uri attribute
     var newUriAttr = subSectionPath + (pageName ? ('/' + pageName + '.html') : '');
@@ -65,14 +87,7 @@ domino.views.define('guide', function(view) {
     domino.views.currentView = mainSection + subSection + '/' + pageName;
     window.scrollTo(0, 0);
 
-    //getSectionData(mainSection);
-
-    // this.transition.render('#guide-container', {
-    //   currentSectionPath: '/guide' + subSection + (pageName ? ('/' + pageName + '.html'): '')
-    // });
-
     var self = this;
-    var fileName = '/js/app/sections/guide';
 
     if (subSection) {
       fileName += '/' + subSection;
@@ -89,7 +104,7 @@ domino.views.define('guide', function(view) {
         $('#guide-container .docs-section .page-content').html(data);
       } else {
         $('#guide-container').html(data);
-        buildSideBar.call(self, 'guide', 'using-nightwatch');
+        buildSideBar.call(self, 'guide', 'getting-started');
       }
 
       if (subSection && pageName) {
@@ -100,22 +115,51 @@ domino.views.define('guide', function(view) {
       if (typeof cb == 'function') {
         cb();
       }
-      //self.initHelper('sidebar').render('#guide-container');
     });
   }
 
-  function buildSideBar(mainSection, defaultSection) {
-    var subSection = this.$scope && this.$scope.sectionName || defaultSection;
-    var sidebar = domino.views.sidebar.build(mainSection, subSection);
+  function renderSideBar(fileName, dataUri, subSection, pageName, cb) {
+    if (subSection) {
+      fileName += '/' + subSection;
+    }
 
+    if (pageName) {
+      fileName += '/' + pageName + '.txt';
+    } else {
+      fileName += '.txt';
+    }
+    var self = this;
+
+    $.get(fileName, function() {
+      buildSideBar.call(self, 'guide', 'getting-started');
+
+      if (subSection && pageName) {
+        $('#guide-container .bs-sidenav a[href="'+ dataUri +'"]').addClass('active');
+      }
+
+      self.initHelper('sourcecolor').render();
+      if (typeof cb == 'function') {
+        cb();
+      }
+    });
+  }
+
+  function buildSideBar(mainSection, subSection) {
+    var sidebar = domino.views.sidebar.build(mainSection, subSection);
     $('#' + mainSection + '-container .bs-sidebar').html(sidebar.content);
   }
 
-  this.init = function() {
-    $('section[data-page-uri]').hide();
-    $('section[data-page-uri^="/guide"]').show();
+  this.init = function(view_script) {
+    var subSection = this.$scope && this.$scope.sectionName || defaultSection;
+    var subSectionContainer = $('#'+ mainSection +'-container').find('.docs-section');
+    var currentUriAttr = subSectionContainer.attr('data-page-uri') || '';
 
-    buildSideBar.call(this, 'guide', 'using-nightwatch');
+    if (currentUriAttr === '/guide/' || document.location.pathname !== currentUriAttr) {
+      $('section[data-page-uri]').hide();
+      $('section[data-page-uri^="/guide"]').show();
+
+      buildSideBar.call(this, mainSection, subSection);
+    }
   };
 
   this.pageView = function(view_script) {
@@ -141,37 +185,37 @@ domino.views.define('guide', function(view) {
 
     return;
 
-    var mainSection = 'guide';
-    var subSection = '';
-    var sectionPath = subSection;
-    if (sectionPath !== '') {
-      sectionPath = '/' + sectionPath;
-    }
-
-    if (domino.views.currentView == mainSection + sectionPath) {
-      return;
-    }
-
-    window.scrollTo(0, 0);
-    getSectionData(mainSection);
-
-    var sidebar = domino.views.sidebar.build(mainSection, subSection);
-    view_script.$container = '#'+ mainSection +'-container';
-    view_script.no_render = true;
-    document.title = sidebar.title + ' | Nightwatch.js';
-
-    this.initHelper('transition').render(null, {
-      pathname: '/' + mainSection,
-      fadeIn: false,
-      currentSectionPath: '/' + mainSection
-    });
-
-    $('#' + mainSection + '-container .bs-sidebar').html(sidebar.content);
-
-    domino.views.currentView = mainSection + sectionPath;
-    if (document.documentElement.getAttribute('data-uri') != '/' + mainSection + sectionPath) {
-      document.documentElement.setAttribute('data-uri', '/' + mainSection + sectionPath);
-    }
+    // var mainSection = 'guide';
+    // var subSection = '';
+    // var sectionPath = subSection;
+    // if (sectionPath !== '') {
+    //   sectionPath = '/' + sectionPath;
+    // }
+    //
+    // if (domino.views.currentView == mainSection + sectionPath) {
+    //   return;
+    // }
+    //
+    // window.scrollTo(0, 0);
+    // getSectionData(mainSection);
+    //
+    // var sidebar = domino.views.sidebar.build(mainSection, subSection);
+    // view_script.$container = '#'+ mainSection +'-container';
+    // view_script.no_render = true;
+    // document.title = sidebar.title + ' | Nightwatch.js';
+    //
+    // this.initHelper('transition').render(null, {
+    //   pathname: '/' + mainSection,
+    //   fadeIn: false,
+    //   currentSectionPath: '/' + mainSection
+    // });
+    //
+    // $('#' + mainSection + '-container .bs-sidebar').html(sidebar.content);
+    //
+    // domino.views.currentView = mainSection + sectionPath;
+    // if (document.documentElement.getAttribute('data-uri') != '/' + mainSection + sectionPath) {
+    //   document.documentElement.setAttribute('data-uri', '/' + mainSection + sectionPath);
+    // }
   };
 
 });
