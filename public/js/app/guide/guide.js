@@ -47,7 +47,7 @@ domino.views.define('guide', function(view) {
 
       if (element.length === 1) {
         $([document.documentElement, document.body]).animate({
-          scrollTop: element.offset().top - 80
+          scrollTop: element.offset().top - 90
         }, 200);
       }
     }
