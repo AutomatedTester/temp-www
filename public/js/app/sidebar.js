@@ -187,7 +187,8 @@ domino.views.sidebar = new (function() {
           title: 'Expect | ',
           nthChildIndex: 2,
           linkTitle: 'Expect',
-          sidenavData: []
+          sidenavData: [],
+          baseUrl: '/api/expect/'
         },
         'pageobject': {
           title: 'Page Object | ',
@@ -200,44 +201,6 @@ domino.views.sidebar = new (function() {
           nthChildIndex: 4,
           linkTitle: 'API Commands',
           sidenavData: []
-        }
-      }
-    },
-
-    examples: {
-      title: 'Examples',
-      content: {
-        '': {
-          title: '',
-          nthChildIndex: 1,
-          linkTitle: 'About Nightwatch',
-          sidenavData: [
-            ['#motivation', 'Motivation'],
-            ['#roadmap', 'Roadmap'],
-            ['#the-team', 'The Team']
-          ]
-        },
-
-        'contribute': {
-          title: 'Contributing | ',
-          nthChildIndex: 2,
-          linkTitle: 'Contributing',
-          sidenavData: [
-            // ['#contributing-guidelines', 'Contributing Guidelines'],
-            // ['#writing-docs', 'Writing Docs &amp; Examples'],
-            // ['#become-a-contributor', 'Become a Contributor']
-          ]
-        },
-
-        'community': {
-          title: 'Community Resources | ',
-          nthChildIndex: 3,
-          linkTitle: 'Community Resources',
-          sidenavData: [
-            ['#community-assistance', 'Getting Assistance'],
-            ['#community-articles', 'Articles & Guides'],
-            ['#community-projects', 'Open-source Projects']
-          ]
         }
       }
     },
@@ -306,7 +269,12 @@ domino.views.sidebar = new (function() {
           content = sectionData.sidenavData[i];
 
           if (content.length === 3 && !Array.isArray(content[2])) {
-            sidenavContent.push('<h5><a class="nav-link" href="' + baseUrl + content[1] +'">'+ content[2] +'</a></h5>');
+            if (baseUrl) {
+              sidenavContent.push('<h5><a class="nav-link" href="' + baseUrl + content[1] +'">'+ content[2] +'</a></h5>');
+            } else {
+              sidenavContent.push('<h5>'+ content[2] +'</h5>');
+            }
+
           } else {
             sidenavContent.push('<a class="nav-link" href="' + baseUrl +  content[0] +'">'+ content[1] + '</a>');
 

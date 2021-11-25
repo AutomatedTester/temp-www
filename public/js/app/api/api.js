@@ -9,40 +9,9 @@ domino.controllers.define('api', function($api, $protocol) {
   this.pageobjectAction = function() {};
 
   this.methodAction = function() {
-    this.$view.methods = $api.getAll();
-    this.$view.api = $protocol.getAll().result(function(data) {
-      for (var section in data) {
-        var items = data[section];
-        for (var i = 0; i < items.length; i++) {
-          if (items[i].name.toLowerCase() == this.params.method_name.toLowerCase()) {
-            this.$view.method = items[i];
-            this.$view.section = section;
-            break;
-          }
-        }
-      }
-    });
 
     this.$view.methodName = this.params.method_name;
   };
-});
-
-domino.models.provide('api', function() {
-  this.url = '/js/app/api/methods.json';
-  this.getAll = this.$get(function(model) {
-    this.dataType = 'json';
-    this._id = 'methods-list';
-    this.cacheresult = true;
-  });
-});
-
-domino.models.provide('protocol', function() {
-  this.url = '/js/app/api/output.json';
-  this.getAll = this.$get(function(model) {
-    this.dataType = 'json';
-    this._id = 'protocol-list';
-    this.cacheresult = true;
-  });
 });
 
 domino.views.define('api', function(view) {
@@ -54,15 +23,15 @@ domino.views.define('api', function(view) {
   };
   var sidenavReady = false;
 
-  function populateSidenavData() {
+  function populateSidenavData(container) {
     Object.keys(sidenavData).forEach(function(key, index) {
-      $('#api-container .bs-sidebar li:nth-child(' + (index + 1) + ') ul li').each(function(i, el) {
+      $(container + ' .bs-sidebar li:nth-child(' + (index + 1) + ') ul li').each(function(i, el) {
         var element = el.firstChild;
         var entry = [];
 
         if (element && element && element.tagName && element.tagName.toLocaleLowerCase() === 'h5') {
           entry.push('h5');
-          element = element.firstChild;
+          element = element.firstElementChild || {innerHTML: element.innerHTML};
         }
 
         var link = element.href || '';
@@ -80,7 +49,15 @@ domino.views.define('api', function(view) {
     this.transition = this.initHelper('transition');
     this.sourcecolor = this.initHelper('sourcecolor');
 
-    if (!sidenavReady) populateSidenavData();
+    if (sidenavReady) {
+      return;
+    }
+
+    if ($('#apimethod-container').is(':visible')) {
+      populateSidenavData('#apimethod-container');
+    }
+
+    populateSidenavData('#api-container');
   };
 
   function api(view_script, scollspy) {
@@ -90,7 +67,7 @@ domino.views.define('api', function(view) {
       if (scollspy) {
         this.initHelper('bs.scrollspy').render({
           target : '#api-container .bs-sidebar',
-          offset : 580,
+          offset : 280,
           spyAttribute : 'data-spy'
         });
 
@@ -125,8 +102,22 @@ domino.views.define('api', function(view) {
   };
 
   this.methodView = function(view_script) {
+    var sidebar = domino.views.sidebar.build('api', 'commands', function() {
+      return sidenavData.commands;
+    });
+    var data = sidebar.data;
+
+    $('#apimethod-container .bs-sidebar').html(sidebar.content);
+    this.initHelper('sidebar').render('#apimethod-container');
+
+    var scrollTarget = '#apimethod-container .bs-sidenav > li:nth-child('+ data.nthChildIndex +')';
+    this.initHelper('bs.scrollspy').render({
+      target : scrollTarget,
+      offset : 85
+    });
+
     window.scrollTo(0, 0);
-    domino.views.getSectionData('api');
+    domino.views.getSectionData('');
 
     domino.views.currentView = '$method';
     view_script.$container = '#apimethod-container';
@@ -134,35 +125,34 @@ domino.views.define('api', function(view) {
     this.transition.render();
 
     setTimeout(function() {
-      if ($('ul li[name="'+ this.$scope.methodName +'"]').length > 0) {
-        var $top = $('ul li[name="'+ this.$scope.methodName +'"]')[0].offsetTop - 90;
-        if ($top > 100) {
-          $('#protocol-menu')[0].scrollTop = $top;
+      if (this.$scope) {
+        if ($('ul li[name="'+ this.$scope.methodName +'"]').length > 0) {
+          var $top = $('ul li[name="'+ this.$scope.methodName +'"]')[0].offsetTop - 200;
+          if ($top > 100) {
+            $('#protocol-menu')[0].scrollTop = $top;
+          }
         }
       }
     }.bind(this), 100);
 
-    if ($('#apimethod-container .container-carbon').length) {
-      setTimeout(function() {
-        this.sourcecolor.render();
-      }.bind(this), 200);
-    } else {
-      var self = this;
-      $('body').on('DOMNodeInserted', '#apimethod-container', function listener(ev) {
-        if (ev.target === $('#apimethod-container .jumbotron')[0]) {
-          self.sourcecolor.render();
-          $('body').off('DOMNodeInserted', '#apimethod-container');
-        }
-      });
-    }
 
-    if (this.$scope.method && this.$scope.method.descr) {
+    var self = this;
+    $('body').on('DOMNodeInserted', '#apimethod-container', function listener(ev) {
+      if (ev.target === $('#apimethod-container .jumbotron')[0]) {
+        self.sourcecolor.render();
+        $('body').off('DOMNodeInserted', '#apimethod-container');
+      }
+    });
+
+    if (this.$scope && this.$scope.method && this.$scope.method.descr) {
       domino.views.metaTagEl.content = this.$scope.method.descr.replace(/<\/?[^>]+(>|$)/g, '') + ' | API Reference - Nightwatch.js';
     }
 
     if (document.documentElement.getAttribute('data-uri') != '/api/$method') {
       document.documentElement.setAttribute('data-uri', '/api/$method');
     }
+
+
   };
 });
 

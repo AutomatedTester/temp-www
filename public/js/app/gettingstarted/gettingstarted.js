@@ -7,7 +7,6 @@ domino.views.define('gettingstarted', function(view) {
 
     container.find('.bs-sidebar').html(sidebar.content);
     container.scrollspy('dispose');
-    container.scrollspy({target: '#gettingstarted-container .bs-sidebar'});
   }
 
   function getCurrentHref() {
