@@ -84,17 +84,16 @@ body.navbar-visible .bs-sidebar {
 }
 
 [data-uri^="/api"] body.navbar-visible .bs-sidebar,
+[data-uri^="/api/$method"] body.navbar-visible .bs-sidebar,
 [data-uri^="/gettingstarted"] body.navbar-visible .bs-sidebar,
 [data-uri^="/about"] body.navbar-visible .bs-sidebar {
   top: 5rem;
 }
 
+[data-uri^="/api/$method"] body.navbar-visible .bs-sidebar,
 [data-uri^="/api/commands"] body.navbar-visible .bs-sidebar {
   overflow-y: auto;
-  height: 79vh;
-}
-[data-uri^="/api/$method"] body.navbar-visible .bs-sidebar {
-  top: 5rem;
+  height: 90vh;
 }
 
 
@@ -434,18 +433,18 @@ section[data-page-uri] {
 [data-uri="/api/$method"] section[data-page-uri="/api"] {
   display: none;
 }
-[data-uri="/gettingstarted"] section [data-page-uri="/gettingstarted/"],
-[data-uri="/gettingstarted/"] section [data-page-uri="/gettingstarted/"],
-[data-uri^="/gettingstarted/installation"] section [data-page-uri^="/gettingstarted/installation"],
-[data-uri^="/gettingstarted/configuration"] section [data-page-uri^="/gettingstarted/configuration"],
-[data-uri^="/gettingstarted/concepts"] section [data-page-uri^="/gettingstarted/concepts"],
-[data-uri^="/gettingstarted/browser-drivers-setup"] section [data-page-uri^="/gettingstarted/browser-drivers-setup"] {
-  display: block;
+
+[data-page-uri="/api"] section [data-page-uri^="/api"],
+[data-page-uri="/api"] section [data-page-uri^="/api/expect"],
+[data-page-uri="/api"] section [data-page-uri^="/api/pageobject"],
+[data-page-uri="/api"] section [data-page-uri^="/api/commands"] {
+  display: none;
 }
 
 [data-uri="/api"] section [data-page-uri="/api"],
 [data-uri="/api/"] section [data-page-uri="/api"],
 [data-uri^="/api"] section [data-page-uri="/api/$method"],
+/*[data-uri^="/api"] section [data-page-uri^="/api/"].docs-section,*/
 [data-uri^="/api/commands"] section [data-page-uri^="/api/commands"],
 [data-uri^="/api/pageobject"] section [data-page-uri^="/api/pageobject"],
 [data-uri^="/api/expect"] section [data-page-uri^="/api/expect"] {
@@ -485,7 +484,6 @@ section[data-page-uri] {
 
 [data-uri="/contact"] .parallax,
 [data-uri^="/api"] .parallax,
-[data-uri^="/gettingstarted"] .parallax,
 [data-uri^="/guide"] .parallax,
 [data-uri^="/blog"] .parallax,
 [data-uri^="/about"] .parallax,
@@ -494,21 +492,51 @@ section[data-page-uri] {
   height: 250px;
 }
 
+[data-uri^="/api"] .parallax,
+[data-uri^="/guide"] .parallax,
+[data-uri="/api/$method"] .parallax {
+  height: 75px;
+}
+[data-uri^="/api"] .parallax #moon,
+[data-uri^="/guide"] .parallax #moon,
+[data-uri="/api/$method"] .parallax #moon,
+[data-uri^="/api"] .parallax #clouds,
+[data-uri^="/guide"] .parallax #clouds,
+[data-uri="/api/$method"] .parallax #clouds,
+[data-uri^="/api"] .parallax #moon,
+[data-uri^="/guide"] .parallax #moon{
+  display: none;
+}
+
+[data-uri="/api/$method"] .parallax #clouds,
+[data-uri^="/api"] .parallax #moon,
+[data-uri^="/guide"] .parallax #moon{
+  display: none;
+}
+
 [data-uri^="/blog/article"] .parallax {
   height: 400px;
 }
 
 [data-uri="/contact"] .secondary,
 [data-uri="/releases"] .secondary,
-[data-uri^="/api"] .secondary,
-[data-uri^="/gettingstarted"] .secondary,
-[data-uri^="/guide"] .secondary,
 [data-uri^="/blog"] .secondary,
-[data-uri^="/about"] .secondary,
-[data-uri="/api/$method"] .secondary {
+[data-uri^="/about"] .secondary {
   margin-top: -174px;
 }
 
+[data-uri^="/api"] .secondary,
+[data-uri^="/guide"] .secondary {
+  margin-top: -45px;
+}
+[data-uri="/api/$method"] .secondary {
+  margin-top: 0;
+}
+#api-container .jumbotron h1,
+#apimethod-container .jumbotron h1,
+#guide-container .jumbotron h1{
+  display: none;
+}
 [data-uri="/"] .top-moon {
   background-size: 100%;
   /*background-position: calc(50% + 650px) -600px;*/

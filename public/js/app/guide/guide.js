@@ -184,38 +184,6 @@ domino.views.define('guide', function(view) {
     });
 
     return;
-
-    // var mainSection = 'guide';
-    // var subSection = '';
-    // var sectionPath = subSection;
-    // if (sectionPath !== '') {
-    //   sectionPath = '/' + sectionPath;
-    // }
-    //
-    // if (domino.views.currentView == mainSection + sectionPath) {
-    //   return;
-    // }
-    //
-    // window.scrollTo(0, 0);
-    // getSectionData(mainSection);
-    //
-    // var sidebar = domino.views.sidebar.build(mainSection, subSection);
-    // view_script.$container = '#'+ mainSection +'-container';
-    // view_script.no_render = true;
-    // document.title = sidebar.title + ' | Nightwatch.js';
-    //
-    // this.initHelper('transition').render(null, {
-    //   pathname: '/' + mainSection,
-    //   fadeIn: false,
-    //   currentSectionPath: '/' + mainSection
-    // });
-    //
-    // $('#' + mainSection + '-container .bs-sidebar').html(sidebar.content);
-    //
-    // domino.views.currentView = mainSection + sectionPath;
-    // if (document.documentElement.getAttribute('data-uri') != '/' + mainSection + sectionPath) {
-    //   document.documentElement.setAttribute('data-uri', '/' + mainSection + sectionPath);
-    // }
   };
 
 });

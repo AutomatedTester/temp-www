@@ -14,11 +14,11 @@ body {
   display: none;
 }*/
 #apimethod-page div.bs-sidebar > ul > li > ul.nav {
-  max-height: 730px;
+  max-height: 880px;
   overflow-y: auto;
 }
 .navbar-visible #apimethod-page div.bs-sidebar > ul > li > ul.nav {
-  max-height: 500px;
+  max-height: 745px;
 }
 
 select.version-dropdown {

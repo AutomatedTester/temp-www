@@ -4,7 +4,7 @@ domino.views.metaTagContent = domino.views.metaTagEl.content;
 
 domino.views.metaTagTwitterImg = $('meta[name="twitter:image"]').attr('content');
 
-domino.views.sections = ['index', 'gettingstarted', 'about', 'api', 'releases', 'guide', 'blog'];
+domino.views.sections = ['index', 'about', 'api', 'releases', 'guide', 'blog'];
 domino.views.__sectionsData__ = {};
 
 domino.views.getSectionData = function(currentView) {
@@ -94,32 +94,6 @@ domino.views.__runSubSection = function(view_script, mainSection, subSection, co
     document.documentElement.setAttribute('data-uri', '/' + mainSection + sectionPath);
   }
 };
-
-domino.views.define('gettingstarted', function(view) {
-  function renderPage(view_script, params, cb) {
-    $('#gettingstarted-container').scrollspy({target: '#nav-sidebar'});
-  }
-
-  this.installationView = function(view_script) {
-    domino.views.__runSubSection.call(this, view_script,  'gettingstarted', 'installation');
-  };
-
-  this.indexView = function(view_script) {
-    domino.views.__runSubSection.call(this, view_script, 'gettingstarted', '');
-  };
-
-  this.configurationView = function(view_script) {
-    domino.views.__runSubSection.call(this, view_script, 'gettingstarted', 'configuration');
-  };
-
-  this.conceptsView = function(view_script) {
-    domino.views.__runSubSection.call(this, view_script, 'gettingstarted', 'concepts');
-  };
-
-  this['browser-drivers-setupView'] = function(view_script) {
-    domino.views.__runSubSection.call(this, view_script, 'gettingstarted', 'browser-drivers-setup');
-  };
-});
 
 domino.views.define('about', function(view) {
   this.contributeView = function(view_script) {
