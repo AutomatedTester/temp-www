@@ -64,6 +64,7 @@ domino.views.__runSubSection = function(view_script, mainSection, subSection, co
 
   window.scrollTo(0, 0);
   domino.views.getSectionData(mainSection);
+
   var sidebar = domino.views.sidebar.build(mainSection, subSection, contentFn);
   var data = sidebar.data;
 

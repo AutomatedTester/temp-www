@@ -1,6 +1,6 @@
 {
-  "NIGHTWATCH_LIB_PATH": "/Users/andrei/workspace/nightwatch/lib/",
-  "NIGHTWATCH_DOCS_PATH": "/Users/andrei/workspace/nightwatch-docs-content/",
+  "NIGHTWATCH_LIB_PATH": "/Users/andrei/workspace/nightwatch-v2/lib/",
+  "NIGHTWATCH_DOCS_PATH": "/Users/andrei/workspace/nightwatch-docs-v2/",
   "OUTPUT_FOLDER": "./output",
   "NIGHTWATCH_VERSION": "1.1.13",
 
@@ -159,12 +159,7 @@
       "title" : "About",
       "description" : "How to get in touch with the team, and where to submit bugs and feature requests."
     },
-    "gettingstarted" : {
-      "subsections": ["installation", "concepts", "configuration", "browser-drivers-setup"],
-      "pageTitle" : "Getting Started | Nightwatch.js",
-      "title" : "Getting Started",
-      "description" : "Everything you need in order to get started with Nightwatch.js, step-by-step, with configuration guides for various browsers."
-    },
+
     "releases" : {
       "pageTitle" : "Releases | Nightwatch.js",
       "title" : "Releases",
@@ -177,36 +172,8 @@
     }
   },
 
-  "pageSrcFolders" : ["blog","guide", "api", "gettingstarted"],
+  "pageSrcFolders" : ["blog","guide", "api"],
   "pages": {
-    "Overview" : {
-      "overview" : "gettingstarted/overview/overview.md"
-    },
-
-    "Installation" : {
-      "installation" : "gettingstarted/installation/install.md"
-    },
-
-    "Configuration" : {
-      "configuration" : "gettingstarted/configuration/configuration.md",
-      "config-basic-settings" : "gettingstarted/configuration/config-basic-settings.md",
-      "config-webdriver-settings" : "gettingstarted/configuration/config-webdriver-settings.md",
-      "config-selenium-settings" : "gettingstarted/configuration/config-selenium-settings.md",
-      "config-test-settings" : "gettingstarted/configuration/config-test-settings.md"
-    },
-
-    "Concepts" : {
-      "concepts-globals" : "gettingstarted/concepts/globals.md",
-      "concepts-test_environments" : "gettingstarted/concepts/test_environments.md"
-    },
-
-    "browser-drivers-setup" : {
-      "browser-setup" : "gettingstarted/browser-setup/browser-setup.md",
-      "gecko-driver" : "gettingstarted/browser-setup/gecko-driver.md",
-      "chromedriver" : "gettingstarted/browser-setup/chromedriver.md",
-      "edgedriver" : "gettingstarted/browser-setup/edgedriver.md"
-    },
-
     "Using-nightwatch" : {
       "using-nightwatch" : "guide/using-nightwatch/using-nightwatch.md",
       "writing-tests" : "guide/using-nightwatch/writing-tests.md",
