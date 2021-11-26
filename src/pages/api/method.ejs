@@ -50,6 +50,10 @@
   (function() {
     setTimeout(function() {
       try {
+        $('#navbartop ul').on('click', 'li a', function(ev) {
+          ev.stopPropagation();
+        });
+
         var listElement = $('#commands-collapse .btn-toggle-nav li>a[href$="/api/<%- subPageName %>"]');
 
         if (listElement && listElement.get(0)) {

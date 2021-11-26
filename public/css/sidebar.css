@@ -229,6 +229,7 @@ body.navbar-visible .bs-sidebar {
 ul.nav.bs-sidenav button>a,
 ul.nav.bs-sidenav button>a:hover{
   text-decoration: none;
+  font-size: 18px;
 }
 .bs-sidebar ul li::marker {
   content: none;
@@ -237,10 +238,13 @@ ul.nav.bs-sidenav button>a:hover{
   overflow-y: auto;
 }
 
+body.navbar-visible .bs-sidebar {
+  height: calc(100vh - 100px);
+}
+
+
 @media screen and (max-width: 1600px) {
-  body.navbar-visible .bs-sidebar {
-    height: 850px;
-  }
+
 }
 
 @media screen and (max-width: 1400px) {
