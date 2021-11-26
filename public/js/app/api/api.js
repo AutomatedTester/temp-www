@@ -25,14 +25,8 @@ domino.views.define('api', function(view) {
 
     this.initHelper('transition').render(function() {
       if (scollspy) {
-        this.initHelper('bs.scrollspy').render({
-          target : '#api-container .bs-sidebar',
-          offset : 280,
-          spyAttribute : 'data-spy'
-        });
-
         this.initHelper('sourcecolor').render();
-        this.initHelper('sidebar').render('#api-container');
+        //this.initHelper('sidebar').render('#api-container');
       }
     }, view_script);
   }
@@ -60,7 +54,6 @@ domino.views.define('api', function(view) {
   };
 
   this.indexView = function(view_script) {
-    expandMenu('assert');
     domino.views.__runSubSection.call(this, view_script, 'api', '', false);
   };
 

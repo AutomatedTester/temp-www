@@ -737,6 +737,10 @@ section[data-page-uri] {
   margin: 50px auto 20px;
 }
 
-[data-api-page^="/api/"] .parallax {
+[data-api-page^="/api/"] > .parallax {
   display: none;
+}
+
+[data-api-page^="/api/"][data-uri="/"] > .parallax {
+  display: block;
 }

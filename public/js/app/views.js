@@ -87,10 +87,10 @@ domino.views.__runSubSection = function(view_script, mainSection, subSection, co
   var nthChildIndex = data ? data.nthChildIndex : 1;
   var scrollTarget = '#'+ mainSection + '-container .bs-sidenav > li:nth-child('+ nthChildIndex +')';
 
-  this.initHelper('bs.scrollspy').render({
-    target : scrollTarget,
-    offset : 85
-  });
+  // this.initHelper('bs.scrollspy').render({
+  //   target : scrollTarget,
+  //   offset : 85
+  // });
 
   if (sidebar.content !== false) {
     this.initHelper('sidebar').render('#' + mainSection + '-container');
@@ -131,11 +131,6 @@ domino.views.define('releases', function(view) {
     document.title = 'Releases | Nightwatch.js';
 
     this.initHelper('transition').render();
-    this.initHelper('bs.scrollspy').render({
-      target : '#releases-container .bs-sidebar',
-      offset : 50
-    });
-
     this.initHelper('sidebar').render('#releases-container');
 
     domino.views.currentView = 'releases';
