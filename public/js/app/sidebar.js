@@ -175,6 +175,7 @@ domino.views.sidebar = new (function() {
       }
     },
     api: {
+      collapsible: true,
       title: 'API Reference',
       content: {
         '': {
@@ -248,9 +249,18 @@ domino.views.sidebar = new (function() {
     var html = ['<ul class="nav bs-sidenav">'];
 
     var sections = __subSections__[mainSection];
+    var collapsible = sections.collapsible;
     var sectionData;
     var sidenavContent;
     var content;
+
+    if (contentFn === false) {
+      return {
+        data: false,
+        title: sections.title,
+        content: false
+      }
+    }
 
     Object.keys(sections.content).forEach(function(sectionName) {
       sectionData = sections.content[sectionName];
@@ -261,7 +271,13 @@ domino.views.sidebar = new (function() {
           sectionData.sidenavData = contentFn();
         }
 
-        sidenavContent.push('<ul class="nav">');
+        if (collapsible) {
+          sidenavContent.push('<ul class="btn-toggle-nav">');
+        } else {
+          sidenavContent.push('<ul class="nav">');
+        }
+
+
         var baseUrl = sectionData.baseUrl || '';
         for (var i = 0; i < sectionData.sidenavData.length; i++) {
           sidenavContent.push('<li class="nav-item">');
@@ -291,15 +307,32 @@ domino.views.sidebar = new (function() {
 
           sidenavContent.push('</li>');
         }
+
         sidenavContent.push('</ul>');
       } else {
         sidenavContent = [];
       }
 
       var subsectionLink = typeof sectionData.link == 'undefined' ? sectionName : sectionData.link;
-      html.push('<li' + (subSection === sectionName ? ' class="active"' : '') + '><a href="/'+ mainSection +'/' +
-        subsectionLink + (subsectionLink ? '/': '') + '">'+ sectionData.linkTitle +'</a>' +
-        sidenavContent.join('') + '</li>');
+
+
+      if (collapsible) {
+        var active = subSection === sectionName;
+        var target = (sectionName || 'index') + '-collapse';
+
+        html.push('<li' + (active ? ' class="active"' : '') + '>' +
+          '<button class="btn btn-toggle align-items-center rounded collapsed" ' +
+            'data-bs-toggle="collapse" data-bs-target="#'+ target +'" aria-expanded="true">' +
+            '<a href="/'+ mainSection +'/' + subsectionLink + (subsectionLink ? '/': '') + '">'+ sectionData.linkTitle +'</a>' +
+          '</button>' +
+
+          '<div class="collapse show" id="'+ target +'">' + sidenavContent.join('') + '</div></li>'
+        );
+      } else {
+        html.push('<li' + (subSection === sectionName ? ' class="active"' : '') + '><a href="/'+ mainSection +'/' +
+          subsectionLink + (subsectionLink ? '/': '') + '">'+ sectionData.linkTitle +'</a>' +
+          sidenavContent.join('') + '</li>');
+      }
     });
 
     if (Array.isArray(sections.extraContent)) {
