@@ -45,6 +45,7 @@ html, body {
   padding: 4px 9px;
   font-size: 17px;
   font-weight: 300;
+  text-decoration: none!important;
 }
 
 .nav>li>a:hover {
@@ -76,11 +77,6 @@ html, body {
 
 body.navbar-visible .nw-navbar {
   background: #000;
-}
-body.navbar-visible .bs-sidebar {
-  position: sticky;
-  top: 3rem;
-  height: 600px;
 }
 
 [data-uri^="/api"] body.navbar-visible .bs-sidebar,
@@ -741,8 +737,6 @@ section[data-page-uri] {
   margin: 50px auto 20px;
 }
 
-@media screen and (max-width: 1600px) {
-  body.navbar-visible .bs-sidebar {
-    height: 850px;
-  }
+[data-api-page^="/api/"] .parallax {
+  display: none;
 }

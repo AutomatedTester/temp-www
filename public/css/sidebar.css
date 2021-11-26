@@ -6,7 +6,6 @@
 /* First level of nav */
 .bs-sidenav {
   margin-top: 30px;
-  /*margin-bottom: 30px;*/
   font-size: 16px;
   display: block;
 }
@@ -42,8 +41,8 @@
   font-size: 18px;
   padding-bottom: 6px;
   display: block;
-  padding-left: 2px;
   padding-top: 0;
+  padding-left: 0 !important;
 }
 .bs-sidenav h5:hover a {
   color: #111
@@ -155,28 +154,105 @@ ul li ul li ul li a.active {
 .bs-sidebar > ul.bs-sidenav >li {
   display: block;
 }
-/*.docs-section h3[id] {*/
-  /*border-bottom: 1px solid #ccc;*/
-  /*line-height: 1.5;*/
-/*}*/
-/*.docs-section h3[id] a:hover {*/
-  /*text-decoration: none;*/
-/*}*/
-/*.docs-section h3[id] a:hover code{*/
-  /*color:#111;*/
-/*}*/
-/*.docs-section h2[id],*/
-/*.docs-section h3[id],*/
-/*.docs-section h4[id] {*/
-  /*padding-top: 60px; !* this is a hack to fix the anchor scrolling *!*/
-  /*padding-top: -60px;*/
-  /*margin-top: -30px;*/
-/*}*/
 
-/*.docs-section h2[id] {*/
-  /*margin-top: 0;*/
+.dropdown-toggle { outline: 0; }
 
-/*}*/
-/*.page-header {*/
-  /*border-bottom-color: #aaaccc;*/
-/*}*/
+.nav-flush .nav-link {
+  border-radius: 0;
+}
+
+.btn-toggle {
+  display: inline-flex;
+  align-items: center;
+  padding: .25rem .5rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, .65);
+  background-color: transparent;
+  border: 0;
+}
+.btn-toggle:hover,
+.btn-toggle:focus {
+  color: rgba(0, 0, 0, .85);
+  background-color: #d2f4ea;
+}
+
+.btn-toggle::before {
+  width: 1.25em;
+  line-height: 0;
+  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+  transition: transform .35s ease;
+  transform-origin: .5em 50%;
+}
+
+.btn-toggle[aria-expanded="true"] {
+  color: rgba(0, 0, 0, .85);
+}
+.btn-toggle[aria-expanded="true"]::before {
+  transform: rotate(90deg);
+}
+
+.btn-toggle-nav a {
+  display: inline-flex;
+  padding: 3px;
+  margin-top: .125rem;
+  margin-left: 0;
+  text-decoration: none;
+}
+.btn-toggle-nav a:hover,
+.btn-toggle-nav a:focus {
+
+}
+.btn-toggle-nav li {
+  margin-left: 0;
+}
+ul.nav .btn-toggle-nav li h5 {
+  margin-left: -5px;
+  font-size: 16px;
+}
+
+ul.nav .btn-toggle-nav li a {
+  margin-left: 0;
+  display: block;
+  padding-left: 15px;
+}
+body.navbar-visible .bs-sidebar {
+  position: sticky;
+  top: 3rem;
+  height: 600px;
+  overflow-y: auto;
+}
+.bs-sidebar a,
+.bs-sidebar a:hover {
+  text-decoration: none;
+}
+
+ul.nav.bs-sidenav button>a,
+ul.nav.bs-sidenav button>a:hover{
+  text-decoration: none;
+}
+.bs-sidebar ul li::marker {
+  content: none;
+}
+.scrollarea {
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 1600px) {
+  body.navbar-visible .bs-sidebar {
+    height: 850px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  [data-uri^="/api"] .bs-sidebar {
+    top: 85px !important;
+  }
+
+  [data-uri^="/api"] body.navbar-visible .bs-sidenav {
+    margin-top: 0 !important;
+  }
+
+  body.navbar-visible .bs-sidebar {
+    max-height: 590px;
+  }
+}

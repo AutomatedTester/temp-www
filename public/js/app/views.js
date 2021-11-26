@@ -52,6 +52,8 @@ $('[data-page-uri="/gettingstarted/installation"] table').on('click', 'a', funct
   ev.stopPropagation();
 });
 
+
+
 domino.views.__runSubSection = function(view_script, mainSection, subSection, contentFn) {
   var sectionPath = subSection;
   if (sectionPath !== '') {
@@ -64,6 +66,7 @@ domino.views.__runSubSection = function(view_script, mainSection, subSection, co
 
   window.scrollTo(0, 0);
   domino.views.getSectionData(mainSection);
+
   var sidebar = domino.views.sidebar.build(mainSection, subSection, contentFn);
   var data = sidebar.data;
 
@@ -77,18 +80,23 @@ domino.views.__runSubSection = function(view_script, mainSection, subSection, co
     currentSectionPath: '/' + mainSection
   });
 
-  $('#' + mainSection + '-container .bs-sidebar').html(sidebar.content);
+  if (sidebar.content !== false) {
+    $('#' + mainSection + '-container .bs-sidebar').html(sidebar.content);
+  }
 
-  var scrollTarget = '#'+ mainSection + '-container .bs-sidenav > li:nth-child('+ data.nthChildIndex +')';
+  var nthChildIndex = data ? data.nthChildIndex : 1;
+  var scrollTarget = '#'+ mainSection + '-container .bs-sidenav > li:nth-child('+ nthChildIndex +')';
 
   this.initHelper('bs.scrollspy').render({
     target : scrollTarget,
     offset : 85
   });
 
-  this.initHelper('sidebar').render('#' + mainSection + '-container');
-
+  if (sidebar.content !== false) {
+    this.initHelper('sidebar').render('#' + mainSection + '-container');
+  }
   domino.views.currentView = mainSection + sectionPath;
+
   if (document.documentElement.getAttribute('data-uri') != '/' + mainSection + sectionPath) {
     document.documentElement.setAttribute('data-uri', '/' + mainSection + sectionPath);
   }
@@ -242,6 +250,15 @@ const headerHeight = 70;
 $('#bd-versions').on('click', function(e) {
   e.preventDefault();
 });
+
+$('[data-uri^="/api"] #expect-collapse').on('click', 'a', function(ev) {
+  ev.stopPropagation();
+});
+
+$('[data-uri^="/api"] #commands-collapse').on('click', 'a', function(ev) {
+  ev.stopPropagation();
+});
+
 $('a.local-nav').on('click', function(e) {
   e.stopPropagation();
 });

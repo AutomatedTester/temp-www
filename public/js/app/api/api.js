@@ -15,49 +15,9 @@ domino.controllers.define('api', function($api, $protocol) {
 });
 
 domino.views.define('api', function(view) {
-  var sidenavData = {
-    '': [],
-    expect: [],
-    pageobject: [],
-    commands: []
-  };
-  var sidenavReady = false;
-
-  function populateSidenavData(container) {
-    Object.keys(sidenavData).forEach(function(key, index) {
-      $(container + ' .bs-sidebar li:nth-child(' + (index + 1) + ') ul li').each(function(i, el) {
-        var element = el.firstChild;
-        var entry = [];
-
-        if (element && element && element.tagName && element.tagName.toLocaleLowerCase() === 'h5') {
-          entry.push('h5');
-          element = element.firstElementChild || {innerHTML: element.innerHTML};
-        }
-
-        var link = element.href || '';
-        if (link) {
-          link = link.substring(element.href.indexOf('#'));
-        }
-        entry.push(link, element.innerHTML);
-        sidenavData[key].push(entry);
-      });
-    });
-    sidenavReady = true;
-  }
-
   this.init = function() {
     this.transition = this.initHelper('transition');
     this.sourcecolor = this.initHelper('sourcecolor');
-
-    if (sidenavReady) {
-      return;
-    }
-
-    if ($('#apimethod-container').is(':visible')) {
-      populateSidenavData('#apimethod-container');
-    }
-
-    populateSidenavData('#api-container');
   };
 
   function api(view_script, scollspy) {
@@ -77,64 +37,44 @@ domino.views.define('api', function(view) {
     }, view_script);
   }
 
+  function expandMenu(container) {
+    $('ul.bs-sidenav div.collapse').removeClass('show');
+    $('#'+container+'-collapse').prev().attr('aria-expanded', 'true');
+    $('#'+container+'-collapse').addClass('show');
+  }
+
   this.expectView = function(view_script) {
-    domino.views.__runSubSection.call(this, view_script, 'api', 'expect', function() {
-      return sidenavData.expect;
-    });
+    expandMenu('expect');
+    domino.views.__runSubSection.call(this, view_script, 'api', 'expect', false);
   };
 
   this.commandsView = function(view_script) {
-    domino.views.__runSubSection.call(this, view_script, 'api', 'commands', function() {
-      return sidenavData.commands;
-    });
+    expandMenu('commands');
+
+    domino.views.__runSubSection.call(this, view_script, 'api', 'commands', false);
   };
 
   this.pageobjectView = function(view_script) {
-    domino.views.__runSubSection.call(this, view_script, 'api', 'pageobject', function() {
-      return sidenavData.pageobject;
-    });
+    expandMenu('pageobject');
+    domino.views.__runSubSection.call(this, view_script, 'api', 'pageobject', false);
   };
 
   this.indexView = function(view_script) {
-    domino.views.__runSubSection.call(this, view_script, 'api', '', function() {
-      return sidenavData[''];
-    });
+    expandMenu('assert');
+    domino.views.__runSubSection.call(this, view_script, 'api', '', false);
   };
 
   this.methodView = function(view_script) {
-    var sidebar = domino.views.sidebar.build('api', 'commands', function() {
-      return sidenavData.commands;
-    });
-    var data = sidebar.data;
-
-    $('#apimethod-container .bs-sidebar').html(sidebar.content);
-    this.initHelper('sidebar').render('#apimethod-container');
-
-    var scrollTarget = '#apimethod-container .bs-sidenav > li:nth-child('+ data.nthChildIndex +')';
-    this.initHelper('bs.scrollspy').render({
-      target : scrollTarget,
-      offset : 85
-    });
+    //this.initHelper('sidebar').render('#apimethod-container');
+    expandMenu('commands');
 
     window.scrollTo(0, 0);
     domino.views.getSectionData('');
-
     domino.views.currentView = '$method';
     view_script.$container = '#apimethod-container';
     document.title = (this.$scope && this.$scope.methodName ? this.$scope.methodName + ' | ' : '') + 'API Reference | Nightwatch.js';
+
     this.transition.render();
-
-    setTimeout(function() {
-      if (this.$scope) {
-        if ($('ul li[name="'+ this.$scope.methodName +'"]').length > 0) {
-          var $top = $('ul li[name="'+ this.$scope.methodName +'"]')[0].offsetTop - 200;
-          if ($top > 100) {
-            $('#protocol-menu')[0].scrollTop = $top;
-          }
-        }
-      }
-    }.bind(this), 100);
-
 
     var self = this;
     $('body').on('DOMNodeInserted', '#apimethod-container', function listener(ev) {
