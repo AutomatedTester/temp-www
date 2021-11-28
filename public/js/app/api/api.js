@@ -20,15 +20,19 @@ domino.views.define('api', function(view) {
     this.sourcecolor = this.initHelper('sourcecolor');
   };
 
-  function api(view_script, scollspy) {
-    view_script.$container = '#api-container';
+  // function api(view_script, scollspy) {
+  //   view_script.$container = '#api-container';
+  //
+  //   this.initHelper('transition').render(function() {
+  //     if (scollspy) {
+  //       this.initHelper('sourcecolor').render();
+  //       //this.initHelper('sidebar').render('#api-container');
+  //     }
+  //   }, view_script);
+  // }
 
-    this.initHelper('transition').render(function() {
-      if (scollspy) {
-        this.initHelper('sourcecolor').render();
-        //this.initHelper('sidebar').render('#api-container');
-      }
-    }, view_script);
+  function renderApiPage(view_script, params, cb) {
+
   }
 
   function expandMenu(container) {
@@ -54,7 +58,8 @@ domino.views.define('api', function(view) {
   };
 
   this.indexView = function(view_script) {
-    domino.views.__runSubSection.call(this, view_script, 'api', '', false);
+    renderApiPage.call(this, view_script, this.$scope || {});
+    //domino.views.__runSubSection.call(this, view_script, 'api', '', false);
   };
 
   this.methodView = function(view_script) {

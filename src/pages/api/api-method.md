@@ -46,9 +46,10 @@
       </table>
     </div>
 
-    {% if method.returns %}
-    <h3>Returns</h3>
-    <div class="table-responsive">
+{% if method.returns %}
+
+<h3>Returns</h3>
+  <div class="table-responsive">
       <table class="table table-bordered table-striped">
         <thead>
          <tr>
@@ -61,10 +62,10 @@
            <td>{{method.returns.type}}</td>
            <td>{{method.returns.descr}}</td>
          </tr>
-        </tbody>
-      </table>
-    </div>
-    {% endif %}
+       </tbody>
+    </table>
+  </div>
+{% endif %}
 
 {% if method.example %}
 <h3>Usage</h3>

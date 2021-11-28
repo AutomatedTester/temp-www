@@ -112,8 +112,9 @@
         <loc>https://nightwatchjs.org/api/elementIdLocationInView.html</loc>
         <loc>https://nightwatchjs.org/api/elementIdLocation.html</loc>
         <loc>https://nightwatchjs.org/api/source.html</loc>
+        <loc>https://nightwatchjs.org/api/pageSource.html</loc>
         <loc>https://nightwatchjs.org/api/execute.html</loc>
-        <loc>https://nightwatchjs.org/api/executeAsync.html</loc>
+        <loc>https://nightwatchjs.org/api/executeAsyncScript.html</loc>
         <loc>https://nightwatchjs.org/api/cookie.html</loc>
         <loc>https://nightwatchjs.org/api/doubleClick.html</loc>
         <loc>https://nightwatchjs.org/api/mouseButtonClick.html</loc>
@@ -136,7 +137,18 @@
         <loc>https://nightwatchjs.org/api/deleteCookie.html</loc>
         <loc>https://nightwatchjs.org/api/deleteCookies.html</loc>
         <loc>https://nightwatchjs.org/api/end.html</loc>
+        <loc>https://nightwatchjs.org/api/getCurrentUrl.html</loc>
+        <loc>https://nightwatchjs.org/api/navigateTo.html</loc>
+        <loc>https://nightwatchjs.org/api/quit.html</loc>
+
+        <loc>https://nightwatchjs.org/api/uploadFile.html</loc>
+        <loc>https://nightwatchjs.org/api/updateValue.html</loc>
+        <loc>https://nightwatchjs.org/api/setAttribute.html</loc>
+        <loc>https://nightwatchjs.org/api/getAccessibleName.html</loc>
+        <loc>https://nightwatchjs.org/api/getAriaRole.html</loc>
         <loc>https://nightwatchjs.org/api/getAttribute.html</loc>
+        <loc>https://nightwatchjs.org/api/getElementProperty.html</loc>
+        <loc>https://nightwatchjs.org/api/getElementRect.html</loc>
         <loc>https://nightwatchjs.org/api/getCookie.html</loc>
         <loc>https://nightwatchjs.org/api/getCookies.html</loc>
         <loc>https://nightwatchjs.org/api/getCssProperty.html</loc>
@@ -160,19 +172,29 @@
         <loc>https://nightwatchjs.org/api/resizeWindow.html</loc>
         <loc>https://nightwatchjs.org/api/saveScreenshot.html</loc>
         <loc>https://nightwatchjs.org/api/setCookie.html</loc>
-        <loc>https://nightwatchjs.org/api/updateValue.html</loc>
         <loc>https://nightwatchjs.org/api/sendKeys.html</loc>
         <loc>https://nightwatchjs.org/api/setWindowPosition.html</loc>
+        <loc>https://nightwatchjs.org/api/setWindowRect.html</loc>
+        <loc>https://nightwatchjs.org/api/setWindowSize.html</loc>
         <loc>https://nightwatchjs.org/api/submitForm.html</loc>
         <loc>https://nightwatchjs.org/api/switchWindow.html</loc>
         <loc>https://nightwatchjs.org/api/urlHash.html</loc>
         <loc>https://nightwatchjs.org/api/useCss.html</loc>
         <loc>https://nightwatchjs.org/api/useXpath.html</loc>
+        <loc>https://nightwatchjs.org/api/isEnabled.html</loc>
+        <loc>https://nightwatchjs.org/api/isSelected.html</loc>
+        <loc>https://nightwatchjs.org/api/dragAndDrop.html</loc>
+
+        <loc>https://nightwatchjs.org/api/takeElementScreenshot.html</loc>
         <loc>https://nightwatchjs.org/api/waitForElementNotPresent.html</loc>
         <loc>https://nightwatchjs.org/api/waitForElementNotVisible.html</loc>
         <loc>https://nightwatchjs.org/api/waitForElementPresent.html</loc>
         <loc>https://nightwatchjs.org/api/waitForElementVisible.html</loc>
         <loc>https://nightwatchjs.org/api/findElement.html</loc>
         <loc>https://nightwatchjs.org/api/findElements.html</loc>
+        <loc>https://nightwatchjs.org/api/waitUntil.html</loc>
+        <loc>https://nightwatchjs.org/api/openNewWindow.html</loc>
+        <loc>https://nightwatchjs.org/api/getWindowPosition.html</loc>
+        <loc>https://nightwatchjs.org/api/fullscreenWindow.html</loc>
     </url>
 </urlset>

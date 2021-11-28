@@ -1,6 +1,6 @@
 <ul class="nav bs-sidenav">
     <li>
-        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#assert-collapse" aria-expanded="true"><a href="/api/">Assert</a></button>
+        <a href="/api"><button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#assert-collapse" aria-expanded="true">Assert</button></a>
         <div class="collapse" id="assert-collapse">
             <ul class="btn-toggle-nav">
                 <li class="nav-item"><a href="/api/#assert-attributeContains">attributeContains</a></li>
@@ -24,7 +24,35 @@
     </li>
 
     <li>
-        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#expect-collapse" aria-expanded="false"><a href="/api/expect/">Expect</a></button>
+        <a href="/api/ensure/"><button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#ensure-collapse" aria-expanded="true">Ensure</button></a>
+        <div class="collapse" id="ensure-collapse">
+            <ul class="btn-toggle-nav">
+                <li class="nav-item"><a href="/api/#assert-attributeContains">attributeContains</a></li>
+                <li class="nav-item"><a href="/api/#assert-attributeEquals">attributeEquals</a></li>
+                <li class="nav-item"><a href="/api/#assert-containsText">containsText</a></li>
+                <li class="nav-item"><a href="/api/#assert-cssClassPresent">cssClassPresent</a></li>
+                <li class="nav-item"><a href="/api/#assert-cssProperty">cssProperty</a></li>
+                <li class="nav-item"><a href="/api/#assert-domPropertyContains">domPropertyContains</a></li>
+                <li class="nav-item"><a href="/api/#assert-domPropertyEquals">domPropertyEquals</a></li>
+                <li class="nav-item"><a href="/api/#assert-elementPresent">elementPresent</a></li>
+                <li class="nav-item"><a href="/api/#assert-enabled">enabled</a></li>
+                <li class="nav-item"><a href="/api/#assert-selected">selected</a></li>
+                <li class="nav-item"><a href="/api/#assert-value">value</a></li>
+                <li class="nav-item"><a href="/api/#assert-valueContains">valueContains</a></li>
+                <li class="nav-item"><a href="/api/#assert-visible">visible</a></li>
+                <li class="nav-item"><a href="/api/#assert-title">title</a></li>
+                <li class="nav-item"><a href="/api/#assert-urlContains">urlContains</a></li>
+                <li class="nav-item"><a href="/api/#assert-urlEquals">urlEquals</a></li>
+            </ul>
+        </div>
+    </li>
+
+    <li>
+        <div class="list-header">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#expect-collapse" aria-expanded="false"></button>
+            <a href="/api/expect/">Expect</a>
+        </div>
+
         <div class="collapse" id="expect-collapse">
             <ul class="btn-toggle-nav">
                 <li class="nav-item"><a href="/api/expect/#expect-chains">language chains</a></li>
@@ -54,7 +82,7 @@
     </li>
 
     <li>
-        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#pageobject-collapse" aria-expanded="false"><a href="/api/pageobject/">Page</a></button>
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#pageobject-collapse" aria-expanded="false"><a href="/api/pageobject/">Page Object Model</a></button>
 
         <div class="collapse" id="pageobject-collapse">
             <ul class="btn-toggle-nav">
@@ -85,19 +113,24 @@
             <li><h5>Element Interaction</h5></li>
 
             <li><a href="/api/clearValue.html">clearValue</a></li>
-            <li><a href="/api/click.html" name="click">click</a></li>
+            <li><a href="/api/click.html">click</a></li>
+            <li><a href="/api/dragAndDrop.html">dragAndDrop</a></li>
             <li><a href="/api/moveToElement.html">moveToElement</a></li>
             <li><a href="/api/sendKeys.html">sendKeys</a></li>
-            <li><a href="/api/setPassword.html">setPassword</a></li>
+            <li><a href="/api/setAttribute.html">setAttribute</a></li>
             <li><a href="/api/submitForm.html">submitForm</a></li>
             <li><a href="/api/updateValue.html">updateValue</a></li>
+            <li><a href="/api/uploadFile.html">uploadFile</a></li>
 
             <li><h5>Element State</h5></li>
 
             <li><a href="/api/elementActive.html">elementActive</a></li>
+            <li><a href="/api/getAccessibleName.html">getAccessibleName</a></li>
+            <li><a href="/api/getAriaRole.html">getAriaRole</a></li>
             <li><a href="/api/getAttribute.html">getAttribute</a></li>
             <li><a href="/api/getCssProperty.html">getCssProperty</a></li>
             <li><a href="/api/getElementProperty.html">getElementProperty</a></li>
+            <li><a href="/api/getElementRect.html">getElementRect</a></li>
             <li><a href="/api/getElementSize.html">getElementSize</a></li>
             <li><a href="/api/getTagName.html">getTagName</a></li>
             <li><a href="/api/getText.html">getText</a></li>
@@ -132,6 +165,7 @@
             <li><a href="/api/executeAsync.html">executeAsync</a></li>
             <li><a href="/api/injectScript.html">injectScript</a></li>
             <li><a href="/api/source.html">source</a></li>
+            <li><a href="/api/pageSource.html">pageSource</a></li>
 
             <li><h5>Session Related</h5></li>
             <li><a href="/api/end.html">end</a></li>
@@ -150,13 +184,16 @@
             <li><h5>Navigation</h5></li>
 
             <li><a href="/api/back.html">back</a></li>
-            <li><a href="/api/forward.html">forward</a></li>
+            <li><a href="/api/getCurrentUrl.html">getCurrentUrl</a></li>
             <li><a href="/api/getTitle.html">getTitle</a></li>
+            <li><a href="/api/navigateTo.html">navigateTo</a></li>
+            <li><a href="/api/forward.html">forward</a></li>
             <li><a href="/api/init.html">init</a></li>
             <li><a href="/api/refresh.html">refresh</a></li>
             <li><a href="/api/title.html">title</a></li>
             <li><a href="/api/url.html">url</a></li>
             <li><a href="/api/urlHash.html">urlHash</a></li>
+            <li><a href="/api/quit.html">quit</a></li>
 
             <li><h5>Window Related</h5></li>
 
@@ -211,8 +248,9 @@
             <li><a href="/api/setAlertText.html">setAlertText</a></li>
 
             <li><h5>Screen Capture</h5></li>
-            <li><a href="/api/saveScreenshot.html">saveScreenshot</a></li>
             <li><a href="/api/screenshot.html">screenshot</a></li>
+            <li><a href="/api/takeElementScreenshot.html">takeElementScreenshot</a></li>
+            <li><a href="/api/saveScreenshot.html">saveScreenshot</a></li>
 
             <li><h5>Mobile Related</h5></li>
 
@@ -228,7 +266,73 @@
             <li><a href="/api/perform.html">perform</a></li>
             <li><a href="/api/useCss.html">useCss</a></li>
             <li><a href="/api/useXpath.html">useXpath</a></li>
+            <li><a href="/api/waitUntil.html">waitUntil</a></li>
         </ul>
         </div>
     </li>
+    <li>
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#useractions-collapse" aria-expanded="false"><a href="/api/useractions/">User Actions</a></button>
+
+        <div class="collapse" id="useractions-collapse">
+            <ul class="btn-toggle-nav">
+                <li><a href="/api/useractions/#page-object-instance">instance</a></li>
+                <li><a href="/api/useractions/#page-commands">commands</a></li>
+            </ul>
+        </div>
+    </li>
+    <li>
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#chromeapis-collapse" aria-expanded="false"><a href="/api/chromeapis/">Chrome APIs</a></button>
+
+        <div class="collapse" id="chromeapis-collapse">
+            <ul class="btn-toggle-nav">
+                <li><a href="/api/chromeapis/#page-object-instance">instance</a></li>
+                <li><a href="/api/chromeapis/#page-commands">commands</a></li>
+            </ul>
+        </div>
+    </li>
+
+    <li>
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#firefoxapis-collapse" aria-expanded="false"><a href="/api/firefoxapis/">Firefox APIs</a></button>
+
+        <div class="collapse" id="firefoxapis-collapse">
+            <ul class="btn-toggle-nav">
+                <li><a href="/api/firefoxapis/#page-object-instance">instance</a></li>
+                <li><a href="/api/firefoxapis/#page-commands">commands</a></li>
+            </ul>
+        </div>
+    </li>
+
+    <li>
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#programmatic-collapse" aria-expanded="false"><a href="/api/browser/">Programmatic API</a></button>
+
+        <div class="collapse" id="programmatic-collapse">
+            <ul class="btn-toggle-nav">
+                <li><a href="/api/programmatic/#page-object-instance">instance</a></li>
+                <li><a href="/api/programmatic/#page-commands">commands</a></li>
+            </ul>
+        </div>
+    </li>
+
+    <li>
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#element-collapse" aria-expanded="false"><a href="/api/element/">element()</a></button>
+
+        <div class="collapse" id="element-collapse">
+            <ul class="btn-toggle-nav">
+                <li><a href="/api/element/#page-object-instance">instance</a></li>
+                <li><a href="/api/element/#page-commands">commands</a></li>
+            </ul>
+        </div>
+    </li>
+
+    <li>
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#browser-collapse" aria-expanded="false"><a href="/api/browser/">browser</a></button>
+
+        <div class="collapse" id="element-collapse">
+            <ul class="btn-toggle-nav">
+                <li><a href="/api/browser/#page-object-instance">instance</a></li>
+                <li><a href="/api/browser/#page-commands">commands</a></li>
+            </ul>
+        </div>
+    </li>
+
 </ul>
