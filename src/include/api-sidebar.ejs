@@ -1,67 +1,55 @@
 <ul class="nav bs-sidenav">
     <li>
-        <a href="/api"><button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#assert-collapse" aria-expanded="true">Assert</button></a>
-        <div class="collapse" id="assert-collapse">
-            <ul class="btn-toggle-nav">
-                <li class="nav-item"><a href="/api/#assert-attributeContains">attributeContains</a></li>
-                <li class="nav-item"><a href="/api/#assert-attributeEquals">attributeEquals</a></li>
-                <li class="nav-item"><a href="/api/#assert-containsText">containsText</a></li>
-                <li class="nav-item"><a href="/api/#assert-cssClassPresent">cssClassPresent</a></li>
-                <li class="nav-item"><a href="/api/#assert-cssProperty">cssProperty</a></li>
-                <li class="nav-item"><a href="/api/#assert-domPropertyContains">domPropertyContains</a></li>
-                <li class="nav-item"><a href="/api/#assert-domPropertyEquals">domPropertyEquals</a></li>
-                <li class="nav-item"><a href="/api/#assert-elementPresent">elementPresent</a></li>
-                <li class="nav-item"><a href="/api/#assert-enabled">enabled</a></li>
-                <li class="nav-item"><a href="/api/#assert-selected">selected</a></li>
-                <li class="nav-item"><a href="/api/#assert-value">value</a></li>
-                <li class="nav-item"><a href="/api/#assert-valueContains">valueContains</a></li>
-                <li class="nav-item"><a href="/api/#assert-visible">visible</a></li>
-                <li class="nav-item"><a href="/api/#assert-title">title</a></li>
-                <li class="nav-item"><a href="/api/#assert-urlContains">urlContains</a></li>
-                <li class="nav-item"><a href="/api/#assert-urlEquals">urlEquals</a></li>
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#index-collapse" aria-expanded="false"><a href="/api/">Overview</a></button>
+
+        <div class="collapse" id="index-collapse" data-section-url="/api/">
+            <ul class="btn-toggle-nav local-nav">
+                <li><a href="/api/#the-browser-object">browser object</a></li>
+                <li><a href="/api/#api-contents">browser API</a></li>
             </ul>
         </div>
     </li>
 
     <li>
-        <a href="/api/ensure/"><button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#ensure-collapse" aria-expanded="true">Ensure</button></a>
-        <div class="collapse" id="ensure-collapse">
-            <ul class="btn-toggle-nav">
-                <li class="nav-item"><a href="/api/#assert-attributeContains">attributeContains</a></li>
-                <li class="nav-item"><a href="/api/#assert-attributeEquals">attributeEquals</a></li>
-                <li class="nav-item"><a href="/api/#assert-containsText">containsText</a></li>
-                <li class="nav-item"><a href="/api/#assert-cssClassPresent">cssClassPresent</a></li>
-                <li class="nav-item"><a href="/api/#assert-cssProperty">cssProperty</a></li>
-                <li class="nav-item"><a href="/api/#assert-domPropertyContains">domPropertyContains</a></li>
-                <li class="nav-item"><a href="/api/#assert-domPropertyEquals">domPropertyEquals</a></li>
-                <li class="nav-item"><a href="/api/#assert-elementPresent">elementPresent</a></li>
-                <li class="nav-item"><a href="/api/#assert-enabled">enabled</a></li>
-                <li class="nav-item"><a href="/api/#assert-selected">selected</a></li>
-                <li class="nav-item"><a href="/api/#assert-value">value</a></li>
-                <li class="nav-item"><a href="/api/#assert-valueContains">valueContains</a></li>
-                <li class="nav-item"><a href="/api/#assert-visible">visible</a></li>
-                <li class="nav-item"><a href="/api/#assert-title">title</a></li>
-                <li class="nav-item"><a href="/api/#assert-urlContains">urlContains</a></li>
-                <li class="nav-item"><a href="/api/#assert-urlEquals">urlEquals</a></li>
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#assert-collapse" aria-expanded="false"><a href="/api/assert/">Assert</a></button>
+        <div class="collapse" id="assert-collapse" data-section-url="/api/assert/">
+            <ul class="btn-toggle-nav local-nav">
+                <li class="overview nav-item"><a href="/api/assert/#assertions">Overview</a></li>
+                <li class="nav-item"><a href="/api/assert/#assert-attributeContains">attributeContains</a></li>
+                <li class="nav-item"><a href="/api/assert/#assert-attributeEquals">attributeEquals</a></li>
+                <li class="nav-item"><a href="/api/assert/#assert-attributeMatches">attributeMatches</a></li>
+                <li class="nav-item"><a href="/api/assert/#assert-containsText">containsText</a></li>
+                <li class="nav-item"><a href="/api/assert/#assert-cssClassPresent">cssClassPresent</a></li>
+                <li class="nav-item"><a href="/api/assert/#assert-cssProperty">cssProperty</a></li>
+                <li class="nav-item"><a href="/api/assert/#assert-domPropertyContains">domPropertyContains</a></li>
+                <li class="nav-item"><a href="/api/assert/#assert-domPropertyEquals">domPropertyEquals</a></li>
+                <li class="nav-item"><a href="/api/assert/#assert-elementPresent">elementPresent</a></li>
+                <li class="nav-item"><a href="/api/assert/#assert-enabled">enabled</a></li>
+                <li class="nav-item"><a href="/api/assert/#assert-selected">selected</a></li>
+                <li class="nav-item"><a href="/api/assert/#assert-value">value</a></li>
+                <li class="nav-item"><a href="/api/assert/#assert-valueContains">valueContains</a></li>
+                <li class="nav-item"><a href="/api/assert/#assert-visible">visible</a></li>
+                <li class="nav-item"><a href="/api/assert/#assert-title">title</a></li>
+                <li class="nav-item"><a href="/api/assert/#assert-urlContains">urlContains</a></li>
+                <li class="nav-item"><a href="/api/assert/#assert-urlEquals">urlEquals</a></li>
             </ul>
         </div>
     </li>
 
     <li>
         <div class="list-header">
-            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#expect-collapse" aria-expanded="false"></button>
-            <a href="/api/expect/">Expect</a>
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#expect-collapse" aria-expanded="false"><a href="/api/expect/">Expect</a></button>
         </div>
 
-        <div class="collapse" id="expect-collapse">
-            <ul class="btn-toggle-nav">
+        <div class="collapse" id="expect-collapse" data-section-url="/api/expect/">
+            <ul class="btn-toggle-nav local-nav">
                 <li class="nav-item"><a href="/api/expect/#expect-chains">language chains</a></li>
                 <li class="nav-item"><a href="/api/expect/#expect-matchers">equal() / contain() / match()</a></li>
                 <li class="nav-item"><a href="/api/expect/#expect-startend">startWith() / endWith()</a></li>
                 <li class="nav-item"><a href="/api/expect/#expect-negation">.not</a></li>
                 <li class="nav-item"><a href="/api/expect/#expect-before">before() / after()</a></li>
-                <li class="nav-item"><h5><a href="/api/expect/#expect-cookie-">.cookie()</a></h5></li>
-                <li class="nav-item"><h5><a href="/api/expect/#expect-element-">.element()</a></h5></li>
+                <li class="nav-item local-nav"><h5><a href="/api/expect/#expect-cookie-">.cookie()</a></h5></li>
+                <li class="nav-item local-nav"><h5><a href="/api/expect/#expect-element-">.element()</a></h5></li>
                 <li class="nav-item"><a href="/api/expect/#expect-a">.a() / .an()</a></li>
                 <li class="nav-item"><a href="/api/expect/#expect-active">.active</a></li>
                 <li class="nav-item"><a href="/api/expect/#expect-attribute">.attribute(name)</a></li>
@@ -73,19 +61,219 @@
                 <li class="nav-item"><a href="/api/expect/#expect-text">.text</a></li>
                 <li class="nav-item"><a href="/api/expect/#expect-value">.value</a></li>
                 <li class="nav-item"><a href="/api/expect/#expect-visible">.visible</a></li>
-                <li class="nav-item"><h5><a href="/api/expect/#expect-elements-">.elements()</a></h5></li>
+                <li class="nav-item local-nav"><h5><a href="/api/expect/#expect-elements-">.elements()</a></h5></li>
                 <li class="nav-item"><a href="/api/expect/#expect-elements-count">.count</a></li>
-                <li class="nav-item"><h5><a href="/api/expect/#expect-title-">.title()</a></h5></li>
-                <li class="nav-item"><h5><a href="/api/expect/#expect-url-">.url()</a></h5></li>
+                <li class="nav-item local-nav"><h5><a href="/api/expect/#expect-title-">.title()</a></h5></li>
+                <li class="nav-item local-nav"><h5><a href="/api/expect/#expect-url-">.url()</a></h5></li>
             </ul>
         </div>
     </li>
 
     <li>
-        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#pageobject-collapse" aria-expanded="false"><a href="/api/pageobject/">Page Object Model</a></button>
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#commands-collapse" aria-expanded="false"><a href="/api/commands/">API Commands</a></button>
+        <div class="collapse" id="commands-collapse" data-section-url="/api/commands/">
+            <ul class="btn-toggle-nav local-nav">
+                <li class="overview"><a href="/api/commands/#api-commands">Overview</a></li>
+                <li class="overview"><a href="/api/commands/#using-chrome-devtools-protocol">Using Chrome DevTools protocol</a></li>
+                <li class="overview"><a href="/api/commands/#firefox-specific-commands">Firefox Specific</a></li>
+                <li><h5>Finding Elements</h5></li>
+                <li><a href="/api/getFirstElementChild.html">getFirstElementChild</a></li>
+                <li><a href="/api/getLastElementChild.html">getLastElementChild</a></li>
+                <li><a href="/api/getNextSibling.html">getNextSibling</a></li>
+                <li><a href="/api/getPreviousSibling.html">getPreviousSibling</a></li>
+                <li><a href="/api/getShadowRoot.html">getShadowRoot</a></li>
+                <li><a href="/api/findElement.html" title="go to browser.findElement() command">findElement</a></li>
+                <li><a href="/api/findElements.html">findElements</a></li>
+                <li><a href="/api/element.html">element</a></li>
+                <li><a href="/api/elementIdElement.html">elementIdElement</a></li>
+                <li><a href="/api/elementIdElements.html">elementIdElements</a></li>
+                <li><a href="/api/elementIdEquals.html">elementIdEquals</a></li>
+                <li><a href="/api/elements.html">elements</a></li>
+                <li><a href="/api/waitForElementPresent.html">waitForElementPresent</a></li>
+                <li><a href="/api/waitForElementNotPresent.html">waitForElementNotPresent</a></li>
+                <li><a href="/api/waitForElementVisible.html">waitForElementVisible</a></li>
+                <li><a href="/api/waitForElementNotVisible.html">waitForElementNotVisible</a></li>
 
-        <div class="collapse" id="pageobject-collapse">
-            <ul class="btn-toggle-nav">
+                <li><h5>Element Interaction</h5></li>
+
+                <li><a href="/api/clearValue.html">clearValue</a></li>
+                <li><a href="/api/click.html">click</a></li>
+                <li><a href="/api/dragAndDrop.html">dragAndDrop</a></li>
+                <li><a href="/api/moveToElement.html">moveToElement</a></li>
+                <li><a href="/api/sendKeys.html">sendKeys</a></li>
+                <li><a href="/api/setAttribute.html">setAttribute</a></li>
+                <li><a href="/api/submitForm.html">submitForm</a></li>
+                <li><a href="/api/updateValue.html">updateValue</a></li>
+                <li><a href="/api/uploadFile.html">uploadFile</a></li>
+
+                <li><h5>Element State</h5></li>
+
+                <li><a href="/api/elementActive.html">elementActive</a></li>
+                <li><a href="/api/getAccessibleName.html">getAccessibleName</a></li>
+                <li><a href="/api/getAriaRole.html">getAriaRole</a></li>
+                <li><a href="/api/getAttribute.html">getAttribute</a></li>
+                <li><a href="/api/getCssProperty.html">getCssProperty</a></li>
+                <li><a href="/api/getElementProperty.html">getElementProperty</a></li>
+                <li><a href="/api/getElementRect.html">getElementRect</a></li>
+                <li><a href="/api/getElementSize.html">getElementSize</a></li>
+                <li><a href="/api/getTagName.html">getTagName</a></li>
+                <li><a href="/api/getText.html">getText</a></li>
+                <li><a href="/api/getValue.html">getValue</a></li>
+                <li><a href="/api/hasDescendants.html">hasDescendants</a></li>
+                <li><a href="/api/isEnabled.html">isEnabled</a></li>
+                <li><a href="/api/isSelected.html">isSelected</a></li>
+                <li><a href="/api/isVisible.html">isVisible</a></li>
+                <li><a href="/api/isPresent.html">isPresent</a></li>
+
+                <li><h5>User Actions</h5></li>
+
+                <li><a href="/api/clickAndHold.html">clickAndHold</a></li>
+                <li><a href="/api/doubleClick.html">doubleClick</a></li>
+                <li><a href="/api/keys.html">keys</a></li>
+                <li><a href="/api/mouseButtonClick.html">mouseButtonClick</a></li>
+                <li><a href="/api/mouseButtonDown.html">mouseButtonDown</a></li>
+                <li><a href="/api/mouseButtonUp.html">mouseButtonUp</a></li>
+                <li><a href="/api/moveTo.html">moveTo</a></li>
+                <li><a href="/api/rightClick.html">rightClick</a></li>
+
+                <li><h5>Element Location</h5></li>
+
+                <li><a href="/api/getLocation.html">getLocation</a></li>
+                <li><a href="/api/getLocationInView.html">getLocationInView</a></li>
+
+                <li><h5>Protocol Actions</h5></li>
+                <li><a href="/api/elementIdAttribute.html">elementIdAttribute</a></li>
+                <li><a href="/api/elementIdClear.html">elementIdClear</a></li>
+                <li><a href="/api/elementIdClick.html">elementIdClick</a></li>
+                <li><a href="/api/elementIdCssProperty.html">elementIdCssProperty</a></li>
+                <li><a href="/api/elementIdDisplayed.html">elementIdDisplayed</a></li>
+                <li><a href="/api/elementIdEnabled.html">elementIdEnabled</a></li>
+                <li><a href="/api/elementIdLocation.html">elementIdLocation</a></li>
+                <li><a href="/api/elementIdLocationInView.html">elementIdLocationInView</a></li>
+                <li><a href="/api/elementIdName.html">elementIdName</a></li>
+                <li><a href="/api/elementIdSelected.html">elementIdSelected</a></li>
+                <li><a href="/api/elementIdSize.html">elementIdSize</a></li>
+                <li><a href="/api/elementIdText.html">elementIdText</a></li>
+                <li><a href="/api/elementIdValue.html">elementIdValue</a></li>
+                <li><a href="/api/submit.html">submit</a></li>
+
+                <li><h5>Document Handling</h5></li>
+                <li><a href="/api/execute.html">execute</a></li>
+                <li><a href="/api/executeAsync.html">executeAsync</a></li>
+                <li><a href="/api/injectScript.html">injectScript</a></li>
+                <li><a href="/api/source.html">source</a></li>
+                <li><a href="/api/pageSource.html">pageSource</a></li>
+
+                <li><h5>Session Related</h5></li>
+                <li><a href="/api/end.html">end</a></li>
+                <li><a href="/api/getLog.html">getLog</a></li>
+                <li><a href="/api/getLogTypes.html">getLogTypes</a></li>
+                <li><a href="/api/isLogAvailable.html">isLogAvailable</a></li>
+                <li><a href="/api/session.html">session</a></li>
+                <li><a href="/api/sessionLog.html">sessionLog</a></li>
+                <li><a href="/api/sessionLogTypes.html">sessionLogTypes</a></li>
+                <li><a href="/api/sessions.html">sessions</a></li>
+                <li><a href="/api/status.html">status</a></li>
+                <li><a href="/api/timeouts.html">timeouts</a></li>
+                <li><a href="/api/timeoutsAsyncScript.html">timeoutsAsyncScript</a></li>
+                <li><a href="/api/timeoutsImplicitWait.html">timeoutsImplicitWait</a></li>
+
+                <li><h5>Navigation</h5></li>
+
+                <li><a href="/api/back.html">back</a></li>
+                <li><a href="/api/getCurrentUrl.html">getCurrentUrl</a></li>
+                <li><a href="/api/getTitle.html">getTitle</a></li>
+                <li><a href="/api/navigateTo.html">navigateTo</a></li>
+                <li><a href="/api/forward.html">forward</a></li>
+                <li><a href="/api/init.html">init</a></li>
+                <li><a href="/api/refresh.html">refresh</a></li>
+                <li><a href="/api/title.html">title</a></li>
+                <li><a href="/api/url.html">url</a></li>
+                <li><a href="/api/urlHash.html">urlHash</a></li>
+                <li><a href="/api/quit.html">quit</a></li>
+
+                <li><h5>Window Related</h5></li>
+
+                <li><a href="/api/closeWindow.html">closeWindow</a></li>
+                <li><a href="/api/fullscreenWindow.html">fullscreenWindow</a></li>
+                <li><a href="/api/getWindowPosition.html">getWindowPosition</a></li>
+                <li><a href="/api/getWindowRect.html">getWindowRect</a></li>
+                <li><a href="/api/getWindowSize.html">getWindowSize</a></li>
+                <li><a href="/api/maximizeWindow.html">maximizeWindow</a></li>
+                <li><a href="/api/minimizeWindow.html">minimizeWindow</a></li>
+                <li><a href="/api/openNewWindow.html">openNewWindow</a></li>
+                <li><a href="/api/resizeWindow.html">resizeWindow</a></li>
+                <li><a href="/api/setWindowPosition.html">setWindowPosition</a></li>
+                <li><a href="/api/setWindowRect.html">setWindowRect</a></li>
+                <li><a href="/api/setWindowSize.html">setWindowSize</a></li>
+                <li><a href="/api/switchWindow.html">switchWindow</a></li>
+
+                <li><h5>Window Protocol</h5></li>
+                <li><a href="/api/window.html">window</a></li>
+                <li><a href="/api/windowHandle.html">windowHandle</a></li>
+                <li><a href="/api/windowHandles.html">windowHandles</a></li>
+                <li><a href="/api/windowMaximize.html">windowMaximize</a></li>
+                <li><a href="/api/windowPosition.html">windowPosition</a></li>
+                <li><a href="/api/windowRect.html">windowRect</a></li>
+                <li><a href="/api/windowSize.html">windowSize</a></li>
+
+                <li><h5>Frames</h5></li>
+                <li><a href="/api/frame.html">frame</a></li>
+                <li><a href="/api/frameParent.html">frameParent</a></li>
+
+                <li><h5>Cookies</h5></li>
+                <li><a href="/api/cookie.html">cookie</a></li>
+                <li><a href="/api/deleteCookie.html">deleteCookie</a></li>
+                <li><a href="/api/deleteCookies.html">deleteCookies</a></li>
+                <li><a href="/api/getCookies.html">getCookies</a></li>
+                <li><a href="/api/getCookie.html">getCookie</a></li>
+                <li><a href="/api/setCookie.html">setCookie</a></li>
+
+                <li><h5>User Prompts</h5></li>
+                <li><a href="/api/acceptAlert.html">acceptAlert</a></li>
+                <li><a href="/api/dismissAlert.html">dismissAlert</a></li>
+                <li><a href="/api/getAlertText.html">getAlertText</a></li>
+                <li><a href="/api/setAlertText.html">setAlertText</a></li>
+
+                <li><h5>Screen Capture</h5></li>
+                <li><a href="/api/screenshot.html">screenshot</a></li>
+                <li><a href="/api/takeElementScreenshot.html">takeElementScreenshot</a></li>
+                <li><a href="/api/saveScreenshot.html">saveScreenshot</a></li>
+
+                <li><h5>Mobile Related</h5></li>
+
+                <li><a href="/api/getOrientation.html">getOrientation</a></li>
+                <li><a href="/api/setOrientation.html">setOrientation</a></li>
+                <li><a href="/api/contexts.html">contexts</a></li>
+                <li><a href="/api/currentContext.html">currentContext</a></li>
+                <li><a href="/api/setContext.html">setContext</a></li>
+
+                <li><h5>Utilities/Debugging</h5></li>
+
+                <li><a href="/api/pause.html">pause</a></li>
+                <li><a href="/api/perform.html">perform</a></li>
+                <li><a href="/api/useCss.html">useCss</a></li>
+                <li><a href="/api/useXpath.html">useXpath</a></li>
+                <li><a href="/api/waitUntil.html">waitUntil</a></li>
+            </ul>
+        </div>
+    </li>
+
+    <li>
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#ensure-collapse" aria-expanded="false"><a href="/api/ensure/">Ensure</a></button>
+
+        <div class="collapse" id="ensure-collapse" data-section-url="/api/ensure/">
+            <ul class="btn-toggle-nav local-nav">
+                <li><a href="/api/ensure/#ensure-api">Overview</a></li>
+            </ul>
+        </div>
+    </li>
+
+    <li>
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#pageobject-collapse" aria-expanded="false"><a href="/api/pageobject/">Page Object</a></button>
+
+        <div class="collapse" id="pageobject-collapse" data-section-url="/api/pageobject/">
+            <ul class="btn-toggle-nav local-nav">
                 <li><a href="/api/pageobject/#page-object-instance">instance</a></li>
                 <li><a href="/api/pageobject/#page-commands">commands</a></li>
             </ul>
@@ -93,222 +281,23 @@
     </li>
 
     <li>
-        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#commands-collapse" aria-expanded="false"><a href="/api/commands/">API Commands</a></button>
-        <div class="collapse" id="commands-collapse">
-        <ul class="btn-toggle-nav">
-            <li><h5>Finding Elements</h5></li>
-            <li><a href="/api/findElement.html" title="go to browser.findElement() command">findElement</a></li>
-            <li><a href="/api/findElements.html">findElements</a></li>
-            <li><a href="/api/element.html">element</a></li>
-            <li><a href="/api/elementIdElement.html">elementIdElement</a></li>
-            <li><a href="/api/elementIdElements.html">elementIdElements</a></li>
-            <li><a href="/api/elementIdEquals.html">elementIdEquals</a></li>
-            <li><a href="/api/elements.html">elements</a></li>
-            <li><a href="/api/waitForElementPresent.html">waitForElementPresent</a></li>
-            <li><a href="/api/waitForElementNotPresent.html">waitForElementNotPresent</a></li>
-            <li><a href="/api/waitForElementVisible.html">waitForElementVisible</a></li>
-            <li><a href="/api/waitForElementNotVisible.html">waitForElementNotVisible</a></li>
-
-
-            <li><h5>Element Interaction</h5></li>
-
-            <li><a href="/api/clearValue.html">clearValue</a></li>
-            <li><a href="/api/click.html">click</a></li>
-            <li><a href="/api/dragAndDrop.html">dragAndDrop</a></li>
-            <li><a href="/api/moveToElement.html">moveToElement</a></li>
-            <li><a href="/api/sendKeys.html">sendKeys</a></li>
-            <li><a href="/api/setAttribute.html">setAttribute</a></li>
-            <li><a href="/api/submitForm.html">submitForm</a></li>
-            <li><a href="/api/updateValue.html">updateValue</a></li>
-            <li><a href="/api/uploadFile.html">uploadFile</a></li>
-
-            <li><h5>Element State</h5></li>
-
-            <li><a href="/api/elementActive.html">elementActive</a></li>
-            <li><a href="/api/getAccessibleName.html">getAccessibleName</a></li>
-            <li><a href="/api/getAriaRole.html">getAriaRole</a></li>
-            <li><a href="/api/getAttribute.html">getAttribute</a></li>
-            <li><a href="/api/getCssProperty.html">getCssProperty</a></li>
-            <li><a href="/api/getElementProperty.html">getElementProperty</a></li>
-            <li><a href="/api/getElementRect.html">getElementRect</a></li>
-            <li><a href="/api/getElementSize.html">getElementSize</a></li>
-            <li><a href="/api/getTagName.html">getTagName</a></li>
-            <li><a href="/api/getText.html">getText</a></li>
-            <li><a href="/api/getValue.html">getValue</a></li>
-            <li><a href="/api/isEnabled.html">isEnabled</a></li>
-            <li><a href="/api/isSelected.html">isSelected</a></li>
-            <li><a href="/api/isVisible.html">isVisible</a></li>
-
-            <li><h5>Element Location</h5></li>
-
-            <li><a href="/api/getLocation.html">getLocation</a></li>
-            <li><a href="/api/getLocationInView.html">getLocationInView</a></li>
-
-            <li><h5>Protocol Actions</h5></li>
-            <li><a href="/api/elementIdAttribute.html">elementIdAttribute</a></li>
-            <li><a href="/api/elementIdClear.html">elementIdClear</a></li>
-            <li><a href="/api/elementIdClick.html">elementIdClick</a></li>
-            <li><a href="/api/elementIdCssProperty.html">elementIdCssProperty</a></li>
-            <li><a href="/api/elementIdDisplayed.html">elementIdDisplayed</a></li>
-            <li><a href="/api/elementIdEnabled.html">elementIdEnabled</a></li>
-            <li><a href="/api/elementIdLocation.html">elementIdLocation</a></li>
-            <li><a href="/api/elementIdLocationInView.html">elementIdLocationInView</a></li>
-            <li><a href="/api/elementIdName.html">elementIdName</a></li>
-            <li><a href="/api/elementIdSelected.html">elementIdSelected</a></li>
-            <li><a href="/api/elementIdSize.html">elementIdSize</a></li>
-            <li><a href="/api/elementIdText.html">elementIdText</a></li>
-            <li><a href="/api/elementIdValue.html">elementIdValue</a></li>
-            <li><a href="/api/submit.html">submit</a></li>
-
-            <li><h5>Document Handling</h5></li>
-            <li><a href="/api/execute.html">execute</a></li>
-            <li><a href="/api/executeAsync.html">executeAsync</a></li>
-            <li><a href="/api/injectScript.html">injectScript</a></li>
-            <li><a href="/api/source.html">source</a></li>
-            <li><a href="/api/pageSource.html">pageSource</a></li>
-
-            <li><h5>Session Related</h5></li>
-            <li><a href="/api/end.html">end</a></li>
-            <li><a href="/api/getLog.html">getLog</a></li>
-            <li><a href="/api/getLogTypes.html">getLogTypes</a></li>
-            <li><a href="/api/isLogAvailable.html">isLogAvailable</a></li>
-            <li><a href="/api/session.html">session</a></li>
-            <li><a href="/api/sessionLog.html">sessionLog</a></li>
-            <li><a href="/api/sessionLogTypes.html">sessionLogTypes</a></li>
-            <li><a href="/api/sessions.html">sessions</a></li>
-            <li><a href="/api/status.html">status</a></li>
-            <li><a href="/api/timeouts.html">timeouts</a></li>
-            <li><a href="/api/timeoutsAsyncScript.html">timeoutsAsyncScript</a></li>
-            <li><a href="/api/timeoutsImplicitWait.html">timeoutsImplicitWait</a></li>
-
-            <li><h5>Navigation</h5></li>
-
-            <li><a href="/api/back.html">back</a></li>
-            <li><a href="/api/getCurrentUrl.html">getCurrentUrl</a></li>
-            <li><a href="/api/getTitle.html">getTitle</a></li>
-            <li><a href="/api/navigateTo.html">navigateTo</a></li>
-            <li><a href="/api/forward.html">forward</a></li>
-            <li><a href="/api/init.html">init</a></li>
-            <li><a href="/api/refresh.html">refresh</a></li>
-            <li><a href="/api/title.html">title</a></li>
-            <li><a href="/api/url.html">url</a></li>
-            <li><a href="/api/urlHash.html">urlHash</a></li>
-            <li><a href="/api/quit.html">quit</a></li>
-
-            <li><h5>Window Related</h5></li>
-
-            <li><a href="/api/closeWindow.html">closeWindow</a></li>
-            <li><a href="/api/fullscreenWindow.html">fullscreenWindow</a></li>
-            <li><a href="/api/getWindowPosition.html">getWindowPosition</a></li>
-            <li><a href="/api/getWindowRect.html">getWindowRect</a></li>
-            <li><a href="/api/getWindowSize.html">getWindowSize</a></li>
-            <li><a href="/api/maximizeWindow.html">maximizeWindow</a></li>
-            <li><a href="/api/minimizeWindow.html">minimizeWindow</a></li>
-            <li><a href="/api/openNewWindow.html">openNewWindow</a></li>
-            <li><a href="/api/resizeWindow.html">resizeWindow</a></li>
-            <li><a href="/api/setWindowPosition.html">setWindowPosition</a></li>
-            <li><a href="/api/setWindowRect.html">setWindowRect</a></li>
-            <li><a href="/api/setWindowSize.html">setWindowSize</a></li>
-            <li><a href="/api/switchWindow.html">switchWindow</a></li>
-
-            <li><h5>Window Protocol</h5></li>
-            <li><a href="/api/window.html">window</a></li>
-            <li><a href="/api/windowHandle.html">windowHandle</a></li>
-            <li><a href="/api/windowHandles.html">windowHandles</a></li>
-            <li><a href="/api/windowMaximize.html">windowMaximize</a></li>
-            <li><a href="/api/windowPosition.html">windowPosition</a></li>
-            <li><a href="/api/windowRect.html">windowRect</a></li>
-            <li><a href="/api/windowSize.html">windowSize</a></li>
-
-            <li><h5>Frames</h5></li>
-            <li><a href="/api/frame.html">frame</a></li>
-            <li><a href="/api/frameParent.html">frameParent</a></li>
-
-            <li><h5>Cookies</h5></li>
-            <li><a href="/api/cookie.html">cookie</a></li>
-            <li><a href="/api/deleteCookie.html">deleteCookie</a></li>
-            <li><a href="/api/deleteCookies.html">deleteCookies</a></li>
-            <li><a href="/api/getCookies.html">getCookies</a></li>
-            <li><a href="/api/getCookie.html">getCookie</a></li>
-            <li><a href="/api/setCookie.html">setCookie</a></li>
-
-            <li><h5>User Actions</h5></li>
-
-            <li><a href="/api/doubleClick.html">doubleClick</a></li>
-            <li><a href="/api/keys.html">keys</a></li>
-            <li><a href="/api/mouseButtonClick.html">mouseButtonClick</a></li>
-            <li><a href="/api/mouseButtonDown.html">mouseButtonDown</a></li>
-            <li><a href="/api/mouseButtonUp.html">mouseButtonUp</a></li>
-            <li><a href="/api/moveTo.html">moveTo</a></li>
-
-            <li><h5>User Prompts</h5></li>
-            <li><a href="/api/acceptAlert.html">acceptAlert</a></li>
-            <li><a href="/api/dismissAlert.html">dismissAlert</a></li>
-            <li><a href="/api/getAlertText.html">getAlertText</a></li>
-            <li><a href="/api/setAlertText.html">setAlertText</a></li>
-
-            <li><h5>Screen Capture</h5></li>
-            <li><a href="/api/screenshot.html">screenshot</a></li>
-            <li><a href="/api/takeElementScreenshot.html">takeElementScreenshot</a></li>
-            <li><a href="/api/saveScreenshot.html">saveScreenshot</a></li>
-
-            <li><h5>Mobile Related</h5></li>
-
-            <li><a href="/api/getOrientation.html">getOrientation</a></li>
-            <li><a href="/api/setOrientation.html">setOrientation</a></li>
-            <li><a href="/api/contexts.html">contexts</a></li>
-            <li><a href="/api/currentContext.html">currentContext</a></li>
-            <li><a href="/api/setContext.html">setContext</a></li>
-
-            <li><h5>Utilities/Debugging</h5></li>
-
-            <li><a href="/api/pause.html">pause</a></li>
-            <li><a href="/api/perform.html">perform</a></li>
-            <li><a href="/api/useCss.html">useCss</a></li>
-            <li><a href="/api/useXpath.html">useXpath</a></li>
-            <li><a href="/api/waitUntil.html">waitUntil</a></li>
-        </ul>
-        </div>
-    </li>
-    <li>
         <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#useractions-collapse" aria-expanded="false"><a href="/api/useractions/">User Actions</a></button>
 
-        <div class="collapse" id="useractions-collapse">
-            <ul class="btn-toggle-nav">
-                <li><a href="/api/useractions/#page-object-instance">instance</a></li>
-                <li><a href="/api/useractions/#page-commands">commands</a></li>
-            </ul>
-        </div>
-    </li>
-    <li>
-        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#chromeapis-collapse" aria-expanded="false"><a href="/api/chromeapis/">Chrome APIs</a></button>
-
-        <div class="collapse" id="chromeapis-collapse">
-            <ul class="btn-toggle-nav">
-                <li><a href="/api/chromeapis/#page-object-instance">instance</a></li>
-                <li><a href="/api/chromeapis/#page-commands">commands</a></li>
+        <div class="collapse" id="useractions-collapse" data-section-url="/api/useractions/">
+            <ul class="btn-toggle-nav local-nav">
+                <li><a href="/api/useractions/#user-actions-api">Overview</a></li>
+                <li><a href="/api/useractions/#available-actions-">Available Actions</a></li>
+                <li><a href="/api/useractions/#working-with-action-ticks">Working with Action Ticks</a></li>
             </ul>
         </div>
     </li>
 
     <li>
-        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#firefoxapis-collapse" aria-expanded="false"><a href="/api/firefoxapis/">Firefox APIs</a></button>
+        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#programmatic-collapse" aria-expanded="false"><a href="/api/programmatic/">Programmatic API</a></button>
 
-        <div class="collapse" id="firefoxapis-collapse">
-            <ul class="btn-toggle-nav">
-                <li><a href="/api/firefoxapis/#page-object-instance">instance</a></li>
-                <li><a href="/api/firefoxapis/#page-commands">commands</a></li>
-            </ul>
-        </div>
-    </li>
-
-    <li>
-        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#programmatic-collapse" aria-expanded="false"><a href="/api/browser/">Programmatic API</a></button>
-
-        <div class="collapse" id="programmatic-collapse">
-            <ul class="btn-toggle-nav">
-                <li><a href="/api/programmatic/#page-object-instance">instance</a></li>
-                <li><a href="/api/programmatic/#page-commands">commands</a></li>
+        <div class="collapse" id="programmatic-collapse" data-section-url="/api/programmatic/">
+            <ul class="btn-toggle-nav local-nav">
+                <li><a href="/api/programmatic/#programmatic-api">Using the Programmatic API</a></li>
             </ul>
         </div>
     </li>
@@ -316,23 +305,14 @@
     <li>
         <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#element-collapse" aria-expanded="false"><a href="/api/element/">element()</a></button>
 
-        <div class="collapse" id="element-collapse">
-            <ul class="btn-toggle-nav">
-                <li><a href="/api/element/#page-object-instance">instance</a></li>
-                <li><a href="/api/element/#page-commands">commands</a></li>
+        <div class="collapse" id="element-collapse" data-section-url="/api/element/">
+            <ul class="btn-toggle-nav local-nav">
+                <li><a href="/api/element/#syntax-">Syntax</a></li>
+                <li><a href="/api/element/#api-commands">Api Commands</a></li>
+                <li><a href="/api/element/#working-example">Working Example</a></li>
             </ul>
         </div>
     </li>
 
-    <li>
-        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#browser-collapse" aria-expanded="false"><a href="/api/browser/">browser</a></button>
-
-        <div class="collapse" id="element-collapse">
-            <ul class="btn-toggle-nav">
-                <li><a href="/api/browser/#page-object-instance">instance</a></li>
-                <li><a href="/api/browser/#page-commands">commands</a></li>
-            </ul>
-        </div>
-    </li>
 
 </ul>

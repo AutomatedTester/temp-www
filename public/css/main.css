@@ -381,6 +381,7 @@ header .navbar-right .nav-item.dropdown {
   background-color: #333222;
   border: 1px solid #555;
   color: #DDA562;
+  margin-left: -50px;
 }
 .dropdown-divider {
   border-top: 1px solid #444;
@@ -438,6 +439,7 @@ header .navbar-right .nav-item.dropdown {
 
 [data-uri="/"] .nw-navbar {
   position: static;
+  background-color: transparent;
 }
 
 @media (max-width: 990px) {
@@ -509,7 +511,7 @@ h5 {
 
 #index-container .btn-download {
   background: rgba(206, 142, 50, 1) url("../images/button-download.svg") no-repeat scroll 10% / auto 60%;
-  width: 160px;
+  width: 180px;
 }
 
 .jumbotron .btn-github:hover {
@@ -534,6 +536,9 @@ ul.features {
   font-size: 12px;
   border-radius: 10px;
 
+}
+.code-toolbar pre.language-javascript {
+  font-size: 14px;
 }
 
 .sample-test pre {
@@ -619,10 +624,17 @@ p.secondary-text {
 }
 .docs-section .page-header h2 {
   padding-top: 78px;
-  font-size: 45px;
+  font-size: 40px;
   font-weight: 300;
   border-bottom: 1px solid #ccc;
 }
+.page-header span.since {
+  padding: 10px;
+  font-style: italic;
+  font-size: 15px;
+  color:#555
+}
+
 .docs-section h3 {
   padding-top: 90px;
   margin-top: -70px;
@@ -1500,8 +1512,8 @@ footer .footer-text {
 
 footer .logo-home {
   margin-top: 0px;
-  background-image: url("../images/logo-pvs.svg");
-  background-size: auto;
+  background-image: url("../img/browserstack-logo.png");
+  background-size: 80px;
   height: 80px;
   width: 81px;
   background-repeat: no-repeat;
@@ -1850,6 +1862,11 @@ p.whatis-logo + p {
 .survey-banner-beta .close {
   right: 8px;
   top: 8px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 5px;
+  margin-left: 50px;
+  position: absolute;
 }
 .survey-banner-beta strong {
   font-weight: 500;
@@ -2060,6 +2077,43 @@ p.whatis-logo + p {
 #blog-container .list-group-item .top-post-card {
   display: none;
 }
+
+[data-page-uri^="/api/index"] .apimethod,
+[data-page-uri^="/api/expect"] .apimethod,
+[data-page-uri^="/api/useractions"] .apimethod {
+  border: 1px solid #f8f8f8;
+  margin: 0 0 25px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 2px 5px 9px 0px rgba(0,0,0,.2);
+}
+
+[data-page-uri^="/api/index"] .apimethod h3,
+[data-page-uri^="/api/expect"] .apimethod h3,
+[data-page-uri^="/api/useractions"] .apimethod h3 {
+  padding-left: 0;
+  font-weight: 400;
+  font-size: 20px;
+  color: #0c5460;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+[data-page-uri^="/api/index"] .apimethod h3 code,
+[data-page-uri^="/api/expect"] .apimethod h3 code,
+[data-page-uri^="/api/useractions"] .apimethod h3 code{
+  background-color: #f8f8f8;
+  padding-left: 0;
+  font-size: 16px;
+  margin: 2px 3px;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+[data-page-uri^="/api/index"] .apimethod p,
+[data-page-uri^="/api/expect"] .apimethod p,
+[data-page-uri^="/api/useractions"] .apimethod p,
+[data-page-uri^="/api/useractions"] .apimethod .table-responsive td {
+  font-size: 18px;
+}
+
 .DocSearch-Container {
   z-index: 2000!important;
 }
@@ -2088,4 +2142,43 @@ p.whatis-logo + p {
 }
 .DocSearch-Hit[aria-selected="true"] mark {
   background-color: #555 !important;
+}
+#guide-container h3.whatsnew-h3 {
+  border: 0;
+  background: #222;
+  font-size: 28px;
+  margin: 0;
+  padding: 10px;
+  color: #eee;
+}
+#guide-container .docs-section[data-page-uri$="whats-new-v2.html"] ul p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #222;
+}
+.docs-section[data-page-uri$="whats-new-v2.html"] ul li {
+  margin-left: -10px;
+  list-style-type: disclosure-closed;
+}
+.docs-section[data-page-uri$="whats-new-v2.html"] ul li::marker{
+  color: #DDA562;
+}
+.docs-section[data-page-uri$="whats-new-v2.html"] li h5 a {
+  background: #f8f8f8;
+  font-size: 22px;
+  color:#DDA562;
+  font-weight: 400;
+  display: block;
+  padding: 5px;
+}
+.docs-section[data-page-uri$="whats-new-v2.html"] li h5 a:hover {
+  color: #222;
+  text-decoration: underline;
+}
+#guide-container .top-banner {
+  width: 100%;
+  margin-top: -150px;
+}
+#guide-container .top-banner img {
+  width: 100%;
 }

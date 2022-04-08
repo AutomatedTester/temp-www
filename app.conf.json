@@ -8,6 +8,7 @@
   "githubRepo": "nightwatchjs/nightwatch",
   "apiRepoUrl": "https://github.com",
   "devServerPort": "3001",
+  "docsRepoBranch": "versions/2.0",
 
   "apiFileList": [
     ["api/expect/assertions/element/", "expect"],
@@ -37,7 +38,8 @@
           "pages": [
             "introduction",
             "installation",
-            "quickstart"
+            "quickstart",
+            "whats-new-v2"
           ],
           "vars": {
             "pageHeader": "Getting Started with Nightwatch"
@@ -74,7 +76,8 @@
             "using-bdd-describe",
             "using-es6-async",
             "writing-assertions",
-            "expect-assertions"
+            "expect-assertions",
+            "writing-unit-tests"
           ],
           "vars": {
             "pageHeader": "Writing Tests"
@@ -94,6 +97,7 @@
             "pageHeader": "Using Nightwatch"
           }
         },
+
         "running-tests": {
           "pages": [
             "nightwatch-runner",
@@ -111,13 +115,32 @@
           }
         },
 
+        "third-party-runners": {
+          "pages": [
+            "cucumberjs-nightwatch-integration",
+            "using-mocha"
+          ],
+          "vars": {
+            "pageHeader": "Integrating Third-party Test Runners"
+          }
+        },
+
+        "migrating-to-nightwatch": {
+          "pages": [
+            "from-protractor",
+            "from-nightwatch-v1"
+          ],
+          "vars": {
+            "pageHeader": "Migrating to Nightwatch"
+          }
+        },
+
         "extending-nightwatch": {
           "pages": [
             "custom-assertions",
             "custom-commands",
             "custom-reporter",
-            "using-with-selenium-webdriver",
-            "using-with-webdriverio"
+            "plugin-api"
           ],
           "vars": {
             "pageHeader": "Extending Nightwatch"
@@ -132,14 +155,6 @@
           ],
           "vars": {
             "pageHeader": "Working with Page Objects"
-          }
-        },
-        "unit-testing-with-nightwatch": {
-          "pages": [
-            "writing-unit-tests"
-          ],
-          "vars": {
-            "pageHeader": "Writing Unit Tests"
           }
         }
       },
@@ -167,6 +182,30 @@
         "expect":  {
           "vars": {
             "pageHeader": ""
+          }
+        },
+        "useractions":  {
+          "vars": {
+            "pageHeader": ""
+          }
+        },
+        "programmatic": {
+          "vars": {
+            "pageHeader": ""
+          }
+        },
+        "element": {
+          "vars": {
+            "pageHeader": ""
+          }
+        },
+        "ensure": {
+          "vars": {
+            "pageHeader": ""
+          }
+        },
+        "assert": {
+          "vars": {
           }
         }
       },

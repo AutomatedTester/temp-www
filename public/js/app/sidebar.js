@@ -1,9 +1,6 @@
 domino.views.sidebar = new (function() {
   var __subSections__ = {
     guide: {
-      extraContent: [
-        '<div class="migrating-guide"><a target="_blank" href="https://github.com/nightwatchjs/nightwatch/wiki/Migrating-to-Nightwatch-1.0">Migrating from v0.9?</a></div>'
-      ],
       title: 'Developer Guide',
       content: {
         ////////////////////////////////////////////////////////////
@@ -27,7 +24,8 @@ domino.views.sidebar = new (function() {
               ['installation.html#install-nightwatch', 'Install Nightwatch'],
               ['installation.html#install-webdriver', 'Install Browser Drivers']
             ]],
-            ['quickstart.html', 'Quickstart Tutorial']
+            ['quickstart.html', 'Quickstart Tutorial'],
+            ['whats-new-v2.html', 'What\'s New in v2']
           ]
         },
 
@@ -39,8 +37,12 @@ domino.views.sidebar = new (function() {
           baseUrl: '/guide/configuration/',
           sidenavData: [
             ['overview.html', 'Overview', [
-              ['overview.html#nightwatch-json', 'nightwatch.json'],
-              ['overview.html#nightwatch-conf-js', 'nightwatch.conf.js']
+              ['overview.html#nightwatch-conf-js', 'nightwatch.conf.js'],
+              ['overview.html#auto-generated-configuration', 'Auto-generated Configuration'],
+              ['overview.html#working-with-test-environments', 'Working with Test Environments'],
+              ['overview.html#working-with-test-globals', 'Working with Test Globals'],
+              ['overview.html#using-env-variables', 'Using Env Variables'],
+              ['overview.html#manual-configuration', 'Manual Configuration']
             ]],
 
             ['defaults.html', 'Defaults'],
@@ -54,6 +56,20 @@ domino.views.sidebar = new (function() {
               ['settings.html#webdriver-settings', 'WebDriver Settings'],
               ['settings.html#selenium-server-settings', 'Selenium Settings']
             ]]
+          ]
+        },
+
+        'browser-drivers-setup': {
+          title: 'Browser Drivers Specific | ',
+          nthChildIndex: 2,
+          linkTitle: 'Browser Drivers Specific',
+          baseUrl: '/guide/browser-drivers-setup/',
+          sidenavData: [
+            ['overview.html', 'Overview'],
+            ['geckodriver.html', 'GeckoDriver (Firefox)'],
+            ['chromedriver.html', 'ChromeDriver'],
+            ['edgedriver.html', 'EdgeDriver'],
+            ['safaridriver.html', 'SafariDriver']
           ]
         },
 
@@ -92,15 +108,16 @@ domino.views.sidebar = new (function() {
           linkTitle: 'Writing Tests',
           baseUrl: '/guide/writing-tests/',
           sidenavData: [
-            ['using-exports.html', 'exports interface'],
             ['using-bdd-describe.html', 'describe() interface', [
               ['using-bdd-describe.html#overview', 'Overview'],
               ['using-bdd-describe.html#basic-example', 'Basic Example'],
               ['using-bdd-describe.html#complete-syntax', 'Complete BDD Syntax']
             ]],
+            ['using-exports.html', 'exports interface'],
             ['using-es6-async.html', 'Using ES6 async/await'],
             ['writing-assertions.html', 'Writing Assertions'],
             ['expect-assertions.html', 'Using .expect() assertions'],
+            ['writing-unit-tests.html', 'Writing Unit Tests']
           ]
         },
 
@@ -117,36 +134,7 @@ domino.views.sidebar = new (function() {
             ['test-tags.html', 'Test Tags'],
             ['parallel-running.html', 'Running in Parallel'],
             ['disabling-tests.html', 'Disabling / Skipping Tests'],
-            ['programmatic-api.html', 'Programmatic API'],
-            ['using-mocha.html', 'Using Mocha']
-          ]
-        },
-
-        'browser-drivers-setup': {
-          title: 'Browser Drivers Specific | ',
-          nthChildIndex: 2,
-          linkTitle: 'Browser Drivers Specific',
-          baseUrl: '/guide/browser-drivers-setup/',
-          sidenavData: [
-            ['overview.html', 'Overview'],
-            ['geckodriver.html', 'GeckoDriver (Firefox)'],
-            ['chromedriver.html', 'ChromeDriver'],
-            ['edgedriver.html', 'EdgeDriver'],
-            ['safaridriver.html', 'SafariDriver']
-          ]
-        },
-
-        'extending-nightwatch': {
-          title: 'Extending Nightwatch | ',
-          nthChildIndex: 3,
-          linkTitle: 'Extending Nightwatch',
-          baseUrl: '/guide/extending-nightwatch/',
-          sidenavData: [
-            ['custom-commands.html', 'Custom commands'],
-            ['custom-assertions.html', 'Custom assertions'],
-            ['custom-reporter.html', 'Custom reporter'],
-            ['using-with-selenium-webdriver.html', 'Using with selenium-webdriver'],
-            ['using-with-webdriverio.html', 'Using with WebdriverIO']
+            ['programmatic-api.html', 'Programmatic API']
           ]
         },
 
@@ -163,13 +151,50 @@ domino.views.sidebar = new (function() {
           ]
         },
 
-        'unit-testing-with-nightwatch': {
-          title: 'Unit Testing with Nightwatch | ',
-          nthChildIndex: 4,
-          linkTitle: 'Unit Testing with Nightwatch',
-          baseUrl: '/guide/unit-testing-with-nightwatch/',
+        'extending-nightwatch': {
+          title: 'Extending Nightwatch | ',
+          nthChildIndex: 3,
+          linkTitle: 'Extending Nightwatch',
+          baseUrl: '/guide/extending-nightwatch/',
           sidenavData: [
-            ['writing-unit-tests.html', 'Writing Unit Tests']
+            ['custom-commands.html', 'Custom commands'],
+            ['custom-assertions.html', 'Custom assertions'],
+            ['custom-reporter.html', 'Custom reporter'],
+            ['plugin-api.html', 'Plugin API']
+          ]
+        },
+
+        'third-party-runners': {
+          title: 'Using Third-party Test Runners | ',
+          nthChildIndex: 2,
+          linkTitle: 'Third-party Integrations',
+          baseUrl: '/guide/third-party-runners/',
+          sidenavData: [
+            ['cucumberjs-nightwatch-integration.html', 'CucumberJS Integration', [
+              ['cucumberjs-nightwatch-integration.html#configuration', 'Configuration'],
+              ['cucumberjs-nightwatch-integration.html#running-tests', 'Running Tests'],
+              ['cucumberjs-nightwatch-integration.html#manually-starting-the-webdriver-session', 'Manually Starting the WebDriver Session'],
+              ['cucumberjs-nightwatch-integration.html#reporting', 'Reporting']
+            ]],
+            ['using-mocha.html', 'Using Mocha as a Test Runner', [
+              ['using-mocha.html#why-mocha-', 'Why Mocha?'],
+              ['using-mocha.html#configuration', 'Configuration'],
+              ['using-mocha.html#extended-describe-syntax', 'Extended describe() Syntax'],
+              ['using-mocha.html#using-the-mochawesome-reporter', 'Using Mochawesome'],
+              ['using-mocha.html#using-mocha-junit-reporter', 'Using mocha-junit-reporter'],
+              ['using-mocha.html#using-the-standard-mocha', 'Using the standard Mocha']
+            ]]
+          ]
+        },
+
+        'migrating-to-nightwatch': {
+          title: 'Migrating to Nightwatch 2 | ',
+          nthChildIndex: 4,
+          linkTitle: 'Migrating to Nightwatch 2',
+          baseUrl: '/guide/migrating-to-nightwatch/',
+          sidenavData: [
+            ['from-protractor.html', 'From Protractor'],
+            ['from-nightwatch-v1.html', 'From Nightwatch v1.x']
           ]
         }
       }

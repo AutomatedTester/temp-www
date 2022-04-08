@@ -2,7 +2,9 @@ html, body {
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background-color: #1b1b1b;
 }
-
+a {
+  text-decoration: none;
+}
 #mh, #mp {
   opacity: 1;
 }
@@ -70,13 +72,14 @@ html, body {
   /*height: 65px;*/
   background: none;
   border: 0;
+  background: #000;
 }
 .nw-navbar .container {
   width: 100%;
 }
 
 body.navbar-visible .nw-navbar {
-  background: #000;
+
 }
 
 [data-uri^="/api"] body.navbar-visible .bs-sidebar,
@@ -405,8 +408,7 @@ section[data-page-uri] {
 }
 
 [data-uri="/"] .navbar-collapse .nav > li > a[href="/"],
-[data-uri^="/gettingstarted"] .navbar-collapse .nav > li > a[href^="/gettingstarted"],
-[data-uri^="/guide"] .navbar-collapse .nav > li > a[href^="/guide"],
+[data-uri^="/guide"] .navbar-collapse .nav > li:nth-child(2) > a,
 [data-uri^="/api"] .navbar-collapse .nav > li > a[href^="/api"],
 [data-uri^="/blog"] .navbar-collapse .nav > li > a[href^="/blog"],
 [data-uri^="/about"] .navbar-collapse .nav > li > a[href^="/about"] {
@@ -417,7 +419,6 @@ section[data-page-uri] {
 [data-uri="/"] section[data-page-uri="/"],
 [data-uri="/blog"] section[data-page-uri="/blog"],
 [data-uri="/contact"] section[data-page-uri="/contact"],
-[data-uri^="/gettingstarted"] section[data-page-uri^="/gettingstarted"],
 [data-uri^="/guide"] section[data-page-uri^="/guide"],
 [data-uri^="/api"] section[data-page-uri^="/api"],
 [data-uri^="/about"] section[data-page-uri^="/about"],
@@ -426,14 +427,11 @@ section[data-page-uri] {
   display: block;
 }
 
-[data-uri="/api/$method"] section[data-page-uri="/api"] {
+[data-uri="/api/$method"] section[data-page-uri="/api/index"] {
   display: none;
 }
 
-[data-page-uri="/api"] section [data-page-uri^="/api"],
-[data-page-uri="/api"] section [data-page-uri^="/api/expect"],
-[data-page-uri="/api"] section [data-page-uri^="/api/pageobject"],
-[data-page-uri="/api"] section [data-page-uri^="/api/commands"] {
+[data-page-uri="/api"] section [data-page-uri^="/api/index"] {
   display: none;
 }
 
@@ -441,8 +439,16 @@ section[data-page-uri] {
 [data-uri="/api/"] section [data-page-uri="/api"],
 [data-uri^="/api"] section [data-page-uri="/api/$method"],
 /*[data-uri^="/api"] section [data-page-uri^="/api/"].docs-section,*/
+
+[data-uri^="/api/"] section [data-page-uri^="/api/index"],
 [data-uri^="/api/commands"] section [data-page-uri^="/api/commands"],
 [data-uri^="/api/pageobject"] section [data-page-uri^="/api/pageobject"],
+[data-uri^="/api/useractions"] section [data-page-uri^="/api/useractions"],
+[data-uri^="/api/browser"] section [data-page-uri^="/api/browser"],
+[data-uri^="/api/ensure"] section [data-page-uri^="/api/ensure"],
+[data-uri^="/api/assert"] section [data-page-uri^="/api/assert"],
+[data-uri^="/api/element"] section [data-page-uri^="/api/element"],
+[data-uri^="/api/programmatic"] section [data-page-uri^="/api/programmatic"],
 [data-uri^="/api/expect"] section [data-page-uri^="/api/expect"] {
   display: block;
 }
@@ -459,12 +465,17 @@ section[data-page-uri] {
 [data-uri^="/guide/configuration"] section [data-page-uri^="/guide/configuration"],
 [data-uri^="/guide/writing-tests"] section [data-page-uri^="/guide/writing-tests"],
 [data-uri^="/guide/using-nightwatch"] section [data-page-uri^="/guide/using-nightwatch"],
+[data-uri^="/guide/third-party-runners"] section [data-page-uri^="/guide/third-party-runners"],
 [data-uri^="/guide/browser-drivers-setup"] section [data-page-uri^="/guide/browser-drivers-setup"],
 [data-uri^="/guide/running-tests"] section [data-page-uri^="/guide/running-tests"],
 [data-uri^="/guide/extending-nightwatch"] section [data-page-uri^="/guide/extending-nightwatch"],
 [data-uri^="/guide/working-with-page-objects"] section [data-page-uri^="/guide/working-with-page-objects"],
-[data-uri^="/guide/unit-testing-with-nightwatch"] section [data-page-uri^="/guide/unit-testing-with-nightwatch"] {
+[data-uri^="/guide/migrating-to-nightwatch"] section [data-page-uri^="/guide/migrating-to-nightwatch"] {
   display: block;
+}
+
+[data-uri^="/guide/third-party-runners/"][data-uri$=".html"] section[data-page-uri^="/guide"] li.active a[href^="/guide/"][href$=".html"]+ul {
+  /*display: block;*/
 }
 
 [data-uri="/about"] section [data-page-uri="/about"],
@@ -493,15 +504,9 @@ section[data-page-uri] {
 [data-uri="/api/$method"] .parallax {
   height: 75px;
 }
-[data-uri^="/api"] .parallax #moon,
-[data-uri^="/guide"] .parallax #moon,
-[data-uri="/api/$method"] .parallax #moon,
-[data-uri^="/api"] .parallax #clouds,
-[data-uri^="/guide"] .parallax #clouds,
-[data-uri="/api/$method"] .parallax #clouds,
-[data-uri^="/api"] .parallax #moon,
-[data-uri^="/guide"] .parallax #moon{
-  display: none;
+[data-uri^="/api"] .parallax,
+[data-uri^="/guide"] .parallax {
+  display: none !important;
 }
 
 [data-uri="/api/$method"] .parallax #clouds,
@@ -522,9 +527,7 @@ section[data-page-uri] {
 }
 
 [data-uri^="/api"] .secondary,
-[data-uri^="/guide"] .secondary {
-  margin-top: -45px;
-}
+[data-uri^="/guide"] .secondary,
 [data-uri="/api/$method"] .secondary {
   margin-top: 0;
 }

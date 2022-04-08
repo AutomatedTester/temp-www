@@ -238,40 +238,34 @@ domino.viewhelpers.define('transition', function() {
   };
 });
 
-let scrollpos = window.scrollY;
-const header = document.querySelector('nav');
-const headerHeight = 70;
+(function() {
+  var scrollpos = window.scrollY;
+  var header = document.querySelector('nav');
+  var headerHeight = 15;
 
-$('#bd-versions').on('click', function(e) {
-  e.preventDefault();
-});
+  $('#bd-versions').on('click', function(e) {
+    e.preventDefault();
+  });
 
-$('[data-uri^="/api"] #expect-collapse').on('click', 'a', function(ev) {
-  ev.stopPropagation();
-});
-
-$('[data-uri^="/api"] #commands-collapse').on('click', 'a', function(ev) {
-  ev.stopPropagation();
-});
-
-$('a.local-nav').on('click', function(e) {
-  e.stopPropagation();
-});
+  $('a.local-nav').on('click', function(e) {
+    e.stopPropagation();
+  });
 
 
 $('.survey-banner-beta button.close').on('click', function() {
   if (window.localStorage) {
-    window.localStorage.setItem('v2-beta-banner-shown', '1');
+    window.localStorage.setItem('nightwatch-component-banner-shown', '1');
     $('body').removeClass('banner-visible');
   }
 });
 
-window.addEventListener('scroll', function() {
-  scrollpos = window.scrollY;
+  window.addEventListener('scroll', function() {
+    scrollpos = window.scrollY;
 
-  if (scrollpos >= headerHeight) {
-    document.body.classList.add('navbar-visible');
-  } else {
-    document.body.classList.remove('navbar-visible');
-  }
-});
+    if (scrollpos >= headerHeight) {
+      document.body.classList.add('navbar-visible');
+    } else {
+      document.body.classList.remove('navbar-visible');
+    }
+  });
+})();

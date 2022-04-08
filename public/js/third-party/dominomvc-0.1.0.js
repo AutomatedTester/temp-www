@@ -3008,6 +3008,19 @@ domino.eventmanager.EventBus.prototype = {
       if (ev.isDefaultPrevented() || ev.isPropagationStopped()) {
         return;
       }
+
+      try {
+        var isLocalNav = false;
+        var parent = ev.target.parentNode;
+        if (parent.classList.contains('local-nav') || (parent.parentNode && parent.parentNode.classList.contains('local-nav'))) {
+          isLocalNav = true;
+        }
+        if (isLocalNav) {
+          return;
+        }
+      } catch (err) {}
+
+
       var href = $(this).attr('href');
       var hostname = location.protocol + '//' + location.host;
       if (!domino.util.string.startsWith(href, 'http://') &&

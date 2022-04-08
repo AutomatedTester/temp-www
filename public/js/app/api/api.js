@@ -18,20 +18,79 @@ domino.views.define('api', function(view) {
   this.init = function() {
     this.transition = this.initHelper('transition');
     this.sourcecolor = this.initHelper('sourcecolor');
+
+    $('#api-container .bs-sidebar>ul.bs-sidenav').on('show.bs.collapse', function(ev) {
+      var sectionUrl = ev.target.getAttribute('data-section-url');
+      var state = {};
+
+      try {
+        window.history.replaceState(state, "Title", sectionUrl);
+        var popStateEvent = new PopStateEvent('popstate', {state: state});
+        dispatchEvent(popStateEvent);
+      } catch (err) {}
+
+    });
+
   };
 
-  // function api(view_script, scollspy) {
-  //   view_script.$container = '#api-container';
-  //
-  //   this.initHelper('transition').render(function() {
-  //     if (scollspy) {
-  //       this.initHelper('sourcecolor').render();
-  //       //this.initHelper('sidebar').render('#api-container');
-  //     }
-  //   }, view_script);
-  // }
-
   function renderApiPage(view_script, params, cb) {
+
+    view_script.$container = '#api-container';
+    view_script.no_render = true;
+    var sectionContainer = $('#api-container');
+    var subSection = params.sectionName;
+    var fileName = '/js/app/sections/api';
+    var docsContainer = sectionContainer.find('.docs-section');
+    var subSectionContainer = sectionContainer.find('.docs-section[data-page-uri^="/api/'+ subSection +'"]');
+
+    var expandButton = sectionContainer.find('ul li button[data-bs-target="#' + subSection + '-collapse"]');
+    var isMenuExpanded = String(expandButton.attr('aria-expanded'));
+    if (isMenuExpanded !== 'true') {
+      expandButton.attr('aria-expanded', 'true');
+      $('#' + subSection + '-collapse').addClass('show');
+    }
+
+    if (subSectionContainer.is(':visible')) {
+      return;
+    }
+
+    var subSectionPath = subSection === 'index' ? '' : subSection;
+    var mainSection = 'api';
+    document.title = 'API Reference | Nightwatch.js';
+
+    this.initHelper('transition').render(null, {
+      pathname: true,
+      fadeIn: false,
+      currentSectionPath: '/api/index'
+    });
+
+    if (document.documentElement.getAttribute('data-uri') != '/api/' + subSectionPath) {
+      document.documentElement.setAttribute('data-uri', '/api/' + subSectionPath);
+    }
+
+
+    docsContainer.attr('data-page-uri', '/api/' + subSection);
+    domino.views.getSectionData(mainSection);
+    domino.views.currentView = mainSection + subSection;
+    window.scrollTo(0, 0);
+
+    var self = this;
+
+    if (subSection) {
+      fileName += '/' + subSection;
+    }
+
+    var contentElement = $('#api-container .docs-section .page-content');
+    fileName += '.txt';
+
+    $.get(fileName, function(data) {
+      contentElement.html(data);
+
+      self.initHelper('sourcecolor').render();
+      if (typeof cb == 'function') {
+        cb();
+      }
+    });
 
   }
 
@@ -42,24 +101,63 @@ domino.views.define('api', function(view) {
   }
 
   this.expectView = function(view_script) {
-    expandMenu('expect');
-    domino.views.__runSubSection.call(this, view_script, 'api', 'expect', false);
+    renderApiPage.call(this, view_script, {
+      sectionName: 'expect'
+    });
   };
 
   this.commandsView = function(view_script) {
-    expandMenu('commands');
-
-    domino.views.__runSubSection.call(this, view_script, 'api', 'commands', false);
+    renderApiPage.call(this, view_script, {
+      sectionName: 'commands'
+    });
   };
 
   this.pageobjectView = function(view_script) {
-    expandMenu('pageobject');
-    domino.views.__runSubSection.call(this, view_script, 'api', 'pageobject', false);
+    renderApiPage.call(this, view_script, {
+      sectionName: 'pageobject'
+    });
+  };
+
+  this.useractionsView = function(view_script) {
+    renderApiPage.call(this, view_script, {
+      sectionName: 'useractions'
+    });
   };
 
   this.indexView = function(view_script) {
-    renderApiPage.call(this, view_script, this.$scope || {});
-    //domino.views.__runSubSection.call(this, view_script, 'api', '', false);
+    renderApiPage.call(this, view_script, {
+      sectionName: 'index'
+    });
+  };
+
+  this.ensureView = function(view_script) {
+    renderApiPage.call(this, view_script, {
+      sectionName: 'ensure'
+    });
+  };
+
+  this.ensureView = function(view_script) {
+    renderApiPage.call(this, view_script, {
+      sectionName: 'ensure'
+    });
+  };
+
+  this.elementView = function(view_script) {
+    renderApiPage.call(this, view_script, {
+      sectionName: 'element'
+    });
+  };
+
+  this.programmaticView = function(view_script) {
+    renderApiPage.call(this, view_script, {
+      sectionName: 'programmatic'
+    });
+  };
+
+  this.assertView = function(view_script) {
+    renderApiPage.call(this, view_script, {
+      sectionName: 'assert'
+    });
   };
 
   this.methodView = function(view_script) {
@@ -89,8 +187,6 @@ domino.views.define('api', function(view) {
     if (document.documentElement.getAttribute('data-uri') != '/api/$method') {
       document.documentElement.setAttribute('data-uri', '/api/$method');
     }
-
-
   };
 });
 

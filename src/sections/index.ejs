@@ -14,14 +14,14 @@
   <div class="parallax__layer parallax__layer--0">
     <header class="navbar nw-navbar navbar-expand-lg navbar-dark flex-column flex-md-row">
       <div id="survey-banner-index" class="survey-banner-beta alert alert-info alert-dismissible fade" role="alert">
-        <strong>📣 <a href="https://nightwatchjs.org/blog/nightwatch-v2-beta-is-available.html">Nightwatch v2.0-beta</a></strong> is available! Read the <a href="https://nightwatchjs.org/blog/nightwatch-v2-beta-is-available.html">blog post</a> about the new features and changes.
+        🎉 Introducing <strong>Component Testing</strong> in Nightwatch for <strong>React</strong> and <strong>Vue</strong> apps. <a href="http://nightwatchjs.org/blog/introducing-component-testing-in-nightwatch/">Read More</a>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="padding: 0 10px;">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
 
       <div class="container">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
                 aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -33,10 +33,10 @@
         <div id="navigation" class="collapse navbar-collapse">
           <ul class="nav navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item"><a href="/">Home</a></li>
-            <li class="nav-item"><a href="/guide/">Developer Guide</a></li>
+            <li class="nav-item"><a href="https://nightwatchjs.org/guide/getting-started/">Developer Guide</a></li>
             <li class="nav-item"><a href="/api/">API Reference</a></li>
-            <li class="nav-item"><a href="/about/">About</a></li>
-            <li class="nav-item"><a href="/blog/">Blog</a></li>
+            <li class="nav-item"><a href="/about/community/">Community</a></li>
+            <li class="nav-item"><a href="https://nightwatchjs.org/blog/">Blog</a></li>
             <li class="nav-item"><a aria-label="Nightwatch on github" href="https://github.com/nightwatchjs/nightwatch" rel="noopener" title="GitHub"><mat-icon class="mat-icon" role="img" svgicon="logos:github" aria-hidden="true"><svg focusable="false" viewBox="0 0 51.8 50.4" xmlns="http://www.w3.org/2000/svg"><path d="M25.9,0.2C11.8,0.2,0.3,11.7,0.3,25.8c0,11.3,7.3,20.9,17.5,24.3c1.3,0.2,1.7-0.6,1.7-1.2c0-0.6,0-2.6,0-4.8c-7.1,1.5-8.6-3-8.6-3c-1.2-3-2.8-3.7-2.8-3.7c-2.3-1.6,0.2-1.6,0.2-1.6c2.6,0.2,3.9,2.6,3.9,2.6c2.3,3.9,6,2.8,7.5,2.1c0.2-1.7,0.9-2.8,1.6-3.4c-5.7-0.6-11.7-2.8-11.7-12.7c0-2.8,1-5.1,2.6-6.9c-0.3-0.7-1.1-3.3,0.3-6.8c0,0,2.1-0.7,7,2.6c2-0.6,4.2-0.9,6.4-0.9c2.2,0,4.4,0.3,6.4,0.9c4.9-3.3,7-2.6,7-2.6c1.4,3.5,0.5,6.1,0.3,6.8c1.6,1.8,2.6,4.1,2.6,6.9c0,9.8-6,12-11.7,12.6c0.9,0.8,1.7,2.4,1.7,4.7c0,3.4,0,6.2,0,7c0,0.7,0.5,1.5,1.8,1.2c10.2-3.4,17.5-13,17.5-24.3C51.5,11.7,40.1,0.2,25.9,0.2z"></path></svg></mat-icon></a></li>
           </ul>
         </div>
@@ -47,9 +47,9 @@
                aria-haspopup="true" aria-expanded="true"><%= version %></a>
 
             <div class="dropdown-menu dropdown-menu-md-right" aria-labelledby="bd-versions">
-              <a class="dropdown-item active" href="https://v2.nightwatchjs.org/">Latest (<%= version %>)</a>
+              <a class="dropdown-item active" href="https://nightwatchjs.org/">Latest (<%= version %>)</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="https://nightwatchjs.org/">v1.7</a>
+              <a class="dropdown-item" href="https://v17.nightwatchjs.org/">v1.7</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="https://v09.nightwatchjs.org/">v0.9</a>
               <div class="dropdown-divider"></div>
@@ -83,8 +83,8 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-6 col-md-12 col-sm-8 download">
-              <a href="/guide/getting-started/installation.html"
-                 class="btn btn-primary btn-lg btn-download">INSTALL (<%= version %>)</a>
+              <a href="https://nightwatchjs.org/guide/getting-started/installation.html"
+                 class="btn btn-primary btn-lg btn-download">INSTALL<br> (<%= version %>)</a>
               <a href="https://github.com/nightwatchjs/nightwatch" rel="noreferrer" target="_blank"
                  class="btn btn-primary btn-lg btn-github">VIEW ON GITHUB</a>
             </div>
@@ -98,7 +98,7 @@
           <div class="horizontal-line" style="width:100%"></div>
           <div class="row overview">
             <div class="col-sm-12 col-lg-10" style="margin: 10px auto; float: none; text-align: center;">
-              <h2>Browser Automation</h2>
+              <h2>End-to-End Automation</h2>
               <p style="font-weight: 100; font-size:22px">
                 <span style="font-weight: 300">Nightwatch.js</span> is an integrated, easy to use <span style="font-weight: 300">End-to-End</span> testing solution for web applications and websites, written in Node.js.
                 It uses the <a href="https://www.w3.org/TR/webdriver/" target="_blank" rel="noreferrer">W3C WebDriver API</a> to drive browsers and perform commands and assertions on DOM elements.
@@ -133,9 +133,9 @@
                 </li>
 
                 <li class="plugins">
-                  <h3>Easy to Extend</h3>
+                  <h3>Plugin API</h3>
                   <p>
-                    Flexible command and assertion framework which makes it easy to extend to implement your application custom commands and assertions.
+                    Flexible command and assertion framework which makes it easy to implement your own plugins and extend the built-in commands and assertions APIs.
                   </p>
                 </li>
 
@@ -179,7 +179,7 @@
                 <li class="junit">
                   <h3>Continuous Integration</h3>
                   <p>
-                    JUnit XML reporting is built-in so you can integrate your tests in your build process with systems such as Teamcity, Jenkins, Hudson etc.
+                    JUnit XML reporting is built-in so you can integrate your tests in your build process with systems such as Teamcity, Jenkins, CircleCI etc.
                   </p>
                 </li>
 

@@ -108,7 +108,21 @@ domino.views.define('guide', function(view) {
       }
 
       if (subSection && pageName) {
-        $('#guide-container .bs-sidenav a[href="'+ newUriAttr +'"]').addClass('active');
+        var linkElement = $('#guide-container .bs-sidenav a[href="'+ newUriAttr +'"]');
+
+        if (linkElement.length) {
+          linkElement.addClass('active');
+        } else if (newUriAttr.indexOf('.html') > 0) {
+          // var linkParts = newUriAttr.split('/');
+          // linkParts.pop();
+          // linkElement = $('#guide-container .bs-sidenav a[href="'+ (linkParts.join('/')) +'/"]');
+          // linkElement.click();
+          //
+          // var listElementSibling = $('#guide-container .bs-sidenav a[href="'+ (linkParts.join('/')) +'/"]+ul');
+          // if (listElementSibling.length) {
+          //   listElementSibling.show();
+          // }
+        }
       }
 
       self.initHelper('sourcecolor').render();
@@ -131,13 +145,26 @@ domino.views.define('guide', function(view) {
     var self = this;
 
     $.get(fileName, function() {
-      buildSideBar.call(self, 'guide', 'getting-started');
+      buildSideBar.call(self, 'guide', subSection);
 
       if (subSection && pageName) {
-        $('#guide-container .bs-sidenav a[href="'+ dataUri +'"]').addClass('active');
+        var linkElement = $('#guide-container .bs-sidenav a[href="'+ dataUri +'"]');
+        if (linkElement.length) {
+          linkElement.addClass('active');
+        } else if (dataUri.indexOf('.html') > 0) {
+          var linkParts = dataUri.split('/');
+          linkParts.pop();
+          linkElement = $('#guide-container .bs-sidenav a[href="'+ (linkParts.join('/')) +'/"]');
+          //linkElement.click();
+
+          // var listElementSibling = $('#guide-container .bs-sidenav a[href="'+ (linkParts.join('/')) +'/"]+ul');
+          // if (listElementSibling.length) {
+          //   listElementSibling.show();
+          // }
+        }
       }
 
-      self.initHelper('sourcecolor').render();
+      //self.initHelper('sourcecolor').render();
       if (typeof cb == 'function') {
         cb();
       }
@@ -182,8 +209,6 @@ domino.views.define('guide', function(view) {
     }, function() {
       $('#guide-container .bs-sidenav li.active ul li a:first').click();
     });
-
-    return;
   };
 
 });

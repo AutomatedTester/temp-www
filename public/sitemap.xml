@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
+        <loc>https://nightwatchjs.org/</loc>
         <loc>https://nightwatchjs.org/guide/getting-started/</loc>
         <loc>https://nightwatchjs.org/guide/getting-started/introduction.html</loc>
-        <loc>https://nightwatchjs.org/guide/getti ng-started/installation.html</loc>
+        <loc>https://nightwatchjs.org/guide/getting-started/installation.html</loc>
         <loc>https://nightwatchjs.org/guide/getting-started/quickstart.html</loc>
+        <loc>https://nightwatchjs.org/guide/getting-started/whats-new-v2.html</loc>
         <loc>https://nightwatchjs.org/guide/configuration/</loc>
         <loc>https://nightwatchjs.org/guide/configuration/overview.html</loc>
         <loc>https://nightwatchjs.org/guide/configuration/defaults.html</loc>
@@ -56,6 +58,7 @@
         <loc>https://nightwatchjs.org/blog/nightwatch-v2-alpha-is-released.html</loc>
         <loc>https://nightwatchjs.org/blog/test_engineering.html</loc>
         <loc>https://nightwatchjs.org/blog/a-first-look-at-nightwatch-v2.html</loc>
+        <loc>https://nightwatchjs.org/blog/nightwatch-has-joined-the-browserstack-family.html</loc>
 
 
         <loc>https://nightwatchjs.org/about/</loc>
@@ -141,9 +144,7 @@
         <loc>https://nightwatchjs.org/api/navigateTo.html</loc>
         <loc>https://nightwatchjs.org/api/quit.html</loc>
 
-        <loc>https://nightwatchjs.org/api/uploadFile.html</loc>
         <loc>https://nightwatchjs.org/api/updateValue.html</loc>
-        <loc>https://nightwatchjs.org/api/setAttribute.html</loc>
         <loc>https://nightwatchjs.org/api/getAccessibleName.html</loc>
         <loc>https://nightwatchjs.org/api/getAriaRole.html</loc>
         <loc>https://nightwatchjs.org/api/getAttribute.html</loc>
@@ -196,5 +197,15 @@
         <loc>https://nightwatchjs.org/api/openNewWindow.html</loc>
         <loc>https://nightwatchjs.org/api/getWindowPosition.html</loc>
         <loc>https://nightwatchjs.org/api/fullscreenWindow.html</loc>
+        <loc>https://nightwatchjs.org/api/getFirstElementChild.html</loc>
+        <loc>https://nightwatchjs.org/api/getLastElementChild.html</loc>
+        <loc>https://nightwatchjs.org/api/getNextSibling.html</loc>
+        <loc>https://nightwatchjs.org/api/getPreviousSibling.html</loc>
+        <loc>https://nightwatchjs.org/api/getShadowRoot.html</loc>
+        <loc>https://nightwatchjs.org/api/uploadFile.html</loc>
+        <loc>https://nightwatchjs.org/api/hasDescendants.html</loc>
+        <loc>https://nightwatchjs.org/api/isPresent.html</loc>
+        <loc>https://nightwatchjs.org/api/clickAndHold.html</loc>
+        <loc>https://nightwatchjs.org/api/rightClick.html</loc>
     </url>
 </urlset>

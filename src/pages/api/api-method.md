@@ -1,10 +1,12 @@
 {% if method %}
 <div class="page-header">
 <h2>.{{method.name}}() <a title="Suggest edits" target="_blank" class="edit-source" href="{{method.editLink}}">Suggest edits</a></h2>
+{% if method.since %}<span class="since">Since: {{method.since}}</span>{% endif %}
 </div>
 <br>
 
   {% autoescape false %}{{method.descr}}{% endautoescape %}
+
   {% if method.api == 'protocol.elementinteraction' || method.api == 'protocol.elementstate' || method.api == 'protocol.elementlocation' %}
   {% autoescape false %}
       <p class="alert alert-info"><code>{{method.name}}()</code> will automatically wait for the element to be present (until the specified timeout). If the element is not found, an error is thrown which will cause the test to fail. Starting with <code>v1.2</code> you can suppress element not found errors by specifying the <code>suppressNotFoundErrors</code> option.</p>
@@ -20,55 +22,59 @@
     {% endautoescape %}{% endif %}
 
 {% if method.syntax %}
-<h3>Syntax</h3>
+<h3>Usage:</h3>
 <div class="sample-test">
-<pre data-language="javascript" style="padding-top: 10px" class="default-theme language-javascript"><code class="default-theme language-javascript">{{method.syntax}}</code></pre>
-</div>{% endif %}
-    <h3>Parameters</h3>
-    <div class="table-responsive">
-      <table class="table table-bordered table-striped">
-        <thead>
-         <tr>
-           <th style="width: 100px;">Name</th>
-           <th style="width: 100px;">Type</th>
-           <th>description</th>
-         </tr>
-        </thead>
-        <tbody>
-         {% for param in method.params %}
-         <tr>
-           <td><code>{{param.name}}</code>{% if param.optional %}<br><span class="optional">Optional</span>{% endif %}</td>
-           <td>{{param.types}}</td>
-           <td>{% autoescape false %}{{param.descr}}{% endautoescape %}</td>
-         </tr>
-         {% endfor %}
-        </tbody>
-      </table>
-    </div>
+{% for syntax in method.syntax %}
+<pre data-language="javascript" style="padding-top: 10px; margin-bottom: 10px" class="default-theme language-javascript"><code class="default-theme language-javascript">{{syntax}}</code></pre>
+{% endfor %}
+</div>
+{% endif %}
+
+<h3>Parameters:</h3>
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead>
+     <tr>
+       <th style="width: 100px;">Name</th>
+       <th style="width: 100px;">Type</th>
+       <th>description</th>
+     </tr>
+    </thead>
+    <tbody>
+     {% for param in method.params %}
+     <tr>
+       <td><code>{{param.name}}</code>{% if param.optional %}<br><span class="optional">Optional</span>{% endif %}</td>
+       <td>{{param.types}}</td>
+       <td>{% autoescape false %}{{param.descr}}{% endautoescape %}</td>
+     </tr>
+     {% endfor %}
+    </tbody>
+  </table>
+</div>
 
 {% if method.returns %}
 
-<h3>Returns</h3>
+<h3>Returns:</h3>
   <div class="table-responsive">
-      <table class="table table-bordered table-striped">
-        <thead>
-         <tr>
-           <th style="width: 200px;">Type</th>
-           <th>description</th>
-         </tr>
-        </thead>
-        <tbody>
-         <tr>
-           <td>{{method.returns.type}}</td>
-           <td>{{method.returns.descr}}</td>
-         </tr>
-       </tbody>
+    <table class="table table-bordered table-striped">
+      <thead>
+       <tr>
+         <th style="width: 200px;">Type</th>
+         <th>description</th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+         <td>{{method.returns.type}}</td>
+         <td>{{method.returns.descr}}</td>
+       </tr>
+      </tbody>
     </table>
-  </div>
+</div>
 {% endif %}
 
 {% if method.example %}
-<h3>Usage</h3>
+<h3>Example:</h3>
 <div class="sample-test">
 <pre class="line-numbers" data-language="javascript" class=" language-javascript"><code class=" language-javascript">{{method.example}}</code></pre>
 </div>
@@ -79,11 +85,19 @@
 {% endif %}
 
 {% if method.see.length > 0 %}
-<h3>See also</h3>
+<h3>See also:</h3>
 <ul class="api-related-links">
 {% for link in method.see %}
 <li><a href="/api/{{link}}.html">{{link}}</a></li>
 {% endfor %}
+</ul>
+{% endif %}
+
+
+{% if method.moreInfoLink %}
+<h3>More Info:</h3>
+<ul>
+  <li><code><a href="https://{{method.moreInfoLink}}" target="_blank">{{method.moreInfoLink}}</a></code></li>
 </ul>
 {% endif %}
 

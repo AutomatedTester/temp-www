@@ -9,13 +9,16 @@
   font-size: 16px;
   display: block;
 }
-
+.bs-sidebar > .nav > li > a {
+  font-size: 17px !important;
+  font-weight: 400 !important;
+}
 /* All levels of nav */
 .bs-sidebar .nav > li > a {
   display: block;
   padding: 5px 10px;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   color: #c7254e;
 }
 .bs-sidebar .nav > li > a:hover,
@@ -59,7 +62,7 @@
   padding-top:    4px;
   padding-bottom: 4px;
   padding-left: 25px;
-  font-size: 90%;
+  font-size: 16px;
   color: #DDA562
 }
 .bs-sidebar .nav .nav > li.active > a {
@@ -70,7 +73,7 @@
   margin-left: 25px;
 }
 .bs-sidebar ul.nav > li.active ul.nav > li > ul.nav > li > a {
-  font-size: 15px;
+  font-size: 16px;
   padding-top: 6px;
 }
 
@@ -213,7 +216,7 @@ ul.nav .btn-toggle-nav li h5 {
 ul.nav .btn-toggle-nav li a {
   margin-left: 0;
   display: block;
-  padding-left: 15px;
+  padding-left: 16px;
 }
 body.navbar-visible .bs-sidebar {
   position: sticky;
@@ -221,10 +224,30 @@ body.navbar-visible .bs-sidebar {
   height: 600px;
   overflow-y: auto;
 }
+
+.bs-sidebar ul.nav .btn-toggle-nav li.overview a {
+  padding-left: 0;
+  font-size: 16px;
+
+}
+
 .bs-sidebar a,
 .bs-sidebar a:hover {
   text-decoration: none;
 }
+
+.bs-sidenav button a {
+  color: #c7254e;
+  font-weight: 400;
+}
+.bs-sidenav button a:hover {
+  color: #222
+}
+
+.bs-sidenav ul li a {
+  font-size: 16px;
+}
+
 
 ul.nav.bs-sidenav button>a,
 ul.nav.bs-sidenav button>a:hover{
