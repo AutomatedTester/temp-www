@@ -1,0 +1,1281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cc097f18-e6db-44f8-8580-afed9c5bb567" name="Default Changelist" comment="updated expect.cookie()">
+      <change beforePath="$PROJECT_DIR$/../nightwatch-docs/gettingstarted/configuration/config-test-settings.md" beforeDir="false" afterPath="$PROJECT_DIR$/../nightwatch-docs/gettingstarted/configuration/config-test-settings.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nightwatch-docs/guide/extending-nightwatch/custom-assertions.md" beforeDir="false" afterPath="$PROJECT_DIR$/../nightwatch-docs/guide/extending-nightwatch/custom-assertions.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nightwatch-docs/guide/extending-nightwatch/custom-commands.md" beforeDir="false" afterPath="$PROJECT_DIR$/../nightwatch-docs/guide/extending-nightwatch/custom-commands.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nightwatch-docs/guide/extending-nightwatch/custom-reporter.md" beforeDir="false" afterPath="$PROJECT_DIR$/../nightwatch-docs/guide/extending-nightwatch/custom-reporter.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nightwatch-gecko-examples/lib/globals.js" beforeDir="false" afterPath="$PROJECT_DIR$/../nightwatch-gecko-examples/lib/globals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nightwatch-gecko-examples/lib/pages/examples/window.js" beforeDir="false" afterPath="$PROJECT_DIR$/../nightwatch-gecko-examples/lib/pages/examples/window.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nightwatch-gecko-examples/lib/pages/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/../nightwatch-gecko-examples/lib/pages/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nightwatch-gecko-examples/nightwatch.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nightwatch-gecko-examples/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../nightwatch-gecko-examples/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nightwatch-gecko-examples/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../nightwatch-gecko-examples/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nightwatch-gecko-examples/test/apimethod-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../nightwatch-gecko-examples/test/apimethod-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nightwatch-gecko-examples/test/examples/form-input.js" beforeDir="false" afterPath="$PROJECT_DIR$/../nightwatch-gecko-examples/test/examples/form-input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nightwatch-gecko-examples/test/homepage-test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../nightwatch-gecko-examples/test/homepage-test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.conf.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.conf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/mobile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app/api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app/api/method.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app/api/method.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app/gettingstarted/gettingstarted.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app/gettingstarted/gettingstarted.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app/guide/guide.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app/guide/guide.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app/sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app/sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app/views.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app/views.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/third-party/carbonad.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/footer.html.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/footer.html.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/navbar.html.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/navbar.html.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/scripts.html.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/scripts.html.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sections/api.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/api.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sections/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/sections/index.ejs" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../nightwatch-docs/gettingstarted/configuration/config-test-settings.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="743">
+                <caret line="138" column="16" lean-forward="true" selection-start-line="138" selection-start-column="16" selection-end-line="138" selection-end-column="16" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../nightwatch-docs/guide/extending-nightwatch/custom-reporter.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="154">
+                <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/www/new.nightwatchjs.org/__e2e/window/setValue.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="24">
+              <caret line="95" column="38" selection-start-line="95" selection-start-column="38" selection-end-line="95" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/www/new.nightwatchjs.org/__e2e/window/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="706">
+              <caret line="112" selection-start-line="112" selection-end-line="112" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/include/parallax.html.ejs">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/include/scripts.html.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/app/guide/guide.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="704">
+              <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="39226">
+              <caret line="1783" column="19" selection-start-line="1783" selection-start-column="19" selection-end-line="1783" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.conf.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1232">
+              <caret line="56" column="12" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Download</find>
+      <find>View on</find>
+      <find>Contact</find>
+      <find>googletagmanager</find>
+      <find>&lt;footer&gt;</find>
+      <find>cookie</find>
+      <find>&lt;p class=&quot;align-left&quot;&gt;&amp;copy; Nightwatchjs.org 2015 &lt;/p&gt;</find>
+      <find>NightCloud</find>
+      <find>&lt;li&gt;&lt;a href=&quot;http://nightcloud.io&quot; target=&quot;_blank&quot;&gt;NightCloud&lt;/a&gt;&lt;/li&gt;</find>
+      <find>v0.9.14</find>
+      <find>_carbonads</find>
+      <find>index-banner</find>
+      <find>carbonad</find>
+      <find>&lt;h2&gt;Issues&lt;/h2&gt;</find>
+      <find>&lt;&lt;&lt;</find>
+      <find>&gt;&gt;&gt;</find>
+      <find>_carbonads_js</find>
+      <find>id=&quot;_carbonads_js&quot; async</find>
+      <find>timestam</find>
+      <find>timestamp_format</find>
+      <find>frame</find>
+      <find>paginateEach</find>
+      <find>twitter</find>
+      <find>renderCarbon</find>
+      <find>carbon</find>
+      <find>col-sm-4 download</find>
+      <find>index-features</find>
+      <find>download</find>
+      <find>2020</find>
+      <find>screenshots</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>&quot;</replace>
+      <replace>`$1`</replace>
+      <replace>api['expect.element']</replace>
+      <replace>assert.strictEqual</replace>
+      <replace>[Web Element ID](https://www.w3.org/TR/webdriver1/#dfn-web-elements)</replace>
+      <replace>https://</replace>
+      <replace>'</replace>
+      <replace>LocateStrategy.validate</replace>
+      <replace>waitForElementVisible</replace>
+      <replace>waitForElementNotVisible</replace>
+      <replace>waitForElementNotPresent</replace>
+      <replace>#dialog</replace>
+      <replace>running-tests.html</replace>
+      <replace>selector</replace>
+      <replace>/expect</replace>
+      <replace>expect</replace>
+      <replace>jsonwire</replace>
+      <replace>\*</replace>
+      <replace>sidebar.buid</replace>
+      <replace>sidebar.build</replace>
+      <replace>0.9.21</replace>
+      <replace>0.9.20</replace>
+      <replace>&lt;p class=&quot;align-left&quot;&gt;&amp;copy; 2020 &lt;a href=&quot;https://pineview.io&quot; target=&quot;_blank&quot;&gt;Pine View Software AS&lt;/a&gt; • Code licensed under the &lt;a rel=&quot;noreferrer&quot; href=&quot;https://github.com/nightwatchjs/nightwatch/blob/master/LICENSE.md&quot;&gt;MIT License&lt;/a&gt;.&lt;/p&gt;</replace>
+      <replace>v0.19.20</replace>
+      <replace />
+      <replace>id=&quot;_carbonads_js&quot;</replace>
+      <replace>index-banner</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$USER_HOME$/www/pineview-blog-installed/versions/3.1.1/core</dir>
+      <dir>$USER_HOME$/www/pineview-blog-installed/versions/3.1.1</dir>
+      <dir>$USER_HOME$/www/pineview-blog-installed/content/themes</dir>
+      <dir>$USER_HOME$/www/pineview-ghost/core/server</dir>
+      <dir>$PROJECT_DIR$/../nightwatch-public/lib</dir>
+      <dir>$PROJECT_DIR$/../nightwatch-docs</dir>
+      <dir>$PROJECT_DIR$/public</dir>
+      <dir>$USER_HOME$/www/new.nightwatchjs.org/css</dir>
+      <dir>$USER_HOME$/www/new.nightwatchjs.org/__test/css</dir>
+      <dir>$PROJECT_DIR$/public/css</dir>
+      <dir>$PROJECT_DIR$/lib</dir>
+      <dir>$PROJECT_DIR$/../nightwatch-docs/guide/using-nightwatch</dir>
+      <dir>$PROJECT_DIR$/../nightwatch-docs/gettingstarted</dir>
+      <dir>$PROJECT_DIR$/public/js/app/api</dir>
+      <dir>$PROJECT_DIR$/../nightwatch-current/lib/settings</dir>
+      <dir>$PROJECT_DIR$/public/js</dir>
+      <dir>$USER_HOME$/www/nightwatchjs.org</dir>
+      <dir>$USER_HOME$/www/nightwatchjs.org/css</dir>
+      <dir>$USER_HOME$/www/nightwatchjs.org/api</dir>
+      <dir>$USER_HOME$/www/nightwatchjs.org/contact</dir>
+      <dir>$USER_HOME$/www/nightwatchjs.org/gettingstarted</dir>
+      <dir>$USER_HOME$/www/nightwatchjs.org/guide</dir>
+      <dir>$PROJECT_DIR$/../nightwatch-current/lib</dir>
+      <dir>$PROJECT_DIR$/../nightwatch-current/test/src</dir>
+      <dir>$PROJECT_DIR$/public/js/app</dir>
+      <dir>$PROJECT_DIR$/src/include</dir>
+      <dir>$PROJECT_DIR$/src/pages</dir>
+      <dir>$PROJECT_DIR$/src/sections</dir>
+      <dir>$PROJECT_DIR$/src</dir>
+      <dir>$PROJECT_DIR$/../nightwatch-docs/gettingstarted/configuration</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../nightwatch-docs" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/public/css/sidebar.css" />
+        <option value="$PROJECT_DIR$/src/include/header.html.ejs" />
+        <option value="$PROJECT_DIR$/src/sections/gettingstarted.ejs" />
+        <option value="$PROJECT_DIR$/src/sections/releases.ejs" />
+        <option value="$PROJECT_DIR$/src/sections/guide.ejs" />
+        <option value="$PROJECT_DIR$/src/sections/about.ejs" />
+        <option value="$PROJECT_DIR$/lib/MarkdownParser.js" />
+        <option value="$PROJECT_DIR$/lib/utils.js" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/../nightwatch-gecko-examples/nightwatch.conf.js" />
+        <option value="$PROJECT_DIR$/../nightwatch-gecko-examples/test/examples/ecosia.js" />
+        <option value="$PROJECT_DIR$/../nightwatch-current/package.json" />
+        <option value="$PROJECT_DIR$/public/css/mobile.css" />
+        <option value="$PROJECT_DIR$/../nightwatch-current/lib/transport/browserstack.js" />
+        <option value="$PROJECT_DIR$/../nightwatch-current/lib/transport/transport.js" />
+        <option value="$PROJECT_DIR$/../nightwatch-docs/gettingstarted/configuration/config-webdriver-settings.md" />
+        <option value="$PROJECT_DIR$/../nightwatch-docs/gettingstarted/configuration/config-selenium-settings.md" />
+        <option value="$PROJECT_DIR$/../nightwatch-docs/guide/using-nightwatch/using-bdd-describe.md" />
+        <option value="$PROJECT_DIR$/public/js/app/api/method.html" />
+        <option value="$PROJECT_DIR$/src/sections/api.ejs" />
+        <option value="$PROJECT_DIR$/src/include/navbar.html.ejs" />
+        <option value="$USER_HOME$/www/nightwatchjs.org/gettingstarted/index.html" />
+        <option value="$USER_HOME$/www/nightwatchjs.org/api/back.html" />
+        <option value="$USER_HOME$/www/nightwatchjs.org/js/google-tag.js" />
+        <option value="$USER_HOME$/www/nightwatchjs.org/api/acceptAlert.html" />
+        <option value="$USER_HOME$/www/nightwatchjs.org/contact/index.html" />
+        <option value="$USER_HOME$/www/nightwatchjs.org/css/main.css" />
+        <option value="$USER_HOME$/www/nightwatchjs.org/js/app/views.js" />
+        <option value="$USER_HOME$/www/nightwatchjs.org/api/elementIdClick.html" />
+        <option value="$USER_HOME$/www/nightwatchjs.org/index.html" />
+        <option value="$PROJECT_DIR$/../nightwatch-docs/guide/extending-nightwatch/custom-commands.md" />
+        <option value="$PROJECT_DIR$/../nightwatch-docs/guide/extending-nightwatch/custom-reporter.md" />
+        <option value="$PROJECT_DIR$/../nightwatch-docs/guide/extending-nightwatch/custom-assertions.md" />
+        <option value="$PROJECT_DIR$/app.conf.json" />
+        <option value="$PROJECT_DIR$/public/js/app/sidebar.js" />
+        <option value="$PROJECT_DIR$/../nightwatch-gecko-examples/test/webdriverio.js" />
+        <option value="$PROJECT_DIR$/../nightwatch-docs/guide/extending-nightwatch/using-with-selenium-webdriver.md" />
+        <option value="$PROJECT_DIR$/../nightwatch-docs/guide/extending-nightwatch/using-with-webdriverio.md" />
+        <option value="$PROJECT_DIR$/../nightwatch-current/.travis.yml" />
+        <option value="$PROJECT_DIR$/public/js/app/guide/guide.js" />
+        <option value="$PROJECT_DIR$/public/js/app/api/api.js" />
+        <option value="$PROJECT_DIR$/public/js/app/views.js" />
+        <option value="$PROJECT_DIR$/public/js/app/gettingstarted/gettingstarted.js" />
+        <option value="$PROJECT_DIR$/src/include/scripts.html.ejs" />
+        <option value="$PROJECT_DIR$/src/sections/index.ejs" />
+        <option value="$PROJECT_DIR$/public/css/main.css" />
+        <option value="$PROJECT_DIR$/src/include/footer.html.ejs" />
+        <option value="$USER_HOME$/www/new.nightwatchjs.org/__e2e/window/index.html" />
+        <option value="$USER_HOME$/www/new.nightwatchjs.org/__e2e/window/setValue.html" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/../nightwatch-docs/gettingstarted/configuration/config-test-settings.md" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-2279" />
+    <option name="y" value="25" />
+    <option name="width" value="2259" />
+    <option name="height" value="1415" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="nightwatch-www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nightwatch-www" type="47feb1d3:ProjectViewModuleNode" />
+            </path>
+            <path>
+              <item name="nightwatch-www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nightwatch-www" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="nightwatch-docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nightwatch-www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nightwatch-www" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="nightwatch-docs" type="462c0819:PsiDirectoryNode" />
+              <item name="gettingstarted" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nightwatch-www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nightwatch-www" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="nightwatch-docs" type="462c0819:PsiDirectoryNode" />
+              <item name="gettingstarted" type="462c0819:PsiDirectoryNode" />
+              <item name="configuration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nightwatch-www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nightwatch-www" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="nightwatch-www" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nightwatch-www" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nightwatch-www" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="nightwatch-www" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="javascript.nodejs.core.library.configured.version" value="10.15.1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nightwatch-public/lib/api/protocol" />
+    <property name="nodejs.mocha.mocha_node_package_dir" value="$PROJECT_DIR$/../nightwatch-current/node_modules/mocha" />
+    <property name="nodejs.protractor.protractor_package" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/local/bin/node" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../nightwatch-docs/guide/extending-nightwatch" />
+      <recent name="$USER_HOME$/www/nightwatchjs.org/js/third-party" />
+      <recent name="$PROJECT_DIR$/../nightwatch-docs/guide/running-tests" />
+      <recent name="$PROJECT_DIR$/src/sections" />
+      <recent name="$PROJECT_DIR$/../moonscape/bin" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/js/third-party" />
+      <recent name="$PROJECT_DIR$/src/sections/old" />
+      <recent name="$USER_HOME$/www/pineview-blog-installed/content/themes/pineview/assets" />
+      <recent name="$PROJECT_DIR$/src/sections/guide" />
+      <recent name="$PROJECT_DIR$/src/pages/guide" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Node.js.build-pages-with-releases">
+    <configuration name="build-apidocs" type="NodeJSConfigurationType" path-to-js-file="build/apidocs.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="build-pages-with-releases" type="NodeJSConfigurationType" path-to-js-file="build/releases.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="build-pages" type="NodeJSConfigurationType" path-to-js-file="build/pages.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="build-static" type="NodeJSConfigurationType" path-to-js-file="build/static.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build:pages" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="build:web" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build:web" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="getValue" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/../nightwatch-current/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$/../nightwatch-current</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>SUITE</test-kind>
+      <test-file>$PROJECT_DIR$/../nightwatch-current/test/src/api/commands/testGetValue.js</test-file>
+      <test-names>
+        <name value="getValue" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="test page object element selectors" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/../nightwatch/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$/../nightwatch</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>SUITE</test-kind>
+      <test-file>$PROJECT_DIR$/../nightwatch/test/src/element/testPageObjectElementSelectors.js</test-file>
+      <test-names>
+        <name value="test page object element selectors" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="test page object element selectors.page object element command with custom message and no args" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/../nightwatch/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$/../nightwatch</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/../nightwatch/test/src/element/testPageObjectElementSelectors.js</test-file>
+      <test-names>
+        <name value="test page object element selectors" />
+        <name value="page object element command with custom message and no args" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="testRunner ES6 Async.test Runner with ES6 async/await tests getText example" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/../nightwatch/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$/../nightwatch</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/../nightwatch/test/src/runner/testRunnerEs6Async.js</test-file>
+      <test-names>
+        <name value="testRunner ES6 Async" />
+        <name value="test Runner with ES6 async/await tests getText example" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="waitForElementVisible.client.waitForElementVisible() success with custom locator strategy" type="mocha-javascript-test-runner" temporary="true" nameIsGenerated="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <mocha-package>$PROJECT_DIR$/../nightwatch-current/node_modules/mocha</mocha-package>
+      <working-directory>$PROJECT_DIR$/../nightwatch-current</working-directory>
+      <pass-parent-env>true</pass-parent-env>
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>TEST</test-kind>
+      <test-file>$PROJECT_DIR$/../nightwatch-current/test/src/api/commands/testWaitForElementVisible.js</test-file>
+      <test-names>
+        <name value="waitForElementVisible" />
+        <name value="client.waitForElementVisible() success with custom locator strategy" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Mocha.getValue" />
+      <item itemvalue="Mocha.test page object element selectors" />
+      <item itemvalue="Mocha.test page object element selectors.page object element command with custom message and no args" />
+      <item itemvalue="Mocha.testRunner ES6 Async.test Runner with ES6 async/await tests getText example" />
+      <item itemvalue="Mocha.waitForElementVisible.client.waitForElementVisible() success with custom locator strategy" />
+      <item itemvalue="Node.js.build-apidocs" />
+      <item itemvalue="Node.js.build-pages-with-releases" />
+      <item itemvalue="Node.js.build-pages" />
+      <item itemvalue="Node.js.build-static" />
+      <item itemvalue="npm.build" />
+      <item itemvalue="npm.build:web" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Mocha.getValue" />
+        <item itemvalue="Mocha.waitForElementVisible.client.waitForElementVisible() success with custom locator strategy" />
+        <item itemvalue="Mocha.testRunner ES6 Async.test Runner with ES6 async/await tests getText example" />
+        <item itemvalue="Mocha.test page object element selectors.page object element command with custom message and no args" />
+        <item itemvalue="Mocha.test page object element selectors" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cc097f18-e6db-44f8-8580-afed9c5bb567" name="Default Changelist" comment="" />
+      <created>1554633377060</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1554633377060</updated>
+    </task>
+    <task id="LOCAL-00001" summary="updated expect.cookie()">
+      <created>1555694947443</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1555694947443</updated>
+    </task>
+    <task id="LOCAL-00002" summary="updated http urls to https">
+      <created>1557393319082</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1557393319082</updated>
+    </task>
+    <task id="LOCAL-00003" summary="- Fixed an issue resulting from calling waitForElement commands when a page object element with a custom output message;&#10;- Fixed an issue with creating custom commands by extending built-in waitForElement commands">
+      <created>1558524365451</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1558524365451</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added support for element commands (e.g. getText) to be used with ES6 await">
+      <created>1558613394386</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1558613394386</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added search">
+      <created>1560178365787</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1560178365787</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added search">
+      <created>1560178580277</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1560178580277</updated>
+    </task>
+    <task id="LOCAL-00007" summary="version 1.2">
+      <created>1566041576497</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1566041576497</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="testRunner_ES6_Async_test_Runner_with_ES6_async_await_tests_getText_example - 2019.05.23 at 14h 34m 08s.xml">
+      <configuration name="testRunner ES6 Async.test Runner with ES6 async/await tests getText example" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="testRunner_ES6_Async_test_Runner_with_ES6_async_await_tests_getText_example - 2019.05.23 at 14h 34m 30s.xml">
+      <configuration name="testRunner ES6 Async.test Runner with ES6 async/await tests getText example" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="waitForElementVisible_client_waitForElementVisible()_success_with_custom_locator_strategy - 2020.08.16 at 10h 50m 45s.xml">
+      <configuration name="waitForElementVisible.client.waitForElementVisible() success with custom locator strategy" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="waitForElementVisible_client_waitForElementVisible()_success_with_custom_locator_strategy - 2020.08.16 at 10h 50m 50s.xml">
+      <configuration name="waitForElementVisible.client.waitForElementVisible() success with custom locator strategy" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="waitForElementVisible_client_waitForElementVisible()_success_with_custom_locator_strategy - 2020.08.16 at 10h 51m 09s.xml">
+      <configuration name="waitForElementVisible.client.waitForElementVisible() success with custom locator strategy" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="waitForElementVisible_client_waitForElementVisible()_success_with_custom_locator_strategy - 2020.08.16 at 10h 52m 31s.xml">
+      <configuration name="waitForElementVisible.client.waitForElementVisible() success with custom locator strategy" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="getValue - 2020.08.16 at 10h 53m 03s.xml">
+      <configuration name="getValue" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="getValue - 2020.08.16 at 10h 53m 54s.xml">
+      <configuration name="getValue" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="getValue - 2020.08.16 at 10h 54m 15s.xml">
+      <configuration name="getValue" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="getValue - 2020.08.16 at 10h 54m 20s.xml">
+      <configuration name="getValue" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-2279" y="25" width="2259" height="1415" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49923196" visible="true" weight="0.19571045" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info id="aws.explorer" order="3" sideWeight="0.50076807" side_tool="true" weight="0.1361837" />
+      <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" weight="0.32872504" />
+      <window_info anchor="bottom" id="Version Control" order="1" weight="0.18049155" />
+      <window_info anchor="bottom" id="Message" order="2" />
+      <window_info anchor="bottom" id="Find" order="3" weight="0.32872504" />
+      <window_info anchor="bottom" id="Run" order="4" weight="0.33230293" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.28618422" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="8" />
+      <window_info anchor="bottom" id="Messages" order="9" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../nightwatch-public" />
+    </ignored-roots>
+    <MESSAGE value="updated expect.cookie()" />
+    <MESSAGE value="updated http urls to https" />
+    <MESSAGE value="- Fixed an issue resulting from calling waitForElement commands when a page object element with a custom output message;&#10;- Fixed an issue with creating custom commands by extending built-in waitForElement commands" />
+    <MESSAGE value="Added support for element commands (e.g. getText) to be used with ES6 await" />
+    <MESSAGE value="added search" />
+    <MESSAGE value="version 1.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 1.2" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <condition expression="!definition.selector" language="JavaScript" />
+          <url>file://$PROJECT_DIR$/../nightwatch/lib/element/element.js</url>
+          <line>64</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/../nightwatch/lib/element/locate/single-element-by-recursion.js</url>
+          <line>38</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/../nightwatch/test/lib/nockselements.js</url>
+          <line>138</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/../nightwatch/test/src/index/testNightwatchIndex.js</url>
+          <line>31</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/../nightwatch/lib/api/element-commands/_waitFor.js</url>
+          <line>174</line>
+          <option name="timeStamp" value="105" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/../nightwatch/test/src/runner/testRunWithCustomCommands.js</url>
+          <line>143</line>
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/../nightwatch-gecko-examples/lib/pages/examples/window.js</url>
+          <line>11</line>
+          <option name="timeStamp" value="144" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/../nightwatch/lib/testsuite/context.js</url>
+          <line>300</line>
+          <option name="timeStamp" value="154" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/../nightwatch-public/lib/api/element-commands/_waitForDisplayed.js</url>
+          <line>5</line>
+          <option name="timeStamp" value="173" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/../nightwatch-public/lib/reporter/summary.js</url>
+          <line>67</line>
+          <option name="timeStamp" value="174" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/../nightwatch-public/lib/api/element-commands/_baseElementCommand.js</url>
+          <line>55</line>
+          <option name="timeStamp" value="183" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/lib/ApiDocs.js</url>
+          <line>19</line>
+          <option name="timeStamp" value="185" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/lib/ApiDocs.js</url>
+          <line>53</line>
+          <option name="timeStamp" value="186" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/../nightwatch-current/test/src/api/commands/testWaitForElementVisible.js</url>
+          <line>251</line>
+          <option name="timeStamp" value="187" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/../nightwatch-current/test/src/api/commands/testGetValue.js</url>
+          <line>24</line>
+          <option name="timeStamp" value="190" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/../nightwatch-current/lib/element/command.js</url>
+          <line>230</line>
+          <option name="timeStamp" value="191" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/../nightwatch-current/lib/api/element-commands/_baseElementCommand.js</url>
+          <line>37</line>
+          <option name="timeStamp" value="192" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/lib/MarkdownParser.js</url>
+          <line>327</line>
+          <option name="timeStamp" value="254" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/../nightwatch-current/lib/testsuite/index.js</url>
+          <line>432</line>
+          <option name="timeStamp" value="255" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="mocha-javascript-test-runner">
+        <watch expression="command.args[0]" language="JavaScript" />
+        <watch expression="arguments" language="JavaScript" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>[...namespace, resource].join(path.sep)</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>namespace.join(path.sep)</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+    </expressions>
+    <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>namespace.length &gt; 1</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>section == 'protocol'</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>method == 'protocol.elementinteraction'</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>fileName.startsWith('customPerform')</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>isUserDefined === true</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.commandName == 'waitForElementClickable'</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>!definition.selector</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>matches == null</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+    <expressions id="watch">
+      <expression>
+        <expression-string>this.content[subPageName]</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.content[]</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.content['_pages_'][key]</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.sections[key].subsections</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.sections[key]</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.content._sections_</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>describeInstance.timeout</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>describeInstance.__proto__</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>parent === this</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>describeInstance.__proto__</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>Object.keys(describeInstance.__proto__)</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>this.hooks.indexOf(key) &gt; -1</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>Utils.isES6AsyncFn(this.module[testName])</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/public/css/mobile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3498">
+          <caret line="159" column="9" selection-start-line="159" selection-start-column="9" selection-end-line="159" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sections/api.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10230">
+          <caret line="465" column="20" selection-start-line="465" selection-start-column="20" selection-end-line="465" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/www/nightwatchjs.org/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/www/new.nightwatchjs.org/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="631" column="9" lean-forward="true" selection-start-line="623" selection-end-line="631" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/www/new.nightwatchjs.org/gettingstarted/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="1819" column="26" lean-forward="true" selection-start-line="1819" selection-start-column="26" selection-end-line="1819" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/www/nightwatchjs.org/js/google-tag.js" />
+    <entry file="file://$PROJECT_DIR$/public/favicon.ico">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$USER_HOME$/www/nightwatchjs.org/js/third-party/carbonad.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5566">
+          <caret line="253" column="3" lean-forward="true" selection-start-line="253" selection-start-column="3" selection-end-line="253" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/www/nightwatchjs.org/gettingstarted/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="581">
+          <caret line="9416" column="45" selection-start-line="9416" selection-start-column="45" selection-end-line="9416" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/www/nightwatchjs.org/contact/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/www/nightwatchjs.org/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="9409" column="12" lean-forward="true" selection-start-line="9409" selection-start-column="12" selection-end-line="9409" selection-end-column="12" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#3;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/www/nightwatchjs.org/api/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/www/nightwatchjs.org/js/app/views.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="262" column="25" selection-start-line="262" selection-start-column="25" selection-end-line="262" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/www/nightwatchjs.org/api/elementIdClick.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="9573" column="25" selection-start-line="9573" selection-start-column="25" selection-end-line="9573" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/www/nightwatchjs.org/api/execute.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1197">
+          <caret line="9592" column="29" selection-start-line="9592" selection-start-column="29" selection-end-line="9592" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/www/nightwatchjs.org/api/clearValue.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1197">
+          <caret line="9596" column="8" selection-start-line="9596" selection-start-column="8" selection-end-line="9596" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/www/nightwatchjs.org/api/acceptAlert.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1197">
+          <caret line="9573" column="18" selection-start-line="9573" selection-start-column="18" selection-end-line="9573" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/www/nightwatchjs.org/api/back.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1197">
+          <caret line="9603" column="13" selection-start-line="9603" selection-start-column="13" selection-end-line="9603" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/www/nightwatchjs.org/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/app/views.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="242" column="26" selection-start-line="242" selection-start-column="10" selection-end-line="242" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../nightwatch-current/lib/settings/defaults.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="160" lean-forward="true" selection-start-line="160" selection-end-line="160" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../nightwatch-docs/gettingstarted/configuration/config-basic-settings.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="264">
+            <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../nightwatch-docs/guide/using-nightwatch/writing-assertions.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="770">
+            <caret line="35" selection-start-line="35" selection-end-line="36" selection-end-column="81" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../nightwatch-docs/guide/using-nightwatch/writing-tests.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="374">
+            <caret line="17" column="51" lean-forward="true" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/include/header.html.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="94" column="21" lean-forward="true" selection-start-line="94" selection-start-column="21" selection-end-line="94" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/api.html.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/gettingstarted.html.ejs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sections/guide.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/app/sidebar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="103" column="43" lean-forward="true" selection-start-line="103" selection-start-column="43" selection-end-line="103" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../nightwatch-docs/guide/extending-nightwatch/custom-assertions.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="883">
+            <caret line="111" column="84" selection-start-line="111" selection-start-column="84" selection-end-line="111" selection-end-column="84" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../nightwatch-docs/guide/extending-nightwatch/custom-commands.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="861">
+            <caret line="252" selection-start-line="252" selection-end-line="252" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../nightwatch-gecko-examples/test/selenium-webdriver.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-311">
+          <caret selection-end-line="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../nightwatch-current/.coveralls.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../nightwatch-current/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../nightwatch-current/test/src/runner/testRunnerWithSeleniumWebdriver.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="118" column="8" lean-forward="true" selection-start-line="118" selection-start-column="8" selection-end-line="118" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../nightwatch-docs/guide/extending-nightwatch/using-with-webdriverio.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="250">
+            <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/include/footer.html.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="31" column="84" lean-forward="true" selection-start-line="31" selection-start-column="84" selection-end-line="31" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../nightwatch-docs/guide/extending-nightwatch/using-with-selenium-webdriver.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="286">
+            <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../nightwatch-gecko-examples/test/webdriverio.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../nightwatch-docs/guide/using-nightwatch/expect-assertions.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="308">
+            <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/include/navbar.html.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/include/parallax.html.ejs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/include/scripts.html.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/app/guide/guide.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39226">
+          <caret line="1783" column="19" selection-start-line="1783" selection-start-column="19" selection-end-line="1783" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.conf.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1232">
+          <caret line="56" column="12" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../nightwatch-docs/guide/extending-nightwatch/custom-reporter.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="154">
+            <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/www/new.nightwatchjs.org/__e2e/window/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="706">
+          <caret line="112" selection-start-line="112" selection-end-line="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/www/new.nightwatchjs.org/__e2e/window/setValue.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="95" column="38" selection-start-line="95" selection-start-column="38" selection-end-line="95" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../nightwatch-docs/gettingstarted/configuration/config-test-settings.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="743">
+            <caret line="138" column="16" lean-forward="true" selection-start-line="138" selection-start-column="16" selection-end-line="138" selection-end-column="16" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

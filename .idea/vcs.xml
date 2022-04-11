@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/../nightwatch" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../nightwatch-current" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../nightwatch-docs" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../nightwatch-gecko-examples" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$USER_HOME$/www/new.nightwatchjs.org" vcs="Git" />
+  </component>
+</project>

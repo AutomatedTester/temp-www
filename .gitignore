@@ -1,7 +1,5 @@
 node_modules
 output
-.idea
-.env
 .DS_Store
 build/output.json
 

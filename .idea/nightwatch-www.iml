@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$USER_HOME$/nightcloud/nightframe" />
+    <content url="file://$USER_HOME$/pineview">
+      <excludeFolder url="file://$USER_HOME$/pineview" />
+    </content>
+    <content url="file://$MODULE_DIR$/../moonscape" />
+    <content url="file://$MODULE_DIR$/../nightwatch-current" />
+    <content url="file://$MODULE_DIR$/../nightwatch-docs" />
+    <content url="file://$MODULE_DIR$/../nightwatch-gecko-examples" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/.tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/temp" />
+      <excludeFolder url="file://$MODULE_DIR$/tmp" />
+    </content>
+    <content url="file://$USER_HOME$/www/new.nightwatchjs.org" />
+    <content url="file://$USER_HOME$/www/nightwatchjs.org" />
+    <content url="file://$USER_HOME$/www/pineview-blog-installed">
+      <excludeFolder url="file://$USER_HOME$/www/pineview-blog-installed" />
+      <excludeFolder url="file://$USER_HOME$/www/pineview-blog-installed/versions/3.1.1/core/built" />
+    </content>
+    <content url="file://$USER_HOME$/www/pineview-ghost" />
+    <content url="file://$USER_HOME$/www/pineview.io">
+      <excludeFolder url="file://$USER_HOME$/www/pineview.io" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
