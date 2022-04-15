@@ -1,5 +1,5 @@
 {
-  "NIGHTWATCH_LIB_PATH": "/Users/andrei/workspace/nightwatch-v2/lib/",
+  "NIGHTWATCH_LIB_PATH": "/Users/andrei/workspace/nightwatch/lib/",
   "NIGHTWATCH_DOCS_PATH": "/Users/andrei/workspace/nightwatch-docs-v2/",
   "OUTPUT_FOLDER": "./output",
   "NIGHTWATCH_VERSION": "1.1.13",
@@ -91,7 +91,8 @@
             "finding-and-interacting-with-elements",
             "using-xpath-selectors",
             "using-test-hooks",
-            "external-globals"
+            "external-globals",
+            "running-tests-with-appium"
           ],
           "vars": {
             "pageHeader": "Using Nightwatch"

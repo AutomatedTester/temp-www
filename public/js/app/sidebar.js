@@ -22,7 +22,8 @@ domino.views.sidebar = new (function() {
             ['installation.html', 'Installing Nightwatch', [
               ['installation.html#install-node-js', 'Install Node.js'],
               ['installation.html#install-nightwatch', 'Install Nightwatch'],
-              ['installation.html#install-webdriver', 'Install Browser Drivers']
+              ['installation.html#install-webdriver', 'Install Browser Drivers'],
+              ['installation.html#install-selenium-server', 'Install Selenium Server']
             ]],
             ['quickstart.html', 'Quickstart Tutorial'],
             ['whats-new-v2.html', 'What\'s New in v2']
@@ -87,6 +88,7 @@ domino.views.sidebar = new (function() {
 
             ['finding-and-interacting-with-elements.html', 'Working with DOM Elements', [
               ['finding-and-interacting-with-elements.html#finding-amp-interacting-with-elements', 'Locating Elements'],
+              ['finding-and-interacting-with-elements.html#relative-locators', 'Relative Locators'],
               ['finding-and-interacting-with-elements.html#element-properties', 'Element Properties'],
             ]],
             ['using-xpath-selectors.html', 'Using XPath'],
@@ -97,6 +99,9 @@ domino.views.sidebar = new (function() {
               ['external-globals.html#global-test-settings', 'Global Test Settings'],
               ['external-globals.html#global-test-hooks', 'Global Test Hooks'],
               ['external-globals.html#global-reporter', 'Global Reporter']
+            ]],
+            ['running-tests-with-appium.html', 'Testing on Mobile Devices', [
+              ['running-tests-with-appium.html#', 'Using Appium']
             ]]
           ]
         },
