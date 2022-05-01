@@ -125,68 +125,103 @@
   ],
   "usage": "browser.assert.cssProperty(\"#main\", \"display\", \"block\");"
 },
-{
-  "name" : "domPropertyContains",
-  "descr": "Checks if the specified DOM property of a given element has the expected value. For all the available DOM element properties, consult the [Element doc at MDN](https://developer.mozilla.org/en-US/docs/Web/API/element).\n\nSeveral properties can be specified (either as an array or command-separated list). Nightwatch will check each one for presence.",
-  "parameters":[
-    {
-      "name" : "definition",
-      "type" : "string|object",
-      "descr" : "The selector (CSS / Xpath) used to locate the element. Can either be a string or an object which specifies <a href=\"https://nightwatchjs.org/guide/using-nightwatch/finding-and-interacting-with-elements.html\">element properties</a>.",
-      "optional" : false
-    },
-    {
-      "name" : "domProperty",
-      "type" : "string",
-      "descr" : "The DOM property name.",
-      "optional" : false
-    },
-    {
-      "name" : "expected",
-      "type" : "string|number",
-      "descr" : "The expected value of the DOM property to check.",
-      "optional" : false
-    },
-    {
-      "name" : "msg",
-      "type" : "string",
-      "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
-      "optional" : true
-    }
-  ],
-  "usage": "browser.assert.domPropertyContains('#main', 'classList', 'visible');\n\n  // in case the resulting property is an array, several elements could be specified\n  browser.assert.domPropertyEquals('#main', 'classList', ['class-one', 'class-two']);\n  browser.assert.domPropertyEquals('#main', 'classList', 'class-one,class-two');"
-},
-{
-  "name" : "domPropertyEquals",
-  "descr": "Checks if the specified DOM property of a given element has the expected value. For all the available DOM element properties, consult the [Element doc at MDN](https://developer.mozilla.org/en-US/docs/Web/API/element). If the result value is JSON object or array, a deep equality comparison will be performed.",
-  "parameters":[
-    {
-      "name" : "definition",
-      "type" : "string|object",
-      "descr" : "The selector (CSS / Xpath) used to locate the element. Can either be a string or an object which specifies <a href=\"https://nightwatchjs.org/guide/using-nightwatch/finding-and-interacting-with-elements.html\">element properties</a>.",
-      "optional" : false
-    },
-    {
-      "name" : "domProperty",
-      "type" : "string",
-      "descr" : "The DOM property name.",
-      "optional" : false
-    },
-    {
-      "name" : "expected",
-      "type" : "string|number",
-      "descr" : "The expected value of the DOM property to check.",
-      "optional" : false
-    },
-    {
-      "name" : "msg",
-      "type" : "string",
-      "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
-      "optional" : true
-    }
-  ],
-  "usage": "browser.assert.domPropertyEquals('#main', 'className', 'visible');\n\n  // deep equal will be performed\n  browser.assert.domPropertyEquals('#main', 'classList', ['class-one', 'class-two']);\n\n  // split on ',' and deep equal will be performed\n  browser.assert.domPropertyEquals('#main', 'classList', 'class-one,class-two']);"
-},
+  {
+    "name" : "domPropertyContains",
+    "descr": "Checks if the specified DOM property of a given element has the expected value. For all the available DOM element properties, consult the [Element doc at MDN](https://developer.mozilla.org/en-US/docs/Web/API/element).\n\nSeveral properties can be specified (either as an array or command-separated list). Nightwatch will check each one for presence.",
+    "parameters":[
+      {
+        "name" : "definition",
+        "type" : "string|object",
+        "descr" : "The selector (CSS / Xpath) used to locate the element. Can either be a string or an object which specifies <a href=\"https://nightwatchjs.org/guide/using-nightwatch/finding-and-interacting-with-elements.html\">element properties</a>.",
+        "optional" : false
+      },
+      {
+        "name" : "domProperty",
+        "type" : "string",
+        "descr" : "The DOM property name.",
+        "optional" : false
+      },
+      {
+        "name" : "expected",
+        "type" : "string|number",
+        "descr" : "The expected value of the DOM property to check.",
+        "optional" : false
+      },
+      {
+        "name" : "msg",
+        "type" : "string",
+        "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
+        "optional" : true
+      }
+    ],
+    "usage": "browser.assert.domPropertyContains('#main', 'classList', 'visible');\n\n  // in case the resulting property is an array, several elements could be specified\n  browser.assert.domPropertyEquals('#main', 'classList', ['class-one', 'class-two']);\n  browser.assert.domPropertyEquals('#main', 'classList', 'class-one,class-two');"
+  },
+
+  {
+    "name" : "domPropertyEquals",
+    "descr": "Checks if the specified DOM property of a given element has the expected value. For all the available DOM element properties, consult the [Element doc at MDN](https://developer.mozilla.org/en-US/docs/Web/API/element). If the result value is JSON object or array, a deep equality comparison will be performed.",
+    "parameters":[
+      {
+        "name" : "definition",
+        "type" : "string|object",
+        "descr" : "The selector (CSS / Xpath) used to locate the element. Can either be a string or an object which specifies <a href=\"https://nightwatchjs.org/guide/using-nightwatch/finding-and-interacting-with-elements.html\">element properties</a>.",
+        "optional" : false
+      },
+      {
+        "name" : "domProperty",
+        "type" : "string",
+        "descr" : "The DOM property name.",
+        "optional" : false
+      },
+      {
+        "name" : "expected",
+        "type" : "string|number",
+        "descr" : "The expected value of the DOM property to check.",
+        "optional" : false
+      },
+      {
+        "name" : "msg",
+        "type" : "string",
+        "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
+        "optional" : true
+      }
+    ],
+    "usage": "browser.assert.domPropertyEquals('#main', 'className', 'visible');\n\n  // deep equal will be performed\n  browser.assert.domPropertyEquals('#main', 'classList', ['class-one', 'class-two']);\n\n  // split on ',' and deep equal will be performed\n  browser.assert.domPropertyEquals('#main', 'classList', 'class-one,class-two']);"
+  },
+
+  {
+    "name" : "domPropertyMatches",
+    "descr": "Check if specified DOM property value of a given element matches a regex. For all the available DOM element properties, consult the [Element doc at MDN](https://developer.mozilla.org/en-US/docs/Web/API/element).",
+
+    "parameters":[
+      {
+        "name" : "definition",
+        "type" : "string|object",
+        "descr" : "The selector (CSS / Xpath) used to locate the element. Can either be a string or an object which specifies <a href=\"https://nightwatchjs.org/guide/using-nightwatch/finding-and-interacting-with-elements.html\">element properties</a>.",
+        "optional" : false
+      },
+      {
+        "name" : "domProperty",
+        "type" : "string",
+        "descr" : "The DOM property name.",
+        "optional" : false
+      },
+      {
+        "name" : "regex",
+        "type" : "string|RegExp",
+        "descr" : "Regex to match against",
+        "optional" : false
+      },
+      {
+        "name" : "msg",
+        "type" : "string",
+        "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
+        "optional" : true
+      }
+    ],
+    "usage": "browser.assert.domPropertyMatches('#main', 'tagName', /^frame/);"
+  },
+
   {
     "name" : "elementsCount",
     "descr": "Checks if the number of elements specified by a selector is equal to a given value.",
@@ -206,44 +241,27 @@
     ],
     "usage": "browser.assert.elementsCount('div', 10);"
   },
-{
-  "name" : "elementPresent",
-  "descr": "Checks if the given element exists in the DOM.",
-  "parameters":[
-    {
-      "name" : "definition",
-      "type" : "string|object",
-      "descr" : "The selector (CSS / Xpath) used to locate the element. Can either be a string or an object which specifies <a href=\"https://nightwatchjs.org/guide/using-nightwatch/finding-and-interacting-with-elements.html\">element properties</a>.",
-      "optional" : false
-    },
-    {
-      "name" : "msg",
-      "type" : "string",
-      "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
-      "optional" : true
-    }
-  ],
-  "usage": "browser.assert.elementPresent(\"#main\");"
-},
-{
-  "name" : "enabled",
-  "descr": "Checks if the given element is enabled (as indicated by the 'disabled' attribute).",
-  "parameters":[
-    {
-      "name" : "definition",
-      "type" : "string|object",
-      "descr" : "The selector (CSS / Xpath) used to locate the element. Can either be a string or an object which specifies <a href=\"https://nightwatchjs.org/guide/using-nightwatch/finding-and-interacting-with-elements.html\">element properties</a>.",
-      "optional" : false
-    },
-    {
-      "name" : "msg",
-      "type" : "string",
-      "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
-      "optional" : true
-    }
-  ],
-  "usage": "browser.assert.enabled('.should_be_enabled');\n   browser.assert.enabled({selector: '.should_be_enabled'});\n  browser.assert.enabled({selector: '.should_be_enabled', supressNotFoundErrors: true});"
-},
+
+  {
+    "name" : "elementPresent",
+    "descr": "Checks if the given element exists in the DOM.",
+    "parameters":[
+      {
+        "name" : "definition",
+        "type" : "string|object",
+        "descr" : "The selector (CSS / Xpath) used to locate the element. Can either be a string or an object which specifies <a href=\"https://nightwatchjs.org/guide/using-nightwatch/finding-and-interacting-with-elements.html\">element properties</a>.",
+        "optional" : false
+      },
+      {
+        "name" : "msg",
+        "type" : "string",
+        "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
+        "optional" : true
+      }
+    ],
+    "usage": "browser.assert.elementPresent(\"#main\");"
+  },
+
   {
     "name" : "hasClass",
     "descr": "Checks if the given element has the specified CSS class. Multiple css classes can be specified either as an array or a space-delimited string.\n\nIn case the expected value is a space delimited string, the order is not taken into account - each value will individually be checked against.",
@@ -270,6 +288,7 @@
     ],
     "usage": "browser.assert.hasClass(\"#main\", \"container\");\n  browser.assert.hasClass('#main', ['visible', 'container']);\n  browser.assert.hasClass('#main', 'visible container');"
   },
+
   {
     "name" : "hasAttribute",
     "descr": "Checks if the given element contains the specified DOM attribute. Multiple attributes can be specified either as an array or a space-delimited string.\n\nIn case the expected value is a space delimited string, the order is not taken into account - each value will individually be checked against.",
@@ -296,6 +315,28 @@
     ],
     "usage": "browser.assert.hasAttribute(\"#main\", \"data-track\");\n  browser.assert.hasAttribute('#main', ['data-track', 'selected']);\n  browser.assert.hasAttribute('#main', 'selected enabled');"
   },
+
+
+  {
+    "name" : "enabled",
+    "descr": "Checks if the given element is enabled (as indicated by the 'disabled' attribute).",
+    "parameters":[
+      {
+        "name" : "definition",
+        "type" : "string|object",
+        "descr" : "The selector (CSS / Xpath) used to locate the element. Can either be a string or an object which specifies <a href=\"https://nightwatchjs.org/guide/using-nightwatch/finding-and-interacting-with-elements.html\">element properties</a>.",
+        "optional" : false
+      },
+      {
+        "name" : "msg",
+        "type" : "string",
+        "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
+        "optional" : true
+      }
+    ],
+    "usage": "browser.assert.enabled('.should_be_enabled');\n   browser.assert.enabled({selector: '.should_be_enabled'});\n  browser.assert.enabled({selector: '.should_be_enabled', supressNotFoundErrors: true});"
+  },
+
   {
     "name" : "selected",
     "descr": "Checks if the given element is selected.",
@@ -315,89 +356,15 @@
     ],
     "usage": "browser.assert.selected('#main select option.first');"
   },
-{
-  "name" : "value",
-  "descr": "Checks if the given form element's value equals the expected value.",
-  "parameters":[
-    {
-      "name" : "definition",
-      "type" : "string|object",
-      "descr" : "The selector (CSS / Xpath) used to locate the element. Can either be a string or an object which specifies <a href=\"https://nightwatchjs.org/guide/using-nightwatch/finding-and-interacting-with-elements.html\">element properties</a>.",
-      "optional" : false
-    },
-    {
-      "name" : "expectedText",
-      "type" : "string",
-      "descr" : "The expected text.",
-      "optional" : false
-    },
-    {
-      "name" : "msg",
-      "type" : "string",
-      "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
-      "optional" : true
-    }
-  ],
-  "usage": "browser.assert.value(\"form.login input[type=text]\", \"username\");"
-},
-{
-  "name" : "valueContains",
-  "descr": "Checks if the given form element's value contains the expected value.",
-  "parameters":[
-    {
-      "name" : "definition",
-      "type" : "string|object",
-      "descr" : "The selector (CSS / Xpath) used to locate the element. Can either be a string or an object which specifies <a href=\"https://nightwatchjs.org/guide/using-nightwatch/finding-and-interacting-with-elements.html\">element properties</a>.",
-      "optional" : false
-    },
-    {
-      "name" : "expectedText",
-      "type" : "string",
-      "descr" : "The expected text.",
-      "optional" : false
-    },
-    {
-      "name" : "msg",
-      "type" : "string",
-      "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
-      "optional" : true
-    }
-  ],
-  "usage": "browser.assert.valueContains(\"form.login input[type=text]\", \"username\");"
-},
-{
-  "name" : "visible",
-  "descr": "Checks if the given element is visible on the page.",
-  "parameters":[
-    {
-      "name" : "definition",
-      "type" : "string|object",
-      "descr" : "The selector (CSS / Xpath) used to locate the element. Can either be a string or an object which specifies <a href=\"https://nightwatchjs.org/guide/using-nightwatch/finding-and-interacting-with-elements.html\">element properties</a>.",
-      "optional" : false
-    },
-    {
-      "name" : "msg",
-      "type" : "string",
-      "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
-      "optional" : true
-    }
-  ],
-  "usage": "browser.assert.visible('.should_be_visible');\n  browser.assert.visible({selector: '.should_be_visible'});\n  browser.assert.visible({selector: '.should_be_visible', supressNotFoundErrors: true});"
-},
+
   {
-    "name" : "containsText",
-    "descr": "Checks if the given element contains the specified text.",
+    "name" : "titleContains",
+    "descr": "Checks if the current title contains the given value.",
     "parameters":[
       {
-        "name" : "definition",
-        "type" : "string|object",
-        "descr" : "The selector (CSS/Xpath) used to locate the element. Can either be a string or an object which specifies <a href=\"https://nightwatchjs.org/guide/using-nightwatch/finding-and-interacting-with-elements.html\">element properties</a>.",
-        "optional" : false
-      },
-      {
-        "name" : "expectedText",
+        "name" : "value",
         "type" : "string",
-        "descr" : "The text to look for.",
+        "descr" : "The value to look for.",
         "optional" : false
       },
       {
@@ -407,11 +374,11 @@
         "optional" : true
       }
     ],
-    "usage": "browser.assert.containsText(\"#main\", \"The Night Watch\");"
+    "usage": "browser.assert.titleContains('Nightwatch.js');"
   },
 
   {
-    "name" : "title",
+    "name" : "textEquals",
     "descr": "Checks if the page title equals the given value.",
     "parameters":[
       {
@@ -427,8 +394,29 @@
         "optional" : true
       }
     ],
-    "usage": "browser.assert.title(\"Nightwatch.js\");"
+    "usage": "browser.assert.textEquals(\"Nightwatch.js\");"
   },
+
+  {
+    "name" : "titleMatches",
+    "descr": "Checks if the current title matches a regular expression.",
+    "parameters":[
+      {
+        "name" : "regex",
+        "type" : "string|RegExp",
+        "descr" : "Regex to match the page title against.",
+        "optional" : false
+      },
+      {
+        "name" : "msg",
+        "type" : "string",
+        "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
+        "optional" : true
+      }
+    ],
+    "usage": "browser.assert.titleMatches('^Nightwatch');"
+  },
+
   {
     "name" : "urlContains",
     "descr": "Checks if the current URL contains the given value.",
@@ -466,6 +454,96 @@
       }
     ],
     "usage": "browser.assert.urlEquals('https://nightwatchjs.org');"
+  },
+
+  {
+    "name" : "urlMatches",
+    "descr": "Checks if the current url matches the given regular expression.",
+    "parameters":[
+      {
+        "name" : "regex",
+        "type" : "string|RegExp",
+        "descr" : "Regex to match the URL against.",
+        "optional" : false
+      },
+      {
+        "name" : "msg",
+        "type" : "string",
+        "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
+        "optional" : true
+      }
+    ],
+    "usage": "browser.assert.urlMatches('^https');"
+  },
+
+  {
+    "name" : "visible",
+    "descr": "Checks if the given element is visible on the page.",
+    "parameters":[
+      {
+        "name" : "definition",
+        "type" : "string|object",
+        "descr" : "The selector (CSS / Xpath) used to locate the element. Can either be a string or an object which specifies <a href=\"https://nightwatchjs.org/guide/using-nightwatch/finding-and-interacting-with-elements.html\">element properties</a>.",
+        "optional" : false
+      },
+      {
+        "name" : "msg",
+        "type" : "string",
+        "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
+        "optional" : true
+      }
+    ],
+    "usage": "browser.assert.visible('.should_be_visible');\n  browser.assert.visible({selector: '.should_be_visible'});\n  browser.assert.visible({selector: '.should_be_visible', supressNotFoundErrors: true});"
+  },
+  {
+    "name" : "valueContains",
+    "descr": "Checks if the given form element's value contains the expected value.",
+    "parameters":[
+      {
+        "name" : "definition",
+        "type" : "string|object",
+        "descr" : "The selector (CSS / Xpath) used to locate the element. Can either be a string or an object which specifies <a href=\"https://nightwatchjs.org/guide/using-nightwatch/finding-and-interacting-with-elements.html\">element properties</a>.",
+        "optional" : false
+      },
+      {
+        "name" : "expectedText",
+        "type" : "string",
+        "descr" : "The expected text.",
+        "optional" : false
+      },
+      {
+        "name" : "msg",
+        "type" : "string",
+        "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
+        "optional" : true
+      }
+    ],
+    "usage": "browser.assert.valueContains(\"form.login input[type=text]\", \"username\");"
+  },
+  {
+    "name" : "valueEquals",
+    "descr": "Checks if the given form element's value equals the expected value.",
+    "parameters":[
+      {
+        "name" : "definition",
+        "type" : "string|object",
+        "descr" : "The selector (CSS / Xpath) used to locate the element. Can either be a string or an object which specifies <a href=\"https://nightwatchjs.org/guide/using-nightwatch/finding-and-interacting-with-elements.html\">element properties</a>.",
+        "optional" : false
+      },
+      {
+        "name" : "expectedText",
+        "type" : "string",
+        "descr" : "The expected text.",
+        "optional" : false
+      },
+      {
+        "name" : "msg",
+        "type" : "string",
+        "descr" : "Optional log message to display in the output. If missing, one is displayed by default.",
+        "optional" : true
+      }
+    ],
+    "usage": "browser.assert.valueEquals(\"form.login input[type=text]\", \"username\");"
   }
 ]
 }
