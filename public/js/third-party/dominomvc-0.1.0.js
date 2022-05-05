@@ -3020,6 +3020,11 @@ domino.eventmanager.EventBus.prototype = {
         }
       } catch (err) {}
 
+      var logical = $(this).attr('data-logical');
+      if(logical !== null) {
+        $(this).addClass('active');
+        return;
+      }
 
       var href = $(this).attr('href');
       var hostname = location.protocol + '//' + location.host;

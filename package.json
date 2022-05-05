@@ -7,6 +7,7 @@
     "test": "cross-env DEV_TEST_URL=http://localhost:3001 nightwatch",
     "build:apidocs": "node build/apidocs.js",
     "build:pages": "node build/pages.js",
+    "build:releases": "node build/releases.js",
     "build:static": "node build/static.js",
     "dev:server": "node lib/server.js",
     "build:web": "npm run build:static && npm run build:pages"

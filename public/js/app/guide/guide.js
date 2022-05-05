@@ -29,7 +29,7 @@ domino.views.define('guide', function(view) {
     var sectionPath = subSection;
     var currentUriAttr = docsContainer.attr('data-page-uri') || '';
 
-    var currentUri = document.location.protocol + '//' + document.location.hostname + currentUriAttr;
+    var currentUri = document.location.protocol + '//' + document.location.host + currentUriAttr;
     var innerSectionFromHash;
     var locationHrefNoHash = document.location.href;
     var hashChange = false;
@@ -196,7 +196,7 @@ domino.views.define('guide', function(view) {
   this.sectionView = function(view_script) {
     view_script.no_render = true;
     var currentUriAttr = document.documentElement.getAttribute('data-uri');
-    var currentUri = document.location.protocol + '//' + document.location.hostname + currentUriAttr;
+    var currentUri = document.location.protocol + '//' + document.location.host + currentUriAttr;
 
     if (document.location.href === currentUri) {
       $('#guide-container .bs-sidenav li.active ul li a:first').click();
