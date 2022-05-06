@@ -26,12 +26,6 @@
   ],
 
   "sections": {
-    "blog": {
-      "pageTitle" : "Blog | Nightwatch.js",
-      "title" : "Blog",
-      "description" : "Updates and tutorials from the Nightwatch team",
-      "itemsList": true
-    },
     "guide" : {
       "subsections": {
         "overview" : {
@@ -255,7 +249,7 @@
     }
   },
 
-  "pageSrcFolders" : ["blog","guide", "api"],
+  "pageSrcFolders" : ["guide", "api"],
   "pages": {
     "Using-nightwatch" : {
       "using-nightwatch" : "guide/using-nightwatch/using-nightwatch.md",
