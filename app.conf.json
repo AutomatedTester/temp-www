@@ -34,18 +34,6 @@
     },
     "guide" : {
       "subsections": {
-        "getting-started": {
-          "pages": [
-            "introduction",
-            "installation",
-            "quickstart",
-            "whats-new-v2"
-          ],
-          "vars": {
-            "pageHeader": "Getting Started with Nightwatch"
-          }
-        },
-
         "overview" : {
           "pages": [
             "what-is-nightwatch",

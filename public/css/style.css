@@ -461,16 +461,14 @@ section[data-page-uri] {
 [data-uri="/guide/"] section [data-page-uri="/guide/"],
 [data-uri="/guide"] [data-page-uri^="/guide"],
 [data-uri="/guide/"] [data-page-uri^="/guide/"],
-[data-uri^="/guide/getting-started"] section [data-page-uri^="/guide/getting-started"],
-[data-uri^="/guide/configuration"] section [data-page-uri^="/guide/configuration"],
-[data-uri^="/guide/writing-tests"] section [data-page-uri^="/guide/writing-tests"],
-[data-uri^="/guide/using-nightwatch"] section [data-page-uri^="/guide/using-nightwatch"],
-[data-uri^="/guide/third-party-runners"] section [data-page-uri^="/guide/third-party-runners"],
-[data-uri^="/guide/browser-drivers-setup"] section [data-page-uri^="/guide/browser-drivers-setup"],
-[data-uri^="/guide/running-tests"] section [data-page-uri^="/guide/running-tests"],
-[data-uri^="/guide/extending-nightwatch"] section [data-page-uri^="/guide/extending-nightwatch"],
-[data-uri^="/guide/working-with-page-objects"] section [data-page-uri^="/guide/working-with-page-objects"],
-[data-uri^="/guide/migrating-to-nightwatch"] section [data-page-uri^="/guide/migrating-to-nightwatch"] {
+[data-uri^="/guide/overview"] section [data-page-uri^="/guide/overview"],
+[data-uri^="/guide/quickstarts"] section [data-page-uri^="/guide/quickstarts"],
+[data-uri^="/guide/totorials"] section [data-page-uri^="/guide/totorials"],
+[data-uri^="/guide/concepts"] section [data-page-uri^="/guide/concepts"],
+[data-uri^="/guide/browser-drivers"] section [data-page-uri^="/guide/browser-drivers"],
+[data-uri^="/guide/how-to-guides"] section [data-page-uri^="/guide/how-to-guides"],
+[data-uri^="/guide/reference"] section [data-page-uri^="/guide/reference"],
+[data-uri^="/guide/resources"] section [data-page-uri^="/guide/resources"] {
   display: block;
 }
 

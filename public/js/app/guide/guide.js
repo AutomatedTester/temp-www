@@ -16,7 +16,7 @@ domino.views.define('guide', function(view) {
 
   var mainSection = 'guide';
   var firstRender = true;
-  var defaultSection = 'getting-started';
+  var defaultSection = 'overview';
 
   function renderGuidePage(view_script, params, cb) {
     view_script.no_render = true;
@@ -104,7 +104,7 @@ domino.views.define('guide', function(view) {
         $('#guide-container .docs-section .page-content').html(data);
       } else {
         $('#guide-container').html(data);
-        buildSideBar.call(self, 'guide', 'getting-started');
+        buildSideBar.call(self, 'guide', 'overview');
       }
 
       if (subSection && pageName) {
@@ -112,6 +112,7 @@ domino.views.define('guide', function(view) {
 
         if (linkElement.length) {
           linkElement.addClass('active');
+          linkElement.closest('li.nav-item[data-logical]').children().addClass('active');
         } else if (newUriAttr.indexOf('.html') > 0) {
           // var linkParts = newUriAttr.split('/');
           // linkParts.pop();

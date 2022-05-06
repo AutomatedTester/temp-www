@@ -5,31 +5,6 @@ domino.views.sidebar = new (function() {
       content: {
         ////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////
-        'getting-started': {
-          title: 'Getting Started',
-          // link: '',
-          nthChildIndex: 1,
-          linkTitle: 'Getting Started',
-          baseUrl: '/guide/getting-started/',
-          sidenavData: [
-            ['introduction.html', 'Introduction', [
-              ['introduction.html#what-is-nightwatch', 'What Is Nightwatch?'],
-              ['introduction.html#theory-of-operation', 'How Does It Work?'],
-              ['introduction.html#overview-of-webdriver', 'What is WebDriver?'],
-              ['introduction.html#browser-support-table', 'Browser Support'],
-              ['introduction.html#nightwatch-selenium-server', 'Nightwatch &amp; Selenium Server']
-            ]],
-            ['installation.html', 'Installing Nightwatch', [
-              ['installation.html#install-node-js', 'Install Node.js'],
-              ['installation.html#install-nightwatch', 'Install Nightwatch'],
-              ['installation.html#install-webdriver', 'Install Browser Drivers'],
-              ['installation.html#install-selenium-server', 'Install Selenium Server']
-            ]],
-            ['quickstart.html', 'Quickstart Tutorial'],
-            ['whats-new-v2.html', 'What\'s New in v2']
-          ]
-        },
-
         'overview': {
           title: 'Overview',
           // link: '',
@@ -389,11 +364,13 @@ domino.views.sidebar = new (function() {
         var baseUrl = sectionData.baseUrl || '';
         for (var i = 0; i < sectionData.sidenavData.length; i++) {
           // level 1
-          sidenavContent.push('<li class="nav-item">');
-
           content = sectionData.sidenavData[i];
           var logical = content[0] === 'logical';
+          var subpath = logical? "" : content[0];
+          var dataattr = logical? "data-logical" : "";
 
+          sidenavContent.push('<li class="nav-item" '+ dataattr + '>');
+          
           if (content.length === 3 && !Array.isArray(content[2])) {
             if (baseUrl) {
               sidenavContent.push('<h5><a class="nav-link" href="' + baseUrl + content[1] +'">'+ content[2] +'</a></h5>');
@@ -402,8 +379,7 @@ domino.views.sidebar = new (function() {
             }
 
           } else {
-            var subpath = logical? "" : content[0];
-            var dataattr = logical? "data-logical" : "";
+            
 
             sidenavContent.push('<a class="nav-link" href="' + baseUrl +  subpath +'"' + dataattr +' >'+ content[1] + '</a>');
 
