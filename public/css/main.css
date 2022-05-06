@@ -1786,17 +1786,14 @@ h3#overview-of-webdriver span {
 h3#install-webdriver {
   margin-top: -30px;
 }
-p.whatis-logo {
-  height: 150px;
-  margin-top: -158px;
-  margin-right: 50px;
-}
-p.whatis-logo img {
+
+img#whatis-logo  {
   float: right;
-  height: 150px;
+  width: 110px;
 }
+
 p.whatis-logo.w3c-logo img {
-  height: 60px;
+  height: 50px;
   border-color: #1a5e9a;
   border-style: solid;
   border-width: .65rem .7rem .6rem;
@@ -1807,10 +1804,10 @@ p.whatis-logo.w3c-logo img {
 
 p.whatis-logo.w3c-logo {
   border-bottom: 0;
-  margin-right: 20px;
-  height: 70px;
-  margin-top: -74px;
+  margin-top: -70px;
+  float: right;
 }
+
 p.whatis-logo + p {
   clear:both;
 }
