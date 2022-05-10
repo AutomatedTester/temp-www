@@ -463,7 +463,7 @@ section[data-page-uri] {
 [data-uri="/guide/"] [data-page-uri^="/guide/"],
 [data-uri^="/guide/overview"] section [data-page-uri^="/guide/overview"],
 [data-uri^="/guide/quickstarts"] section [data-page-uri^="/guide/quickstarts"],
-[data-uri^="/guide/totorials"] section [data-page-uri^="/guide/totorials"],
+[data-uri^="/guide/tutorials"] section [data-page-uri^="/guide/tutorials"],
 [data-uri^="/guide/concepts"] section [data-page-uri^="/guide/concepts"],
 [data-uri^="/guide/browser-drivers"] section [data-page-uri^="/guide/browser-drivers"],
 [data-uri^="/guide/how-to-guides"] section [data-page-uri^="/guide/how-to-guides"],
