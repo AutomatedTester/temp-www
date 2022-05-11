@@ -5,205 +5,257 @@ domino.views.sidebar = new (function() {
       content: {
         ////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////
-        'getting-started': {
-          title: 'Getting Started',
+        'overview': {
+          title: 'Overview',
           // link: '',
           nthChildIndex: 1,
-          linkTitle: 'Getting Started',
-          baseUrl: '/guide/getting-started/',
+          linkTitle: 'Overview',
+          baseUrl: '/guide/overview/',
           sidenavData: [
-            ['introduction.html', 'Introduction', [
-              ['introduction.html#what-is-nightwatch', 'What Is Nightwatch?'],
-              ['introduction.html#theory-of-operation', 'How Does It Work?'],
-              ['introduction.html#overview-of-webdriver', 'What is WebDriver?'],
-              ['introduction.html#browser-support-table', 'Browser Support'],
-              ['introduction.html#nightwatch-selenium-server', 'Nightwatch &amp; Selenium Server']
+            ['what-is-nightwatch.html', 'What is Nightwatch?', [
+              ['what-is-nightwatch.html#why-choose-nightwatch', 'Why choose Nightwatch?'],
+              ['what-is-nightwatch.html#architecture-overview', 'Architecture overview'],
+              ['what-is-nightwatch.html#supported-browsers', 'Supported browsers']
             ]],
-            ['installation.html', 'Installing Nightwatch', [
-              ['installation.html#install-node-js', 'Install Node.js'],
-              ['installation.html#install-nightwatch', 'Install Nightwatch'],
-              ['installation.html#install-webdriver', 'Install Browser Drivers'],
-              ['installation.html#install-selenium-server', 'Install Selenium Server']
-            ]],
-            ['quickstart.html', 'Quickstart Tutorial'],
-            ['whats-new-v2.html', 'What\'s New in v2']
+            ['whats-new-in-v2.html', 'What’s new in v2.0?'],
           ]
         },
 
-        'configuration': {
-          title: 'Configuration',
+        'quickstarts': {
+          title: 'Quickstarts ',
           // link: '',
           nthChildIndex: 1,
-          linkTitle: 'Configuration',
-          baseUrl: '/guide/configuration/',
+          linkTitle: 'Quickstarts',
+          baseUrl: '/guide/quickstarts/',
           sidenavData: [
-            ['overview.html', 'Overview', [
-              ['overview.html#nightwatch-conf-js', 'nightwatch.conf.js'],
-              ['overview.html#auto-generated-configuration', 'Auto-generated Configuration'],
-              ['overview.html#working-with-test-environments', 'Working with Test Environments'],
-              ['overview.html#working-with-test-globals', 'Working with Test Globals'],
-              ['overview.html#using-env-variables', 'Using Env Variables'],
-              ['overview.html#manual-configuration', 'Manual Configuration']
+            ['create-and-run-a-nightwatch-test.html', 'Create and run a Nightwatch test', [
+              ['create-and-run-a-nightwatch-test.html#install-nightwatch', 'Install Nightwatch'],
+              ['create-and-run-a-nightwatch-test.html#install-browser-drivers', 'Install Browser Drivers'],
+              ['create-and-run-a-nightwatch-test.html#run-a-demo-test', 'Run a demo test']
             ]],
-
-            ['defaults.html', 'Defaults'],
-
-            ['settings.html', 'All Settings', [
-              ['settings.html#base-settings', 'Base Settings'],
-              ['settings.html#test-runner-settings', 'Test Runner Settings'],
-              ['settings.html#test-session-settings', 'Test Session Settings'],
-              ['settings.html#filtering-settings', 'Filtering Settings'],
-              ['settings.html#output-settings', 'Output Settings'],
-              ['settings.html#webdriver-settings', 'WebDriver Settings'],
-              ['settings.html#selenium-server-settings', 'Selenium Settings']
+            ['create-and-run-a-test-with-selenium-server.html', 'Create and run a test with Selenium Server', [
+              ['create-and-run-a-test-with-selenium-server.html#install-selenium-server-standalone', 'Install Selenium Server Standalone'],
+              ['create-and-run-a-test-with-selenium-server.html#run-a-demo-test', 'Run a demo test']
+            ]],
+            ['create-and-run-a-test-with-cloud-providers.html', 'Create and run a test with cloud providers', [
+              ['create-and-run-a-test-with-cloud-providers.html#using-browser-stack', 'Using BrowserStack'],
+              ['create-and-run-a-test-with-cloud-providers.html#using-saucelabs', 'Using Saucelabs'],
+              ['create-and-run-a-test-with-cloud-providers.html#using-aws-device-farm', 'Using AWS Device Farm']
             ]]
           ]
         },
 
-        'browser-drivers-setup': {
-          title: 'Browser Drivers Specific | ',
-          nthChildIndex: 2,
-          linkTitle: 'Browser Drivers Specific',
-          baseUrl: '/guide/browser-drivers-setup/',
+        'tutorials': {
+          title: 'Tutorials ',
+          // link: '',
+          nthChildIndex: 1,
+          linkTitle: 'Tutorials',
+          baseUrl: '/guide/tutorials/',
           sidenavData: [
-            ['overview.html', 'Overview'],
-            ['geckodriver.html', 'GeckoDriver (Firefox)'],
-            ['chromedriver.html', 'ChromeDriver'],
-            ['edgedriver.html', 'EdgeDriver'],
-            ['safaridriver.html', 'SafariDriver']
+            ['learn-how-to-write-complex-user-actions.html', 'Learn how to write complex user actions'],
+            ['run-your-tests-in-parallel.html', 'Run your tests in parallel', [
+              ['run-your-tests-in-parallel.html#using-test-workers', 'Using test workers'],
+              ['run-your-tests-in-parallel.html#using-multiple-browsers', 'Using multiple browsers'],
+            ]],
+            ['create-and-run-component-tests.html', 'Create and run component tests', [
+              ['create-and-run-component-tests.html#for-vue-js-projects', 'for Vue.js projects'],
+              ['create-and-run-component-tests.html#for-react-projects', 'for React projects'],
+            ]],
+            ['learn-how-to-write-custom-commands-and-custom-assertions.html', 'Learn how to write custom commands and custom assertions', [
+              ['learn-how-to-write-custom-commands-and-custom-assertions.html#custom-commands', 'Custom commands'],
+              ['learn-how-to-write-custom-commands-and-custom-assertions.html#custom-assertions', 'Custom assertions']
+            ]],
+            ['create-and-run-node-js-unit-integration-tests-with-nightwatch.html', 'Create and run Node.js unit & integration tests with Nightwatch', [
+              ['create-and-run-node-js-unit-integration-tests-with-nightwatch.html#add-details-on-how-to-do-api-testing', 'Add details on how to do API testing ']
+            ]],
+            ['build-a-custom-test-runner-using-the-programmatic-api.html', 'Build a custom test runner using the programmatic API'],
+            ['learn-how-to-run-your-tests-on-github-actions.html', 'Learn how to run your tests on Github Actions'],
+            ['develop-and-publish-a-nightwatch-plugin.html', 'Develop and publish a Nightwatch plugin'],
+            ['cross-browser-testing-at-scale-using-selenium-grid.html', 'Cross-browser testing at scale using Selenium Grid'],
+            ['use-nightwatch-with-appium-for-mobile-web-testing.html', 'Use Nightwatch with Appium for mobile web testing'],
+            ['learn-how-to-test-web-rtc-applications.html', 'Learn how to test WebRTC applications']
           ]
         },
 
-        'using-nightwatch': {
-          title: '',
+        'concepts': {
+          title: 'Concepts ',
           // link: '',
           nthChildIndex: 1,
-          linkTitle: 'Using Nightwatch',
-          baseUrl: '/guide/using-nightwatch/',
+          linkTitle: 'Concepts',
+          baseUrl: '/guide/concepts/',
           sidenavData: [
-            ['concepts.html', 'Core Concepts', [
-              ['concepts.html#defining-test-environments', 'Test Environments'],
-              ['concepts.html#using-test-globals', 'Test Globals']
+            ['what-is-end-to-end-testing.html', 'What is end-to-end testing?'],
+            ['introduction-to-selenium-and-webdriver.html', 'Introduction to Selenium and Webdriver'],
+            ['test-environments.html', 'Test environments'],
+            ['test-globals.html', 'Test globals'],
+            ['session-capabilities.html', 'Session capabilities'],
+            ['parallel-testing-in-nightwatch.html', 'Parallel testing in Nightwatch', [
+              ['parallel-testing-in-nightwatch.html#using-test-workers', 'Using test workers'],
+              ['parallel-testing-in-nightwatch.html#using-multiple-environments', 'Using multiple environments'],
             ]],
-
-            ['finding-and-interacting-with-elements.html', 'Working with DOM Elements', [
-              ['finding-and-interacting-with-elements.html#finding-amp-interacting-with-elements', 'Locating Elements'],
-              ['finding-and-interacting-with-elements.html#relative-locators', 'Relative Locators'],
-              ['finding-and-interacting-with-elements.html#element-properties', 'Element Properties'],
+            ['page-object-model.html', 'Page Object Model', [
+              ['page-object-model.html#overview', 'Overview'],
+              ['page-object-model.html#elements', 'Elements'],
+              ['page-object-model.html#sections', 'Sections'],
+              ['page-object-model.html#page-specific-custom-commands', 'Page-specific custom commands'],
             ]],
-            ['using-xpath-selectors.html', 'Using XPath'],
-            ['using-test-hooks.html', 'Test Hooks', [
-              ['using-test-hooks.html#asynchronous-test-hooks', 'Asynchronous Test Hooks']
-            ]],
-            ['external-globals.html', 'External Globals', [
-              ['external-globals.html#global-test-settings', 'Global Test Settings'],
-              ['external-globals.html#global-test-hooks', 'Global Test Hooks'],
-              ['external-globals.html#global-reporter', 'Global Reporter']
-            ]],
-            ['running-tests-with-appium.html', 'Testing on Mobile Devices', [
-              ['running-tests-with-appium.html#', 'Using Appium']
+            ['component-testing.html', 'Component testing', [
+                ['component-testing.html#what-is-component-testing', 'What is component testing?'],
+                ['component-testing.html#component-testing-in-nightwatch', 'Component testing in Nightwatch'],
             ]]
           ]
         },
 
-        'writing-tests': {
-          title: 'Writing Tests',
+        'browser-drivers': {
+          title: 'Browser Drivers',
           // link: '',
           nthChildIndex: 1,
-          linkTitle: 'Writing Tests',
-          baseUrl: '/guide/writing-tests/',
+          linkTitle: 'Browser Drivers',
+          baseUrl: '/guide/browser-drivers/',
           sidenavData: [
-            ['using-bdd-describe.html', 'describe() interface', [
-              ['using-bdd-describe.html#overview', 'Overview'],
-              ['using-bdd-describe.html#basic-example', 'Basic Example'],
-              ['using-bdd-describe.html#complete-syntax', 'Complete BDD Syntax']
+            ['gecko-driver-firefox.html', 'GeckoDriver (Firefox)', [
+              ['gecko-driver-firefox.html#installation', 'Installation'],
+              ['gecko-driver-firefox.html#cli-reference', 'CLI reference'],
+              ['gecko-driver-firefox.html#use-a-specific-firefox-profile', 'Use a specific Firefox profile'],
+              ['gecko-driver-firefox.html#use-a-specific-firefox-binary', 'Use a specific Firefox binary'],
             ]],
-            ['using-exports.html', 'exports interface'],
-            ['using-es6-async.html', 'Using ES6 async/await'],
-            ['writing-assertions.html', 'Writing Assertions'],
-            ['expect-assertions.html', 'Using .expect() assertions'],
-            ['writing-unit-tests.html', 'Writing Unit Tests']
-          ]
-        },
-
-        'running-tests': {
-          title: 'Running Tests | ',
-          nthChildIndex: 2,
-          linkTitle: 'Running Tests',
-          baseUrl: '/guide/running-tests/',
-          sidenavData: [
-            ['nightwatch-runner.html', 'Nightwatch Runner'],
-            ['command-line-options.html', 'Command-line Options'],
-            ['test-environments.html', 'Test Environments'],
-            ['test-groups.html', 'Test Groups'],
-            ['test-tags.html', 'Test Tags'],
-            ['parallel-running.html', 'Running in Parallel'],
-            ['disabling-tests.html', 'Disabling / Skipping Tests'],
-            ['programmatic-api.html', 'Programmatic API']
-          ]
-        },
-
-        'working-with-page-objects': {
-          title: 'Working with Page Objects | ',
-          nthChildIndex: 4,
-          baseUrl: '/guide/working-with-page-objects/',
-          linkTitle: 'Working with Page Objects',
-          sidenavData: [
-            ['using-page-objects.html', 'Using Page Objects'],
-            ['defining-elements.html', 'Defining Elements'],
-            ['defining-sections.html', 'Defining Sections'],
-            ['writing-commands.html', 'Page-specific Custom Commands']
-          ]
-        },
-
-        'extending-nightwatch': {
-          title: 'Extending Nightwatch | ',
-          nthChildIndex: 3,
-          linkTitle: 'Extending Nightwatch',
-          baseUrl: '/guide/extending-nightwatch/',
-          sidenavData: [
-            ['custom-commands.html', 'Custom commands'],
-            ['custom-assertions.html', 'Custom assertions'],
-            ['custom-reporter.html', 'Custom reporter'],
-            ['plugin-api.html', 'Plugin API']
-          ]
-        },
-
-        'third-party-runners': {
-          title: 'Using Third-party Test Runners | ',
-          nthChildIndex: 2,
-          linkTitle: 'Third-party Integrations',
-          baseUrl: '/guide/third-party-runners/',
-          sidenavData: [
-            ['cucumberjs-nightwatch-integration.html', 'CucumberJS Integration', [
-              ['cucumberjs-nightwatch-integration.html#configuration', 'Configuration'],
-              ['cucumberjs-nightwatch-integration.html#running-tests', 'Running Tests'],
-              ['cucumberjs-nightwatch-integration.html#manually-starting-the-webdriver-session', 'Manually Starting the WebDriver Session'],
-              ['cucumberjs-nightwatch-integration.html#reporting', 'Reporting']
+            ['chrome-driver.html', 'ChromeDriver', [
+              ['chrome-driver.html#installation', 'Installation'],
+              ['chrome-driver.html#cli-reference', 'CLI reference'],
+              ['chrome-driver.html#use-a-specific-chrome-profile', 'Use a specific Chrome profile'],
+              ['chrome-driver.html#use-a-specific-chrome-binary', 'Use a specific Chrome binary'],
             ]],
-            ['using-mocha.html', 'Using Mocha as a Test Runner', [
-              ['using-mocha.html#why-mocha-', 'Why Mocha?'],
-              ['using-mocha.html#configuration', 'Configuration'],
-              ['using-mocha.html#extended-describe-syntax', 'Extended describe() Syntax'],
-              ['using-mocha.html#using-the-mochawesome-reporter', 'Using Mochawesome'],
-              ['using-mocha.html#using-mocha-junit-reporter', 'Using mocha-junit-reporter'],
-              ['using-mocha.html#using-the-standard-mocha', 'Using the standard Mocha']
-            ]]
+            ['safari-driver.html', 'SafariDriver', [
+              ['safari-driver.html#installation', 'Installation'],
+              ['safari-driver.html#cli-reference', 'CLI reference'],
+            ]],
+            ['edge-driver.html', 'EdgeDriver', [
+              ['edge-driver.html#installation', 'Installation'],
+              ['edge-driver.html#cli-reference', 'CLI reference'],
+            ]],
           ]
         },
 
-        'migrating-to-nightwatch': {
-          title: 'Migrating to Nightwatch 2 | ',
-          nthChildIndex: 4,
-          linkTitle: 'Migrating to Nightwatch 2',
-          baseUrl: '/guide/migrating-to-nightwatch/',
+        'how-to-guides': {
+          title: 'How-to guides',
+          // link: '',
+          nthChildIndex: 1,
+          linkTitle: 'How-to guides',
+          baseUrl: '/guide/how-to-guides/',
           sidenavData: [
-            ['from-protractor.html', 'From Protractor'],
-            ['from-nightwatch-v1.html', 'From Nightwatch v1.x']
+            ['logical', 'Writing tests', [
+              ['writing-tests/test-syntax.html', 'Test syntax', [
+                ['writing-tests/test-syntax.html#describes', 'describes'],
+                ['writing-tests/test-syntax.html#exports', 'exports'],
+              ]],
+              ['writing-tests/using-es-6-async-await.html', 'Using ES6 async/await'],
+              ['writing-tests/using-commands-to-perform-actions.html', 'Using commands to perform actions'],
+              ['writing-tests/finding-interacting-with-dom-elements.html', 'Finding & interacting with DOM Elements'],
+              ['writing-tests/understanding-element-visibility.html', 'Understanding element visibility'],
+              ['writing-tests/adding-assertions.html', 'Adding assertions', [
+                ['writing-tests/adding-assertions.html#built-in-assertions', 'Built-in assertions'],
+                ['writing-tests/adding-assertions.html#negating-assertions', 'Negating assertions'],
+                ['writing-tests/adding-assertions.html#expect-assertions', 'Expect assertions'],
+              ]],
+              ['writing-tests/using-test-hooks.html', 'Using test hooks'],
+              ['writing-tests/using-test-globals.html', 'Using test globals'],
+              ['writing-tests/global-test-hooks.html', 'Global test hooks'],
+            ]],
+            ['logical', 'Running tests', [
+              ['running-tests/using-the-cli-test-runner.html', 'Using the CLI test runner'],
+              ['running-tests/command-line-options.html', 'Command-line options'],
+              ['running-tests/choosing-a-test-runner.html', 'Choosing a test runner', [
+                ['running-tests/choosing-a-test-runner.html#built-in', 'Built-in'],
+                ['running-tests/choosing-a-test-runner.html#mocha', 'Mocha'],
+                ['running-tests/choosing-a-test-runner.html#cucumber-js', 'CucumberJS'],
+              ]],
+              ['running-tests/specifying-test-sources.html', 'Specifying test sources'],
+              ['running-tests/skipping-disabling-tests.html', 'Skipping / disabling tests'],
+              ['running-tests/parallel-running.html', 'Parallel running', [
+                ['running-tests/parallel-running.html#with-test-workers', 'With test workers'],
+                ['running-tests/parallel-running.html#cross-browser-testing', 'Cross-browser testing'],
+              ]],
+              ['running-tests/controlling-test-failure-behaviour.html', 'Controlling test failure behaviour'],
+              ['running-tests/filtering-by-test-tags.html', 'Filtering by test tags'],
+              ['running-tests/using-with-test-groups.html', 'Using with test groups'],
+            ]],
+            ['logical', 'Configuration', [
+              ['configuration/nightwatch-configuration-file.html', 'Nightwatch configuration file'],
+              ['configuration/defining-test-environments.html', 'Defining test environments'],
+              ['configuration/using-test-globals-in-your-config.html', 'Using test globals in your config'],
+              ['configuration/using-env-variables-in-your-config.html', 'Using ENV variables in your config'],
+              ['configuration/enabling-http-keep-alive.html', 'Enabling HTTP keep-alive'],
+              ['configuration/setting-up-screenshots-on-test-failure.html', 'Setting up screenshots on test failure'],
+              ['configuration/customising-test-output.html', 'Customising test output'],
+              ['configuration/advanced-test-source-filtering.html', 'Advanced test source filtering'],
+              ['configuration/web-driver-settings.html', 'WebDriver Settings'],
+              ['configuration/selenium-settings.html', 'Selenium Settings'],
+              ['configuration/browser-stack-settings.html', 'BrowserStack Settings'],
+            ]],
+            ['logical', 'Using XPath selectors', [
+              ['using-x-path-seletors/what-is-x-path.html', 'What is XPath?'],
+              ['using-x-path-seletors/how-do-find-an-element-by-xpath.html', 'How do find an element by Xpath'],
+            ]],
+            ['logical', 'Using Nightwatch', [
+              ['using-nightwatch/simulating-complex-user-actions.html', 'Simulating complex user actions'],
+              ['using-nightwatch/taking-screenshots.html', 'Taking screenshots'],
+              ['using-nightwatch/page-loading-strategies.html', 'Page loading strategies'],
+              ['using-nightwatch/working-with-cookies.html', 'Working with cookies'],
+              ['using-nightwatch/working-with-form-elements.html', 'Working with form elements'],
+              ['using-nightwatch/working-with-file-uploads-and-downloads.html', 'Working with file uploads and downloads'],
+              ['using-nightwatch/working-with-shadow-root-elements.html', 'Working with ShadowRoot elements'],
+              ['using-nightwatch/testing-single-sign-on-sso.html', 'Testing Single Sign-on (SSO)'],
+            ]],
+            ['logical', 'Using third-party test runners', [
+              ['using-third-party-test-runners/cucumber-cli-as-a-test-runner.html', 'Cucumber CLI as a test runner'],
+              ['using-third-party-test-runners/mocha-as-a-test-runner.html', 'Mocha as a test runner'],
+              ['using-third-party-test-runners/jest.html', 'Jest'],
+              ['using-third-party-test-runners/ava.html', 'Ava'],
+            ]],
+            ['logical', 'Using page objects', [
+              ['using-page-objects/defining-elements.html', 'Defining Elements'],
+              ['using-page-objects/defining-sections.html', 'Defining Sections'],
+              ['using-page-objects/writing-page-specific-commands.html', 'Writing page-specific commands'],
+            ]],
+            ['logical', 'Extending Nightwatch', [
+              ['extending-nightwatch/adding-custom-commands.html', 'Adding custom commands'],
+              ['extending-nightwatch/adding-custom-assertions.html', 'Adding custom assertions'],
+              ['extending-nightwatch/adding-custom-reporters.html', 'Adding custom reporters'],
+              ['extending-nightwatch/adding-plugins.html', 'Adding plugins'],
+            ]],
           ]
-        }
+        },
+
+        'reference': {
+          title: 'Reference',
+          // link: '',
+          nthChildIndex: 1,
+          linkTitle: 'Reference',
+          baseUrl: '/guide/reference/',
+          sidenavData: [
+            ["complete-bdd-syntax.html", "Complete BDD Syntax"],
+            ["test-runner-cli-reference.html", "Test runner CLI Reference"],
+            ["settings-reference.html", "Settings Reference"],
+          ]
+        },
+
+        'resources': {
+          title: 'Resources',
+          // link: '',
+          nthChildIndex: 1,
+          linkTitle: 'Resources',
+          baseUrl: '/guide/resources/',
+          sidenavData: [
+            ["list-of-integrations.html", "List of integrations"],
+            ["migrating-to-nightwatch-2.html", "Migrating to Nightwatch 2", [
+              ["migrating-to-nightwatch-2.html#from-protractor", "From Protractor"],
+              ["migrating-to-nightwatch-2.html#from-nightwatch-1-7", "From Nightwatch 1.7"],
+            ]],
+          ]
+        },
       }
     },
+
     api: {
       collapsible: true,
       title: 'API Reference',
@@ -293,6 +345,7 @@ domino.views.sidebar = new (function() {
     }
 
     Object.keys(sections.content).forEach(function(sectionName) {
+      //level 0
       sectionData = sections.content[sectionName];
       sidenavContent = [];
 
@@ -310,10 +363,14 @@ domino.views.sidebar = new (function() {
 
         var baseUrl = sectionData.baseUrl || '';
         for (var i = 0; i < sectionData.sidenavData.length; i++) {
-          sidenavContent.push('<li class="nav-item">');
-
+          // level 1
           content = sectionData.sidenavData[i];
+          var logical = content[0] === 'logical';
+          var subpath = logical? "" : content[0];
+          var dataattr = logical? "data-logical" : "";
 
+          sidenavContent.push('<li class="nav-item" '+ dataattr + '>');
+          
           if (content.length === 3 && !Array.isArray(content[2])) {
             if (baseUrl) {
               sidenavContent.push('<h5><a class="nav-link" href="' + baseUrl + content[1] +'">'+ content[2] +'</a></h5>');
@@ -322,9 +379,11 @@ domino.views.sidebar = new (function() {
             }
 
           } else {
-            sidenavContent.push('<a class="nav-link" href="' + baseUrl +  content[0] +'">'+ content[1] + '</a>');
+            
 
-            if (Array.isArray(content[2])) {
+            sidenavContent.push('<a class="nav-link" href="' + baseUrl +  subpath +'"' + dataattr +' >'+ content[1] + '</a>');
+
+            if (Array.isArray(content[2]) && logical) {
               sidenavContent.push('<ul class="nav">');
 
               content[2].forEach(function(data) {

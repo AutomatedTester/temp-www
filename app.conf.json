@@ -26,136 +26,152 @@
   ],
 
   "sections": {
-    "blog": {
-      "pageTitle" : "Blog | Nightwatch.js",
-      "title" : "Blog",
-      "description" : "Updates and tutorials from the Nightwatch team",
-      "itemsList": true
-    },
     "guide" : {
       "subsections": {
-        "getting-started": {
+        "overview" : {
           "pages": [
-            "introduction",
-            "installation",
-            "quickstart",
-            "whats-new-v2"
+            "what-is-nightwatch",
+            "whats-new-in-v2"
           ],
           "vars": {
-            "pageHeader": "Getting Started with Nightwatch"
+            "pageHeader": "Nightwatch Overview"
           }
         },
 
-        "configuration": {
+        "quickstarts" : {
           "pages": [
-            "overview",
-            "settings",
-            "defaults"
+            "create-and-run-a-nightwatch-test",
+            "create-and-run-a-test-with-selenium-server",
+            "create-and-run-a-test-with-cloud-providers"
           ],
           "vars": {
-            "pageHeader": "Configuration"
+            "pageHeader": "Quickstarts"
           }
         },
 
-        "browser-drivers-setup": {
+        "tutorials": {
           "pages": [
-            "overview",
-            "geckodriver",
-            "chromedriver",
-            "edgedriver",
-            "safaridriver"
+            "learn-how-to-write-complex-user-actions",
+            "run-your-tests-in-parallel",
+            "create-and-run-component-tests",
+            "learn-how-to-write-custom-commands-and-custom-assertions",
+            "create-and-run-node-js-unit-integration-tests-with-nightwatch",
+            "build-a-custom-test-runner-using-the-programmatic-api",
+            "learn-how-to-run-your-tests-on-github-actions",
+            "develop-and-publish-a-nightwatch-plugin",
+            "cross-browser-testing-at-scale-using-selenium-grid",
+            "use-nightwatch-with-appium-for-mobile-web-testing",
+            "learn-how-to-test-web-rtc-applications"
           ],
           "vars": {
-            "pageHeader": "Browser Drivers Setup"
+            "pageHeader": "Tutorials"
           }
         },
 
-        "writing-tests": {
+        "concepts": {
           "pages": [
-            "using-exports",
-            "using-bdd-describe",
-            "using-es6-async",
-            "writing-assertions",
-            "expect-assertions",
-            "writing-unit-tests"
-          ],
-          "vars": {
-            "pageHeader": "Writing Tests"
-          }
-        },
-
-        "using-nightwatch": {
-          "pages": [
-            "overview",
-            "concepts",
-            "finding-and-interacting-with-elements",
-            "using-xpath-selectors",
-            "using-test-hooks",
-            "external-globals",
-            "running-tests-with-appium"
-          ],
-          "vars": {
-            "pageHeader": "Using Nightwatch"
-          }
-        },
-
-        "running-tests": {
-          "pages": [
-            "nightwatch-runner",
-            "command-line-options",
+            "what-is-end-to-end-testing",
+            "introduction-to-selenium-and-webdriver",
             "test-environments",
-            "test-groups",
-            "test-tags",
-            "disabling-tests",
-            "parallel-running",
-            "programmatic-api",
-            "using-mocha"
+            "test-globals",
+            "session-capabilities",
+            "parallel-testing-in-nightwatch",
+            "page-object-model",
+            "component-testing"
           ],
           "vars": {
-            "pageHeader": "Running Tests"
+            "pageHeader": "Concepts"
           }
         },
 
-        "third-party-runners": {
+        "browser-drivers": {
           "pages": [
-            "cucumberjs-nightwatch-integration",
-            "using-mocha"
+            "gecko-driver-firefox",
+            "chrome-driver",
+            "safari-driver",
+            "edge-driver"
           ],
           "vars": {
-            "pageHeader": "Integrating Third-party Test Runners"
+            "pageHeader": "Browser Drivers"
           }
         },
 
-        "migrating-to-nightwatch": {
+        "how-to-guides": {
           "pages": [
-            "from-protractor",
-            "from-nightwatch-v1"
+            "writing-tests/test-syntax",
+            "writing-tests/using-es-6-async-await",
+            "writing-tests/using-commands-to-perform-actions",
+            "writing-tests/finding-interacting-with-dom-elements",
+            "writing-tests/understanding-element-visibility",
+            "writing-tests/adding-assertions",
+            "writing-tests/using-test-hooks",
+            "writing-tests/using-test-globals",
+            "writing-tests/global-test-hooks",
+            "running-tests/using-the-cli-test-runner",
+            "running-tests/command-line-options",
+            "running-tests/choosing-a-test-runner",
+            "running-tests/specifying-test-sources",
+            "running-tests/skipping-disabling-tests",
+            "running-tests/parallel-running",
+            "running-tests/controlling-test-failure-behaviour",
+            "running-tests/filtering-by-test-tags",
+            "running-tests/using-with-test-groups",
+            "configuration/nightwatch-configuration-file",
+            "configuration/defining-test-environments",
+            "configuration/using-test-globals-in-your-config",
+            "configuration/using-env-variables-in-your-config",
+            "configuration/enabling-http-keep-alive",
+            "configuration/setting-up-screenshots-on-test-failure",
+            "configuration/customising-test-output",
+            "configuration/advanced-test-source-filtering",
+            "configuration/web-driver-settings",
+            "configuration/selenium-settings",
+            "configuration/browser-stack-settings",
+            "using-x-path-seletors/what-is-x-path",
+            "using-x-path-seletors/how-do-find-an-element-by-xpath",
+            "using-nightwatch/simulating-complex-user-actions",
+            "using-nightwatch/taking-screenshots",
+            "using-nightwatch/page-loading-strategies",
+            "using-nightwatch/working-with-cookies",
+            "using-nightwatch/working-with-form-elements",
+            "using-nightwatch/working-with-file-uploads-and-downloads",
+            "using-nightwatch/working-with-shadow-root-elements",
+            "using-nightwatch/testing-single-sign-on-sso",
+            "using-third-party-test-runners/cucumber-cli-as-a-test-runner",
+            "using-third-party-test-runners/mocha-as-a-test-runner",
+            "using-third-party-test-runners/jest",
+            "using-third-party-test-runners/ava",
+            "using-page-objects/defining-elements",
+            "using-page-objects/defining-sections",
+            "using-page-objects/writing-page-specific-commands",
+            "extending-nightwatch/adding-custom-commands",
+            "extending-nightwatch/adding-custom-assertions",
+            "extending-nightwatch/adding-custom-reporters",
+            "extending-nightwatch/adding-plugins"
           ],
           "vars": {
-            "pageHeader": "Migrating to Nightwatch"
+            "pageHeader": "How-to guides"
           }
         },
 
-        "extending-nightwatch": {
+        "reference": {
           "pages": [
-            "custom-assertions",
-            "custom-commands",
-            "custom-reporter",
-            "plugin-api"
+            "complete-bdd-syntax",
+            "test-runner-cli-reference",
+            "settings-reference"
           ],
           "vars": {
-            "pageHeader": "Extending Nightwatch"
+            "pageHeader": "Reference"
           }
         },
-        "working-with-page-objects": {
+
+        "resources": {
           "pages": [
-            "using-page-objects",
-            "defining-elements",
-            "defining-sections",
-            "writing-commands"
+            "list-of-integrations",
+            "migrating-to-nightwatch-2"
           ],
           "vars": {
-            "pageHeader": "Working with Page Objects"
+            "pageHeader": "Reference"
           }
         }
       },
@@ -233,7 +249,7 @@
     }
   },
 
-  "pageSrcFolders" : ["blog","guide", "api"],
+  "pageSrcFolders" : ["guide", "api"],
   "pages": {
     "Using-nightwatch" : {
       "using-nightwatch" : "guide/using-nightwatch/using-nightwatch.md",
