@@ -53,22 +53,23 @@
 
 /* Nav: second level (shown on .active) */
 .bs-sidebar .nav .nav {
-  display: none; /* Hide by default, but at >768px, show it */
+  /*display: none; !* Hide by default, but at >768px, show it *!*/
   margin-bottom: 8px;
   border-left:1px solid #eee;
-  margin-left:12px;
+  margin-left:16px;
+  font-size: 90%;
 }
-.bs-sidebar .nav .nav > li > a {
-  padding-top:    4px;
-  padding-bottom: 4px;
-  padding-left: 25px;
-  font-size: 16px;
-  color: #DDA562
-}
+
 .bs-sidebar .nav .nav > li.active > a {
   color:#444
 }
 
+.bs-sidebar .nav {
+  display: block;
+}
+.bs-sidebar .nav li .nav li {
+  display: block;
+}
 .bs-sidebar ul.nav > li.active ul.nav > li > ul.nav {
   margin-left: 25px;
 }
@@ -107,6 +108,18 @@ ul.nav.bs-sidenav a:hover {
 ul li ul li ul li a.active {
   background-color: transparent!important;
   text-decoration: underline;
+}
+.bs-sidebar .nav .nav > li > a {
+  padding-top:    4px;
+  padding-bottom: 4px;
+  padding-left: 25px;
+  font-size: 16px;
+  color: #DDA562
+}
+
+ul.nav.bs-sidenav .nav button > a,
+ul.nav.bs-sidenav .nav button > a:hover {
+  font-size: 16px;
 }
 /* Show and affix the side nav when space allows it */
 @media (min-width: 992px) {
@@ -265,6 +278,9 @@ body.navbar-visible .bs-sidebar {
   height: calc(100vh - 100px);
 }
 
+.right-side-nav {
+
+}
 
 @media screen and (max-width: 1600px) {
 

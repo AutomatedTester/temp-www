@@ -59,6 +59,21 @@ domino.views.define('guide', function(view) {
     domino.views.getSectionData(mainSection);
     firstRender = false;
 
+    $('#guide-container .col-md-9 .docs-section').show();
+    $('#guide-container .bs-sidenav a').removeClass('active');
+
+    var rightSideNav = $('#guide-container .col-md-9 .right-side-nav');
+    rightSideNav.html('<ul></ul>');
+
+    $('#guide-container .col-md-9 .docs-section h3').each(function(index, el) {
+      console.log(el)
+      var element = $(el);
+      var id = element.attr('id');
+      var text = element.text();
+
+      rightSideNav.find('ul').append('<li><a href="#'+ id +'">'+ text +'</a></li>');
+    });
+
     if (locationHrefNoHash === currentUri) {
       // the page is already loaded, no need for a transition
       if (hashChange) {
@@ -133,6 +148,22 @@ domino.views.define('guide', function(view) {
   }
 
   function renderSideBar(fileName, dataUri, subSection, pageName, cb) {
+    var dataSectionUrl = '/guide/' + subSection + '/';
+    var sectionElement = $('[data-section-url="'+ dataSectionUrl + '"]');
+    sectionElement.addClass('show');
+
+    var parentSectionElement = sectionElement.parents('div.collapse');
+
+    var buttonEl;
+    if (parentSectionElement.length > 0) {
+      parentSectionElement.addClass('show');
+      buttonEl = parentSectionElement.prev();
+    } else {
+      buttonEl = sectionElement.prev();
+    }
+
+    buttonEl.attr('aria-expanded', 'true');
+
     if (subSection) {
       fileName += '/' + subSection;
     }
@@ -172,6 +203,7 @@ domino.views.define('guide', function(view) {
   }
 
   function buildSideBar(mainSection, subSection) {
+    return;
     var sidebar = domino.views.sidebar.build(mainSection, subSection);
     $('#' + mainSection + '-container .bs-sidebar').html(sidebar.content);
   }
