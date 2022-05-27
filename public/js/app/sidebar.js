@@ -154,8 +154,7 @@ domino.views.sidebar = new (function() {
           baseUrl: '/guide/running-tests/',
           sidenavData: [
             ['nightwatch-runner.html', 'Nightwatch Runner'],
-            ['command-line-options.html', 'Command-line Options'],
-            ['test-environments.html', 'Test Environments'],
+            ['define-test-environments.html', 'Define Test Environments'],
             ['test-groups.html', 'Test Groups'],
             ['test-tags.html', 'Test Tags'],
             ['parallel-running.html', 'Running in Parallel'],

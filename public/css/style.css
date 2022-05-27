@@ -811,7 +811,7 @@ section[data-page-uri] {
 
 .doc-main-body h2 {
   font-family: var(--font-family-two);
-  font-size: 41px;
+  font-size: 35px;
   padding-bottom: 25px;
   font-weight: 700;
 }
@@ -826,14 +826,29 @@ section[data-page-uri] {
   font-size: 20px;
   margin-top: 40px;
 }
+
+[data-uri^="/guide/running-tests/"] .doc-main-body h3:before,
+[data-uri^="/guide/browser-drivers/"] .doc-main-body h3:before {
+  content: '🚀';
+  display: inline-block;
+  margin-left: -20px;
+  margin-right: 10px;
+  font-size: 20px;
+  height: 24px;
+  margin-top: -10px;
+}
+
+[data-uri^="/guide/browser-drivers/"] .doc-main-body h3:before {
+  content: '📎';
+}
+
 .doc-main-body h3 {
   font-family: var(--font-family-two);
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 600;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-bottom: 0;
-  margin-top: 50px;
+  margin: 50px -35px 10px;
+  padding: 10px 35px;
+  background: #eee;
 }
 
 @media only screen and (max-width: 991px) {

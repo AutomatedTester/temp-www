@@ -49,6 +49,15 @@
           }
         },
 
+        "nightwatch-cli" : {
+          "pages": [
+            "command-line-options"
+          ],
+          "vars": {
+            "pageHeader": "Nightwatch CLI Runner"
+          }
+        },
+
         "tutorials": {
           "pages": [
             "learn-how-to-write-complex-user-actions",
@@ -96,6 +105,16 @@
           }
         },
 
+        "contributing": {
+          "pages": [
+            "index",
+            "styleguide"
+          ],
+          "vars": {
+            "pageHeader": "Browser Drivers"
+          }
+        },
+
         "how-to-guides": {
           "pages": [
             "index"
@@ -125,7 +144,7 @@
         "running-tests": {
           "pages": [
             "using-the-cli-test-runner",
-            "command-line-options",
+            "define-test-environments",
             "choosing-a-test-runner",
             "specifying-test-sources",
             "skipping-disabling-tests",
@@ -142,7 +161,16 @@
 
         "configuration": {
           "pages": [
-            "configuration"
+            "advanced-test-source-filtering",
+            "enabling-http-keep-alive",
+            "using-env-variables-in-your-config",
+            "browser-stack-settings",
+            "nightwatch-configuration-file",
+            "using-test-globals-in-your-config",
+            "customising-test-output",
+            "selenium-settings",
+            "web-driver-settings",
+            "setting-up-screenshots-on-test-failure"
           ],
           "vars": {
             "pageHeader": "Configuration"
@@ -211,10 +239,19 @@
           }
         },
 
+        "migrating-to-nightwatch": {
+          "pages": [
+            "from-protractor",
+            "from-nightwatch-v1"
+          ],
+          "vars": {
+            "pageHeader": "Migrating to Nightwatch"
+          }
+        },
+
         "resources": {
           "pages": [
-            "list-of-integrations",
-            "migrating-to-nightwatch-2"
+            "list-of-integrations"
           ],
           "vars": {
             "pageHeader": "Reference"
