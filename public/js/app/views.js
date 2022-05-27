@@ -4,7 +4,7 @@ domino.views.metaTagContent = domino.views.metaTagEl.content;
 
 domino.views.metaTagTwitterImg = $('meta[name="twitter:image"]').attr('content');
 
-domino.views.sections = ['index', 'about', 'api', 'releases', 'guide', 'blog'];
+domino.views.sections = ['index', 'about', 'api', 'releases', 'guide'];
 domino.views.__sectionsData__ = {};
 
 domino.views.getSectionData = function(currentView) {

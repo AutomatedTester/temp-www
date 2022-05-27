@@ -1,19 +1,16 @@
-<div class="background">
-  <div class="container bs-docs-container">
-     <div class="row">
-       <div class="col-md-3">
+<div class="doc-container full-width top-border background">
+  <div class="clearfix">
+     <div class="row flex-xl-nowrap no-gutters">
 
-         <div class="bs-sidebar hidden-print" role="complementary">
+         <div class="col-md-3 col-xl-2 doc-sidebar bs-sidebar hidden-print" role="complementary">
              <%- content['_includes_']['api-sidebar'] %>
          </div>
-       </div>
 
-      <div class="col-md-9 api-container" role="main">
+      <div class="col-md-9 col-xl-8 doc-main-body" role="main">
         <div class="docs-section" data-page-uri="/api/<%- subPageName %>">
             <div class="page-content"><%- pageContent %></div>
         </div>
       </div>
-
     </div>
   </div>
 </div>

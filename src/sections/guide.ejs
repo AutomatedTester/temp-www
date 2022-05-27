@@ -1,101 +1,81 @@
-<div class="background">
-  <div class="container bs-docs-container">
-    <div class="row">
-      <div class="col-md-3 bs-sidebar hidden-print" role="complementary">
+<div class="doc-container full-width top-border background">
+  <div class="clearfix">
+    <div class="row flex-xl-nowrap no-gutters">
+      <div class="col-md-3 col-xl-2 doc-sidebar bs-sidebar hidden-print" role="complementary">
 <!--
 =============================================
     Sidebar
 ==============================================
 -->
-        <ul class="nav bs-sidenav">
-          <li class="active">
-            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#index-collapse" aria-expanded="false">
-              <a href="/guide/overview/">Overview</a>
-            </button>
+        <div class="filter-container">
+          <input type="search" id="sidebar-filter" autocomplete="off"  placeholder="Filter by title"/>
+          <ul class="filter-list"></ul>
+        </div>
 
-            <div class="collapse" id="index-collapse" data-section-url="/guide/overview/">
-              <ul class="btn-toggle-nav">
-                <li><a href="/guide/overview/what-is-nightwatch.html">What is Nightwatch?</a></li>
-                <li class="nav-item"><a href="/guide/overview/whats-new-in-v2.html">What’s new in v2.0?</a></li>
-              </ul>
-            </div>
-
-          </li>
-
-          <li>
-          <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#quickstarts-collapse" aria-expanded="false">
-              <a href="/guide/quickstarts/">Quickstarts</a>
+        <div class="clearfix">
+          <button class="btn btn-link d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#doc-sidebar-nav" aria-controls="doc-sidebar-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
           </button>
+        </div>
 
-          <div class="collapse" id="quickstarts-collapse" data-section-url="/guide/quickstarts/">
-            <ul class="nav">
-              <li><a href="/guide/quickstarts/create-and-run-a-nightwatch-test.html">Create and run your first Nightwatch test</a>
-              </li>
+        <nav class="doc-links collapse clearfix nav-fix" id="doc-sidebar-nav">
+          <ul class="nav bs-sidenav">
+            <li>
+              <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#index-collapse" aria-expanded="false">
+                <a href="/guide/overview/">Overview</a>
+              </button>
 
-              <li><a href="/guide/quickstarts/create-and-run-a-test-with-selenium-server.html">Run a test with Selenium Server</a>
-              </li>
+              <div class="collapse" id="index-collapse" data-section-url="/guide/overview/">
+                <ul class="btn-toggle-nav">
+                  <li><a href="/guide/overview/what-is-nightwatch.html">What is Nightwatch?</a></li>
+                  <li class="nav-item"><a href="/guide/overview/whats-new-in-v2.html">What’s new in v2.0?</a></li>
+                </ul>
+              </div>
 
-              <li><a href="/guide/quickstarts/create-and-run-a-test-with-cloud-providers.html">Run a test with cloud providers</a>
-              </li>
-            </ul>
-          </div>
+            </li>
 
-          </li>
-
-
-          <li>
-            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#tutorials-collapse" aria-expanded="false">
-              <a href="/guide/tutorials/">Tutorials</a>
+            <li>
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#quickstarts-collapse" aria-expanded="false">
+                <a href="/guide/quickstarts/">Quickstarts</a>
             </button>
 
-            <div class="collapse" id="tutorials-collapse" data-section-url="/guide/tutorials/">
-              <ul class="nav">
-                <li><a href="/guide/tutorials/learn-how-to-write-complex-user-actions.html">Learn how to write complex user actions</a></li>
-                <li><a href="/guide/tutorials/run-your-tests-in-parallel.html">Run your tests in parallel</a>
+            <div class="collapse" id="quickstarts-collapse" data-section-url="/guide/quickstarts/">
+              <ul class="btn-toggle-nav">
+                <li><a href="/guide/quickstarts/create-and-run-a-nightwatch-test.html">Create and run your first Nightwatch test</a>
                 </li>
 
-                <li><a href="/guide/tutorials/create-and-run-component-tests.html">Create and run component tests</a>
+                <li><a href="/guide/quickstarts/create-and-run-a-test-with-selenium-server.html">Run a test with Selenium Server</a>
                 </li>
 
-                <li><a href="/guide/tutorials/learn-how-to-write-custom-commands-and-custom-assertions.html">Learn how to write custom commands and custom assertions</a>
-                </li>
-
-                <li><a href="/guide/tutorials/create-and-run-node-js-unit-integration-tests-with-nightwatch.html">Create and run Node.js unit &amp; integration tests with Nightwatch</a></li>
-                <li><a href="/guide/tutorials/create-and-run-node-js-unit-integration-tests-with-nightwatch.html#add-details-on-how-to-do-api-testing">Add details on how to do API testing </a></li>
-
-                <li><a href="/guide/tutorials/build-a-custom-test-runner-using-the-programmatic-api.html">Build a custom test runner using the programmatic API</a></li>
-                <li><a href="/guide/tutorials/learn-how-to-run-your-tests-on-github-actions.html">Learn how to run your tests on Github Actions</a></li>
-                <li><a href="/guide/tutorials/develop-and-publish-a-nightwatch-plugin.html">Develop and publish a Nightwatch plugin</a></li>
-                <li><a href="/guide/tutorials/cross-browser-testing-at-scale-using-selenium-grid.html">Cross-browser testing at scale using Selenium Grid</a></li>
-                <li><a href="/guide/tutorials/use-nightwatch-with-appium-for-mobile-web-testing.html">Use Nightwatch with Appium for mobile web testing</a></li>
-                <li><a href="/guide/tutorials/learn-how-to-test-web-rtc-applications.html">Learn how to test WebRTC applications</a></li>
+<!--                <li><a href="/guide/quickstarts/create-and-run-a-test-with-cloud-providers.html">Run a test with cloud providers</a></li>-->
               </ul>
             </div>
-          </li>
+
+            </li>
 
 
+            <li>
+              <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#concepts-collapse" aria-expanded="false">
+                <a href="/guide/concepts/">Concepts</a>
+              </button>
 
-          <li>
-            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#concepts-collapse" aria-expanded="false">
-              <a href="/guide/concepts/">Concepts</a>
-            </button>
-
-            <div class="collapse" id="concepts-collapse" data-section-url="/guide/concepts/">
-              <ul class="nav">
-                <li><a href="/guide/concepts/what-is-end-to-end-testing.html">What is end-to-end testing?</a></li>
-                <li><a href="/guide/concepts/introduction-to-selenium-and-webdriver.html">Introduction to Selenium and Webdriver</a></li>
-                <li><a href="/guide/concepts/test-environments.html">Test environments</a></li>
-                <li><a href="/guide/concepts/test-globals.html">Test globals</a></li>
-                <li><a href="/guide/concepts/session-capabilities.html">Session capabilities</a></li>
-                <li><a href="/guide/concepts/parallel-testing-in-nightwatch.html">Parallel testing in Nightwatch</a>
-                  <ul class="nav">
+              <div class="collapse" id="concepts-collapse" data-section-url="/guide/concepts/">
+                <ul class="btn-toggle-nav">
+<!--                  <li><a href="/guide/concepts/what-is-end-to-end-testing.html">What is end-to-end testing?</a></li>-->
+<!--                  <li><a href="/guide/concepts/introduction-to-selenium-and-webdriver.html">Introduction to Selenium and Webdriver</a></li>-->
+                  <li><a href="/guide/concepts/test-environments.html">Test environments</a></li>
+                  <li><a href="/guide/concepts/test-globals.html">Test globals</a></li>
+                  <li><a href="/guide/concepts/session-capabilities.html">Session capabilities</a></li>
+                  <li><a href="/guide/concepts/parallel-testing-in-nightwatch.html">Parallel testing in Nightwatch</a>
+                    <!-- <ul class="nav">
                     <li><a href="/guide/concepts/parallel-testing-in-nightwatch.html#using-test-workers">Using test workers</a></li>
                     <li><a href="/guide/concepts/parallel-testing-in-nightwatch.html#using-multiple-environments">Using multiple environments</a></li>
-                  </ul>
-                </li>
+                  </ul> -->
+                  </li>
 
-                <li><a href="/guide/concepts/page-object-model.html">Page Object Model</a>
-                  <ul class="nav">
+                  <li><a href="/guide/concepts/page-object-model.html">Page Object Model</a>
+                    <!-- <ul class="nav">
                     <li><a href="/guide/concepts/page-object-model.html#overview">Overview</a>
                     </li>
                     <li><a href="/guide/concepts/page-object-model.html#elements">Elements</a>
@@ -103,199 +83,260 @@
                     <li><a href="/guide/concepts/page-object-model.html#sections">Sections</a>
                     </li>
                     <li><a href="/guide/concepts/page-object-model.html#page-specific-custom-commands">Page-specific custom commands</a></li>
-                  </ul>
-                </li>
+                  </ul> -->
+                  </li>
 
-                <li><a class="nav-link active" href="/guide/concepts/component-testing.html">Component testing</a>
-                  <ul class="nav">
-                    <li><a href="/guide/concepts/component-testing.html#what-is-component-testing">What is component testing?</a></li>
-                    <li><a href="/guide/concepts/component-testing.html#component-testing-in-nightwatch">Component testing in Nightwatch</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </li>
+                  <li><a class="nav-link active" href="/guide/concepts/component-testing.html">Component testing</a>
+                    <!-- <ul class="nav">
+                   <li><a href="/guide/concepts/component-testing.html#what-is-component-testing">What is component testing?</a></li>
+                   <li><a href="/guide/concepts/component-testing.html#component-testing-in-nightwatch">Component testing in Nightwatch</a></li>
+                 </ul> -->
+                  </li>
+                </ul>
+              </div>
+            </li>
 
-          <li>
-            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#browserdrivers-collapse" aria-expanded="false">
-              <a href="/guide/browser-drivers/">Browser Drivers</a>
-            </button>
+            <li>
+              <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#howto-collapse" aria-expanded="false">
+                <a href="/guide/">How-to guides</a>
+              </button>
 
-            <div class="collapse" id="browserdrivers-collapse" data-section-url="/guide/browser-drivers/">
-              <ul class="nav">
-                <li class="nav-item"><a href="/guide/browser-drivers/gecko-driver-firefox.html">GeckoDriver (Firefox)</a></li>
-                <li class="nav-item"><a href="/guide/browser-drivers/chrome-driver.html">ChromeDriver</a></li>
-                <li class="nav-item"><a href="/guide/browser-drivers/safari-driver.html">SafariDriver</a></li>
-                <li class="nav-item"><a href="/guide/browser-drivers/edge-driver.html">EdgeDriver</a></li>
-              </ul>
-            </div>
-          </li>
+              <div class="collapse" id="howto-collapse" data-section-url="/guide/">
+                <ul class="btn-toggle-nav toggle-nav-inner">
+                  <li>
+                    <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#writing-tests-collapse" aria-expanded="false">
+                      <a href="/guide/writing-tests/">Writing tests</a>
+                    </button>
 
-          <li>
-            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#howto-collapse" aria-expanded="false">
-              <a href="/guide/">How-to guides</a>
-            </button>
-
-            <div class="collapse" id="howto-collapse" data-section-url="/guide/">
-              <ul class="nav">
-                <li>
-                  <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#writing-tests-collapse" aria-expanded="false">
-                    <a href="/guide/writing-tests/">Writing tests</a>
-                  </button>
-
-                  <div class="collapse" id="writing-tests-collapse" data-section-url="/guide/writing-tests/">
-                    <ul class="nav">
-                      <li><a href="/guide/writing-tests/test-syntax.html">Test syntax</a></li>
-                      <li><a href="/guide/writing-tests/using-es-6-async-await.html">Using ES6 async/await</a></li>
-                      <li><a href="/guide/writing-tests/using-commands-to-perform-actions.html">Using commands to perform actions</a></li>
-                      <li><a href="/guide/writing-tests/finding-interacting-with-dom-elements.html">Finding &amp; interacting with DOM Elements</a></li>
-                      <li><a href="/guide/writing-tests/understanding-element-visibility.html">Understanding element visibility</a></li>
-                      <li><a href="/guide/writing-tests/adding-assertions.html">Adding assertions</a></li>
-                      <li><a href="/guide/writing-tests/using-test-hooks.html">Using test hooks</a></li>
-                      <li><a href="/guide/writing-tests/using-test-globals.html">Using test globals</a></li>
-                      <li><a href="/guide/writing-tests/global-test-hooks.html">Global test hooks</a></li>
-                    </ul>
-                  </div>
-                </li>
+                    <div class="collapse" id="writing-tests-collapse" data-section-url="/guide/writing-tests/">
+                      <ul class="btn-toggle-nav">
+                        <li><a href="/guide/writing-tests/test-syntax.html">Test syntax</a></li>
+                        <li><a href="/guide/writing-tests/using-es-6-async-await.html">Using ES6 async/await</a></li>
+                        <li><a href="/guide/writing-tests/finding-interacting-with-dom-elements.html">Finding &amp; interacting with DOM Elements</a></li>
+<!--                        <li><a href="/guide/writing-tests/understanding-element-visibility.html">Understanding element visibility</a></li>-->
+                        <li><a href="/guide/writing-tests/adding-assertions.html">Adding assertions</a></li>
+                        <li><a href="/guide/writing-tests/using-test-hooks.html">Using test hooks</a></li>
+                        <li><a href="/guide/writing-tests/using-test-globals.html">Using test globals</a></li>
+                        <li><a href="/guide/writing-tests/global-test-hooks.html">Global test hooks</a></li>
+                      </ul>
+                    </div>
+                  </li>
 
 
-                <li>
-                  <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#runningtests-collapse" aria-expanded="false">
-                    <a href="/guide/running-tests/">Running tests</a>
-                  </button>
+                  <li>
+                    <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#runningtests-collapse" aria-expanded="false">
+                      <a href="/guide/running-tests/">Running tests</a>
+                    </button>
 
-                  <div class="collapse" id="runningtests-collapse" data-section-url="/guide/running-tests/">
-                    <ul class="nav">
-                      <li><a href="/guide/running-tests/using-the-cli-test-runner.html">Using the CLI test runner</a></li>
-                      <li><a href="/guide/running-tests/command-line-options.html">Command-line options</a></li>
-                      <li><a href="/guide/running-tests/choosing-a-test-runner.html">Choosing a test runner</a></li>
-                      <li><a href="/guide/running-tests/specifying-test-sources.html">Specifying test sources</a></li>
-                      <li><a href="/guide/running-tests/skipping-disabling-tests.html">Skipping / disabling tests</a></li>
-                      <li><a href="/guide/running-tests/parallel-running.html">Parallel running</a></li>
-                      <li><a href="/guide/running-tests/controlling-test-failure-behaviour.html">Controlling test failure behaviour</a></li>
-                      <li><a href="/guide/running-tests/filtering-by-test-tags.html">Filtering by test tags</a></li>
-                      <li><a href="/guide/running-tests/using-with-test-groups.html">Using with test groups</a></li>
-                    </ul>
-                  </div>
+                    <div class="collapse" id="runningtests-collapse" data-section-url="/guide/running-tests/">
+                      <ul class="btn-toggle-nav">
+                        <li><a href="/guide/running-tests/using-the-cli-test-runner.html">Using the CLI test runner</a></li>
+                        <li><a href="/guide/running-tests/choosing-a-test-runner.html">Choosing a test runner</a></li>
+                        <li><a href="/guide/running-tests/specifying-test-sources.html">Specifying test sources</a></li>
+                        <li><a href="/guide/running-tests/skipping-disabling-tests.html">Skipping / disabling tests</a></li>
+                        <li><a href="/guide/running-tests/parallel-running.html">Parallel running</a></li>
+                        <li><a href="/guide/running-tests/controlling-test-failure-behaviour.html">Controlling test failure behaviour</a></li>
+                        <li><a href="/guide/running-tests/filtering-by-test-tags.html">Filtering by test tags</a></li>
+                        <li><a href="/guide/running-tests/using-with-test-groups.html">Using with test groups</a></li>
+                      </ul>
+                    </div>
 
-                </li>
+                  </li>
 
-                <li>
-                  <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#configuration-collapse" aria-expanded="false">
-                    <a href="/guide/configuration/">Configuration</a>
-                  </button>
+                  <li>
+                    <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#configuration-collapse" aria-expanded="false">
+                      <a href="/guide/configuration/">Configure</a>
+                    </button>
 
-                  <div class="collapse" id="configuration-collapse" data-section-url="/guide/configuration/">
-                    <ul class="nav">
-                      <li><a href="/guide/configuration/nightwatch-configuration-file.html">Nightwatch configuration file</a></li>
-                      <li><a href="/guide/configuration/defining-test-environments.html">Defining test environments</a></li>
-                      <li><a href="/guide/configuration/using-test-globals-in-your-config.html">Using test globals in your config</a></li>
-                      <li><a href="/guide/configuration/using-env-variables-in-your-config.html">Using ENV variables in your config</a></li>
-                      <li><a href="/guide/configuration/enabling-http-keep-alive.html">Enabling HTTP keep-alive</a></li>
-                      <li><a href="/guide/configuration/setting-up-screenshots-on-test-failure.html">Setting up screenshots on test failure</a></li>
-                      <li><a href="/guide/configuration/customising-test-output.html">Customising test output</a></li>
-                      <li><a href="/guide/configuration/advanced-test-source-filtering.html">Advanced test source filtering</a></li>
-                      <li><a href="/guide/configuration/web-driver-settings.html">WebDriver Settings</a></li>
-                      <li><a href="/guide/configuration/selenium-settings.html">Selenium Settings</a></li>
-                      <li><a href="/guide/configuration/browser-stack-settings.html">BrowserStack Settings</a></li>
-                    </ul>
-                  </div>
-                </li>
+                    <div class="collapse" id="configuration-collapse" data-section-url="/guide/configuration/">
+                      <ul class="btn-toggle-nav">
+                        <li><a href="/guide/configuration/nightwatch-configuration-file.html">Nightwatch configuration file</a></li>
+                        <li><a href="/guide/configuration/defining-test-environments.html">Defining test environments</a></li>
+                        <li><a href="/guide/configuration/using-test-globals-in-your-config.html">Using test globals in your config</a></li>
+                        <li><a href="/guide/configuration/using-env-variables-in-your-config.html">Using ENV variables in your config</a></li>
+                        <li><a href="/guide/configuration/enabling-http-keep-alive.html">Enabling HTTP keep-alive</a></li>
+                        <li><a href="/guide/configuration/setting-up-screenshots-on-test-failure.html">Setting up screenshots on test failure</a></li>
+                        <li><a href="/guide/configuration/customising-test-output.html">Customising test output</a></li>
+                        <li><a href="/guide/configuration/advanced-test-source-filtering.html">Advanced test source filtering</a></li>
+                        <li><a href="/guide/configuration/web-driver-settings.html">WebDriver Settings</a></li>
+                        <li><a href="/guide/configuration/selenium-settings.html">Selenium Settings</a></li>
+                        <li><a href="/guide/configuration/browser-stack-settings.html">BrowserStack Settings</a></li>
+                      </ul>
+                    </div>
+                  </li>
 
-                <li>
-                  <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#usingnightwatch-collapse" aria-expanded="false">
-                    <a href="/guide/using-nightwatch/">Using Nightwatch</a>
-                  </button>
+                  <% /*
+                  <li>
+                    <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#usingnightwatch-collapse" aria-expanded="false">
+                      <a href="/guide/using-nightwatch/">Using Nightwatch</a>
+                    </button>
 
-                  <div class="collapse" id="usingnightwatch-collapse" data-section-url="/guide/using-nightwatch/">
-                    <ul class="nav">
-                      <li><a href="/guide/using-nightwatch/simulating-complex-user-actions.html">Simulating complex user actions</a></li>
-                      <li><a href="/guide/using-nightwatch/taking-screenshots.html">Taking screenshots</a></li>
-                      <li><a href="/guide/using-nightwatch/page-loading-strategies.html">Page loading strategies</a></li>
-                      <li><a href="/guide/using-nightwatch/how-do-find-an-element-by-xpath.html">How do find an element by Xpath</a></li>
-                      <li><a href="/guide/using-nightwatch/working-with-cookies.html">Working with cookies</a></li>
-                      <li><a href="/guide/using-nightwatch/working-with-form-elements.html">Working with form elements</a></li>
-                      <li><a href="/guide/using-nightwatch/working-with-file-uploads-and-downloads.html">Working with file uploads and downloads</a></li>
-                      <li><a href="/guide/using-nightwatch/working-with-shadow-root-elements.html">Working with ShadowRoot elements</a></li>
-                      <li><a href="/guide/using-nightwatch/testing-single-sign-on-sso.html">Testing Single Sign-on (SSO)</a></li>
-                    </ul>
-                  </div>
-                </li>
+                    <div class="collapse" id="usingnightwatch-collapse" data-section-url="/guide/using-nightwatch/">
+                      <ul class="btn-toggle-nav">
+                        <li><a href="/guide/using-nightwatch/simulating-complex-user-actions.html">Simulating complex user actions</a></li>
+                        <li><a href="/guide/using-nightwatch/taking-screenshots.html">Taking screenshots</a></li>
+                        <li><a href="/guide/using-nightwatch/page-loading-strategies.html">Page loading strategies</a></li>
+                        <li><a href="/guide/using-nightwatch/how-do-find-an-element-by-xpath.html">How do find an element by Xpath</a></li>
+                        <li><a href="/guide/using-nightwatch/working-with-cookies.html">Working with cookies</a></li>
+                        <li><a href="/guide/using-nightwatch/working-with-form-elements.html">Working with form elements</a></li>
+                        <li><a href="/guide/using-nightwatch/working-with-file-uploads-and-downloads.html">Working with file uploads and downloads</a></li>
+                        <li><a href="/guide/using-nightwatch/working-with-shadow-root-elements.html">Working with ShadowRoot elements</a></li>
+                        <li><a href="/guide/using-nightwatch/testing-single-sign-on-sso.html">Testing Single Sign-on (SSO)</a></li>
+                      </ul>
+                    </div>
+                  </li> */ %>
 
-                <li>
-                  <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#thirdparty-collapse" aria-expanded="false">
-                    <a href="/guide/thirdparty-test-runners/">Using third-party test runners</a>
-                  </button>
+                  <li>
+                    <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#thirdparty-collapse" aria-expanded="false">
+                      <a href="/guide/third-party-test-runners/">Third-party test runners</a>
+                    </button>
 
-                  <div class="collapse" id="thirdparty-collapse" data-section-url="/guide/thirdparty-test-runners/">
-                    <ul class="nav">
-                      <li><a href="/guide/thirdparty-test-runners/cucumber-cli-as-a-test-runner.html">Cucumber CLI as a test runner</a></li>
-                      <li><a href="/guide/thirdparty-test-runners/mocha-as-a-test-runner.html">Mocha as a test runner</a></li>
-                      <li><a href="/guide/thirdparty-test-runners/jest.html">Jest</a></li>
-                      <li><a href="/guide/using-third-party-test-runners/ava.html">Ava</a></li>
-                    </ul>
-                  </div>
+                    <div class="collapse" id="thirdparty-collapse" data-section-url="/guide/third-party-test-runners/">
+                      <ul class="btn-toggle-nav">
+                        <li><a href="/guide/third-party-test-runners/cucumber-cli-as-a-test-runner.html">Cucumber CLI as a test runner</a></li>
+                        <li><a href="/guide/third-party-test-runners/mocha-as-a-test-runner.html">Mocha as a test runner</a></li>
+<!--                        <li><a href="/guide/thirdparty-test-runners/jest.html">Jest</a></li>-->
+<!--                        <li><a href="/guide/using-third-party-test-runners/ava.html">Ava</a></li>-->
+                      </ul>
+                    </div>
 
-                </li>
+                  </li>
 
 
-                <li>
-                  <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#pageobjects-collapse" aria-expanded="false">
-                    <a href="/guide/using-page-objects/">Using Page Objects</a>
-                  </button>
+                  <li>
+                    <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#pageobjects-collapse" aria-expanded="false">
+                      <a href="/guide/using-page-objects/">Page Objects</a>
+                    </button>
 
-                  <div class="collapse" id="pageobjects-collapse" data-section-url="/guide/using-page-objects/">
-                    <ul class="nav">
-                      <li><a href="/guide/using-page-objects/defining-elements.html">Defining Elements</a></li>
-                      <li><a href="/guide/using-page-objects/defining-sections.html">Defining Sections</a></li>
-                      <li><a href="/guide/using-page-objects/writing-page-specific-commands.html">Writing page-specific commands</a></li>
-                    </ul>
-                  </div>
-                </li>
+                    <div class="collapse" id="pageobjects-collapse" data-section-url="/guide/using-page-objects/">
+                      <ul class="btn-toggle-nav">
+                        <li><a href="/guide/using-page-objects/defining-elements.html">Define Elements</a></li>
+                        <li><a href="/guide/using-page-objects/defining-sections.html">Define Sections</a></li>
+                        <li><a href="/guide/using-page-objects/writing-page-specific-commands.html">Add page-specific commands</a></li>
+                      </ul>
+                    </div>
+                  </li>
 
-                <li>
-                  <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#extending-collapse" aria-expanded="false">
-                    <a href="/guide/extending-nightwatch/">Extending Nightwatch</a>
-                  </button>
+                  <li>
+                    <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#extending-collapse" aria-expanded="false">
+                      <a href="/guide/extending-nightwatch/">Extend Nightwatch</a>
+                    </button>
 
-                  <div class="collapse" id="extending-collapse" data-section-url="/guide/extending-nightwatch//">
-                    <ul class="nav">
-                      <li><a href="/guide/extending-nightwatch/adding-custom-commands.html">Adding custom commands</a></li>
-                      <li><a href="/guide/extending-nightwatch/adding-custom-assertions.html">Adding custom assertions</a></li>
-                      <li><a href="/guide/extending-nightwatch/adding-custom-reporters.html">Adding custom reporters</a></li>
-                      <li><a href="/guide/extending-nightwatch/adding-plugins.html">Adding plugins</a></li>
-                    </ul>
-                  </div>
+                    <div class="collapse" id="extending-collapse" data-section-url="/guide/extending-nightwatch//">
+                      <ul class="btn-toggle-nav">
+                        <li><a href="/guide/extending-nightwatch/adding-custom-commands.html">Add custom commands</a></li>
+                        <li><a href="/guide/extending-nightwatch/adding-custom-assertions.html">Add custom assertions</a></li>
+                        <li><a href="/guide/extending-nightwatch/adding-custom-reporters.html">Add custom reporters</a></li>
+                        <li><a href="/guide/extending-nightwatch/adding-plugins.html">Create plugins</a></li>
+                      </ul>
+                    </div>
 
-                </li>
-              </ul>
+                  </li>
+                </ul>
 
-            </div>
+              </div>
 
-          </li>
+            </li>
 
-          <li>
-            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
-              <a href="/guide/reference/">Reference</a>
-            </button>
 
-            <div class="collapse" id="reference-collapse" data-section-url="/guide/reference/">
+            <li>
+              <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#tutorials-collapse" aria-expanded="false">
+                <a href="/guide/tutorials/">Tutorials</a>
+              </button>
 
-            </div>
-          </li>
+              <div class="collapse" id="tutorials-collapse" data-section-url="/guide/tutorials/">
+                <ul class="btn-toggle-nav">
+                  <li><a href="/guide/tutorials/learn-how-to-write-complex-user-actions.html">Learn how to write complex user actions</a></li>
+<!--                  <li><a href="/guide/tutorials/run-your-tests-in-parallel.html">Run your tests in parallel</a></li>-->
 
-          <li>
-            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#resources-collapse" aria-expanded="false">
-              <a href="/guide/resources/">Resources</a>
-            </button>
+                  <li><a href="/guide/tutorials/create-and-run-component-tests.html">Create and run component tests</a></li>
+                  <li><a href="/guide/tutorials/learn-how-to-write-custom-commands-and-custom-assertions.html">Learn how to write custom commands and custom assertions</a></li>
+                  <li><a href="/guide/tutorials/create-and-run-node-js-unit-integration-tests-with-nightwatch.html">Create and run Node.js unit &amp; integration tests with Nightwatch</a></li>
+                  <li><a href="/guide/tutorials/build-a-custom-test-runner-using-the-programmatic-api.html">Build a custom test runner using the programmatic API</a></li>
+<!--                  <li><a href="/guide/tutorials/learn-how-to-run-your-tests-on-github-actions.html">Learn how to run your tests on Github Actions</a></li>-->
+                  <li><a href="/guide/tutorials/develop-and-publish-a-nightwatch-plugin.html">Develop and publish a Nightwatch plugin</a></li>
+                  <li><a href="/guide/tutorials/cross-browser-testing-at-scale-using-selenium-grid.html">Cross-browser testing at scale using Selenium Grid</a></li>
+                  <li><a href="/guide/tutorials/use-nightwatch-with-appium-for-mobile-web-testing.html">Use Nightwatch with Appium for mobile web testing</a></li>
+<!--                  <li><a href="/guide/tutorials/learn-how-to-test-web-rtc-applications.html">Learn how to test WebRTC applications</a></li>-->
+                </ul>
+              </div>
+            </li>
 
-            <div class="collapse" id="resources-collapse" data-section-url="/guide/resources/">
+            <li>
+              <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
+                <a href="/guide/reference/">Reference</a>
+              </button>
 
-            </div>
-          </li>
+              <div class="collapse" id="reference-collapse" data-section-url="/guide/reference/">
 
-        </ul>
+                <ul class="btn-toggle-nav toggle-nav-inner">
+                  <li>
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#browserdrivers-collapse" aria-expanded="false">
+                      <a href="/guide/browser-drivers/">Browser Drivers</a>
+                    </button>
 
+                    <div class="collapse" id="browserdrivers-collapse" data-section-url="/guide/browser-drivers/">
+                      <ul class="btn-toggle-nav">
+                        <li class="nav-item"><a href="/guide/browser-drivers/gecko-driver-firefox.html">GeckoDriver (Firefox)</a></li>
+                        <li class="nav-item"><a href="/guide/browser-drivers/chrome-driver.html">ChromeDriver</a></li>
+                        <li class="nav-item"><a href="/guide/browser-drivers/safari-driver.html">SafariDriver</a></li>
+                        <li class="nav-item"><a href="/guide/browser-drivers/edge-driver.html">EdgeDriver</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#nightwatchcli-collapse" aria-expanded="false">
+                      <a href="/guide/nightwatch-cli/">Nightwatch CLI</a>
+                    </button>
+
+                    <div class="collapse" id="nightwatchcli-collapse" data-section-url="/guide/nightwatch-cli/">
+                      <ul class="btn-toggle-nav">
+                        <li class="nav-item"><a href="/guide/nightwatch-cli/command-line-options.html">Command-line Options</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+
+              </div>
+            </li>
+
+            <li>
+              <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#resources-collapse" aria-expanded="false">
+                <a href="/guide/resources/">Resources</a>
+              </button>
+
+              <div class="collapse" id="resources-collapse" data-section-url="/guide/resources/">
+                <ul class="btn-toggle-nav toggle-nav-inner">
+                  <li>
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#contributing-collapse" aria-expanded="false">
+                      <a href="/guide/contributing/">Contribute guide</a>
+                    </button>
+
+                    <div class="collapse" id="contributing-collapse" data-section-url="/guide/contributing/">
+                      <ul class="btn-toggle-nav">
+<!--                        <li class="nav-item"><a href="/guide/contributing/index.html">Overview</a></li>-->
+                        <li class="nav-item"><a href="/guide/contributing/styleguide.html">Style guide</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#migrating-collapse" aria-expanded="false">
+                      <a href="/guide/migrating-to-nightwatch/">Migrating to Nightwatch 2</a>
+                    </button>
+
+                    <div class="collapse" id="migrating-collapse" data-section-url="/guide/migrating-to-nightwatch/">
+                      <ul class="btn-toggle-nav">
+                        <li class="nav-item"><a href="/guide/migrating-to-nightwatch/from-nightwatch-v1.html">From Nightwatch v1</a></li>
+                        <li class="nav-item"><a href="/guide/migrating-to-nightwatch/from-protractor.html">From Protractor</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+          </ul>
+        </nav>
         <!--
         =============================================
            End Sidebar
@@ -303,17 +344,13 @@
         -->
       </div>
 
-      <div class="col-md-9" role="main">
+      <div class="col-md-9 col-xl-8 doc-main-body" role="main">
         <div class="docs-section" data-page-uri="/guide/<%- subPageName %>">
           <div class="page-content"><%- pageContent %></div>
         </div>
-        <div class="right-side-nav">
-          <ul>
-            <li class="nav-item"><a href="/guide/overview/what-is-nightwatch.html#why-choose-nightwatch">Why choose Nightwatch?</a></li>
-            <li class="nav-item"><a href="/guide/overview/what-is-nightwatch.html#architecture-overview">Architecture overview</a></li>
-            <li class="nav-item"><a href="/guide/overview/what-is-nightwatch.html#supported-browsers">Supported browsers</a></li>
-          </ul>
-        </div>
+      </div>
+
+      <div class="d-none d-xl-block col-xl-2 doc-sideNav right-side-nav">
       </div>
 
     </div>

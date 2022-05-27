@@ -1,6 +1,6 @@
 html, body {
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background-color: #1b1b1b;
+  background-color: #fff;
 }
 a {
   text-decoration: none;
@@ -45,9 +45,11 @@ a {
 
 .nav>li>a {
   padding: 4px 9px;
-  font-size: 17px;
-  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
   text-decoration: none!important;
+  font-family: var(--font-family-two);
+  margin: 0 15px 0 0;
 }
 
 .nav>li>a:hover {
@@ -78,16 +80,13 @@ a {
   width: 100%;
 }
 
-body.navbar-visible .nw-navbar {
 
-}
-
-[data-uri^="/api"] body.navbar-visible .bs-sidebar,
+/* [data-uri^="/api"] body.navbar-visible .bs-sidebar,
 [data-uri^="/api/$method"] body.navbar-visible .bs-sidebar,
 [data-uri^="/gettingstarted"] body.navbar-visible .bs-sidebar,
 [data-uri^="/about"] body.navbar-visible .bs-sidebar {
   top: 5rem;
-}
+} */
 
 [data-uri^="/api/$method"] body.navbar-visible .bs-sidebar,
 [data-uri^="/api/commands"] body.navbar-visible .bs-sidebar {
@@ -336,7 +335,7 @@ b, strong {
 }
 
 pre:before {
-  content: '$';
+  content: '%';
   z-index: 1;
   display: inline-block;
   color: #222;
@@ -348,6 +347,9 @@ pre:before {
   max-height: 13em;
   transform: rotate(0);
 }
+pre.language-bash {
+  font-size: 14px;
+}
 pre.language-bash:before {
   color: #888;
 }
@@ -358,7 +360,9 @@ pre.windows-cmd:before {
   content: 'C:\\>';
 }
 pre[data-language="javascript"]:before,
-pre[class*="language-javascript"]:before{
+pre[class*="language-javascript"]:before,
+pre[class*="language-typescript"]::before
+{
   content: none;
 }
 
@@ -461,16 +465,20 @@ section[data-page-uri] {
 [data-uri="/guide/"] section [data-page-uri="/guide/"],
 [data-uri="/guide"] [data-page-uri^="/guide"],
 [data-uri="/guide/"] [data-page-uri^="/guide/"],
-[data-uri^="/guide/getting-started"] section [data-page-uri^="/guide/getting-started"],
-[data-uri^="/guide/configuration"] section [data-page-uri^="/guide/configuration"],
+[data-uri^="/guide/overview"] section [data-page-uri^="/guide/overview"],
+[data-uri^="/guide/quickstarts"] section [data-page-uri^="/guide/quickstarts"],
+[data-uri^="/guide/tutorials"] section [data-page-uri^="/guide/tutorials"],
+[data-uri^="/guide/concepts"] section [data-page-uri^="/guide/concepts"],
+[data-uri^="/guide/browser-drivers"] section [data-page-uri^="/guide/browser-drivers"],
 [data-uri^="/guide/writing-tests"] section [data-page-uri^="/guide/writing-tests"],
-[data-uri^="/guide/using-nightwatch"] section [data-page-uri^="/guide/using-nightwatch"],
-[data-uri^="/guide/third-party-runners"] section [data-page-uri^="/guide/third-party-runners"],
-[data-uri^="/guide/browser-drivers-setup"] section [data-page-uri^="/guide/browser-drivers-setup"],
 [data-uri^="/guide/running-tests"] section [data-page-uri^="/guide/running-tests"],
+[data-uri^="/guide/configuration"] section [data-page-uri^="/guide/configuration"],
+[data-uri^="/guide/using-nightwatch"] section [data-page-uri^="/guide/using-nightwatch"],
+[data-uri^="/guide/thirdparty-test-runners"] section [data-page-uri^="/guide/configuration"],
+[data-uri^="/guide/using-page-objects"] section [data-page-uri^="/guide/using-page-objects"],
 [data-uri^="/guide/extending-nightwatch"] section [data-page-uri^="/guide/extending-nightwatch"],
-[data-uri^="/guide/working-with-page-objects"] section [data-page-uri^="/guide/working-with-page-objects"],
-[data-uri^="/guide/migrating-to-nightwatch"] section [data-page-uri^="/guide/migrating-to-nightwatch"] {
+[data-uri^="/guide/reference"] section [data-page-uri^="/guide/reference"],
+[data-uri^="/guide/resources"] section [data-page-uri^="/guide/resources"] {
   display: block;
 }
 
@@ -523,7 +531,7 @@ section[data-page-uri] {
 [data-uri="/releases"] .secondary,
 [data-uri^="/blog"] .secondary,
 [data-uri^="/about"] .secondary {
-  margin-top: -174px;
+  margin-top: -176px;
 }
 
 [data-uri^="/api"] .secondary,
@@ -747,3 +755,174 @@ section[data-page-uri] {
 [data-api-page^="/api/"][data-uri="/"] > .parallax {
   display: block;
 }
+
+/* New CSS */
+
+/*------------- Global Prefix -------------------*/
+::-webkit-scrollbar{ width: 2px; }
+::-webkit-scrollbar-track { background: #fff;}
+::-webkit-scrollbar-thumb { background: #502D17;border-radius: 0;}
+/*------------- Firefox Scrollbar -------------------*/
+
+#doc-sidebar-nav {
+  scrollbar-width: none;
+  scrollbar-color: #502D17 #502D17;
+}
+
+.doc-container.full-width {
+  padding: 0 1.5rem;
+  max-width: 1768px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.doc-container.top-border {
+  border-top: 1px solid rgba(0,0,0,0.09);
+}
+
+.doc-container .doc-main-body {
+  padding-left: 20px;
+  padding-bottom: 65px;
+}
+
+.doc-container.top-border .doc-main-body {
+  padding-top: 50px;
+}
+
+.doc-container.full-width .doc-main-body {
+  border-right: 1px solid rgba(0,0,0,0.09);
+  padding-right: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .doc-container.full-width {
+    padding: 0px 15px 30px;
+}
+.doc-container.full-width .doc-main-body {
+  padding: 15px 15px 30px;
+}
+}
+
+.doc-container.top-border .doc-sidebar {
+  padding-top: 50px;
+  padding-left: 0;
+  padding-right: 0px;
+}
+
+.doc-main-body h2 {
+  font-family: var(--font-family-two);
+  font-size: 41px;
+  padding-bottom: 25px;
+  font-weight: 700;
+}
+.doc-main-body h4,
+.doc-main-body h5 {
+  font-family: var(--font-family-two);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.doc-main-body h5 {
+  font-size: 20px;
+  margin-top: 40px;
+}
+.doc-main-body h3 {
+  font-family: var(--font-family-two);
+  font-size: 28px;
+  font-weight: 600;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 0;
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 991px) {
+  .doc-main-body h2 {
+    font-size: 30px;
+  }
+
+  .doc-main-body h3 {
+    font-size: 22px;
+  }
+}
+
+
+.doc-sideNav {
+  top: 50px;
+  padding-top: 50px;
+  position: sticky;
+  height: 100%;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.doc-sideNav ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.doc-sideNav a {
+  display: block;
+  font-size: 16px;
+  line-height: 25px;
+  margin-bottom: 5px;
+  color: #767676;
+  padding: 0 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.doc-sideNav a.active {
+  background-color: #DDA562;
+  color: #fff;
+}
+ 
+
+#doc-sidebar-nav {
+  max-height: 100vh;
+  /* overflow-y: scroll; */
+}
+
+@media only screen and (min-width: 768px) {
+  #doc-sidebar-nav {
+    display: block !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #doc-sidebar-nav {
+    position: fixed;
+    top: 79px;
+    right: 0;
+    height: 100%;
+    background: #fff;
+    width: 280px;
+    border-left: 1px solid #E1E6EE;
+    padding: 30px 15px 10px;
+    max-height: calc(100vh - 79px);
+  }
+  #doc-sidebar-nav .nav.bs-sidenav li .btn {
+    background: #fff;
+  }
+}
+
+.toggle-visibility {
+  opacity: 0;
+}
+
+.improve-article-bottom {
+  color: #fff;
+  background-color: #7ec699;
+  padding: 10px 20px;
+  border-radius: 25px;
+  display: inline-block;
+  -webkit-box-shadow: 4px 4px 5px 0px rgba(224,224,224,1);
+  -moz-box-shadow: 4px 4px 5px 0px rgba(224,224,224,1);
+  box-shadow: 4px 4px 5px 0px rgba(224,224,224,1);
+}
+
+.improve-article-bottom:hover {
+  color: #fff;
+  background-color: #4fb073;
+}
+
+/* END New CSS */

@@ -60,6 +60,16 @@ domino.views.sidebar = new (function() {
           ]
         },
 
+        'nightwatch-cli': {
+          title: 'Nightwatch CLI Runner | ',
+          nthChildIndex: 2,
+          linkTitle: 'Nightwatch CLI Runner',
+          baseUrl: '/guide/nightwatch-cli/',
+          sidenavData: [
+            ['command-line-options.html', 'Command-line Options']
+          ]
+        },
+
         'browser-drivers-setup': {
           title: 'Browser Drivers Specific | ',
           nthChildIndex: 2,
@@ -71,6 +81,17 @@ domino.views.sidebar = new (function() {
             ['chromedriver.html', 'ChromeDriver'],
             ['edgedriver.html', 'EdgeDriver'],
             ['safaridriver.html', 'SafariDriver']
+          ]
+        },
+
+        'contributing': {
+          title: 'Contributing | ',
+          nthChildIndex: 2,
+          linkTitle: 'Contributing',
+          baseUrl: '/guide/contributing/',
+          sidenavData: [
+            ['index.html', 'Overview'],
+            ['styleguide.html', 'Style guide']
           ]
         },
 

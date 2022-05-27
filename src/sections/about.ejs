@@ -11,44 +11,63 @@
   </div>
 </div>
 
-<div class="background">
-  <div class="container bs-docs-container">
-    <div class="row">
-      <div class="col-md-3">
-        <div class="bs-sidebar hidden-print" role="complementary" data-spy="affix" data-offset-top="60" data-offset-bottom="330">
-          <ul class="nav bs-sidenav">
+<div class="doc-container full-width top-border background">
+  <div class="clearfix">
+    <div class="row flex-xl-nowrap no-gutters">
+        <div class="col-md-3 col-xl-2 doc-sidebar bs-sidebar hidden-print" role="complementary">
+        <div class="clearfix">
+            <button class="btn btn-link d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#doc-sidebar-nav" aria-controls="doc-sidebar-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+                stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
+            </button>
+          </div>
+          
+          <nav class="doc-links collapse clearfix nav-fix" id="doc-sidebar-nav">
+            <ul class="nav bs-sidenav">
 
-            <li>
-              <a href="/about/">About Nightwatch</a>
-              <ul class="nav">
-                <li class="nav-item"><a class="nav-link" href="#motivation">Motivation &amp; Vision</a></li>
-                <li class="nav-item"><a class="nav-link" href="#roadmap">Roadmap</a></li>
-                <li class="nav-item"><a class="nav-link" href="#the-team">The Team</a></li>
-              </ul>
-            </li>
+              <li>
+                <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#about-collapse" aria-expanded="false">
+                  <a href="/about/">About Nightwatch</a>
+                </button>
+                <div class="collapse" id="about-collapse" data-section-url="/about/">
+                  <ul class="btn-toggle-nav">
+                    <li><a href="/about/#motivation">Motivation &amp; Vision</a></li>
+                    <li><a href="/about/#roadmap">Roadmap</a></li>
+                    <li><a href="/about/#the-team">The Team</a></li>
+                  </ul>
+                </div>              
+              </li>
 
-            <li>
-              <a href="/about/contribute/">Contributing</a>
-              <ul class="nav">
-                <li class="nav-item"><a class="nav-link" href="#contributing-guidelines">Contributing Guidelines</a></li>
-                <li class="nav-item"><a class="nav-link" href="#writing-docs">Writing Docs &amp; Examples</a></li>
-                <li class="nav-item"><a class="nav-link" href="#become-a-contributor">Become a Contributor</a></li>
-              </ul>
-            </li>
+              <li>
+                <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#contribute-collapse" aria-expanded="false">
+                  <a href="/about/contribute/">Contributing</a>
+                </button>
+                <div class="collapse" id="contribute-collapse" data-section-url="/about/contribute/">
+                  <ul class="btn-toggle-nav">
+                    <li><a href="/about/contribute/">Contributing Guidelines</a></li>
+                    <!-- <li><a href="/about/contribute/#writing-docs">Writing Docs &amp; Examples</a></li>
+                    <li><a href="/about/contribute/#become-a-contributor">Become a Contributor</a></li> -->
+                  </ul>
+                </div> 
+              </li>
 
-            <li>
-              <a href="/about/community/">Community</a>
-              <ul class="nav">
-                <li class="nav-item"><a class="nav-link" href="#community-assistance">Getting Assistance</a></li>
-                <li class="nav-item"><a class="nav-link" href="#community-articles">Articles &amp; Guides</a></li>
-                <li class="nav-item"><a class="nav-link"><a href="#community-projects">Open-source Projects</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+              <li>
+                <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#community-collapse" aria-expanded="false">
+                  <a href="/about/community/">Community</a>
+                </button>
+                <div class="collapse" id="community-collapse" data-section-url="/about/community/">
+                  <ul class="btn-toggle-nav">
+                    <li><a href="/about/community/#community-assistance">Getting Assistance</a></li>
+                    <li><a href="/about/community/#community-articles">Articles &amp; Guides</a></li>
+                    <li><a href="/about/community/#community-projects">Open-source Projects</a></li>
+                  </ul>
+                </div> 
+              </li>
+            </ul>
+        </nav>        
       </div>
 
-      <div class="col-md-9" role="main">
+      <div class="col-md-9 col-xl-8 doc-main-body" role="main">
         <div class="docs-section" data-page-uri="/about">
           <div class="page-header">
             <h2 id="motivation">About Nightwatch</h2>
