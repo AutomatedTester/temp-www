@@ -1,8 +1,8 @@
 {
-  "NIGHTWATCH_LIB_PATH": "/Users/andrei/workspace/nightwatch/lib/",
-  "NIGHTWATCH_DOCS_PATH": "/Users/andrei/workspace/nightwatch-docs-v2/",
-  "OUTPUT_FOLDER": "./output",
-  "NIGHTWATCH_VERSION": "1.1.13",
+  "NIGHTWATCH_LIB_PATH": "../nightwatch/lib/",
+  "NIGHTWATCH_DOCS_PATH": "../nightwatch-docs-v2/",
+  "OUTPUT_FOLDER": "../nightwatchjs.org/",
+  "NIGHTWATCH_VERSION": "2.1.4",
 
   "docsRepoUrl": "https://github.com/nightwatchjs/nightwatch-docs/",
   "githubRepo": "nightwatchjs/nightwatch",

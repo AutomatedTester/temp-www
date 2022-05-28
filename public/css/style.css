@@ -442,8 +442,6 @@ section[data-page-uri] {
 [data-uri="/api"] section [data-page-uri="/api"],
 [data-uri="/api/"] section [data-page-uri="/api"],
 [data-uri^="/api"] section [data-page-uri="/api/$method"],
-/*[data-uri^="/api"] section [data-page-uri^="/api/"].docs-section,*/
-
 [data-uri^="/api/"] section [data-page-uri^="/api/index"],
 [data-uri^="/api/commands"] section [data-page-uri^="/api/commands"],
 [data-uri^="/api/pageobject"] section [data-page-uri^="/api/pageobject"],
@@ -457,14 +455,11 @@ section[data-page-uri] {
   display: block;
 }
 
-[data-uri="/blog"] section [data-page-uri="/blog"],
-[data-uri="/blog/"] section [data-page-uri="/blog/"],
-[data-uri="/blog"] [data-page-uri^="/blog"],
-[data-uri="/blog/"] [data-page-uri^="/blog/"],
 [data-uri="/guide"] section [data-page-uri="/guide"],
 [data-uri="/guide/"] section [data-page-uri="/guide/"],
 [data-uri="/guide"] [data-page-uri^="/guide"],
 [data-uri="/guide/"] [data-page-uri^="/guide/"],
+
 [data-uri^="/guide/overview"] section [data-page-uri^="/guide/overview"],
 [data-uri^="/guide/quickstarts"] section [data-page-uri^="/guide/quickstarts"],
 [data-uri^="/guide/tutorials"] section [data-page-uri^="/guide/tutorials"],
@@ -473,6 +468,8 @@ section[data-page-uri] {
 [data-uri^="/guide/writing-tests"] section [data-page-uri^="/guide/writing-tests"],
 [data-uri^="/guide/running-tests"] section [data-page-uri^="/guide/running-tests"],
 [data-uri^="/guide/configuration"] section [data-page-uri^="/guide/configuration"],
+[data-uri^="/guide/contributing"] section [data-page-uri^="/guide/contributing"],
+[data-uri^="/guide/migrating-to-nightwatch"] section [data-page-uri^="/guide/migrating-to-nightwatch"],
 [data-uri^="/guide/using-nightwatch"] section [data-page-uri^="/guide/using-nightwatch"],
 [data-uri^="/guide/thirdparty-test-runners"] section [data-page-uri^="/guide/configuration"],
 [data-uri^="/guide/using-page-objects"] section [data-page-uri^="/guide/using-page-objects"],
@@ -797,17 +794,18 @@ section[data-page-uri] {
 @media only screen and (max-width: 767px) {
   .doc-container.full-width {
     padding: 0px 15px 30px;
-}
-.doc-container.full-width .doc-main-body {
-  padding: 15px 15px 30px;
-}
+  }
+  .doc-container.full-width .doc-main-body {
+    padding: 15px 15px 30px;
+  }
 }
 
-.doc-container.top-border .doc-sidebar {
-  padding-top: 50px;
-  padding-left: 0;
-  padding-right: 0px;
+@media screen and (max-width: 1550px) {
+  .doc-main-body {
+    max-width: 940px;
+  }
 }
+
 
 .doc-main-body h2 {
   font-family: var(--font-family-two);

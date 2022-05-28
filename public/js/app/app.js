@@ -28,9 +28,9 @@
       },
 
       {
-        "route" : "/guide/:section/:subsection/:pageName.html",
+        "route" : "/blog/:articleTitle.html",
         "defaults" : {
-          "controller" : "guide",
+          "controller" : "blog",
           "action"     : "page"
         }
       }

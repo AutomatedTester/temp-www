@@ -680,7 +680,7 @@ ul.features {
   background-color: transparent;
 }
 .page-header {
-  margin: 25px 0 40px;
+  margin: 25px 0 25px;
 }
 p.secondary-text {
   color: #777 !important;
@@ -1845,14 +1845,17 @@ h3#overview-of-webdriver span {
 h3#install-webdriver {
   margin-top: -30px;
 }
-
-img#whatis-logo  {
-  float: right;
-  width: 110px;
+p.whatis-logo {
+  height: 150px;
+  margin-top: -158px;
+  margin-right: 50px;
 }
-
+p.whatis-logo img {
+  float: right;
+  height: 150px;
+}
 p.whatis-logo.w3c-logo img {
-  height: 50px;
+  height: 60px;
   border-color: #1a5e9a;
   border-style: solid;
   border-width: .65rem .7rem .6rem;
@@ -1863,10 +1866,10 @@ p.whatis-logo.w3c-logo img {
 
 p.whatis-logo.w3c-logo {
   border-bottom: 0;
-  margin-top: -70px;
-  float: right;
+  margin-right: 20px;
+  height: 70px;
+  margin-top: -74px;
 }
-
 p.whatis-logo + p {
   clear:both;
 }

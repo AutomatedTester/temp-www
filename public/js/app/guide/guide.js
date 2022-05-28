@@ -41,7 +41,6 @@ domino.views.define('guide', function(view) {
     var pageName = params.pageName || '';
     var sectionPath = subSection;
     var currentUriAttr = docsContainer.attr('data-page-uri') || '';
-
     var currentUri = document.location.protocol + '//' + document.location.host + currentUriAttr;
     var innerSectionFromHash;
     var locationHrefNoHash = document.location.href;
@@ -70,7 +69,6 @@ domino.views.define('guide', function(view) {
     var subSectionTitle;
 
     domino.views.getSectionData(mainSection);
-    firstRender = false;
 
     $('#guide-container .docs-section').show();
     $('#guide-container .bs-sidenav a').removeClass('active');
@@ -87,7 +85,7 @@ domino.views.define('guide', function(view) {
       } else {
         renderSideBar.call(this, fileName, currentUriAttr, subSection, pageName, cb);
       }
-
+      firstRender = false;
       return;
     }
 
@@ -135,8 +133,7 @@ domino.views.define('guide', function(view) {
 
         if (linkElement.length) {
           linkElement.addClass('active');
-          linkElement.closest('#guide-container li.collapse-container').children('.collapse').collapse('show');
-          linkElement.closest('#guide-container li.collapse-container-inner').children('.collapse').collapse('show');
+
         } else if (newUriAttr.indexOf('.html') > 0) {
           // var linkParts = newUriAttr.split('/');
           // linkParts.pop();
@@ -244,11 +241,11 @@ domino.views.define('guide', function(view) {
       $('#sidebar-filter').keyup(filterSidebar);
 
       if (subSection && pageName) {
-        var linkElement = $('#guide-container .bs-sidenav a[href="'+ dataUri +'"]');
+        var linkElement = $('#doc-sidebar-nav li a[href="'+ dataUri +'"]');
         if (linkElement.length) {
           linkElement.addClass('active');
-          linkElement.closest('#guide-container li.collapse-container').children('.collapse').collapse('show');
-          linkElement.closest('#guide-container li.collapse-container-inner').children('.collapse').collapse('show');
+          var button = linkElement.closest('.collapse').prev();
+          button.attr('aria-expanded', 'true');
         } else if (dataUri.indexOf('.html') > 0) {
           var linkParts = dataUri.split('/');
           linkParts.pop();
@@ -313,11 +310,12 @@ domino.views.define('guide', function(view) {
 
   function filterSidebar(event) {
     // prevent up, down and enter keys
-    if(event.which == 38 || event.which == 40 || event.which == 13) return;
+    if (event.which === 38 || event.which === 40 || event.which === 13) {
+      return;
+    }
 
-    const niddle = event.target.value;
-
-    if (niddle === '' || niddle === null){
+    var niddle = event.target.value;
+    if (niddle === '' || niddle === null) {
       clearFilterList();
       return;
     }
@@ -339,8 +337,9 @@ domino.views.define('guide', function(view) {
   }
 
   function buildSideBar(mainSection, subSection) {
-    var sidebar = domino.views.sidebar.build(mainSection, subSection);
-    $('#' + mainSection + '-container .bs-sidebar').html(sidebar.content);
+    return;
+    // var sidebar = domino.views.sidebar.build(mainSection, subSection);
+    // $('#' + mainSection + '-container .bs-sidebar').html(sidebar.content);
   }
 
   this.init = function(view_script) {
