@@ -26,7 +26,7 @@ domino.views.define('blog', function(view) {
     var locationHref = document.location.href.split('#')[0];
 
     var currentUriAttr = sectionContainer.attr('data-page-uri') || '';
-    var currentUri = document.location.protocol + '//' + document.location.hostname + currentUriAttr;
+    var currentUri = document.location.protocol + '//' + document.location.host + currentUriAttr;
     domino.views.getSectionData(mainSection);
     domino.views.currentView = mainSection + '/';
 

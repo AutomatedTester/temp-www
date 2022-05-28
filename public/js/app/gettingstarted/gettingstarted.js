@@ -32,7 +32,7 @@ domino.views.define('gettingstarted', function(view) {
 
   function renderPage(view_script, sectionName) {
     view_script.no_render = true;
-    var currentUri = document.location.protocol + '//' + document.location.hostname + (document.documentElement.getAttribute('data-uri') || '');
+    var currentUri = document.location.protocol + '//' + document.location.host + (document.documentElement.getAttribute('data-uri') || '');
     var newHref = getCurrentHref();
 
     if (newHref === currentUri) {

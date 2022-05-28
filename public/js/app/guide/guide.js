@@ -16,7 +16,7 @@ domino.views.define('guide', function(view) {
 
   var mainSection = 'guide';
   var firstRender = true;
-  var defaultSection = 'getting-started';
+  var defaultSection = 'overview';
 
   function renderRightSideBar() {
     var rightSideNav = $('#guide-container .right-side-nav');
@@ -42,7 +42,7 @@ domino.views.define('guide', function(view) {
     var sectionPath = subSection;
     var currentUriAttr = docsContainer.attr('data-page-uri') || '';
 
-    var currentUri = document.location.protocol + '//' + document.location.hostname + currentUriAttr;
+    var currentUri = document.location.protocol + '//' + document.location.host + currentUriAttr;
     var innerSectionFromHash;
     var locationHrefNoHash = document.location.href;
     var hashChange = false;
@@ -123,7 +123,7 @@ domino.views.define('guide', function(view) {
         $('#guide-container .docs-section .page-content').html(data);
       } else {
         $('#guide-container').html(data);
-        buildSideBar.call(self, 'guide', 'getting-started');
+        buildSideBar.call(self, 'guide', 'overview');
       }
 
       renderRightSideBar();
@@ -339,7 +339,6 @@ domino.views.define('guide', function(view) {
   }
 
   function buildSideBar(mainSection, subSection) {
-    return;
     var sidebar = domino.views.sidebar.build(mainSection, subSection);
     $('#' + mainSection + '-container .bs-sidebar').html(sidebar.content);
   }
@@ -367,7 +366,7 @@ domino.views.define('guide', function(view) {
   this.sectionView = function(view_script) {
     view_script.no_render = true;
     var currentUriAttr = document.documentElement.getAttribute('data-uri');
-    var currentUri = document.location.protocol + '//' + document.location.hostname + currentUriAttr;
+    var currentUri = document.location.protocol + '//' + document.location.host + currentUriAttr;
 
     if (document.location.href === currentUri) {
       $('#guide-container .bs-sidenav li.active ul li a:first').click();

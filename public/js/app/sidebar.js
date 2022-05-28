@@ -5,57 +5,42 @@ domino.views.sidebar = new (function() {
       content: {
         ////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////
-        'getting-started': {
-          title: 'Getting Started',
+        'overview': {
+          title: 'Overview',
           // link: '',
           nthChildIndex: 1,
-          linkTitle: 'Getting Started',
-          baseUrl: '/guide/getting-started/',
+          linkTitle: 'Overview',
+          baseUrl: '/guide/overview/',
           sidenavData: [
-            ['introduction.html', 'Introduction', [
-              ['introduction.html#what-is-nightwatch', 'What Is Nightwatch?'],
-              ['introduction.html#theory-of-operation', 'How Does It Work?'],
-              ['introduction.html#overview-of-webdriver', 'What is WebDriver?'],
-              ['introduction.html#browser-support-table', 'Browser Support'],
-              ['introduction.html#nightwatch-selenium-server', 'Nightwatch &amp; Selenium Server']
+            ['what-is-nightwatch.html', 'What is Nightwatch?', [
+              ['what-is-nightwatch.html#why-choose-nightwatch', 'Why choose Nightwatch?'],
+              ['what-is-nightwatch.html#architecture-overview', 'Architecture overview'],
+              ['what-is-nightwatch.html#supported-browsers', 'Supported browsers']
             ]],
-            ['installation.html', 'Installing Nightwatch', [
-              ['installation.html#install-node-js', 'Install Node.js'],
-              ['installation.html#install-nightwatch', 'Install Nightwatch'],
-              ['installation.html#install-webdriver', 'Install Browser Drivers'],
-              ['installation.html#install-selenium-server', 'Install Selenium Server']
-            ]],
-            ['quickstart.html', 'Quickstart Tutorial'],
-            ['whats-new-v2.html', 'What\'s New in v2']
+            ['whats-new-in-v2.html', 'What’s new in v2.0?'],
           ]
         },
 
-        'configuration': {
-          title: 'Configuration',
+        'quickstarts': {
+          title: 'Quickstarts ',
           // link: '',
           nthChildIndex: 1,
-          linkTitle: 'Configuration',
-          baseUrl: '/guide/configuration/',
+          linkTitle: 'Quickstarts',
+          baseUrl: '/guide/quickstarts/',
           sidenavData: [
-            ['overview.html', 'Overview', [
-              ['overview.html#nightwatch-conf-js', 'nightwatch.conf.js'],
-              ['overview.html#auto-generated-configuration', 'Auto-generated Configuration'],
-              ['overview.html#working-with-test-environments', 'Working with Test Environments'],
-              ['overview.html#working-with-test-globals', 'Working with Test Globals'],
-              ['overview.html#using-env-variables', 'Using Env Variables'],
-              ['overview.html#manual-configuration', 'Manual Configuration']
+            ['create-and-run-a-nightwatch-test.html', 'Create and run a Nightwatch test', [
+              ['create-and-run-a-nightwatch-test.html#install-nightwatch', 'Install Nightwatch'],
+              ['create-and-run-a-nightwatch-test.html#install-browser-drivers', 'Install Browser Drivers'],
+              ['create-and-run-a-nightwatch-test.html#run-a-demo-test', 'Run a demo test']
             ]],
-
-            ['defaults.html', 'Defaults'],
-
-            ['settings.html', 'All Settings', [
-              ['settings.html#base-settings', 'Base Settings'],
-              ['settings.html#test-runner-settings', 'Test Runner Settings'],
-              ['settings.html#test-session-settings', 'Test Session Settings'],
-              ['settings.html#filtering-settings', 'Filtering Settings'],
-              ['settings.html#output-settings', 'Output Settings'],
-              ['settings.html#webdriver-settings', 'WebDriver Settings'],
-              ['settings.html#selenium-server-settings', 'Selenium Settings']
+            ['create-and-run-a-test-with-selenium-server.html', 'Create and run a test with Selenium Server', [
+              ['create-and-run-a-test-with-selenium-server.html#install-selenium-server-standalone', 'Install Selenium Server Standalone'],
+              ['create-and-run-a-test-with-selenium-server.html#run-a-demo-test', 'Run a demo test']
+            ]],
+            ['create-and-run-a-test-with-cloud-providers.html', 'Create and run a test with cloud providers', [
+              ['create-and-run-a-test-with-cloud-providers.html#using-browser-stack', 'Using BrowserStack'],
+              ['create-and-run-a-test-with-cloud-providers.html#using-saucelabs', 'Using Saucelabs'],
+              ['create-and-run-a-test-with-cloud-providers.html#using-aws-device-farm', 'Using AWS Device Farm']
             ]]
           ]
         },
@@ -92,6 +77,67 @@ domino.views.sidebar = new (function() {
           sidenavData: [
             ['index.html', 'Overview'],
             ['styleguide.html', 'Style guide']
+          ]
+        },
+
+        'tutorials': {
+          title: 'Tutorials ',
+          // link: '',
+          nthChildIndex: 1,
+          linkTitle: 'Tutorials',
+          baseUrl: '/guide/tutorials/',
+          sidenavData: [
+            ['learn-how-to-write-complex-user-actions.html', 'Learn how to write complex user actions'],
+            ['run-your-tests-in-parallel.html', 'Run your tests in parallel', [
+              ['run-your-tests-in-parallel.html#using-test-workers', 'Using test workers'],
+              ['run-your-tests-in-parallel.html#using-multiple-browsers', 'Using multiple browsers'],
+            ]],
+            ['create-and-run-component-tests.html', 'Create and run component tests', [
+              ['create-and-run-component-tests.html#for-vue-js-projects', 'for Vue.js projects'],
+              ['create-and-run-component-tests.html#for-react-projects', 'for React projects'],
+            ]],
+            ['learn-how-to-write-custom-commands-and-custom-assertions.html', 'Learn how to write custom commands and custom assertions', [
+              ['learn-how-to-write-custom-commands-and-custom-assertions.html#custom-commands', 'Custom commands'],
+              ['learn-how-to-write-custom-commands-and-custom-assertions.html#custom-assertions', 'Custom assertions']
+            ]],
+            ['create-and-run-node-js-unit-integration-tests-with-nightwatch.html', 'Create and run Node.js unit & integration tests with Nightwatch', [
+              ['create-and-run-node-js-unit-integration-tests-with-nightwatch.html#add-details-on-how-to-do-api-testing', 'Add details on how to do API testing ']
+            ]],
+            ['build-a-custom-test-runner-using-the-programmatic-api.html', 'Build a custom test runner using the programmatic API'],
+            ['learn-how-to-run-your-tests-on-github-actions.html', 'Learn how to run your tests on Github Actions'],
+            ['develop-and-publish-a-nightwatch-plugin.html', 'Develop and publish a Nightwatch plugin'],
+            ['cross-browser-testing-at-scale-using-selenium-grid.html', 'Cross-browser testing at scale using Selenium Grid'],
+            ['use-nightwatch-with-appium-for-mobile-web-testing.html', 'Use Nightwatch with Appium for mobile web testing'],
+            ['learn-how-to-test-web-rtc-applications.html', 'Learn how to test WebRTC applications']
+          ]
+        },
+
+        'concepts': {
+          title: 'Concepts ',
+          // link: '',
+          nthChildIndex: 1,
+          linkTitle: 'Concepts',
+          baseUrl: '/guide/concepts/',
+          sidenavData: [
+            ['what-is-end-to-end-testing.html', 'What is end-to-end testing?'],
+            ['introduction-to-selenium-and-webdriver.html', 'Introduction to Selenium and Webdriver'],
+            ['test-environments.html', 'Test environments'],
+            ['test-globals.html', 'Test globals'],
+            ['session-capabilities.html', 'Session capabilities'],
+            ['parallel-testing-in-nightwatch.html', 'Parallel testing in Nightwatch', [
+              ['parallel-testing-in-nightwatch.html#using-test-workers', 'Using test workers'],
+              ['parallel-testing-in-nightwatch.html#using-multiple-environments', 'Using multiple environments'],
+            ]],
+            ['page-object-model.html', 'Page Object Model', [
+              ['page-object-model.html#overview', 'Overview'],
+              ['page-object-model.html#elements', 'Elements'],
+              ['page-object-model.html#sections', 'Sections'],
+              ['page-object-model.html#page-specific-custom-commands', 'Page-specific custom commands'],
+            ]],
+            ['component-testing.html', 'Component testing', [
+              ['component-testing.html#what-is-component-testing', 'What is component testing?'],
+              ['component-testing.html#component-testing-in-nightwatch', 'Component testing in Nightwatch'],
+            ]]
           ]
         },
 
@@ -154,7 +200,8 @@ domino.views.sidebar = new (function() {
           baseUrl: '/guide/running-tests/',
           sidenavData: [
             ['nightwatch-runner.html', 'Nightwatch Runner'],
-            ['define-test-environments.html', 'Define Test Environments'],
+            ['command-line-options.html', 'Command-line Options'],
+            ['test-environments.html', 'Test Environments'],
             ['test-groups.html', 'Test Groups'],
             ['test-tags.html', 'Test Tags'],
             ['parallel-running.html', 'Running in Parallel'],
@@ -173,6 +220,34 @@ domino.views.sidebar = new (function() {
             ['defining-elements.html', 'Defining Elements'],
             ['defining-sections.html', 'Defining Sections'],
             ['writing-commands.html', 'Page-specific Custom Commands']
+          ]
+        },
+
+        'reference': {
+          title: 'Reference',
+          // link: '',
+          nthChildIndex: 1,
+          linkTitle: 'Reference',
+          baseUrl: '/guide/reference/',
+          sidenavData: [
+            ["complete-bdd-syntax.html", "Complete BDD Syntax"],
+            ["test-runner-cli-reference.html", "Test runner CLI Reference"],
+            ["settings-reference.html", "Settings Reference"],
+          ]
+        },
+
+        'resources': {
+          title: 'Resources',
+          // link: '',
+          nthChildIndex: 1,
+          linkTitle: 'Resources',
+          baseUrl: '/guide/resources/',
+          sidenavData: [
+            ["list-of-integrations.html", "List of integrations"],
+            ["migrating-to-nightwatch-2.html", "Migrating to Nightwatch 2", [
+              ["migrating-to-nightwatch-2.html#from-protractor", "From Protractor"],
+              ["migrating-to-nightwatch-2.html#from-nightwatch-1-7", "From Nightwatch 1.7"],
+            ]],
           ]
         },
 
