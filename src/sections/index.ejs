@@ -226,7 +226,7 @@ describe('Demo test Ecosia.org', function() {
       .sendKeys('input[type=search]', 'nightwatch')
       .assert.visible('button[type=submit]')
       .click('button[type=submit]')
-      .assert.containsText('.mainline-results', 'Nightwatch.js')
+      .assert.textContains('.layout__content', 'Nightwatch.js')
       .end();
   })
 });</code></pre>
