@@ -324,7 +324,7 @@ a {
 }
 
 b, strong {
-  font-weight: 500;
+  font-weight: 600;
 }
 .parallax #index-container .index-features p {
   font-weight: 300;
@@ -474,6 +474,7 @@ section[data-page-uri] {
 [data-uri^="/guide/thirdparty-test-runners"] section [data-page-uri^="/guide/configuration"],
 [data-uri^="/guide/using-page-objects"] section [data-page-uri^="/guide/using-page-objects"],
 [data-uri^="/guide/extending-nightwatch"] section [data-page-uri^="/guide/extending-nightwatch"],
+[data-uri^="/guide/nightwatch-cli"] section [data-page-uri^="/guide/nightwatch-cli"],
 [data-uri^="/guide/reference"] section [data-page-uri^="/guide/reference"],
 [data-uri^="/guide/resources"] section [data-page-uri^="/guide/resources"] {
   display: block;

@@ -6,6 +6,7 @@
 
   "docsRepoUrl": "https://github.com/nightwatchjs/nightwatch-docs/",
   "githubRepo": "nightwatchjs/nightwatch",
+  "baseUrl": "https://nightwatchjs.org",
   "apiRepoUrl": "https://github.com",
   "devServerPort": "3001",
   "docsRepoBranch": "versions/2.0",
@@ -31,6 +32,7 @@
         "overview" : {
           "pages": [
             "what-is-nightwatch",
+            "what-is-webdriver",
             "whats-new-in-v2"
           ],
           "vars": {
@@ -51,7 +53,9 @@
 
         "nightwatch-cli" : {
           "pages": [
-            "command-line-options"
+            "command-line-options",
+            "settings",
+            "defaults"
           ],
           "vars": {
             "pageHeader": "Nightwatch CLI Runner"
@@ -95,10 +99,10 @@
 
         "browser-drivers": {
           "pages": [
-            "gecko-driver-firefox",
-            "chrome-driver",
-            "safari-driver",
-            "edge-driver"
+            "geckodriver",
+            "chromedriver",
+            "safaridriver",
+            "edgedriver"
           ],
           "vars": {
             "pageHeader": "Browser Drivers"
@@ -126,15 +130,22 @@
 
         "writing-tests": {
           "pages": [
-            "test-syntax",
+            "test-syntax-bdd",
+            "test-syntax-exports",
             "using-es-6-async-await",
+            "using-cucumberjs",
+            "using-mocha",
             "using-commands-to-perform-actions",
             "finding-interacting-with-dom-elements",
             "understanding-element-visibility",
             "adding-assertions",
             "using-test-hooks",
             "using-test-globals",
-            "global-test-hooks"
+            "global-test-hooks",
+            "using-xpath-selectors",
+            "write-complex-user-actions",
+            "write-component-tests-for-react",
+            "write-nodejs-unit-integration-tests"
           ],
           "vars": {
             "pageHeader": "Writing Tests"
@@ -144,15 +155,16 @@
         "running-tests": {
           "pages": [
             "using-the-cli-test-runner",
-            "define-test-environments",
             "choosing-a-test-runner",
             "specifying-test-sources",
             "skipping-disabling-tests",
             "parallel-running",
+            "programmatic-api",
             "controlling-test-failure-behaviour",
             "filtering-by-test-tags",
             "using-with-test-groups",
-            "using-xpath-selectors"
+            "mobile-web-testing-with-appium"
+
           ],
           "vars": {
             "pageHeader": "Running Tests"
@@ -161,6 +173,7 @@
 
         "configuration": {
           "pages": [
+            "define-test-environments",
             "advanced-test-source-filtering",
             "enabling-http-keep-alive",
             "using-env-variables-in-your-config",
@@ -170,10 +183,20 @@
             "customising-test-output",
             "selenium-settings",
             "web-driver-settings",
-            "setting-up-screenshots-on-test-failure"
+            "taking-screenshots-on-fail"
           ],
           "vars": {
             "pageHeader": "Configuration"
+          }
+        },
+
+        "configuration-reference": {
+          "pages": [
+            "settings",
+            "defaults"
+          ],
+          "vars": {
+            "pageHeader": "Configuration Reference"
           }
         },
 
@@ -228,16 +251,6 @@
           }
         },
 
-        "reference": {
-          "pages": [
-            "complete-bdd-syntax",
-            "test-runner-cli-reference",
-            "settings-reference"
-          ],
-          "vars": {
-            "pageHeader": "Reference"
-          }
-        },
 
         "migrating-to-nightwatch": {
           "pages": [

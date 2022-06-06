@@ -7,20 +7,23 @@
         <loc>https://nightwatchjs.org/guide/getting-started/installation.html</loc>
         <loc>https://nightwatchjs.org/guide/getting-started/quickstart.html</loc>
         <loc>https://nightwatchjs.org/guide/getting-started/whats-new-v2.html</loc>
+
         <loc>https://nightwatchjs.org/guide/configuration/</loc>
         <loc>https://nightwatchjs.org/guide/configuration/overview.html</loc>
         <loc>https://nightwatchjs.org/guide/configuration/defaults.html</loc>
         <loc>https://nightwatchjs.org/guide/configuration/settings.html</loc>
+
         <loc>https://nightwatchjs.org/guide/using-nightwatch/</loc>
         <loc>https://nightwatchjs.org/guide/using-nightwatch/concepts.html</loc>
         <loc>https://nightwatchjs.org/guide/using-nightwatch/finding-and-interacting-with-elements.html</loc>
         <loc>https://nightwatchjs.org/guide/using-nightwatch/using-xpath-selectors.html</loc>
         <loc>https://nightwatchjs.org/guide/using-nightwatch/using-test-hooks.html</loc>
         <loc>https://nightwatchjs.org/guide/using-nightwatch/external-globals.html</loc>
+
         <loc>https://nightwatchjs.org/guide/running-tests/</loc>
         <loc>https://nightwatchjs.org/guide/running-tests/nightwatch-runner.html</loc>
         <loc>https://nightwatchjs.org/guide/running-tests/command-line-options.html</loc>
-        <loc>https://nightwatchjs.org/guide/running-tests/test-environments.html</loc>
+        <loc>https://nightwatchjs.org/guide/concepts/test-environments.html</loc>
         <loc>https://nightwatchjs.org/guide/running-tests/test-groups.html</loc>
         <loc>https://nightwatchjs.org/guide/running-tests/test-tags.html</loc>
         <loc>https://nightwatchjs.org/guide/running-tests/parallel-running.html</loc>
@@ -39,8 +42,6 @@
         <loc>https://nightwatchjs.org/guide/extending-nightwatch/custom-commands.html</loc>
         <loc>https://nightwatchjs.org/guide/extending-nightwatch/custom-assertions.html</loc>
         <loc>https://nightwatchjs.org/guide/extending-nightwatch/custom-reporter.html</loc>
-        <loc>https://nightwatchjs.org/guide/extending-nightwatch/using-with-selenium-webdriver.html</loc>
-        <loc>https://nightwatchjs.org/guide/extending-nightwatch/using-with-webdriverio.html</loc>
 
         <loc>https://nightwatchjs.org/guide/working-with-page-objects/</loc>
         <loc>https://nightwatchjs.org/guide/working-with-page-objects/using-page-objects.html</loc>
@@ -48,11 +49,9 @@
         <loc>https://nightwatchjs.org/guide/working-with-page-objects/defining-sections.html</loc>
         <loc>https://nightwatchjs.org/guide/working-with-page-objects/writing-commands.html</loc>
 
-        <loc>https://nightwatchjs.org/guide/</loc>
         <loc>https://nightwatchjs.org/guide/unit-testing-with-nightwatch/</loc>
         <loc>https://nightwatchjs.org/guide/unit-testing-with-nightwatch/writing-unit-tests.html</loc>
 
-        <loc>https://nightwatchjs.org/blog/</loc>
         <loc>https://nightwatchjs.org/blog/nightwatch-user-survey-results-2021.html</loc>
         <loc>https://nightwatchjs.org/blog/nightwatch-v2-beta-is-available.html</loc>
         <loc>https://nightwatchjs.org/blog/nightwatch-v2-alpha-is-released.html</loc>
@@ -60,7 +59,27 @@
         <loc>https://nightwatchjs.org/blog/a-first-look-at-nightwatch-v2.html</loc>
         <loc>https://nightwatchjs.org/blog/nightwatch-has-joined-the-browserstack-family.html</loc>
 
+        <loc>https://nightwatchjs.org/guide/nightwatch-cli/command-line-options.html</loc>
+        <loc>https://nightwatchjs.org/guide/configuration-reference/settings.html</loc>
+        <loc>https://nightwatchjs.org/guide/migrating-to-nightwatch/from-protractor.html</loc>
+        <loc>https://nightwatchjs.org/guide/migrating-to-nightwatch/from-nightwatch-v1.html</loc>
+        <loc>https://nightwatchjs.org/guide/concepts/session-capabilities.html</loc>
+        <loc>https://nightwatchjs.org/guide/concepts/parallel-testing-in-nightwatch.html</loc>
+        <loc>https://nightwatchjs.org/guide/concepts/page-object-model.html</loc>
+        <loc>https://nightwatchjs.org/guide/concepts/component-testing.html</loc>
+        <loc>https://nightwatchjs.org/guide/concepts/test-globals.html</loc>
+        <loc>https://nightwatchjs.org/guide/concepts/test-environments.html</loc>
+        <loc>https://nightwatchjs.org/guide/quickstarts/create-and-run-a-nightwatch-test.html</loc>
+        <loc>https://nightwatchjs.org/guide/configuration/define-test-environments.html</loc>
+        <loc>https://nightwatchjs.org/guide/configuration/using-env-variables-in-your-config.html</loc>
+        <loc>https://nightwatchjs.org/guide/configuration/customising-test-output.html</loc>
+        <loc>https://nightwatchjs.org/guide/configuration/advanced-test-source-filtering.html</loc>
+        <loc>https://nightwatchjs.org/guide/writing-tests/using-cucumberjs.html</loc>
+        <loc>https://nightwatchjs.org/guide/writing-tests/write-component-tests-for-react.html</loc>
+        <loc>https://nightwatchjs.org/guide/running-tests/mobile-web-testing-with-appium.html</loc>
 
+        <loc>https://nightwatchjs.org/guide/</loc>
+        <loc>https://nightwatchjs.org/blog/</loc>
         <loc>https://nightwatchjs.org/about/</loc>
         <loc>https://nightwatchjs.org/about/contribute/</loc>
         <loc>https://nightwatchjs.org/about/community/</loc>

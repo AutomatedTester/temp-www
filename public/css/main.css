@@ -2068,6 +2068,9 @@ p.whatis-logo + p {
   padding-top: 20px;
   border-top: 1px solid #ccc;
 }
+[data-page-uri^="/api/"] .sample-test .toolbar {
+  top: 10px !important;
+}
 
 [data-page-uri^="/api/index"] .apimethod,
 [data-page-uri^="/api/expect"] .apimethod,
@@ -2087,6 +2090,8 @@ p.whatis-logo + p {
   font-size: 20px;
   color: #0c5460;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  margin: 0 0 10px 0;
+  background: transparent;
 }
 [data-page-uri^="/api/index"] .apimethod h3 code,
 [data-page-uri^="/api/expect"] .apimethod h3 code,

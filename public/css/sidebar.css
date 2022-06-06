@@ -72,7 +72,6 @@
   border-right: 1px solid rgba(0,0,0,0.09);
   height: 100vh;
   position: sticky;
-  min-width: 300px;
 }
 
 @media only screen and (max-width: 767px){
@@ -183,7 +182,9 @@ ul.nav.bs-sidenav .nav button > a:hover {
   .doc-main-body {
 
   }
-
+  .doc-sidebar {
+    min-width: 300px;
+  }
 }
 .bs-sidebar.affix-top {
   margin-bottom: 50px;
@@ -250,8 +251,9 @@ ul.nav.bs-sidenav .nav button > a:hover {
   margin-left: 0;
 }
 ul.nav .btn-toggle-nav li h5 {
-  margin-left: -5px;
+  margin-left: 5px;
   font-size: 16px;
+  font-weight: 600;
 }
 
 ul.nav .btn-toggle-nav li {

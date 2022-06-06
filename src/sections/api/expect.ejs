@@ -1,8 +1,8 @@
-<%- content['api']['expect'] %>
+<%- content['api']['expect']['content'] %>
 
 <div class="commands">
-    <%- content['api']['expect-api']['cookie'] %>
-    <%- content['api']['expect-api']['element'] %>
+    <%- content['api']['expect-api']['cookie']['content'] %>
+    <%- content['api']['expect-api']['element']['content'] %>
 
     <%
     for (var methodName in api['expect.element']) {
@@ -46,7 +46,7 @@
     </div>  <!-- end .apimethod -->
     <% } %>
 
-    <%- content['api']['expect-api']['elements'] %>
-    <%- content['api']['expect-api']['title'] %>
-    <%- content['api']['expect-api']['url'] %>
+    <%- content['api']['expect-api']['elements']['content'] %>
+    <%- content['api']['expect-api']['title']['content'] %>
+    <%- content['api']['expect-api']['url']['content'] %>
 </div>

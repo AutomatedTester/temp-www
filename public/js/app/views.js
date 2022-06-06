@@ -31,7 +31,7 @@ domino.views.define('index', function(view) {
     var videoContainer = $('#video-container');
     window.setTimeout(function() {
       if (videoContainer.is(':empty')) {
-        videoContainer.html('<iframe src="https://player.vimeo.com/video/376838936?loop=1&byline=0&portrait=0&title=0" ' +
+        videoContainer.html('<iframe src="https://player.vimeo.com/video/714406223?loop=1&byline=0&portrait=0&title=0" ' +
           'style="width:100%;height:560px" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>');
       }
     }, 500);
