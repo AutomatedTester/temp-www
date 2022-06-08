@@ -239,6 +239,18 @@
           }
         },
 
+        "reporters": {
+          "pages": [
+            "add-custom-reporter",
+            "use-html-reporter",
+            "use-json-reporter",
+            "use-junit-reporter"
+          ],
+          "vars": {
+            "pageHeader": "Using Reporters"
+          }
+        },
+
         "extending-nightwatch": {
           "pages": [
             "adding-custom-commands",

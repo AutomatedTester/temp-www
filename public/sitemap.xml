@@ -77,6 +77,10 @@
         <loc>https://nightwatchjs.org/guide/writing-tests/using-cucumberjs.html</loc>
         <loc>https://nightwatchjs.org/guide/writing-tests/write-component-tests-for-react.html</loc>
         <loc>https://nightwatchjs.org/guide/running-tests/mobile-web-testing-with-appium.html</loc>
+        <loc>https://nightwatchjs.org/guide/reporters/use-json-reporter.html</loc>
+        <loc>https://nightwatchjs.org/guide/reporters/use-html-reporter.html</loc>
+        <loc>https://nightwatchjs.org/guide/reporters/use-junit-reporter.html</loc>
+        <loc>https://nightwatchjs.org/guide/reporters/add-custom-reporter.html</loc>
 
         <loc>https://nightwatchjs.org/guide/</loc>
         <loc>https://nightwatchjs.org/blog/</loc>

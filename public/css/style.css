@@ -468,6 +468,7 @@ section[data-page-uri] {
 [data-uri^="/guide/writing-tests"] section [data-page-uri^="/guide/writing-tests"],
 [data-uri^="/guide/running-tests"] section [data-page-uri^="/guide/running-tests"],
 [data-uri^="/guide/configuration"] section [data-page-uri^="/guide/configuration"],
+[data-uri^="/guide/reporters"] section [data-page-uri^="/guide/reporters"],
 [data-uri^="/guide/contributing"] section [data-page-uri^="/guide/contributing"],
 [data-uri^="/guide/migrating-to-nightwatch"] section [data-page-uri^="/guide/migrating-to-nightwatch"],
 [data-uri^="/guide/using-nightwatch"] section [data-page-uri^="/guide/using-nightwatch"],
@@ -756,16 +757,15 @@ section[data-page-uri] {
 
 /* New CSS */
 
-/*------------- Global Prefix -------------------*/
-::-webkit-scrollbar{ width: 2px; }
-::-webkit-scrollbar-track { background: #fff;}
-::-webkit-scrollbar-thumb { background: #502D17;border-radius: 0;}
 /*------------- Firefox Scrollbar -------------------*/
 
 #doc-sidebar-nav {
-  scrollbar-width: none;
+  scrollbar-width: 2px;
   scrollbar-color: #502D17 #502D17;
 }
+#doc-sidebar-nav:-webkit-scrollbar{ width: 2px; }
+#doc-sidebar-nav:-webkit-scrollbar-track { background: #fff;}
+#doc-sidebar-nav:-webkit-scrollbar-thumb { background: #502D17;border-radius: 0;}
 
 .doc-container.full-width {
   padding: 0 1.5rem;
@@ -803,7 +803,7 @@ section[data-page-uri] {
 
 @media screen and (max-width: 1550px) {
   .doc-main-body {
-    max-width: 940px;
+
   }
 }
 
