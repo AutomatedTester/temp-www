@@ -353,6 +353,8 @@ pre.language-bash {
 pre.language-bash:before {
   color: #888;
 }
+
+.hide-indicator pre:before,
 pre.hide-indicator:before {
   content: none;
 }
@@ -467,6 +469,8 @@ section[data-page-uri] {
 [data-uri^="/guide/browser-drivers"] section [data-page-uri^="/guide/browser-drivers"],
 [data-uri^="/guide/writing-tests"] section [data-page-uri^="/guide/writing-tests"],
 [data-uri^="/guide/running-tests"] section [data-page-uri^="/guide/running-tests"],
+[data-uri^="/guide/mobile-web-testing"] section [data-page-uri^="/guide/mobile-web-testing"],
+[data-uri^="/guide/network-requests"] section [data-page-uri^="/guide/network-requests"],
 [data-uri^="/guide/configuration"] section [data-page-uri^="/guide/configuration"],
 [data-uri^="/guide/reporters"] section [data-page-uri^="/guide/reporters"],
 [data-uri^="/guide/contributing"] section [data-page-uri^="/guide/contributing"],

@@ -163,11 +163,32 @@
             "controlling-test-failure-behaviour",
             "filtering-by-test-tags",
             "using-with-test-groups",
-            "mobile-web-testing-with-appium"
-
+            "catch-js-exceptions",
+            "capture-console-messages"
           ],
           "vars": {
             "pageHeader": "Running Tests"
+          }
+        },
+
+        "mobile-web-testing": {
+          "pages": [
+            "with-appium",
+            "override-device-dimensions"
+          ],
+          "vars": {
+            "pageHeader": "Mobile Web Testing"
+          }
+        },
+
+        "network-requests": {
+          "pages": [
+            "capture-network-calls",
+            "mock-geolocation",
+            "mock-network-response"
+          ],
+          "vars": {
+            "pageHeader": "Network Requests"
           }
         },
 
@@ -241,7 +262,7 @@
 
         "reporters": {
           "pages": [
-            "add-custom-reporter",
+            "create-custom-reporter",
             "use-html-reporter",
             "use-json-reporter",
             "use-junit-reporter"
