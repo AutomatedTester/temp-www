@@ -96,7 +96,7 @@
                     <li class="overview"><a href="/api/commands/#api-commands">Overview</a></li>
                     <li class="overview"><a href="/api/commands/#using-chrome-devtools-protocol">Using Chrome DevTools protocol</a></li>
                     <li class="overview"><a href="/api/commands/#firefox-specific-commands">Firefox Specific</a></li>
-                    <li><h5>Finding Elements</h5></li>
+                    <li><h5>Find Elements</h5></li>
                     <li><a href="/api/getFirstElementChild.html">getFirstElementChild</a></li>
                     <li><a href="/api/getLastElementChild.html">getLastElementChild</a></li>
                     <li><a href="/api/getNextSibling.html">getNextSibling</a></li>
@@ -161,43 +161,30 @@
                     <li><a href="/api/getLocation.html">getLocation</a></li>
                     <li><a href="/api/getLocationInView.html">getLocationInView</a></li>
 
-                    <li><h5>Protocol Actions</h5></li>
-                    <li><a href="/api/elementIdAttribute.html">elementIdAttribute</a></li>
-                    <li><a href="/api/elementIdClear.html">elementIdClear</a></li>
-                    <li><a href="/api/elementIdClick.html">elementIdClick</a></li>
-                    <li><a href="/api/elementIdCssProperty.html">elementIdCssProperty</a></li>
-                    <li><a href="/api/elementIdDisplayed.html">elementIdDisplayed</a></li>
-                    <li><a href="/api/elementIdEnabled.html">elementIdEnabled</a></li>
-                    <li><a href="/api/elementIdLocation.html">elementIdLocation</a></li>
-                    <li><a href="/api/elementIdLocationInView.html">elementIdLocationInView</a></li>
-                    <li><a href="/api/elementIdName.html">elementIdName</a></li>
-                    <li><a href="/api/elementIdSelected.html">elementIdSelected</a></li>
-                    <li><a href="/api/elementIdSize.html">elementIdSize</a></li>
-                    <li><a href="/api/elementIdText.html">elementIdText</a></li>
-                    <li><a href="/api/elementIdValue.html">elementIdValue</a></li>
-                    <li><a href="/api/submit.html">submit</a></li>
-
                     <li><h5>Document Handling</h5></li>
                     <li><a href="/api/execute.html">execute</a></li>
-                    <li><a href="/api/executeAsync.html">executeAsync</a></li>
+                    <li><a href="/api/executeAsyncScript.html">executeAsyncScript</a></li>
                     <li><a href="/api/injectScript.html">injectScript</a></li>
                     <li><a href="/api/source.html">source</a></li>
                     <li><a href="/api/pageSource.html">pageSource</a></li>
 
                     <li><h5>Session Related</h5></li>
                     <li><a href="/api/end.html">end</a></li>
-                    <li><a href="/api/getLog.html">getLog</a></li>
-                    <li><a href="/api/getLogTypes.html">getLogTypes</a></li>
-                    <li><a href="/api/isLogAvailable.html">isLogAvailable</a></li>
                     <li><a href="/api/session.html">session</a></li>
-                    <li><a href="/api/sessionLog.html">sessionLog</a></li>
-                    <li><a href="/api/sessionLogTypes.html">sessionLogTypes</a></li>
                     <li><a href="/api/sessions.html">sessions</a></li>
-                    <li><a href="/api/setNetworkConditions.html">setNetworkConditions</a></li>
                     <li><a href="/api/status.html">status</a></li>
                     <li><a href="/api/timeouts.html">timeouts</a></li>
                     <li><a href="/api/timeoutsAsyncScript.html">timeoutsAsyncScript</a></li>
                     <li><a href="/api/timeoutsImplicitWait.html">timeoutsImplicitWait</a></li>
+
+                    <li><h5>Browser Logs</h5></li>
+                    <li><a href="/api/captureBrowserConsoleLogs.html">captureBrowserConsoleLogs</a></li>
+                    <li><a href="/api/captureBrowserExceptions.html">captureBrowserExceptions</a></li>
+                    <li><a href="/api/getLog.html">getLog</a></li>
+                    <li><a href="/api/getLogTypes.html">getLogTypes</a></li>
+                    <li><a href="/api/isLogAvailable.html">isLogAvailable</a></li>
+                    <li><a href="/api/sessionLog.html">sessionLog</a></li>
+                    <li><a href="/api/sessionLogTypes.html">sessionLogTypes</a></li>
 
                     <li><h5>Navigation</h5></li>
 
@@ -212,31 +199,6 @@
                     <li><a href="/api/url.html">url</a></li>
                     <li><a href="/api/urlHash.html">urlHash</a></li>
                     <li><a href="/api/quit.html">quit</a></li>
-
-                    <li><h5>Window Related</h5></li>
-
-                    <li><a href="/api/closeWindow.html">closeWindow</a></li>
-                    <li><a href="/api/fullscreenWindow.html">fullscreenWindow</a></li>
-                    <li><a href="/api/getWindowPosition.html">getWindowPosition</a></li>
-                    <li><a href="/api/getWindowRect.html">getWindowRect</a></li>
-                    <li><a href="/api/getWindowSize.html">getWindowSize</a></li>
-                    <li><a href="/api/maximizeWindow.html">maximizeWindow</a></li>
-                    <li><a href="/api/minimizeWindow.html">minimizeWindow</a></li>
-                    <li><a href="/api/openNewWindow.html">openNewWindow</a></li>
-                    <li><a href="/api/resizeWindow.html">resizeWindow</a></li>
-                    <li><a href="/api/setWindowPosition.html">setWindowPosition</a></li>
-                    <li><a href="/api/setWindowRect.html">setWindowRect</a></li>
-                    <li><a href="/api/setWindowSize.html">setWindowSize</a></li>
-                    <li><a href="/api/switchWindow.html">switchWindow</a></li>
-
-                    <li><h5>Window Protocol</h5></li>
-                    <li><a href="/api/window.html">window</a></li>
-                    <li><a href="/api/windowHandle.html">windowHandle</a></li>
-                    <li><a href="/api/windowHandles.html">windowHandles</a></li>
-                    <li><a href="/api/windowMaximize.html">windowMaximize</a></li>
-                    <li><a href="/api/windowPosition.html">windowPosition</a></li>
-                    <li><a href="/api/windowRect.html">windowRect</a></li>
-                    <li><a href="/api/windowSize.html">windowSize</a></li>
 
                     <li><h5>Frames</h5></li>
                     <li><a href="/api/frame.html">frame</a></li>
@@ -262,6 +224,17 @@
                     <li><a href="/api/takeElementScreenshot.html">takeElementScreenshot</a></li>
                     <li><a href="/api/saveScreenshot.html">saveScreenshot</a></li>
 
+                    <li><h5>Page Performance</h5></li>
+                    <li><a href="/api/getPerformanceMetrics.html">getPerformanceMetrics</a></li>
+                    <li><a href="/api/enablePerformanceMetrics.html">enablePerformanceMetrics</a></li>
+                    <li><a href="/api/takeHeapSnapshot.html">takeHeapSnapshot</a></li>
+
+                    <li><h5>Network Requests</h5></li>
+                    <li><a href="/api/captureNetworkRequests.html">captureNetworkRequests</a></li>
+                    <li><a href="/api/mockNetworkResponse.html">mockNetworkResponse</a></li>
+                    <li><a href="/api/setGeolocation.html">setGeolocation</a></li>
+                    <li><a href="/api/setNetworkConditions.html">setNetworkConditions</a></li>
+
                     <li><h5>Mobile Related</h5></li>
 
                     <li><a href="/api/getOrientation.html">getOrientation</a></li>
@@ -269,6 +242,8 @@
                     <li><a href="/api/contexts.html">contexts</a></li>
                     <li><a href="/api/currentContext.html">currentContext</a></li>
                     <li><a href="/api/setContext.html">setContext</a></li>
+                    <li><a href="/api/setDeviceDimensions.html">setDeviceDimensions</a></li>
+
 
                     <li><h5>Utilities/Debugging</h5></li>
 
@@ -277,6 +252,47 @@
                     <li><a href="/api/useCss.html">useCss</a></li>
                     <li><a href="/api/useXpath.html">useXpath</a></li>
                     <li><a href="/api/waitUntil.html">waitUntil</a></li>
+
+                    <li><h5>Window Related</h5></li>
+
+                    <li><a href="/api/closeWindow.html">closeWindow</a></li>
+                    <li><a href="/api/fullscreenWindow.html">fullscreenWindow</a></li>
+                    <li><a href="/api/getWindowPosition.html">getWindowPosition</a></li>
+                    <li><a href="/api/getWindowRect.html">getWindowRect</a></li>
+                    <li><a href="/api/getWindowSize.html">getWindowSize</a></li>
+                    <li><a href="/api/maximizeWindow.html">maximizeWindow</a></li>
+                    <li><a href="/api/minimizeWindow.html">minimizeWindow</a></li>
+                    <li><a href="/api/openNewWindow.html">openNewWindow</a></li>
+                    <li><a href="/api/resizeWindow.html">resizeWindow</a></li>
+                    <li><a href="/api/setWindowPosition.html">setWindowPosition</a></li>
+                    <li><a href="/api/setWindowRect.html">setWindowRect</a></li>
+                    <li><a href="/api/setWindowSize.html">setWindowSize</a></li>
+                    <li><a href="/api/switchToWindow.html">switchToWindow</a></li>
+
+                    <li><h5>Window Protocol</h5></li>
+                    <li><a href="/api/window.html">window</a></li>
+                    <li><a href="/api/windowHandle.html">windowHandle</a></li>
+                    <li><a href="/api/windowHandles.html">windowHandles</a></li>
+                    <li><a href="/api/windowMaximize.html">windowMaximize</a></li>
+                    <li><a href="/api/windowPosition.html">windowPosition</a></li>
+                    <li><a href="/api/windowRect.html">windowRect</a></li>
+                    <li><a href="/api/windowSize.html">windowSize</a></li>
+
+                    <li><h5>Protocol Actions</h5></li>
+                    <li><a href="/api/elementIdAttribute.html">elementIdAttribute</a></li>
+                    <li><a href="/api/elementIdClear.html">elementIdClear</a></li>
+                    <li><a href="/api/elementIdClick.html">elementIdClick</a></li>
+                    <li><a href="/api/elementIdCssProperty.html">elementIdCssProperty</a></li>
+                    <li><a href="/api/elementIdDisplayed.html">elementIdDisplayed</a></li>
+                    <li><a href="/api/elementIdEnabled.html">elementIdEnabled</a></li>
+                    <li><a href="/api/elementIdLocation.html">elementIdLocation</a></li>
+                    <li><a href="/api/elementIdLocationInView.html">elementIdLocationInView</a></li>
+                    <li><a href="/api/elementIdName.html">elementIdName</a></li>
+                    <li><a href="/api/elementIdSelected.html">elementIdSelected</a></li>
+                    <li><a href="/api/elementIdSize.html">elementIdSize</a></li>
+                    <li><a href="/api/elementIdText.html">elementIdText</a></li>
+                    <li><a href="/api/elementIdValue.html">elementIdValue</a></li>
+                    <li><a href="/api/submit.html">submit</a></li>
                 </ul>
             </div>
         </li>

@@ -18,23 +18,23 @@
 <%- content['_includes_']['parallax'] %>
 
 <section id="apimethod-container" data-page-uri="/api/$method" class="secondary">
-  <div class="background">
-    <div class="container bs-docs-container">
-      <div class="row">
-        <div class="col-md-3 bs-sidebar hidden-print" role="complementary">
+  <div class="doc-container full-width top-border background">
+    <div class="clearfix">
+      <div class="row flex-xl-nowrap no-gutters">
+
+        <div class="col-md-3 col-xl-2 doc-sidebar bs-sidebar hidden-print" role="complementary">
           <%- content['_includes_']['api-sidebar'] %>
         </div>
 
-        <div class="col-md-9" role="main">
+        <div class="col-md-9 col-xl-10 doc-main-body" role="main">
           <div class="docs-section" data-page-uri="/api/<%- subPageName %>">
-            <div class="page-content">
-              <%- pageContent %>
-            </div>
+            <div class="page-content"><%- pageContent %></div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
 </section>
 
 <section id="index-container" data-page-uri="/"></section>

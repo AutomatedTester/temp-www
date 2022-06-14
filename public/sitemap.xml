@@ -128,8 +128,8 @@
         <loc>https://nightwatchjs.org/api/frameParent.html</loc>
 
         <loc>https://nightwatchjs.org/api/setNetworkConditions.html</loc>
-        <loc>https://nightwatchjs.org/api/captureConsoleLogs.html</loc>
-        <loc>https://nightwatchjs.org/api/catchJsExceptions.html</loc>
+        <loc>https://nightwatchjs.org/api/captureBrowserConsoleLogs.html</loc>
+        <loc>https://nightwatchjs.org/api/captureBrowserExceptions.html</loc>
         <loc>https://nightwatchjs.org/api/registerBasicAuth.html</loc>
         <loc>https://nightwatchjs.org/api/enablePerformanceMetrics.html</loc>
         <loc>https://nightwatchjs.org/api/getPerformanceMetrics.html</loc>
@@ -224,7 +224,7 @@
         <loc>https://nightwatchjs.org/api/setWindowRect.html</loc>
         <loc>https://nightwatchjs.org/api/setWindowSize.html</loc>
         <loc>https://nightwatchjs.org/api/submitForm.html</loc>
-        <loc>https://nightwatchjs.org/api/switchWindow.html</loc>
+        <loc>https://nightwatchjs.org/api/switchToWindow.html</loc>
         <loc>https://nightwatchjs.org/api/urlHash.html</loc>
         <loc>https://nightwatchjs.org/api/useCss.html</loc>
         <loc>https://nightwatchjs.org/api/useXpath.html</loc>
