@@ -195,10 +195,21 @@ section.secondary h2 {
   font-size: 35px;
 }
 
-section.secondary h3,
-.secondary h4 {
-  /*font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+#releases-container h2 {
+  border: 0;
 }
+
+#releases-container p img:not([class]) {
+  margin: 0;
+  padding: 10px 0;
+  display: block;
+}
+
+#releases-container .language-js {
+  padding: 10px;
+  margin: 0;
+}
+
 section.secondary h3 span{
   /*background: #f2f2f2;*/
   font-family: 'Source Sans Pro', sans-serif;
@@ -1456,18 +1467,19 @@ code[class*="language-"], pre[class*="language-"] {
   font-size: 14px;
 }
 
-#releases-container pre[class*="language-"] {
-  margin: 10px 25px;
-}
-
 #releases-container .all-releases {
   margin-top:50px;
   margin-bottom:50px;
 }
 #releases-container .list-group-item {
   margin: 15px 0;
-  background: #f8f8f8;
-  border-top-width: 1px !important;
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+#releases-container img {
+    display: block;
+    max-width: 80%;
 }
 
 #releases-container .all-releases a {
@@ -1477,7 +1489,15 @@ code[class*="language-"], pre[class*="language-"] {
 #releases-container .list-group h3 {
   padding-top: 10px;
   margin-top: 0px;
+  font-size: 18px;
 }
+
+/* figure out something better */
+#new-error-stack-trace-output-which-parses-and-highlights-the-source-code-line-3071 {
+  margin: 0;
+  padding: 0;
+}
+
 #releases-container .list-group em {
   font-style: normal;
   font-size: 14px;
