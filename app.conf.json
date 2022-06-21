@@ -164,7 +164,8 @@
             "filtering-by-test-tags",
             "using-with-test-groups",
             "catch-js-exceptions",
-            "capture-console-messages"
+            "capture-console-messages",
+            "take-heap-snapshot"
           ],
           "vars": {
             "pageHeader": "Running Tests"
@@ -265,7 +266,8 @@
             "create-custom-reporter",
             "use-html-reporter",
             "use-json-reporter",
-            "use-junit-reporter"
+            "use-junit-reporter",
+            "use-mochawesome-reporter"
           ],
           "vars": {
             "pageHeader": "Using Reporters"
