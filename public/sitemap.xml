@@ -93,6 +93,8 @@
         <loc>https://nightwatchjs.org/guide/network-requests/capture-network-calls.html</loc>
         <loc>https://nightwatchjs.org/guide/network-requests/mock-network-response.html</loc>
         <loc>https://nightwatchjs.org/guide/network-requests/mock-geolocation.html</loc>
+        <loc>https://nightwatchjs.org/guide/running-tests/take-heap-snapshot.html</loc>
+        <loc>https://nightwatchjs.org/guide/reporters/use-mochawesome-reporter.html</loc>
 
         <loc>https://nightwatchjs.org/guide/</loc>
         <loc>https://nightwatchjs.org/blog/</loc>
