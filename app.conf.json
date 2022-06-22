@@ -63,25 +63,6 @@
           }
         },
 
-        "tutorials": {
-          "pages": [
-            "learn-how-to-write-complex-user-actions",
-            "run-your-tests-in-parallel",
-            "create-and-run-component-tests",
-            "learn-how-to-write-custom-commands-and-custom-assertions",
-            "create-and-run-node-js-unit-integration-tests-with-nightwatch",
-            "build-a-custom-test-runner-using-the-programmatic-api",
-            "learn-how-to-run-your-tests-on-github-actions",
-            "develop-and-publish-a-nightwatch-plugin",
-            "cross-browser-testing-at-scale-using-selenium-grid",
-            "use-nightwatch-with-appium-for-mobile-web-testing",
-            "learn-how-to-test-web-rtc-applications"
-          ],
-          "vars": {
-            "pageHeader": "Tutorials"
-          }
-        },
-
         "concepts": {
           "pages": [
             "what-is-end-to-end-testing",
@@ -210,16 +191,6 @@
           ],
           "vars": {
             "pageHeader": "Configuration"
-          }
-        },
-
-        "configuration-reference": {
-          "pages": [
-            "settings",
-            "defaults"
-          ],
-          "vars": {
-            "pageHeader": "Configuration Reference"
           }
         },
 
