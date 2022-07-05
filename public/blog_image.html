@@ -2,6 +2,13 @@
 <html lang="en" data-uri="/blog">
 <head>
     <title>A First Look at Nightwatch v2.0 | Nightwatch.js Blog</title>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MWC4FHS');</script>
+<!-- End Google Tag Manager -->
 <meta name="description" content="A new chapter for Nightwatch.js awaits."/>
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -116,7 +123,10 @@ section.secondary {
 
 </head>
 <body>
-
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWC4FHS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <div style="position: fixed; width: 1200px; height: 600px; border-right:2px solid #fff; border-bottom:2px solid #fff;top:0px; left: 0px;"></div>
 
 <header class="navbar navbar-expand-lg navbar-dark nw-navbar flex-column flex-md-row">
@@ -235,47 +245,6 @@ section.secondary {
 
 <script src="https://player.vimeo.com/api/player.js" async defer></script>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-92784163-1"></script>
-
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {dataLayer.push(arguments);}
-  gtag('js', new Date());
-  const GA_LOCAL_STORAGE_KEY = 'ga:clientId';
-
-  if (window.localStorage) {
-    if (!localStorage.getItem('v2-banner-shown')) {
-      $('#survey-banner-index').addClass('show');
-      $('#survey-banner-section').addClass('show');
-    }
-
-    if (localStorage.getItem(GA_LOCAL_STORAGE_KEY)) {
-      gtag('js', new Date());
-      gtag('config', 'UA-92784163-1', {
-        send_page_view: true,
-        client_storage: 'none',
-        client_id: localStorage.getItem(GA_LOCAL_STORAGE_KEY),
-      });
-    } else {
-      window.localStorage.setItem(GA_LOCAL_STORAGE_KEY, uuidv4());
-      gtag('js', new Date());
-      gtag('config', 'UA-92784163-1', {
-        send_page_view: true,
-        client_storage: 'none',
-        client_id: localStorage.getItem(GA_LOCAL_STORAGE_KEY),
-      });
-    }
-  }
-</script>
-
-<script>
-// (function() {
-//   window.dataLayer = window.dataLayer || [];
-//   function gtag(){dataLayer.push(arguments);}
-//   gtag('js', new Date());
-//   gtag('config', 'UA-92784163-1');
-// })();
-</script>
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
 <script type="text/javascript">docsearch({
