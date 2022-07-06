@@ -30,6 +30,8 @@
         <loc>https://nightwatchjs.org/guide/running-tests/disabling-tests.html</loc>
         <loc>https://nightwatchjs.org/guide/running-tests/programmatic-api.html</loc>
         <loc>https://nightwatchjs.org/guide/running-tests/using-mocha.html</loc>
+        <loc>https://nightwatchjs.org/guide/running-tests/catch-js-exceptions.html</loc>
+        <loc>https://nightwatchjs.org/guide/running-tests/capture-console-messages.html</loc>
 
         <loc>https://nightwatchjs.org/guide/writing-tests/</loc>
         <loc>https://nightwatchjs.org/guide/writing-tests/using-exports.html</loc>
@@ -76,7 +78,23 @@
         <loc>https://nightwatchjs.org/guide/configuration/advanced-test-source-filtering.html</loc>
         <loc>https://nightwatchjs.org/guide/writing-tests/using-cucumberjs.html</loc>
         <loc>https://nightwatchjs.org/guide/writing-tests/write-component-tests-for-react.html</loc>
-        <loc>https://nightwatchjs.org/guide/running-tests/mobile-web-testing-with-appium.html</loc>
+        <loc>https://nightwatchjs.org/guide/reporters/use-json-reporter.html</loc>
+        <loc>https://nightwatchjs.org/guide/reporters/use-html-reporter.html</loc>
+        <loc>https://nightwatchjs.org/guide/reporters/use-junit-reporter.html</loc>
+        <loc>https://nightwatchjs.org/guide/reporters/add-custom-reporter.html</loc>
+
+        <loc>https://nightwatchjs.org/guide/mobile-web-testing/with-appium.html</loc>
+        <loc>https://nightwatchjs.org/guide/mobile-web-testing/override-device-dimensions.html</loc>
+
+        <loc>https://nightwatchjs.org/guide/reporters/use-junit-reporter.html</loc>
+        <loc>https://nightwatchjs.org/guide/reporters/use-html-reporter.html</loc>
+        <loc>https://nightwatchjs.org/guide/reporters/create-custom-reporter.html</loc>
+
+        <loc>https://nightwatchjs.org/guide/network-requests/capture-network-calls.html</loc>
+        <loc>https://nightwatchjs.org/guide/network-requests/mock-network-response.html</loc>
+        <loc>https://nightwatchjs.org/guide/network-requests/mock-geolocation.html</loc>
+        <loc>https://nightwatchjs.org/guide/running-tests/take-heap-snapshot.html</loc>
+        <loc>https://nightwatchjs.org/guide/reporters/use-mochawesome-reporter.html</loc>
 
         <loc>https://nightwatchjs.org/guide/</loc>
         <loc>https://nightwatchjs.org/blog/</loc>
@@ -110,6 +128,17 @@
         <loc>https://nightwatchjs.org/api/windowSize.html</loc>
         <loc>https://nightwatchjs.org/api/frame.html</loc>
         <loc>https://nightwatchjs.org/api/frameParent.html</loc>
+
+        <loc>https://nightwatchjs.org/api/setNetworkConditions.html</loc>
+        <loc>https://nightwatchjs.org/api/captureBrowserConsoleLogs.html</loc>
+        <loc>https://nightwatchjs.org/api/captureBrowserExceptions.html</loc>
+        <loc>https://nightwatchjs.org/api/registerBasicAuth.html</loc>
+        <loc>https://nightwatchjs.org/api/enablePerformanceMetrics.html</loc>
+        <loc>https://nightwatchjs.org/api/getPerformanceMetrics.html</loc>
+        <loc>https://nightwatchjs.org/api/takeHeapSnapshot.html</loc>
+        <loc>https://nightwatchjs.org/api/mockNetworkResponse.html</loc>
+        <loc>https://nightwatchjs.org/api/setDeviceDimensions.html</loc>
+        <loc>https://nightwatchjs.org/api/setGeolocation.html</loc>
 
         <loc>https://nightwatchjs.org/api/element.html</loc>
         <loc>https://nightwatchjs.org/api/elements.html</loc>
@@ -197,7 +226,7 @@
         <loc>https://nightwatchjs.org/api/setWindowRect.html</loc>
         <loc>https://nightwatchjs.org/api/setWindowSize.html</loc>
         <loc>https://nightwatchjs.org/api/submitForm.html</loc>
-        <loc>https://nightwatchjs.org/api/switchWindow.html</loc>
+        <loc>https://nightwatchjs.org/api/switchToWindow.html</loc>
         <loc>https://nightwatchjs.org/api/urlHash.html</loc>
         <loc>https://nightwatchjs.org/api/useCss.html</loc>
         <loc>https://nightwatchjs.org/api/useXpath.html</loc>

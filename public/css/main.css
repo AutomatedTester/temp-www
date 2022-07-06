@@ -191,6 +191,8 @@ section.secondary h2 {
   margin-top: -27px;
   font-weight: 600;
   border-bottom: 1px solid #ccc;
+  font-family: var(--font-family-two);
+  font-size: 35px;
 }
 
 #releases-container h2 {

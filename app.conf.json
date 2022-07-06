@@ -29,6 +29,7 @@
   "sections": {
     "guide" : {
       "subsections": {
+
         "overview" : {
           "pages": [
             "what-is-nightwatch",
@@ -59,25 +60,6 @@
           ],
           "vars": {
             "pageHeader": "Nightwatch CLI Runner"
-          }
-        },
-
-        "tutorials": {
-          "pages": [
-            "learn-how-to-write-complex-user-actions",
-            "run-your-tests-in-parallel",
-            "create-and-run-component-tests",
-            "learn-how-to-write-custom-commands-and-custom-assertions",
-            "create-and-run-node-js-unit-integration-tests-with-nightwatch",
-            "build-a-custom-test-runner-using-the-programmatic-api",
-            "learn-how-to-run-your-tests-on-github-actions",
-            "develop-and-publish-a-nightwatch-plugin",
-            "cross-browser-testing-at-scale-using-selenium-grid",
-            "use-nightwatch-with-appium-for-mobile-web-testing",
-            "learn-how-to-test-web-rtc-applications"
-          ],
-          "vars": {
-            "pageHeader": "Tutorials"
           }
         },
 
@@ -163,11 +145,33 @@
             "controlling-test-failure-behaviour",
             "filtering-by-test-tags",
             "using-with-test-groups",
-            "mobile-web-testing-with-appium"
-
+            "catch-js-exceptions",
+            "capture-console-messages",
+            "take-heap-snapshot"
           ],
           "vars": {
             "pageHeader": "Running Tests"
+          }
+        },
+
+        "mobile-web-testing": {
+          "pages": [
+            "with-appium",
+            "override-device-dimensions"
+          ],
+          "vars": {
+            "pageHeader": "Mobile Web Testing"
+          }
+        },
+
+        "network-requests": {
+          "pages": [
+            "capture-network-calls",
+            "mock-geolocation",
+            "mock-network-response"
+          ],
+          "vars": {
+            "pageHeader": "Network Requests"
           }
         },
 
@@ -187,16 +191,6 @@
           ],
           "vars": {
             "pageHeader": "Configuration"
-          }
-        },
-
-        "configuration-reference": {
-          "pages": [
-            "settings",
-            "defaults"
-          ],
-          "vars": {
-            "pageHeader": "Configuration Reference"
           }
         },
 
@@ -236,6 +230,19 @@
           ],
           "vars": {
             "pageHeader": "Using Page Objects"
+          }
+        },
+
+        "reporters": {
+          "pages": [
+            "create-custom-reporter",
+            "use-html-reporter",
+            "use-json-reporter",
+            "use-junit-reporter",
+            "use-mochawesome-reporter"
+          ],
+          "vars": {
+            "pageHeader": "Using Reporters"
           }
         },
 

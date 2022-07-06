@@ -7,6 +7,11 @@
 
   {% autoescape false %}{{method.descr}}{% endautoescape %}
 
+{% if method.api == 'protocol.cdp' %}
+{% autoescape false %}
+<p class="alert alert-warning"><code>{{method.name}}()</code> is only available when using Chrome or Edge drivers.</p>
+{% endautoescape %}{% endif %}
+
   {% if method.api == 'protocol.elementinteraction' || method.api == 'protocol.elementstate' || method.api == 'protocol.elementlocation' %}
   {% autoescape false %}
       <p class="alert alert-info"><code>{{method.name}}()</code> will automatically wait for the element to be present (until the specified timeout). If the element is not found, an error is thrown which will cause the test to fail. Starting with <code>v1.2</code> you can suppress element not found errors by specifying the <code>suppressNotFoundErrors</code> option.</p>
@@ -22,15 +27,16 @@
     {% endautoescape %}{% endif %}
 
 {% if method.syntax %}
-<h3>Usage:</h3>
+<h3>Usage</h3>
 <div class="sample-test">
 {% for syntax in method.syntax %}
-<pre data-language="javascript" style="padding-top: 10px; margin-bottom: 10px" class="default-theme language-javascript"><code class="default-theme language-javascript">{{syntax}}</code></pre>
+<pre class="language-javascript" style="padding-top: 10px; margin-bottom: 10px"><code class="language-javascript">{{syntax}}</code></pre>
 {% endfor %}
 </div>
 {% endif %}
 
-<h3>Parameters:</h3>
+
+<h3>Parameters</h3>
 <div class="table-responsive">
   <table class="table table-bordered table-striped">
     <thead>
@@ -54,7 +60,7 @@
 
 {% if method.returns %}
 
-<h3>Returns:</h3>
+<h3>Returns</h3>
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
       <thead>
@@ -74,9 +80,9 @@
 {% endif %}
 
 {% if method.example %}
-<h3>Example:</h3>
+<h3>Example</h3>
 <div class="sample-test">
-<pre class="line-numbers" data-language="javascript" class=" language-javascript"><code class=" language-javascript">{{method.example}}</code></pre>
+<pre class="line-numbers language-javascript"><code class="language-javascript">{{method.example}}</code></pre>
 </div>
 {% endif %}
 
@@ -85,7 +91,7 @@
 {% endif %}
 
 {% if method.see.length > 0 %}
-<h3>See also:</h3>
+<h3>See also</h3>
 <ul class="api-related-links">
 {% for link in method.see %}
 <li><a href="/api/{{link}}.html">{{link}}</a></li>
@@ -95,14 +101,14 @@
 
 
 {% if method.moreInfoLink %}
-<h3>More Info:</h3>
+<h3>Recommended content</h3>
 <ul>
   <li><code><a href="https://{{method.moreInfoLink}}" target="_blank">{{method.moreInfoLink}}</a></code></li>
 </ul>
 {% endif %}
 
 {% if method.link %}
-<h3>W3C WebDriver spec:</h3> 
+<h3>W3C WebDriver spec</h3> 
 <ul>
   <li><code><a href="https://www.w3.org/TR/webdriver{{method.link}}" target="_blank">w3.org/TR/webdriver{{method.link}}</a></code></li>
 </ul>

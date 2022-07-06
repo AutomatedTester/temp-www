@@ -169,7 +169,9 @@
                         <li><a href="/guide/running-tests/filtering-by-test-tags.html">Filter by test tags</a></li>
                         <li><a href="/guide/running-tests/using-with-test-groups.html">Use test groups</a></li>
                         <li><a href="/guide/running-tests/programmatic-api.html">Use the programmatic API</a></li>
-                        <li><a href="/guide/running-tests/mobile-web-testing-with-appium.html">Mobile web testing with Appium</a></li>
+                        <li><a href="/guide/running-tests/capture-console-messages.html">Capture browser logs</a></li>
+                        <li><a href="/guide/running-tests/catch-js-exceptions.html">Capture browser exceptions</a></li>
+                        <li><a href="/guide/running-tests/take-heap-snapshot.html">Take heap snapshot</a></li>
                       </ul>
                     </div>
 
@@ -213,19 +215,62 @@
                   </li>
                   */ %>
 
-                  <li>
+
+                <li>
+                    <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#networkrequests-collapse" aria-expanded="false">
+                        <a href="/guide/network-requests/">Network requests</a>
+                    </button>
+
+                    <div class="collapse" id="networkrequests-collapse" data-section-url="/guide/network-requests/">
+                        <ul class="btn-toggle-nav">
+                            <li><a href="/guide/network-requests/capture-network-calls.html">Capture network calls</a></li>
+                            <li><a href="/guide/network-requests/mock-network-response.html">Mock network response</a></li>
+                            <li><a href="/guide/network-requests/mock-geolocation.html">Mock geolocation</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#reporters-collapse" aria-expanded="false">
+                        <a href="/guide/reporters/">Use reporters</a>
+                    </button>
+
+                    <div class="collapse" id="reporters-collapse" data-section-url="/guide/reporters/">
+                        <ul class="btn-toggle-nav">
+                            <li><a href="/guide/reporters/use-junit-reporter.html">JUnit XML reporter</a></li>
+                            <li><a href="/guide/reporters/use-html-reporter.html">HTML reporter</a></li>
+                            <li><a href="/guide/reporters/use-mochawesome-reporter.html">Mochawesome reporter</a></li>
+                            <li><a href="/guide/reporters/create-custom-reporter.html">Add custom reporter</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
                     <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#pageobjects-collapse" aria-expanded="false">
-                      <a href="/guide/using-page-objects/">Page objects</a>
+                        <a href="/guide/using-page-objects/">Page objects</a>
                     </button>
 
                     <div class="collapse" id="pageobjects-collapse" data-section-url="/guide/using-page-objects/">
-                      <ul class="btn-toggle-nav">
-                        <li><a href="/guide/using-page-objects/defining-elements.html">Define elements</a></li>
-                        <li><a href="/guide/using-page-objects/defining-sections.html">Define sections</a></li>
-                        <li><a href="/guide/using-page-objects/writing-page-specific-commands.html">Add page-specific commands</a></li>
-                      </ul>
+                        <ul class="btn-toggle-nav">
+                            <li><a href="/guide/using-page-objects/defining-elements.html">Define elements</a></li>
+                            <li><a href="/guide/using-page-objects/defining-sections.html">Define sections</a></li>
+                            <li><a href="/guide/using-page-objects/writing-page-specific-commands.html">Add page-specific commands</a></li>
+                        </ul>
                     </div>
-                  </li>
+                </li>
+
+                <li>
+                    <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#mobiletesting-collapse" aria-expanded="false">
+                        <a href="/guide/mobile-web-testing/">Test on mobile</a>
+                    </button>
+
+                    <div class="collapse" id="mobiletesting-collapse" data-section-url="/guide/mobile-web-testing/">
+                        <ul class="btn-toggle-nav">
+                            <li><a href="/guide/mobile-web-testing/with-appium.html">Use Nightwatch with Appium</a></li>
+                            <li><a href="/guide/mobile-web-testing/override-device-dimensions.html">Override device dimensions</a></li>
+                        </ul>
+                    </div>
+                </li>
 
                   <li>
                     <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#extending-collapse" aria-expanded="false">
