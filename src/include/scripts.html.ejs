@@ -15,22 +15,45 @@
 <script src="/js/app/blog/blog.js?v=1103527931"></script>
 <script src="/js/app/app.js?v=1003420931"></script>
 <script src="https://player.vimeo.com/api/player.js" async defer></script>
+<script src="/js/third-party/uuidv4.min.js"></script>
+
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWC4FHS"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWC4FHS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
 <!-- End Google Tag Manager (noscript) -->
 
 <script>
-   if (window.localStorage) {
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {dataLayer.push(arguments);}
+  var GA_LOCAL_STORAGE_KEY = 'ga:clientId';
+
+  if (window.localStorage) {
     (function() {
       if (!localStorage.getItem('nightwatch-component-banner-shown')) {
         $('#survey-banner-index').addClass('show');
         $('#survey-banner-section').addClass('show');
         $('body').addClass('banner-visible');
       }
+
+        if (localStorage.getItem(GA_LOCAL_STORAGE_KEY)) {
+          gtag('gtm.start', new Date().getTime());
+          gtag('config', 'GTM-MWC4FHS', {
+            client_storage: 'none',
+            client_id: localStorage.getItem(GA_LOCAL_STORAGE_KEY),
+          });
+        } else {
+          window.localStorage.setItem(GA_LOCAL_STORAGE_KEY, uuidv4());
+          gtag('gtm.start', new Date().getTime());
+          gtag('config', 'GTM-MWC4FHS', {
+            client_storage: 'none',
+            client_id: localStorage.getItem(GA_LOCAL_STORAGE_KEY),
+          });
+        }
+        gtag('event', 'gtm.js');
     }());
   }
 </script>
+<script src="https://www.googletagmanager.com/gtm.js?id=GTM-MWC4FHS"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"></script>
 <script type="text/javascript">
