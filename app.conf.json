@@ -187,7 +187,8 @@
             "customising-test-output",
             "selenium-settings",
             "web-driver-settings",
-            "taking-screenshots-on-fail"
+            "taking-screenshots-on-fail",
+            "aws-devicefarm-settings"
           ],
           "vars": {
             "pageHeader": "Configuration"
