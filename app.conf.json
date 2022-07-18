@@ -1,6 +1,6 @@
 {
   "NIGHTWATCH_LIB_PATH": "../nightwatch/lib/",
-  "NIGHTWATCH_DOCS_PATH": "../nightwatch-docs-v2/",
+  "NIGHTWATCH_DOCS_PATH": "../nightwatch-docs/",
   "OUTPUT_FOLDER": "../nightwatchjs.org/",
   "NIGHTWATCH_VERSION": "2.1.4",
 
