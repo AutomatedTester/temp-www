@@ -50,6 +50,14 @@ domino.views.define('api', function(view) {
       $('#' + subSection + '-collapse').addClass('show');
     }
 
+    var innerSectionFromHash = document.location.hash.substring(1);
+    var element = $('#' + innerSectionFromHash);
+    if (element.length === 1) {
+      $([document.documentElement, document.body]).animate({
+        scrollTop: element.offset().top - 90
+      }, 200);
+    }
+    
     if (subSectionContainer.is(':visible')) {
       return;
     }
