@@ -63,6 +63,17 @@
           }
         },
 
+        "reference" : {
+          "pages": [
+            "settings",
+            "defaults"
+          ],
+          "vars": {
+            "pageHeader": "Reference"
+          }
+        },
+
+
         "concepts": {
           "pages": [
             "what-is-end-to-end-testing",
