@@ -52,6 +52,15 @@
           }
         },
 
+        "ci-integrations" : {
+          "pages": [
+            "run-nightwatch-on-jenkins"
+          ],
+          "vars": {
+            "pageHeader": "CI Integrations"
+          }
+        },
+
         "nightwatch-cli" : {
           "pages": [
             "command-line-options",
