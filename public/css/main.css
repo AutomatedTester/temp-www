@@ -25,6 +25,12 @@ body {
 body {
   position: relative;
 }
+
+/* prevent images from overflowing */
+img {
+  max-width: 100%;
+}
+
 .container {
   max-width: 1768px;
   width: auto;
