@@ -181,7 +181,7 @@
             "using-debug"
           ],
           "vars": {
-            "pageHeader": "Write Component Tests"
+            "pageHeader": "Debugging Tests"
           }
         },
 
