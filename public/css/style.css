@@ -483,7 +483,8 @@ section[data-page-uri] {
 [data-uri^="/guide/extending-nightwatch"] section [data-page-uri^="/guide/extending-nightwatch"],
 [data-uri^="/guide/nightwatch-cli"] section [data-page-uri^="/guide/nightwatch-cli"],
 [data-uri^="/guide/reference"] section [data-page-uri^="/guide/reference"],
-[data-uri^="/guide/resources"] section [data-page-uri^="/guide/resources"] {
+[data-uri^="/guide/resources"] section [data-page-uri^="/guide/resources"],
+[data-uri^="/guide/ci-integrations"] section [data-page-uri^="/guide/ci-integrations"] {
   display: block;
 }
 
