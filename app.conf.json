@@ -97,7 +97,7 @@
             "styleguide"
           ],
           "vars": {
-            "pageHeader": "Browser Drivers"
+            "pageHeader": "Contributing"
           }
         },
 
@@ -151,6 +151,28 @@
           ],
           "vars": {
             "pageHeader": "Running Tests"
+          }
+        },
+
+        "component-tests": {
+          "pages": [
+            "overview",
+            "react",
+            "vue"
+          ],
+          "vars": {
+            "pageHeader": "Write Component Tests"
+          }
+        },
+
+        "debugging-tests": {
+          "pages": [
+            "overview",
+            "using-pause",
+            "using-debug"
+          ],
+          "vars": {
+            "pageHeader": "Write Component Tests"
           }
         },
 

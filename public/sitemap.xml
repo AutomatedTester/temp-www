@@ -90,6 +90,14 @@
         <loc>https://nightwatchjs.org/guide/reporters/use-html-reporter.html</loc>
         <loc>https://nightwatchjs.org/guide/reporters/create-custom-reporter.html</loc>
 
+        <loc>https://nightwatchjs.org/guide/debugging-tests/overview.html</loc>
+        <loc>https://nightwatchjs.org/guide/debugging-tests/using-pause.html</loc>
+        <loc>https://nightwatchjs.org/guide/debugging-tests/using-debug.html</loc>
+
+        <loc>https://nightwatchjs.org/guide/component-tests/overview.html</loc>
+        <loc>https://nightwatchjs.org/guide/component-tests/react.html</loc>
+        <loc>https://nightwatchjs.org/guide/component-tests/vue.html</loc>
+
         <loc>https://nightwatchjs.org/guide/network-requests/capture-network-calls.html</loc>
         <loc>https://nightwatchjs.org/guide/network-requests/mock-network-response.html</loc>
         <loc>https://nightwatchjs.org/guide/network-requests/mock-geolocation.html</loc>

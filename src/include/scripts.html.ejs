@@ -30,21 +30,21 @@
         $('body').addClass('banner-visible');
       }
 
-        if (localStorage.getItem(GA_LOCAL_STORAGE_KEY)) {
-          gtag('gtm.start', new Date().getTime());
-          gtag('config', 'GTM-MWC4FHS', {
-            client_storage: 'none',
-            client_id: localStorage.getItem(GA_LOCAL_STORAGE_KEY),
-          });
-        } else {
-          window.localStorage.setItem(GA_LOCAL_STORAGE_KEY, uuidv4());
-          gtag('gtm.start', new Date().getTime());
-          gtag('config', 'GTM-MWC4FHS', {
-            client_storage: 'none',
-            client_id: localStorage.getItem(GA_LOCAL_STORAGE_KEY),
-          });
-        }
-        gtag('event', 'gtm.js');
+    if (localStorage.getItem(GA_LOCAL_STORAGE_KEY)) {
+      gtag('gtm.start', new Date().getTime());
+      gtag('config', 'GTM-MWC4FHS', {
+        client_storage: 'none',
+        client_id: localStorage.getItem(GA_LOCAL_STORAGE_KEY),
+      });
+    } else {
+      window.localStorage.setItem(GA_LOCAL_STORAGE_KEY, uuidv4());
+      gtag('gtm.start', new Date().getTime());
+      gtag('config', 'GTM-MWC4FHS', {
+        client_storage: 'none',
+        client_id: localStorage.getItem(GA_LOCAL_STORAGE_KEY),
+      });
+    }
+    gtag('event', 'gtm.js');
     }());
   }
 </script>
