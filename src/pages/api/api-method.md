@@ -110,6 +110,6 @@
 {% if method.link %}
 <h3>W3C WebDriver spec</h3> 
 <ul>
-  <li><code><a href="https://www.w3.org/TR/webdriver{{method.link}}" target="_blank">w3.org/TR/webdriver{{method.link}}</a></code></li>
+  <li><code><a href="{{method.link}}" target="_blank">{{method.link}}</a></code></li>
 </ul>
 {% endif %}
