@@ -71,7 +71,7 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           ssh: true
-          branch: main
+          branch: release/v2
           force: true
           directory: deploy_folder
           repository: nightwatchjs/nightwatchjs.org
