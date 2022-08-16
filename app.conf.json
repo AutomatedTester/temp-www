@@ -136,7 +136,8 @@
             "using-xpath-selectors",
             "write-complex-user-actions",
             "write-component-tests-for-react",
-            "write-nodejs-unit-integration-tests"
+            "write-nodejs-unit-integration-tests",
+            "chrome-devtools-recorder"
           ],
           "vars": {
             "pageHeader": "Writing Tests"
