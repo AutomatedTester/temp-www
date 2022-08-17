@@ -54,7 +54,10 @@
 
         "ci-integrations" : {
           "pages": [
-            "run-nightwatch-on-jenkins"
+            "run-nightwatch-on-jenkins",
+            "run-nightwatch-on-github-actions",
+            "run-nightwatch-on-bamboo",
+            "run-nightwatch-on-azure-pipelines"
           ],
           "vars": {
             "pageHeader": "CI Integrations"
@@ -272,7 +275,9 @@
             "use-html-reporter",
             "use-json-reporter",
             "use-junit-reporter",
-            "use-mochawesome-reporter"
+            "use-mochawesome-reporter",
+            "use-nightwatch-allure-reporter",
+            "use-teamcity-reporter"
           ],
           "vars": {
             "pageHeader": "Using Reporters"
