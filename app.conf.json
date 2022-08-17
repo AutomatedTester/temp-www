@@ -272,7 +272,8 @@
             "use-html-reporter",
             "use-json-reporter",
             "use-junit-reporter",
-            "use-mochawesome-reporter"
+            "use-mochawesome-reporter",
+            "use-slack-reporter"
           ],
           "vars": {
             "pageHeader": "Using Reporters"
