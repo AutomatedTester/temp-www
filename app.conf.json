@@ -2,7 +2,7 @@
   "NIGHTWATCH_LIB_PATH": "../nightwatch/lib/",
   "NIGHTWATCH_DOCS_PATH": "../nightwatch-docs/",
   "OUTPUT_FOLDER": "../nightwatchjs.org/",
-  "NIGHTWATCH_VERSION": "2.3.0",
+  "NIGHTWATCH_VERSION": "2.3.3",
 
   "docsRepoUrl": "https://github.com/nightwatchjs/nightwatch-docs/",
   "githubRepo": "nightwatchjs/nightwatch",
@@ -54,7 +54,10 @@
 
         "ci-integrations" : {
           "pages": [
-            "run-nightwatch-on-jenkins"
+            "run-nightwatch-on-jenkins",
+            "run-nightwatch-on-github-actions",
+            "run-nightwatch-on-bamboo",
+            "run-nightwatch-on-azure-pipelines"
           ],
           "vars": {
             "pageHeader": "CI Integrations"
@@ -273,7 +276,9 @@
             "use-json-reporter",
             "use-junit-reporter",
             "use-mochawesome-reporter",
-            "use-slack-reporter"
+            "use-slack-reporter",
+            "use-nightwatch-allure-reporter",
+            "use-teamcity-reporter"
           ],
           "vars": {
             "pageHeader": "Using Reporters"
