@@ -92,6 +92,11 @@
 }
 }
 
+/* List style fix for safari  */
+.nav li {
+  list-style: none;
+}
+
 .bs-sidebar .nav li .nav li {
   display: block;
 }
