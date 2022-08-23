@@ -66,14 +66,23 @@
 
         "nightwatch-cli" : {
           "pages": [
-            "command-line-options",
-            "settings",
-            "defaults"
+            "command-line-options"
           ],
           "vars": {
             "pageHeader": "Nightwatch CLI Runner"
           }
         },
+
+        "reference" : {
+          "pages": [
+            "settings",
+            "defaults"
+          ],
+          "vars": {
+            "pageHeader": "Reference"
+          }
+        },
+
 
         "concepts": {
           "pages": [
