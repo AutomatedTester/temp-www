@@ -30,7 +30,7 @@
                 <ul class="btn-toggle-nav">
                   <li><a href="/guide/overview/what-is-nightwatch.html">What is Nightwatch?</a></li>
                   <li><a href="/guide/overview/what-is-webdriver.html">What is WebDriver?</a></li>
-                  <li class="nav-item"><a href="/guide/overview/whats-new-in-v2.html">What’s new in v2.0?</a></li>
+                  <li class="nav-item"><a href="/guide/overview/whats-new-in-v2.html">What’s new in v2?</a></li>
                 </ul>
               </div>
 
@@ -49,7 +49,7 @@
                 <li><a href="/guide/quickstarts/create-and-run-a-test-with-selenium-server.html">Run a test with Selenium Server</a>
                 </li>
 
-<!--                <li><a href="/guide/quickstarts/create-and-run-a-test-with-cloud-providers.html">Run a test with cloud providers</a></li>-->
+               <li><a href="/guide/quickstarts/create-and-run-a-test-with-cloud-providers.html">Create and run a test with a cloud provider</a></li>
               </ul>
             </div>
 
@@ -121,6 +121,7 @@
                                 <li><a href="/guide/configuration/web-driver-settings.html">WebDriver settings</a></li>
                                 <li><a href="/guide/configuration/selenium-settings.html">Selenium settings</a></li>
                                 <li><a href="/guide/configuration/browser-stack-settings.html">Configure BrowserStack settings</a></li>
+                                <li><a href="/guide/configuration/aws-devicefarm-settings.html">Configure AWS Device Farm</a></li>
                             </ul>
                         </div>
                     </li>
@@ -148,6 +149,7 @@
                         <li><a href="/guide/writing-tests/global-test-hooks.html">Use global hooks</a></li>
                         <li><a href="/guide/writing-tests/write-component-tests-for-react.html">Write component tests (React)</a></li>
                         <li><a href="/guide/writing-tests/write-nodejs-unit-integration-tests.html">Write unit &amp; integration tests</a></li>
+                        <li><a href="/guide/writing-tests/chrome-devtools-recorder.html">Using Chrome Devtools Recorder</a></li>
                       </ul>
                     </div>
                   </li>
@@ -175,6 +177,35 @@
                       </ul>
                     </div>
 
+                  </li>
+
+                <li>
+                    <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#debugtests-collapse" aria-expanded="false">
+                        <a href="/guide/debugging-tests/">Debug tests</a>
+                    </button>
+
+                    <div class="collapse" id="debugtests-collapse" data-section-url="/guide/debugging-tests/">
+                        <ul class="btn-toggle-nav">
+                            <li><a href="/guide/debugging-tests/overview.html">Overview</a></li>
+                            <li><a href="/guide/debugging-tests/using-pause.html">Use .pause()</a></li>
+                            <li><a href="/guide/debugging-tests/using-debug.html">Use .debug()</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                  <li>
+                    <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#ci-integrations-collapse" aria-expanded="false">
+                      <a href="/guide/ci-integrations/">Run on CI Servers</a>
+                    </button>
+
+                    <div class="collapse" id="ci-integrations-collapse" data-section-url="/guide/ci-integrations/">
+                      <ul class="btn-toggle-nav">
+                        <li><a href="/guide/ci-integrations/run-nightwatch-on-jenkins.html">Jenkins</a></li>
+                        <li><a href="/guide/ci-integrations/run-nightwatch-on-github-actions.html">Github Actions</a></li>
+                        <li><a href="/guide/ci-integrations/run-nightwatch-on-bamboo.html">Bamboo</a></li>
+                        <li><a href="/guide/ci-integrations/run-nightwatch-on-azure-pipelines.html">Azure Pipelines</a></li>
+                      </ul>
+                    </div>
                   </li>
 
                   <% /*
@@ -207,8 +238,8 @@
                       <ul class="btn-toggle-nav">
                         <li><a href="/guide/third-party-test-runners/cucumber-cli-as-a-test-runner.html">Cucumber CLI as a test runner</a></li>
                         <li><a href="/guide/third-party-test-runners/mocha-as-a-test-runner.html">Mocha as a test runner</a></li>
-<!--                        <li><a href="/guide/thirdparty-test-runners/jest.html">Jest</a></li>-->
-<!--                        <li><a href="/guide/using-third-party-test-runners/ava.html">Ava</a></li>-->
+                        <li><a href="/guide/third-party-test-runners/jest.html">Jest as a test runner</a></li>
+                        <li><a href="/guide/third-party-test-runners/ava.html">Ava as a test runner</a></li>
                       </ul>
                     </div>
 
@@ -229,6 +260,20 @@
                         </ul>
                     </div>
                 </li>
+                    <% /*
+                <li>
+                    <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#componenttests-collapse" aria-expanded="false">
+                        <a href="/guide/component-tests/">Component tests</a>
+                    </button>
+
+                    <div class="collapse" id="componenttests-collapse" data-section-url="/guide/component-tests/">
+                        <ul class="btn-toggle-nav">
+                            <li><a href="/guide/component-tests/overview.html">Overview</a></li>
+                            <li><a href="/guide/component-tests/react.html">React component testing</a></li>
+                            <li><a href="/guide/component-tests/vue.html">Vue component testing</a></li>
+                        </ul>
+                    </div>
+                </li> */ %>
 
                 <li>
                     <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#reporters-collapse" aria-expanded="false">
@@ -239,8 +284,12 @@
                         <ul class="btn-toggle-nav">
                             <li><a href="/guide/reporters/use-junit-reporter.html">JUnit XML reporter</a></li>
                             <li><a href="/guide/reporters/use-html-reporter.html">HTML reporter</a></li>
+                            <li><a href="/guide/reporters/use-json-reporter.html">JSON reporter</a></li>
                             <li><a href="/guide/reporters/use-mochawesome-reporter.html">Mochawesome reporter</a></li>
                             <li><a href="/guide/reporters/create-custom-reporter.html">Add custom reporter</a></li>
+                            <li><a href="/guide/reporters/use-slack-reporter.html">Slack reporter</a></li>
+                            <li><a href="/guide/reporters/use-nightwatch-allure-reporter.html">Allure reporter</a></li>
+                            <li><a href="/guide/reporters/use-teamcity-reporter.html">Teamcity reporter</a></li>
                         </ul>
                     </div>
                 </li>

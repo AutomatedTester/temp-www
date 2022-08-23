@@ -50,6 +50,16 @@ domino.views.define('api', function(view) {
       $('#' + subSection + '-collapse').addClass('show');
     }
 
+    if (document.location.hash !== '') {
+      var innerSectionFromHash = document.location.hash.substring(1);
+      var element = $('#' + innerSectionFromHash);
+      if (element.length > 0) {
+        $([document.documentElement, document.body]).animate({
+          scrollTop: (element.offset().top - 120)
+        }, 200);
+      }
+    }
+    
     if (subSectionContainer.is(':visible')) {
       return;
     }

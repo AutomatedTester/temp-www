@@ -1,8 +1,8 @@
 {
   "NIGHTWATCH_LIB_PATH": "../nightwatch/lib/",
-  "NIGHTWATCH_DOCS_PATH": "../nightwatch-docs-v2/",
+  "NIGHTWATCH_DOCS_PATH": "../nightwatch-docs/",
   "OUTPUT_FOLDER": "../nightwatchjs.org/",
-  "NIGHTWATCH_VERSION": "2.1.4",
+  "NIGHTWATCH_VERSION": "2.3.3",
 
   "docsRepoUrl": "https://github.com/nightwatchjs/nightwatch-docs/",
   "githubRepo": "nightwatchjs/nightwatch",
@@ -52,6 +52,18 @@
           }
         },
 
+        "ci-integrations" : {
+          "pages": [
+            "run-nightwatch-on-jenkins",
+            "run-nightwatch-on-github-actions",
+            "run-nightwatch-on-bamboo",
+            "run-nightwatch-on-azure-pipelines"
+          ],
+          "vars": {
+            "pageHeader": "CI Integrations"
+          }
+        },
+
         "nightwatch-cli" : {
           "pages": [
             "command-line-options",
@@ -97,7 +109,7 @@
             "styleguide"
           ],
           "vars": {
-            "pageHeader": "Browser Drivers"
+            "pageHeader": "Contributing"
           }
         },
 
@@ -127,7 +139,8 @@
             "using-xpath-selectors",
             "write-complex-user-actions",
             "write-component-tests-for-react",
-            "write-nodejs-unit-integration-tests"
+            "write-nodejs-unit-integration-tests",
+            "chrome-devtools-recorder"
           ],
           "vars": {
             "pageHeader": "Writing Tests"
@@ -151,6 +164,28 @@
           ],
           "vars": {
             "pageHeader": "Running Tests"
+          }
+        },
+
+        "component-tests": {
+          "pages": [
+            "overview",
+            "react",
+            "vue"
+          ],
+          "vars": {
+            "pageHeader": "Write Component Tests"
+          }
+        },
+
+        "debugging-tests": {
+          "pages": [
+            "overview",
+            "using-pause",
+            "using-debug"
+          ],
+          "vars": {
+            "pageHeader": "Debugging Tests"
           }
         },
 
@@ -187,7 +222,8 @@
             "customising-test-output",
             "selenium-settings",
             "web-driver-settings",
-            "taking-screenshots-on-fail"
+            "taking-screenshots-on-fail",
+            "aws-devicefarm-settings"
           ],
           "vars": {
             "pageHeader": "Configuration"
@@ -239,7 +275,10 @@
             "use-html-reporter",
             "use-json-reporter",
             "use-junit-reporter",
-            "use-mochawesome-reporter"
+            "use-mochawesome-reporter",
+            "use-slack-reporter",
+            "use-nightwatch-allure-reporter",
+            "use-teamcity-reporter"
           ],
           "vars": {
             "pageHeader": "Using Reporters"

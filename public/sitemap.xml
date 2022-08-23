@@ -1380,4 +1380,41 @@
         <priority>0.95</priority>
         <lastmod>27-07-2022</lastmod>
     </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/debugging-tests/overview.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+        <lastmod>27-07-2022</lastmod>
+    </url>
+    <url>
+        <loc>https://nightwatchjs.org/guide/debugging-tests/using-pause.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+        <lastmod>27-07-2022</lastmod>
+    </url>
+    <url>
+        <loc>https://nightwatchjs.org/guide/debugging-tests/using-debug.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+        <lastmod>27-07-2022</lastmod>
+    </url>
+    <url>
+        <loc>https://nightwatchjs.org/guide/component-tests/overview.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+        <lastmod>27-07-2022</lastmod>
+    </url>
+    <url>
+        <loc>https://nightwatchjs.org/guide/component-tests/react.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+        <lastmod>27-07-2022</lastmod>
+    </url>
+    <url>
+        <loc>https://nightwatchjs.org/guide/component-tests/vue.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.95</priority>
+        <lastmod>27-07-2022</lastmod>
+    </url>
 </urlset>

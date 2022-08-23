@@ -1,0 +1,81 @@
+name: Push to Prod
+
+on:
+  workflow_dispatch:
+    # Inputs the workflow accepts.
+    inputs:
+      nightwatch_branch:
+        description: 'nightwatch branch'
+        default: 'main'
+        required: true
+      nightwatch_doc_branch:
+        description: 'nightwatch-docs branch'
+        default: 'versions/2.0'
+        required: true
+      nightwatch_www_branch:
+        description: 'nightwatch-www branch'
+        default: 'versions/2.0'
+        required: true
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          registry-url: 'https://registry.npmjs.org'
+      # Clone and checkout required repositories
+      - name: Checkout nightwatch-docs
+        uses: actions/checkout@v3
+        with:
+          repository: nightwatchjs/nightwatch-docs
+          ref: "${{ github.event.inputs.nightwatch_doc_branch }}"
+          path: nightwatch-docs
+      - name: Checkout nightwatch-www
+        uses: actions/checkout@v3
+        with:
+          ref: "${{ github.event.inputs.nightwatch_www_branch }}"
+          path: nightwatch-www
+      - name: Checkout nightwatch
+        uses: actions/checkout@v3
+        with:
+          repository: nightwatchjs/nightwatch
+          ref: "${{ github.event.inputs.nightwatch_branch }}"
+          path: nightwatch
+      - name: Build API docs
+        run: cd nightwatch-www && npm install && npm run build:apidocs
+      - name: Build Website
+        run: cd nightwatch-www && npm run build:releases && npm run build:static
+      - name: Push to nightwatchjs.org
+        id: push_directory
+        uses: actions/checkout@v3
+        with:
+          repository: nightwatchjs/nightwatchjs.org
+          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          persist-credentials: true
+          path: deploy_folder
+      - name: Create local changes
+        run: |
+          cp -r nightwatchjs.org/* deploy_folder/
+      - name: Commit files
+        run: |
+          cd deploy_folder
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          if [[ `git status --porcelain` ]]; 
+          then
+            git add -A
+            git commit -m "Built from Github Action" 
+          fi
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          ssh: true
+          branch: release/v2
+          force: true
+          directory: deploy_folder
+          repository: nightwatchjs/nightwatchjs.org
