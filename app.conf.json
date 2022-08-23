@@ -276,6 +276,7 @@
             "use-json-reporter",
             "use-junit-reporter",
             "use-mochawesome-reporter",
+            "use-slack-reporter",
             "use-nightwatch-allure-reporter",
             "use-teamcity-reporter"
           ],
