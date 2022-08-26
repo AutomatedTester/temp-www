@@ -190,7 +190,8 @@ section .background {
   padding-bottom: 60px;
 }
 
-section.secondary h2 {
+section.secondary h2,
+section.secondary h1 {
   color: #333;
   padding: 0 35px 10px;
   margin: 30px -35px 10px;
