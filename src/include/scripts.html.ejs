@@ -18,6 +18,62 @@
 <script src="/js/third-party/uuidv4.min.js"></script>
 
 <script>
+  /*
+  StackBlitzSDK.embedGithubProject('stackblitz', 'pineviewlabs/nightwatch-examples', {
+    newWindow: false,
+    view: 'editor',
+    height: 500,
+    terminal: 'test',
+    openFile: 'tests/api/acceptAlert.js'
+  });
+
+  $('#run-stackblitz').on('click', function() {
+    StackBlitzSDK.openProject(
+      // Payload:
+      {
+        files: {
+          'test/acceptAlert.js': `describe('Accept Alert example test', function () {
+
+  it('acceptAlert()', function (browser) {
+    browser
+      .navigateTo('https://nightwatchjs.org/__e2e/window/alerts.html')
+      .click('#show-alert')
+      .ensure.alertIsPresent('> there is an alert open')
+      .pause(500)
+      .acceptAlert(function(result) {
+        console.log(result);
+      })
+      .ensure.not.alertIsPresent('');
+  });
+});`,
+          'readme.md': `# Welcome to the demo`,
+          'package.json': `{
+  "name": "nightwatch-example",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "nightwatch test/acceptAlert.js"
+  },
+  "dependencies": {
+          "nightwatch": "2.3.0"
+  }
+}`
+        },
+        template: 'node',
+        title: 'Nightwatch example',
+        description: `This is an example of my first doc!`,
+      },
+
+      // Options
+      {
+        newWindow: true,
+        openFile: 'test/acceptAlert.js'
+      }
+    );
+  })*/
+</script>
+
+<script>
+
   window.dataLayer = window.dataLayer || [];
   function gtag() {dataLayer.push(arguments);}
   var GA_LOCAL_STORAGE_KEY = 'ga:clientId';
