@@ -2,7 +2,7 @@
   "NIGHTWATCH_LIB_PATH": "../nightwatch/lib/",
   "NIGHTWATCH_DOCS_PATH": "../nightwatch-docs/",
   "OUTPUT_FOLDER": "../nightwatchjs.org/",
-  "NIGHTWATCH_VERSION": "2.1.4",
+  "NIGHTWATCH_VERSION": "2.3.3",
 
   "docsRepoUrl": "https://github.com/nightwatchjs/nightwatch-docs/",
   "githubRepo": "nightwatchjs/nightwatch",
@@ -54,7 +54,10 @@
 
         "ci-integrations" : {
           "pages": [
-            "run-nightwatch-on-jenkins"
+            "run-nightwatch-on-jenkins",
+            "run-nightwatch-on-github-actions",
+            "run-nightwatch-on-bamboo",
+            "run-nightwatch-on-azure-pipelines"
           ],
           "vars": {
             "pageHeader": "CI Integrations"
@@ -63,14 +66,23 @@
 
         "nightwatch-cli" : {
           "pages": [
-            "command-line-options",
-            "settings",
-            "defaults"
+            "command-line-options"
           ],
           "vars": {
             "pageHeader": "Nightwatch CLI Runner"
           }
         },
+
+        "reference" : {
+          "pages": [
+            "settings",
+            "defaults"
+          ],
+          "vars": {
+            "pageHeader": "Reference"
+          }
+        },
+
 
         "concepts": {
           "pages": [
@@ -136,7 +148,8 @@
             "using-xpath-selectors",
             "write-complex-user-actions",
             "write-component-tests-for-react",
-            "write-nodejs-unit-integration-tests"
+            "write-nodejs-unit-integration-tests",
+            "chrome-devtools-recorder"
           ],
           "vars": {
             "pageHeader": "Writing Tests"
@@ -271,7 +284,10 @@
             "use-html-reporter",
             "use-json-reporter",
             "use-junit-reporter",
-            "use-mochawesome-reporter"
+            "use-mochawesome-reporter",
+            "use-slack-reporter",
+            "use-nightwatch-allure-reporter",
+            "use-teamcity-reporter"
           ],
           "vars": {
             "pageHeader": "Using Reporters"
