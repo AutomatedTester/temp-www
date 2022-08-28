@@ -186,6 +186,14 @@ ul.nav.bs-sidenav .nav button > a:hover {
 
   }
 }
+@media (min-width: 1400px) {
+  .doc-sidebar {
+    min-width: 350px;
+  }
+  .doc-main-body {
+    max-width: 1050px;
+  }
+}
 .bs-sidebar.affix-top {
   margin-bottom: 50px;
 }
