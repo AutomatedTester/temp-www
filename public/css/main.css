@@ -1,21 +1,21 @@
 :root {
   /* Headings, logo, search results */
-  --font-family-one: 'Spartan', sans-serif;
-  --font-weight-one-bold: 700;
+  --font-family-one: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-weight-one-bold: 600;
 
   /* Header, footer, buttons, etc */
-  --font-family-two: 'Spartan', sans-serif;
+  --font-family-two: 'Segoe UI', system-ui, -apple-system, sans-serif;
   --font-weight-two-medium: 500;
   --font-weight-two-semi-bold: 600;
-  --font-weight-two-bold: 700;
+  --font-weight-two-bold: 600;
 
   /* Post content */
-  --font-family-three: 'Mulish', sans-serif;
+  --font-family-three: 'Segoe UI', system-ui, -apple-system, sans-serif;
   --font-weight-three-regular: 400;
 
   /* Code block, table, small headings, etc */
   --font-family-four: 'Source Code Pro', monospace;
-  --font-weight-four-medium: 500;
+  --font-weight-four-medium: 600;
 }
 
 html,

@@ -188,10 +188,10 @@ ul.nav.bs-sidenav .nav button > a:hover {
 }
 @media (min-width: 1400px) {
   .doc-sidebar {
-    min-width: 350px;
+    min-width: 320px;
   }
   .doc-main-body {
-    max-width: 1050px;
+    max-width: 870px;
   }
 }
 .bs-sidebar.affix-top {
