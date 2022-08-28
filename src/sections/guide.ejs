@@ -43,13 +43,13 @@
 
             <div class="collapse" id="quickstarts-collapse" data-section-url="/guide/quickstarts/">
               <ul class="btn-toggle-nav">
-                <li><a href="/guide/quickstarts/create-and-run-a-nightwatch-test.html">Create and run your first Nightwatch test</a>
+                <li><a href="/guide/quickstarts/create-and-run-a-nightwatch-test.html">Run your first end-to-end test</a>
                 </li>
 
                 <li><a href="/guide/quickstarts/create-and-run-a-test-with-selenium-server.html">Run a test with Selenium Server</a>
                 </li>
 
-               <li><a href="/guide/quickstarts/create-and-run-a-test-with-cloud-providers.html">Create and run a test with a cloud provider</a></li>
+               <li><a href="/guide/quickstarts/create-and-run-a-test-with-cloud-providers.html">Run a test with a cloud provider</a></li>
               </ul>
             </div>
 
@@ -107,7 +107,7 @@
 
                     <li>
                         <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#configuration-collapse" aria-expanded="false">
-                            <a href="/guide/configuration/">Configure</a>
+                            <a href="/guide/configuration/" class="section">Configure</a>
                         </button>
 
                         <div class="collapse" id="configuration-collapse" data-section-url="/guide/configuration/">
@@ -128,7 +128,7 @@
 
                   <li>
                     <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#writing-tests-collapse" aria-expanded="false">
-                      <a href="/guide/writing-tests/">Write tests</a>
+                      <a href="/guide/writing-tests/" class="section">Write tests</a>
                     </button>
 
                     <div class="collapse" id="writing-tests-collapse" data-section-url="/guide/writing-tests/">
@@ -154,9 +154,24 @@
                     </div>
                   </li>
 
+                <li>
+                    <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#pageobjects-collapse" aria-expanded="false">
+                        <a href="/guide/using-page-objects/" class="section">Page Objects</a>
+                    </button>
+
+                    <div class="collapse" id="pageobjects-collapse" data-section-url="/guide/using-page-objects/">
+                        <ul class="btn-toggle-nav">
+                            <li><a href="/guide/using-page-objects/getting-started.html">Getting started</a></li>
+                            <li><a href="/guide/using-page-objects/defining-elements.html">Define elements</a></li>
+                            <li><a href="/guide/using-page-objects/defining-sections.html">Define sections</a></li>
+                            <li><a href="/guide/using-page-objects/writing-page-specific-commands.html">Add page-specific commands</a></li>
+                        </ul>
+                    </div>
+                </li>
+
                   <li>
                     <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#runningtests-collapse" aria-expanded="false">
-                      <a href="/guide/running-tests/">Run tests</a>
+                      <a href="/guide/running-tests/" class="section">Run tests</a>
                     </button>
 
                     <div class="collapse" id="runningtests-collapse" data-section-url="/guide/running-tests/">
@@ -181,7 +196,7 @@
 
                 <li>
                     <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#debugtests-collapse" aria-expanded="false">
-                        <a href="/guide/debugging-tests/">Debug tests</a>
+                        <a href="/guide/debugging-tests/" class="section">Debug tests</a>
                     </button>
 
                     <div class="collapse" id="debugtests-collapse" data-section-url="/guide/debugging-tests/">
@@ -195,7 +210,7 @@
 
                   <li>
                     <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#ci-integrations-collapse" aria-expanded="false">
-                      <a href="/guide/ci-integrations/">Run on CI Servers</a>
+                      <a href="/guide/ci-integrations/" class="section">Run on CI Servers</a>
                     </button>
 
                     <div class="collapse" id="ci-integrations-collapse" data-section-url="/guide/ci-integrations/">
@@ -249,7 +264,7 @@
 
                 <li>
                     <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#networkrequests-collapse" aria-expanded="false">
-                        <a href="/guide/network-requests/">Network requests</a>
+                        <a href="/guide/network-requests/" class="section">Network requests</a>
                     </button>
 
                     <div class="collapse" id="networkrequests-collapse" data-section-url="/guide/network-requests/">
@@ -277,7 +292,7 @@
 
                 <li>
                     <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#reporters-collapse" aria-expanded="false">
-                        <a href="/guide/reporters/">Use reporters</a>
+                        <a href="/guide/reporters/" class="section">Reporters</a>
                     </button>
 
                     <div class="collapse" id="reporters-collapse" data-section-url="/guide/reporters/">
@@ -286,31 +301,17 @@
                             <li><a href="/guide/reporters/use-html-reporter.html">HTML reporter</a></li>
                             <li><a href="/guide/reporters/use-json-reporter.html">JSON reporter</a></li>
                             <li><a href="/guide/reporters/use-mochawesome-reporter.html">Mochawesome reporter</a></li>
-                            <li><a href="/guide/reporters/create-custom-reporter.html">Add custom reporter</a></li>
                             <li><a href="/guide/reporters/use-slack-reporter.html">Slack reporter</a></li>
                             <li><a href="/guide/reporters/use-nightwatch-allure-reporter.html">Allure reporter</a></li>
                             <li><a href="/guide/reporters/use-teamcity-reporter.html">Teamcity reporter</a></li>
-                        </ul>
-                    </div>
-                </li>
-
-                <li>
-                    <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#pageobjects-collapse" aria-expanded="false">
-                        <a href="/guide/using-page-objects/">Page objects</a>
-                    </button>
-
-                    <div class="collapse" id="pageobjects-collapse" data-section-url="/guide/using-page-objects/">
-                        <ul class="btn-toggle-nav">
-                            <li><a href="/guide/using-page-objects/defining-elements.html">Define elements</a></li>
-                            <li><a href="/guide/using-page-objects/defining-sections.html">Define sections</a></li>
-                            <li><a href="/guide/using-page-objects/writing-page-specific-commands.html">Add page-specific commands</a></li>
+                            <li><a href="/guide/reporters/create-custom-reporter.html">Add custom reporter</a></li>
                         </ul>
                     </div>
                 </li>
 
                 <li>
                     <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#mobiletesting-collapse" aria-expanded="false">
-                        <a href="/guide/mobile-web-testing/">Test on mobile</a>
+                        <a href="/guide/mobile-web-testing/" class="section">Test on mobile</a>
                     </button>
 
                     <div class="collapse" id="mobiletesting-collapse" data-section-url="/guide/mobile-web-testing/">
@@ -323,7 +324,7 @@
 
                   <li>
                     <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#extending-collapse" aria-expanded="false">
-                      <a href="/guide/extending-nightwatch/">Extend Nightwatch</a>
+                      <a href="/guide/extending-nightwatch/" class="section">Extend Nightwatch</a>
                     </button>
 
                     <div class="collapse" id="extending-collapse" data-section-url="/guide/extending-nightwatch//">
@@ -342,30 +343,9 @@
 
             </li>
 
-              <% /*
-            <li>
-              <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#tutorials-collapse" aria-expanded="false">
-                <a href="/guide/tutorials/">Tutorials</a>
-              </button>
-
-              <div class="collapse" id="tutorials-collapse" data-section-url="/guide/tutorials/">
-                <ul class="btn-toggle-nav">
-                  <li><a href="/guide/tutorials/cross-browser-testing-at-scale-using-selenium-grid.html">Cross-browser testing at scale using Selenium Grid</a></li>
-                  <li><a href="/guide/tutorials/use-nightwatch-with-appium-for-mobile-web-testing.html">Use Nightwatch with Appium for mobile web testing</a></li>
-
-                  <li><a href="/guide/tutorials/learn-how-to-test-web-rtc-applications.html">Learn how to test WebRTC applications</a></li>
-                  <li><a href="/guide/tutorials/develop-and-publish-a-nightwatch-plugin.html">Develop and publish a Nightwatch plugin</a></li>
-                  <li><a href="/guide/tutorials/build-a-custom-test-runner-using-the-programmatic-api.html">Build a custom test runner using the programmatic API</a></li>
-                  <li><a href="/guide/tutorials/learn-how-to-run-your-tests-on-github-actions.html">Learn how to run your tests on Github Actions</a></li>
-
-
-                </ul>
-              </div>
-            </li>*/ %>
-
             <li>
               <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#reference-collapse" aria-expanded="false">
-                <a href="/guide/reference/">Reference</a>
+                <a href="/guide/reference/" class="section">Reference</a>
               </button>
 
               <div class="collapse" id="reference-collapse" data-section-url="/guide/reference/">
@@ -373,7 +353,7 @@
                 <ul class="btn-toggle-nav toggle-nav-inner">
                   <li>
                     <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#browserdrivers-collapse" aria-expanded="false">
-                      <a href="/guide/browser-drivers/">Browser Drivers</a>
+                      <a href="/guide/browser-drivers/" class="section">Browser Drivers</a>
                     </button>
 
                     <div class="collapse" id="browserdrivers-collapse" data-section-url="/guide/browser-drivers/">
@@ -388,7 +368,7 @@
 
                   <li>
                     <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#nightwatchcli-collapse" aria-expanded="false">
-                      <a href="/guide/nightwatch-cli/">Nightwatch CLI</a>
+                      <a href="/guide/nightwatch-cli/" class="section">Nightwatch CLI</a>
                     </button>
 
                     <div class="collapse" id="nightwatchcli-collapse" data-section-url="/guide/nightwatch-cli/">
@@ -399,7 +379,7 @@
 
                 <li>
                     <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#refconfiguration-collapse" aria-expanded="false">
-                        <a href="/guide/reference/">Configuration</a>
+                        <a href="/guide/reference/" class="section">Config settings</a>
                     </button>
 
                     <div class="collapse" id="refconfiguration-collapse" data-section-url="/guide/reference/">
@@ -417,7 +397,7 @@
 
             <li>
               <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#resources-collapse" aria-expanded="false">
-                <a href="/guide/resources/">Resources</a>
+                <a href="/guide/resources/" class="section">Resources</a>
               </button>
 
               <div class="collapse" id="resources-collapse" data-section-url="/guide/resources/">

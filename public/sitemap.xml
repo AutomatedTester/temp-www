@@ -227,10 +227,16 @@
     </url>
     <url>
         <loc>https://nightwatchjs.org/guide/working-with-page-objects/using-page-objects.html</loc>
-
-
         <lastmod>27-08-2022</lastmod>
     </url>
+
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/using-page-objects/getting-started.html</loc>
+        <lastmod>28-08-2022</lastmod>
+    </url>
+
+
     <url>
         <loc>https://nightwatchjs.org/guide/working-with-page-objects/defining-elements.html</loc>
 

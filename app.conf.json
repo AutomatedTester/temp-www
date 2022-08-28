@@ -34,7 +34,8 @@
           "pages": [
             "what-is-nightwatch",
             "what-is-webdriver",
-            "whats-new-in-v2"
+            "whats-new-in-v2",
+            "whats-new"
           ],
           "vars": {
             "pageHeader": "Nightwatch Overview"
@@ -269,6 +270,7 @@
 
         "using-page-objects": {
           "pages": [
+            "getting-started",
             "defining-elements",
             "defining-sections",
             "writing-page-specific-commands"
@@ -388,11 +390,6 @@
       "description" : "How to get in touch with the team, and where to submit bugs and feature requests."
     },
 
-    "releases" : {
-      "pageTitle" : "Releases | Nightwatch.js",
-      "title" : "Releases",
-      "description" : "Release history and changelog information."
-    },
     "index" : {
       "pageTitle" : "Nightwatch.js |  Node.js powered End-to-End testing framework",
       "title" : "Nightwatch.js",
