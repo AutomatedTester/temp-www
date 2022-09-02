@@ -76,6 +76,5 @@ jobs:
         with:
           ssh: true
           branch: dev
-          force: true
           directory: deploy_folder
           repository: nightwatchjs/nightwatchjs.org
