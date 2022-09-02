@@ -1,21 +1,21 @@
 :root {
   /* Headings, logo, search results */
-  --font-family-one: 'Spartan', sans-serif;
-  --font-weight-one-bold: 700;
+  --font-family-one: 'Segoe UI', 'Spartan', system-ui, -apple-system, sans-serif;
+  --font-weight-one-bold: 600;
 
   /* Header, footer, buttons, etc */
-  --font-family-two: 'Spartan', sans-serif;
+  --font-family-two: 'Segoe UI', 'Spartan', system-ui, -apple-system, sans-serif;
   --font-weight-two-medium: 500;
   --font-weight-two-semi-bold: 600;
-  --font-weight-two-bold: 700;
+  --font-weight-two-bold: 600;
 
   /* Post content */
-  --font-family-three: 'Mulish', sans-serif;
+  --font-family-three: 'Segoe UI', system-ui, -apple-system, sans-serif;
   --font-weight-three-regular: 400;
 
   /* Code block, table, small headings, etc */
   --font-family-four: 'Source Code Pro', monospace;
-  --font-weight-four-medium: 500;
+  --font-weight-four-medium: 600;
 }
 
 html,
@@ -190,7 +190,8 @@ section .background {
   padding-bottom: 60px;
 }
 
-section.secondary h2 {
+section.secondary h2,
+section.secondary h1 {
   color: #333;
   padding: 0 35px 10px;
   margin: 30px -35px 10px;
@@ -201,6 +202,33 @@ section.secondary h2 {
   font-size: 35px;
 }
 
+section.secondary .docs-section.releases h2,
+section.secondary .docs-section.releases h1 {
+  margin-top: 25px;
+  font-size: 21px;
+  font-weight: 600;
+}
+section.secondary .docs-section.releases .page-header h1{
+  font-size: 35px;
+  margin-top: -25px;
+}
+.releases pre.language-sh,
+.releases pre.language-js {
+  background: #222 !important;
+}
+section.secondary .docs-section.releases h3:not(.mb-1) {
+  font-size: 22px;
+  margin-top: 10px;
+  background: transparent;
+}
+section.secondary .docs-section.releases img {
+  margin: 10px 0;
+  border: 1px solid #ccc;
+}
+section.secondary .docs-section.releases h3.mb-1 {
+  margin-top: -3px;
+  background: transparent;
+}
 #releases-container h2 {
   border: 0;
 }
@@ -210,8 +238,19 @@ section.secondary h2 {
   padding: 10px 0;
   display: block;
 }
-
-#releases-container .language-js {
+.releases .list-group-item {
+  margin: 15px 0 50px;
+  border: 0;
+  border-bottom: 1px solid rgba(0,0,0,.125);
+  padding: 0;
+}
+.releases .justify-content-between {
+  background: #eee;
+  margin: 0 -30px;
+  width: auto !important;
+  padding: 10px 15px 0;
+}
+.releases .language-js {
   padding: 10px;
   margin: 0;
 }
@@ -1476,11 +1515,6 @@ code[class*="language-"], pre[class*="language-"] {
 #releases-container .all-releases {
   margin-top:50px;
   margin-bottom:50px;
-}
-#releases-container .list-group-item {
-  margin: 15px 0;
-  border: 0;
-  border-bottom: 1px solid rgba(0,0,0,.125);
 }
 
 #releases-container img {

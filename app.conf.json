@@ -34,7 +34,8 @@
           "pages": [
             "what-is-nightwatch",
             "what-is-webdriver",
-            "whats-new-in-v2"
+            "whats-new-in-v2",
+            "whats-new"
           ],
           "vars": {
             "pageHeader": "Nightwatch Overview"
@@ -54,7 +55,10 @@
 
         "ci-integrations" : {
           "pages": [
-            "run-nightwatch-on-jenkins"
+            "run-nightwatch-on-jenkins",
+            "run-nightwatch-on-github-actions",
+            "run-nightwatch-on-bamboo",
+            "run-nightwatch-on-azure-pipelines"
           ],
           "vars": {
             "pageHeader": "CI Integrations"
@@ -63,14 +67,23 @@
 
         "nightwatch-cli" : {
           "pages": [
-            "command-line-options",
-            "settings",
-            "defaults"
+            "command-line-options"
           ],
           "vars": {
             "pageHeader": "Nightwatch CLI Runner"
           }
         },
+
+        "reference" : {
+          "pages": [
+            "settings",
+            "defaults"
+          ],
+          "vars": {
+            "pageHeader": "Configuration Reference"
+          }
+        },
+
 
         "concepts": {
           "pages": [
@@ -257,6 +270,7 @@
 
         "using-page-objects": {
           "pages": [
+            "getting-started",
             "defining-elements",
             "defining-sections",
             "writing-page-specific-commands"
@@ -272,7 +286,10 @@
             "use-html-reporter",
             "use-json-reporter",
             "use-junit-reporter",
-            "use-mochawesome-reporter"
+            "use-mochawesome-reporter",
+            "use-slack-reporter",
+            "use-nightwatch-allure-reporter",
+            "use-teamcity-reporter"
           ],
           "vars": {
             "pageHeader": "Using Reporters"
@@ -373,11 +390,6 @@
       "description" : "How to get in touch with the team, and where to submit bugs and feature requests."
     },
 
-    "releases" : {
-      "pageTitle" : "Releases | Nightwatch.js",
-      "title" : "Releases",
-      "description" : "Release history and changelog information."
-    },
     "index" : {
       "pageTitle" : "Nightwatch.js |  Node.js powered End-to-End testing framework",
       "title" : "Nightwatch.js",
