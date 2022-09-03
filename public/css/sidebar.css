@@ -193,6 +193,9 @@ ul.nav.bs-sidenav .nav button > a:hover {
   .doc-main-body {
     max-width: 870px;
   }
+  #apimethod-container .doc-main-body {
+    max-width: 1070px;
+  }
 }
 @media (min-width: 1600px) {
   .doc-sidebar {
@@ -275,6 +278,9 @@ ul.nav .btn-toggle-nav li h5 {
 ul.nav .btn-toggle-nav li {
   margin-bottom: 5px;
 }
+ul.nav .btn-toggle-nav li .btn-toggle {
+  margin-left: 5px;
+}
 ul.nav .btn-toggle-nav li ul li {
   margin-bottom: 0px;
   margin-left: 3px;
@@ -290,6 +296,9 @@ ul.nav .btn-toggle-nav li a {
   padding: 2px 10px 2px 5px;
   line-height: 20px;
 }
+ul.nav .btn-toggle-nav li ul.local-nav li a {
+  padding: 4px 10px 4px 5px;
+}
 .btn-toggle-nav li a.section {
   color: #2A2A2A;
   font-weight: 500;
@@ -298,8 +307,9 @@ ul.nav .btn-toggle-nav li a {
 ul.nav .btn-toggle-nav li > a {
   margin-left: 15px;
 }
+
 ul.nav ul.toggle-nav-inner .btn-toggle-nav li a {
-  margin: 4px 10px 4px 25px;
+  margin: 4px 10px 4px 30px;
 }
 
 ul.nav .btn-toggle-nav li a:hover {

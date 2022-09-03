@@ -106,6 +106,7 @@ domino.views.define('api', function(view) {
 
   function expandMenu(container) {
     $('ul.bs-sidenav div.collapse').removeClass('show');
+
     $('#'+container+'-collapse').prev().attr('aria-expanded', 'true');
     $('#'+container+'-collapse').addClass('show');
   }
@@ -178,7 +179,7 @@ domino.views.define('api', function(view) {
     domino.views.getSectionData('');
     domino.views.currentView = '$method';
     view_script.$container = '#apimethod-container';
-    document.title = (this.$scope && this.$scope.methodName ? this.$scope.methodName + ' | ' : '') + 'API Reference | Nightwatch.js';
+    //document.title = (this.$scope && this.$scope.methodName ? this.$scope.methodName + ' | ' : '') + 'API Reference | Nightwatch.js';
 
     this.transition.render();
 

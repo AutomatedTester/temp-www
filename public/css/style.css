@@ -131,7 +131,7 @@ a {
 .banner-visible .parallax__layer {
 
 }
-.banner-visible .nw-navbar .container {
+[data-uri="/"] .banner-visible .nw-navbar .container {
   margin-top: 35px
 }
 .parallax__layer--0 {
