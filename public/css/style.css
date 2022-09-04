@@ -405,7 +405,7 @@ pre[class*="language-typescript"]::before
 [data-uri^="/api"] .docs-section,
 [data-uri^="/gettingstarted"] .docs-section,
 [data-uri^="/about"] .docs-section,
-[data-uri^="/guide"] .docs-section {
+[data-uri^="/guide"] .docs-section:not(.releases) {
   display:none
 }
 
