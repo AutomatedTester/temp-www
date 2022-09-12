@@ -1,5 +1,5 @@
 html, body {
-  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Segoe UI", Montserrat, system-ui,-apple-system,sans-serif;
   background-color: #fff;
 }
 a {
@@ -49,7 +49,7 @@ a {
   line-height: 1.5;
   text-decoration: none!important;
   font-family: var(--font-family-two);
-  margin: 0 15px 0 0;
+  margin: 0;
 }
 
 .nav>li>a:hover {
@@ -131,7 +131,7 @@ a {
 .banner-visible .parallax__layer {
 
 }
-.banner-visible .nw-navbar .container {
+[data-uri="/"] .banner-visible .nw-navbar .container {
   margin-top: 35px
 }
 .parallax__layer--0 {
@@ -405,7 +405,7 @@ pre[class*="language-typescript"]::before
 [data-uri^="/api"] .docs-section,
 [data-uri^="/gettingstarted"] .docs-section,
 [data-uri^="/about"] .docs-section,
-[data-uri^="/guide"] .docs-section {
+[data-uri^="/guide"] .docs-section:not(.releases) {
   display:none
 }
 

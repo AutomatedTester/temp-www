@@ -254,7 +254,7 @@ domino.viewhelpers.define('transition', function() {
 
 $('.survey-banner-beta button.close').on('click', function() {
   if (window.localStorage) {
-    window.localStorage.setItem('nightwatch-component-banner-shown', '1');
+    window.localStorage.setItem('nightwatch-component-banner-shown-14-sep-2022', '1');
     $('body').removeClass('banner-visible');
   }
 });

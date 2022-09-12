@@ -57,6 +57,7 @@
         var listElement = $('#commands-collapse .btn-toggle-nav li>a[href$="/api/<%- subPageName %>"]');
 
         if (listElement && listElement.get(0)) {
+
           var scrollTop = listElement.get(0).offsetTop;
           var sideBar = $('#apimethod-container .bs-sidebar');
 
@@ -66,6 +67,11 @@
             sideBar[0].scrollTop = scrollTop - 200;
           }
 
+          var parent = listElement.parents('.collapse');
+          var buttonEl = parent[0] ? parent[0].previousElementSibling : null;
+          if (buttonEl) {
+            $(buttonEl).click();
+          }
         }
       } catch (err) {
       }
