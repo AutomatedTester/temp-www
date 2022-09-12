@@ -3,7 +3,6 @@
 
     <url>
         <loc>https://nightwatchjs.org/</loc>
-
         <lastmod>27-08-2022</lastmod>
     </url>
     <url>
@@ -1445,4 +1444,5 @@
         <loc>https://nightwatchjs.org/api/rightClick.html</loc>
         <lastmod>27-08-2022</lastmod>
     </url>
+
 </urlset>
