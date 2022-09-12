@@ -18,7 +18,7 @@
   {% endautoescape %}{% endif %}
     {% if method.internal %}
     {% autoescape false %}<p class="alert alert-warning">Please note that this command operates on a protocol level and accepts the <a href="https://www.w3.org/TR/webdriver1/#dfn-web-elements">Web Element ID</a> as the parameter.
-    To retrieve it, use either the <code>.element()</code> or <code>.elements()</code> command. Read more on <a href="https://www.w3.org/TR/webdriver1/#element-retrieval">Element retrieval</a>.</p>
+    To retrieve it, use either the <code>.findElement()</code> or <code>.findElements()</code> command. Read more on <a href="https://nightwatchjs.org/guide/writing-tests/finding-interacting-with-dom-elements.html">Element retrieval</a>.</p>
     {% endautoescape %}{% endif %}
     {% if method.jsonwire %}
     {% autoescape false %}<p class="alert alert-warning">This command has been deprecated and it's not available when using <a href="https://www.w3.org/TR/webdriver1/">W3C Webdriver</a> clients (such as GeckoDriver).
