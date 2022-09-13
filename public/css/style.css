@@ -80,14 +80,6 @@ a {
   width: 100%;
 }
 
-
-/* [data-uri^="/api"] body.navbar-visible .bs-sidebar,
-[data-uri^="/api/$method"] body.navbar-visible .bs-sidebar,
-[data-uri^="/gettingstarted"] body.navbar-visible .bs-sidebar,
-[data-uri^="/about"] body.navbar-visible .bs-sidebar {
-  top: 5rem;
-} */
-
 [data-uri^="/api/$method"] body.navbar-visible .bs-sidebar,
 [data-uri^="/api/commands"] body.navbar-visible .bs-sidebar {
   overflow-y: auto;
@@ -415,7 +407,7 @@ section[data-page-uri] {
 
 [data-uri="/"] .navbar-collapse .nav > li > a[href="/"],
 [data-uri^="/guide"] .navbar-collapse .nav > li:nth-child(2) > a,
-[data-uri^="/api"] .navbar-collapse .nav > li > a[href^="/api"],
+[data-uri^="/api"] .navbar-collapse .nav > li > a[href$="/api/"],
 [data-uri^="/blog"] .navbar-collapse .nav > li > a[href^="/blog"],
 [data-uri^="/about"] .navbar-collapse .nav > li > a[href^="/about"] {
   color: #fff;

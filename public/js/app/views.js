@@ -4,7 +4,7 @@ domino.views.metaTagContent = domino.views.metaTagEl.content;
 
 domino.views.metaTagTwitterImg = $('meta[name="twitter:image"]').attr('content');
 
-domino.views.sections = ['index', 'about', 'api', 'releases', 'guide'];
+domino.views.sections = ['index', 'about', 'api'];
 domino.views.__sectionsData__ = {};
 
 domino.views.getSectionData = function(currentView) {
@@ -36,7 +36,7 @@ domino.views.define('index', function(view) {
       }
     }, 500);
 
-    domino.views.getSectionData('index');
+    //domino.views.getSectionData('index');
     view_script.no_render = true;
     view_script.$container = '#index-container';
     document.title = 'Nightwatch.js | Node.js powered End-to-End testing framework';
@@ -125,7 +125,7 @@ domino.views.define('releases', function(view) {
     if (domino.views.currentView == 'releases') {
       return;
     }
-    domino.views.getSectionData('releases');
+    //domino.views.getSectionData('releases');
     view_script.$container = '#releases-container';
     view_script.no_render = true;
     document.title = 'Releases | Nightwatch.js';

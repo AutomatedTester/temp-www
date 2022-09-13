@@ -404,7 +404,7 @@ body.navbar-visible .bs-sidebar {
 }
 
 /* @media screen and (max-width: 1400px) {
-  [data-uri^="/api"] .bs-sidebar {
+  [data-uri$="/api"] .bs-sidebar {
     top: 85px !important;
   } */
 

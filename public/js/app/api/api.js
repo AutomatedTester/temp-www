@@ -80,7 +80,7 @@ domino.views.define('api', function(view) {
 
 
     docsContainer.attr('data-page-uri', '/api/' + subSection);
-    domino.views.getSectionData(mainSection);
+    //domino.views.getSectionData(mainSection);
     domino.views.currentView = mainSection + subSection;
     window.scrollTo(0, 0);
 
@@ -176,7 +176,7 @@ domino.views.define('api', function(view) {
     expandMenu('commands');
 
     window.scrollTo(0, 0);
-    domino.views.getSectionData('');
+    //domino.views.getSectionData('');
     domino.views.currentView = '$method';
     view_script.$container = '#apimethod-container';
     //document.title = (this.$scope && this.$scope.methodName ? this.$scope.methodName + ' | ' : '') + 'API Reference | Nightwatch.js';
