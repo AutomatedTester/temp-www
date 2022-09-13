@@ -849,6 +849,9 @@ section[data-page-uri] {
   padding: 10px 35px;
   background: #eee;
 }
+[data-uri^="/api/$method"] .doc-main-body h3 {
+  margin: 50px 0 10px;
+}
 
 @media only screen and (max-width: 991px) {
   .doc-main-body h2 {
