@@ -82,8 +82,27 @@
 {% if method.example %}
 <h3>Example</h3>
 <div class="sample-test">
-<pre class="line-numbers language-javascript"><code class="language-javascript">{{method.example}}</code></pre>
+{% autoescape false %}<pre class="line-numbers language-javascript"><code class="language-javascript">{{method.example}}</code></pre>{% endautoescape %}
 </div>
+{% endif %}
+
+{% if method.exampleLink %}
+<h3>Example</h3>
+<div class="sample-test">
+<iframe width="100%" height="500" src="/__examples/{{method.name}}.html"></iframe>
+</div>
+
+
+Or run locally with:
+
+<div class="sample-test">
+{% autoescape false %}<pre class="hide-indicator language-bash"><code class="language-bash">git clone https://github.com/nightwatchjs/nightwatch-examples.git
+cd nightwatch-examples
+npm install
+npx nightwatch tests{{method.exampleLink}} --env chrome
+</code></pre>{% endautoescape %}
+</div>
+<a target="_blank" href="https://github.com/nightwatchjs/nightwatch-examples"><button>View on Github</button></a>
 {% endif %}
 
 {% if method.more %}
