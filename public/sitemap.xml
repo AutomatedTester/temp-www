@@ -381,7 +381,6 @@
     <url>
         <loc>https://nightwatchjs.org/guide/configuration/using-env-variables-in-your-config.html</loc>
 
-
         <lastmod>27-08-2022</lastmod>
     </url>
     <url>
@@ -529,8 +528,26 @@
     </url>
     <url>
         <loc>https://nightwatchjs.org/guide/reporters/use-mochawesome-reporter.html</loc>
+        <lastmod>27-08-2022</lastmod>
+    </url>
 
+    <url>
+        <loc>https://nightwatchjs.org/guide/reporters/use-slack-reporter.html</loc>
+        <lastmod>27-08-2022</lastmod>
+    </url>
 
+    <url>
+        <loc>https://nightwatchjs.org/guide/reporters/use-nightwatch-allure-reporter.html</loc>
+        <lastmod>27-08-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/reporters/use-teamcity-reporter.html</loc>
+        <lastmod>27-08-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/reporters/use-teamcity-reporter.html</loc>
         <lastmod>27-08-2022</lastmod>
     </url>
 
@@ -560,12 +577,6 @@
     </url>
     <url>
         <loc>https://nightwatchjs.org/about/community/</loc>
-
-
-        <lastmod>27-08-2022</lastmod>
-    </url>
-    <url>
-        <loc>https://nightwatchjs.org/releases/</loc>
 
 
         <lastmod>27-08-2022</lastmod>
@@ -1443,6 +1454,219 @@
     <url>
         <loc>https://nightwatchjs.org/api/rightClick.html</loc>
         <lastmod>27-08-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/overview/whats-new.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/overview/whats-new.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/quickstarts/create-and-run-a-test-with-selenium-server.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/quickstarts/create-and-run-a-test-with-cloud-providers.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/configuration/nightwatch-configuration-file.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/configuration/taking-screenshots-on-fail.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/configuration/aws-devicefarm-settings.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/configuration/browser-stack-settings.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/configuration/selenium-settings.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/configuration/web-driver-settings.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/writing-tests/test-syntax-bdd.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/writing-tests/test-syntax-exports.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/writing-tests/using-es-6-async-await.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/writing-tests/finding-interacting-with-dom-elements.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/writing-tests/adding-assertions.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/writing-tests/using-xpath-selectors.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/writing-tests/write-complex-user-actions.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/writing-tests/using-mocha.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/writing-tests/using-test-hooks.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/writing-tests/using-test-globals.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/writing-tests/global-test-hooks.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/using-page-objects/getting-started.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/using-page-objects/defining-elements.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/using-page-objects/defining-sections.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/using-page-objects/writing-page-specific-commands.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/running-tests/using-the-cli-test-runner.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/running-tests/skipping-disabling-tests.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/running-tests/filtering-by-test-tags.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/running-tests/using-with-test-groups.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/ci-integrations/run-nightwatch-on-azure-pipelines.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/extending-nightwatch/adding-custom-commands.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/extending-nightwatch/adding-custom-assertions.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/extending-nightwatch/adding-custom-reporters.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/extending-nightwatch/adding-plugins.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/browser-drivers/geckodriver.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+    <url>
+        <loc>https://nightwatchjs.org/guide/browser-drivers/chromedriver.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+    <url>
+        <loc>https://nightwatchjs.org/guide/browser-drivers/safaridriver.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/browser-drivers/edgedriver.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/reference/settings.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/reference/defaults.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/overview/what-is-webdriver.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/overview/whats-new-in-v2.html</loc>
+        <lastmod>08-00-2022</lastmod>
+    </url>
+    <url>
+        <loc>https://nightwatchjs.org/guide/overview/what-is-nightwatch.html</loc>
+        <lastmod>08-00-2022</lastmod>
     </url>
 
 </urlset>
