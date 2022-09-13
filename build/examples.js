@@ -1,9 +1,10 @@
-const ExamplesDir = '/Users/andrei/www/nightwatch-examples/tests';
 const path = require('path');
 const fs = require('fs');
 const ejs = require('ejs');
+require('dotenv').config();
 
-const OutputDir = path.join(__dirname, '../../experiment/__examples');
+const ExamplesDir = path.join(process.env.EXAMPLES_DIR, 'tests');
+const OutputDir = path.join(process.env.OUTPUT_FOLDER, '__examples');
 const ejsTemplate = fs.readFileSync(path.join(__dirname, 'example.ejs')).toString('utf-8');
 const ApiCommands = require('./output.json');
 
