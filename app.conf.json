@@ -59,7 +59,8 @@
             "run-nightwatch-on-github-actions",
             "run-nightwatch-on-bamboo",
             "run-nightwatch-on-azure-pipelines",
-            "run-nightwatch-on-circleci"
+            "run-nightwatch-on-circleci",
+            "run-nightwatch-on-gitlab"
           ],
           "vars": {
             "pageHeader": "CI Integrations"
