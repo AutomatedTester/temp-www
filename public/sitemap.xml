@@ -1692,4 +1692,15 @@
         <loc>https://nightwatchjs.org/api/axeRun.html</loc>
         <lastmod>2022-09-23</lastmod>
     </url>
+
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/ci-integrations/run-nightwatch-on-gitlab.html</loc>
+        <lastmod>2022-09-23</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/ci-integrations/run-nightwatch-on-circleci.html</loc>
+        <lastmod>2022-09-23</lastmod>
+    </url>
 </urlset>
