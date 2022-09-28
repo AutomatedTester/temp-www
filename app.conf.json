@@ -244,6 +244,7 @@
 
         "using-nightwatch": {
           "pages": [
+            "accessibility-testing",
             "simulating-complex-user-actions",
             "taking-screenshots",
             "page-loading-strategies",
