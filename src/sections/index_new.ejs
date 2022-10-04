@@ -1,0 +1,960 @@
+<!-- navbar -->
+<div class="navigation1 navbar-expand-lg">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="position:absolute; top:24px; left:24px;">
+    <img src="/images1/navbar-toggler.svg">
+  </button>
+  <div class="navigation-content">
+    <a href="/"> 
+      <div class="nightwatch-logo">
+        <img src="/images1/mini_logo.svg" alt="NightwatchJs logo">
+        <span class="nightwatch-title">Nightwatch.js</span>
+      </div>
+    </a>
+    <div class="navigation-links collapse navbar-collapse" id="navbarNavDropdown">
+      <div class="nav-links-left">
+        <div class="nav-item">
+          <a class="regular16px neutral-white-color header-links" href="<%= baseUrl %>/guide/overview/what-is-nightwatch.html">
+            &nbsp;&nbsp;Guide&nbsp;&nbsp;
+          </a>
+        </div>
+        <div class="nav-item">
+          <a class="regular16px neutral-white-color header-links" href="<%= baseUrl %>/api/">
+            <span>
+              &nbsp;&nbsp;API&nbsp;&nbsp;
+            </span>
+          </a>
+        </div>
+        <div class="nav-item">
+          <a class="regular16px neutral-white-color header-links" href="<%= baseUrl %>/about/community/">
+            Community
+          </a>
+        </div>
+        <div class="nav-item">
+          <a class="regular16px neutral-white-color header-links" href="https://nightwatchjs.org/blog/">
+            &nbsp;&nbsp;Blog&nbsp;&nbsp;
+          </a>
+        </div>
+      </div>
+      <div class="nav-links-right">
+        <a aria-label="Nightwatch on discord" href="https://discord.com/invite/SN8Da2X" rel="noopener" title="discord" target="_blank">
+          <img src="/images1/nav-github.svg">
+        </a>
+        <a href="https://github.com/nightwatchjs/nightwatch" aria-label="Nightwatch on github" target="_blank">
+          <img src="/images1/nav-stars.svg">
+        </a>
+        <div class="nav-item dropdown neutral-white-color">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="regular16px neutral-white-color"><%= version %></span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item semibold14px" style="color: #914618;" href="https://nightwatchjs.org/">Latest <%= version %></a></li>
+            <!-- <li><hr class="dropdown-divider"></li> -->
+            <li><a class="dropdown-item regular14px" href="https://v17.nightwatchjs.org/">Version 1.7</a></li>
+            <!-- <li><hr class="dropdown-divider"></li> -->
+            <li><a class="dropdown-item regular14px" href="https://v09.nightwatchjs.org/">Version 0.9</a></li>
+            <!-- <li><hr class="dropdown-divider"></li> -->
+            <li><a class="dropdown-item regular14px" href="/releases">All Versions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- homepage content -->
+<div class="homepage-content">
+  <div class="hero-section">
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="brand-message">
+          <div class="main-heading">
+            <h1 class="grey40">Fast, Easy and Reliable</h1>
+            <h1 class="orange60">End-to-End Testing</h1>
+          </div>
+          <div class="sub-heading">
+            <span class="regular20px grey40">From set up to test execution and debugging, Nightwatch
+              simplifies test automation for you. Get started in 60 seconds and see it in action.
+            </span>
+          </div>
+        </div>
+        <div class="action1">
+          <div class="action">
+            <div class="npm-install">
+              <span class="npm-text">
+                <span class="primary50">$</span> npm init nightwatch
+              </span>
+            </div>
+            <a class="button-default copy btn-copy" href="" onclick="copytoclipboard('.copy')">
+              <span class="regular16px grey10">
+                Copy
+              </span>
+            </a>
+            <div class="check-circle" style="display: none;">
+              <img src="/images1/check-circle.svg" alt>
+            </div>
+            <a class="copy-mobile btn-copy" onclick="copytoclipboard('.copy-mobile')">
+              <img src="/images1/copy-mobile.svg" src="copy">
+            </a>
+          </div>
+          <span class="regular16px neutral-white-color">
+            <a href="https://nightwatchjs.org/guide/overview/what-is-nightwatch.html"
+              style="text-decoration: underline !important; color: #FFFFFF;">Get started</a> to learn more about Nightwatch JS
+          </span>
+        </div>
+
+      </div>
+      <div class="hero-right">
+        <!-- <div class="overlay"></div> -->
+        <iframe src="https://www.youtube.com/embed/lTLQJ3tD0xc?wmode=transparent" style="width:100%; height: 354px; z-index: 1;" frameborder="0"
+          allow="autoplay; fullscreen" data-ready="true">
+        </iframe>
+      </div>
+    </div>
+  </div>
+  <!-- +++++++=cababilities++++++++++++++++ -->
+  <div class="capabilities-section">
+    <div class="capabilities-title">
+      <h4 class="neutral-black-color">
+        Why Nightwatch?
+      </h4>
+    </div>
+    <div class="capabilities-content">
+      <div class="capabilities">
+        <div class="capabilities-content-title">
+          <span class="neutral-black-color">
+            <h6>Simple but powerful</h6>
+          </span>
+          <span class="regular16px neutral-black-color"> Simple syntax and intuitive commands to avoid clutter and make
+            testing an intuitive
+            experience. Test as you want with support for Typescript and JS.</span>
+        </div>
+        <img src="/images1/capabilities1.svg" alt="simple">
+      </div>
+      <div class="verticle-line"></div>
+      <div class="capabilities">
+        <div class="capabilities-content-title">
+          <span class="neutral-black-color">
+            <h6>Built for a mobile-first world</h6>
+          </span>
+          <span class="regular16px neutral-black-color"> Nightwatch supports testing on mobile browsers and native apps
+            as
+            well. Learn once
+            and deliver amazing experiences across different platforms.</span>
+        </div>
+        <img src="/images1/capabilities2.svg" style="margin-left: 25px;width: 80%" alt="mobile">
+      </div>
+      <div class="verticle-line1"></div>
+      <div class="capabilities">
+        <div class="capabilities-content-title">
+          <span class="neutral-black-color">
+            <h6>No framework restrictions</h6>
+          </span>
+          <span class="regular16px neutral-black-color"> Nightwatch supports everything from multi-tabs and iFrames,
+            pinch-zoom and geolocation so that you are not restricted by your framework.</span>
+        </div>
+        <img src="/images1/capabilities3.svg" alt="framework">
+      </div>
+      <div class="verticle-line"></div>
+      <div class="capabilities">
+        <div class="capabilities-content-title">
+          <span class="neutral-black-color">
+            <h6>Test on real browsers</h6>
+          </span>
+          <span class="regular16px neutral-black-color"> Test on actual Chrome, Safari, Firefox, and Edge browsers
+            instead of testing on browser engines. Test your web applications where they will be used.</span>
+        </div>
+        <img src="/images1/capabilities4.svg" alt="browser">
+      </div>
+    </div>
+  </div>
+  <div class="capabilities-section-tablet">
+    <div class="capabilities-title">
+      <h4 class="neutral-black-color">
+        Why Nightwatch?
+      </h4>
+    </div>
+    <div class="capabilities-content carousel carousel-dark carousel-fade" id="carouselExampleDark2" data-bs-touch="true"
+    data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="capabilities">
+            <div class="capabilities-content-title">
+              <span class="semibold20px neutral-black-color"> Simple but powerful</span>
+              <span class="regular16px neutral-black-color"> Simple syntax and intuitive commands to avoid clutter and
+                make testing an intuitive
+                experience. Test as you want with support for Typescript and JS.</span>
+            </div>
+            <img src="/images1/capabilities1.svg" alt="simple">
+          </div>
+          <div class="verticle-line"></div>
+          <div class="capabilities">
+            <div class="capabilities-content-title">
+              <span class="semibold20px neutral-black-color"> Built for a mobile-first world</span>
+              <span class="regular16px neutral-black-color"> Nightwatch supports testing on mobile browsers and native
+                apps as well. Learn once
+                and deliver amazing experiences across different platforms.</span>
+            </div>
+            <img src="/images1/capabilities2.svg" style="margin-left: 25px;width: 80%" alt="mobile">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="capabilities">
+            <div class="capabilities-content-title">
+              <span class="semibold20px neutral-black-color">No framework restrictions</span>
+              <span class="regular16px neutral-black-color">Nightwatch supports everything from multi-tabs and iFrames,
+                pinch-zoom and
+                geolocation so that you are not restricted by your framework.</span>
+            </div>
+            <img src="/images1/capabilities3.svg" alt="framework">
+          </div>
+          <div class="verticle-line"></div>
+          <div class="capabilities">
+            <div class="capabilities-content-title">
+              <span class="semibold20px neutral-black-color"> Test on real browsers</span>
+              <span class="regular16px neutral-black-color"> Test on actual Chrome, Safari, Firefox, and Edge browsers
+                instead of testing on
+                browser engines. Test your web applications where they will be used.</span>
+            </div>
+            <img src="/images1/capabilities4.svg" alt="browser">
+          </div>
+        </div>
+      </div>
+      
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      </div>
+    </div>
+  </div>
+  <div class="capabilities-section-mobile">
+    <div class="capabilities-title">
+      <h4 class="neutral-black-color">
+        Why Nightwatch?
+      </h4>
+    </div>
+    <div class="capabilities-content carousel carousel-dark carousel-fade" id="carouselExampleDark1" data-bs-touch="true"
+    data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="capabilities">
+            <div class="cababilities-content-title">
+              <span class="neutral-black-color">
+                <h6>Simple but powerful</h6>
+              </span>
+              <span class="regular16px neutral-black-color"> Simple syntax and intuitive commands to avoid clutter and
+                make testing an intuitive
+                experience. Test as you want with support for Typescript and JS.</span>
+            </div>
+            <div class="capabilties-img">
+              <img src="/images1/capabilities1.svg" alt="simple">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="capabilities">
+            <div class="capabilities-content-title">
+              <span class="neutral-black-color">
+                <h6>Built for a mobile-first world</h6>
+              </span>
+              <span class="regular16px neutral-black-color"> Nightwatch supports testing on mobile browsers and native
+                apps as well. Learn once
+                and deliver amazing experiences across different platforms.</span>
+            </div>
+            <div class="capabilties-img">
+              <img src="/images1/capabilities2.svg" style="margin-left: 25px;width: 80%" alt="mobile">
+            </div>
+
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="capabilities">
+            <div class="ccababilities-content-title">
+              <span class="neutral-black-color">
+                <h6>No framework restrictions</h6>
+              </span>
+              <span class="regular16px neutral-black-color"> Nightwatch supports everything from multi-tabs and iFrames,
+                pinch-zoom and
+                geolocation so that you are not restricted by your framework.</span>
+            </div>
+            <div class="capabilties-img">
+              <img src="/images1/capabilities3.svg" alt="framework">
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="capabilities">
+            <div class="capabilities-content-title">
+              <span class="neutral-black-color">
+                <h6>
+                  Test on real browsers
+                </h6>
+              </span>
+              <span class="regular16px neutral-black-color"> Test on actual Chrome, Safari, Firefox, and Edge browsers
+                instead of testing on
+                browser engines. Test your web applications where they will be used.</span>
+            </div>
+            <div class="capabilties-img">
+              <img src="/images1/capabilities4.svg" alt="browser">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleDark1" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      </div>
+    </div>
+
+  </div>
+  <!-- +++++++++++++++ Features Section +++++++++++ -->
+  <div class="features-section">
+    <div class="features-title">
+      <h4 class="neutral-black-color">What makes Nightwatch unique?</h>
+    </div>
+    <div class="features-content">
+      <div class="features">
+        <img src="/images1/features.svg" src="Page Object Model" src="Page Object Model">
+        <div class="features-sub-content">
+          <span class="neutral-black-color">
+            <h6>
+              Page Object Model
+            </h6>
+          </span>
+          <span class="regular16px neutral-black-color">
+            Fast and easy Page Object Model support to better organise elements
+            and sections, with support fot both CSS and Xpath selectors.
+          </span>
+        </div>
+      </div>
+      <div class="features">
+        <img src="/images1/features2.svg" alt="Parallelism">
+        <div class="features-sub-content">
+          <span class="neutral-black-color">
+            <h6>
+              Advanced Parallelism
+            </h6>
+          </span>
+          <span class="regular16px neutral-blacl-color">
+            Upto 1.5x faster test execution than most frameworks with the exact same configuration and setup.
+          </span>
+        </div>
+      </div>
+      <div class="features">
+        <img src="/images1/features3.svg" alt="Pause and Debug">
+        <div class="features-sub-content">
+          <span class="neutral-black-color">
+            <h6>
+              Pause and Debug
+            </h6>
+          </span>
+          <span class="regular16px neutral-blacl-color">
+            Pause your tests and check the state of your browser, use DevTools, or try out commands and assertions to
+            easily debug test failures
+          </span>
+        </div>
+      </div>
+      <div class="features">
+        <img src="/images1/features4.svg" alt="cloud">
+        <div class="features-sub-content">
+          <span class="neutral-black-color">
+            <h6>
+              Cloud testing support
+            </h6>
+          </span>
+          <span class="regular16px neutral-blacl-color">
+            Nightwatch easily integrates with most cloud testing platforms like BrowserStack, Sauce Labs and more.
+          </span>
+        </div>
+      </div>
+      <div class="features">
+        <img src="/images1/features5.svg" alt="No Implicit Waits">
+        <div class="features-sub-content">
+          <span class="neutral-black-color">
+            <h6>
+              Implicit waits
+            </h6>
+          </span>
+          <span class="regular16px neutral-blacl-color">
+            Say goodbye to flaky tests with implicit waits. Write your scripts without waiting for elements to load.
+          </span>
+        </div>
+      </div>
+      <div class="features">
+        <img src="/images1/features6.svg">
+        <div class="features-sub-content">
+          <span class="neutral-black-color">
+            <h6>
+              HTML reporter
+            </h6>
+          </span>
+          <span class="regular16px neutral-blacl-color">
+            Simplified reporting with the integrated HTML reporter that includes test statuses, assertion logs & raw
+            HTTP logs
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="features-section-tablet">
+    <div class="features-title">
+      <h4 class="neutral-black-color">What makes Nightwatch unique?</h>
+    </div>
+    <div class="features-content carousel carousel-dark carousel-fade" id="carouselExampleDark4" data-bs-touch="true"
+    data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="features">
+            <img src="/images1/features.svg" src="Page Object Model">
+            <div class="features-sub-content">
+              <span class="semibold20px neutral-black-color">Page Object Model</span>
+              <span class="regular16px neutral-blacl-color">
+                Upto 1.5x faster test execution than most frameworks with the exact same configuration and setup.
+              </span>
+            </div>
+          </div>
+          <div class="features">
+            <img src="/images1/features2.svg" alt="Parallelism">
+            <div class="features-sub-content">
+              <span class="semibold20px neutral-black-color">Advanced Parallelism</span>
+              <span class="regular16px neutral-blacl-color">
+                Fast and easy Page Object Model support to better organise elements
+                and sections, with support fot both CSS and Xpath selectors.
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="features">
+            <img src="/images1/features3.svg" alt="Pause and Debug">
+            <div class="features-sub-content">
+              <span class="semibold20px neutral-black-color">Pause and Debug</span>
+              <span class="regular16px neutral-blacl-color">
+                Pause your tests and check the state of your browser, use DevTools, or try out commands and assertions
+                to easily debug test failures
+              </span>
+            </div>
+          </div>
+          <div class="features">
+            <img src="/images1/features4.svg" alt="cloud">
+            <div class="features-sub-content">
+              <span class="semibold20px neutral-black-color">Cloud testing support</span>
+              <span class="regular16px neutral-blacl-color">
+                Nightwatch easily integrates with most cloud testing platforms like BrowserStack, Sauce Labs and more.
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="features">
+            <img src="/images1/features5.svg" alt="No Implicit Waits">
+            <div class="features-sub-content">
+              <span class="semibold20px neutral-black-color">Implicit waits</span>
+              <span class="regular16px neutral-blacl-color">
+                Say goodbye to flaky tests with implicit waits. Write your scripts without waiting for elements to load.
+              </span>
+            </div>
+          </div>
+          <div class="features">
+            <img src="/images1/features6.svg">
+            <div class="features-sub-content">
+              <span class="semibold20px neutral-black-color">HTML reporter</span>
+              <span class="regular16px neutral-blacl-color">
+                Simplified reporting with the integrated HTML reporter that includes test statuses, assertion logs & raw
+                HTTP logs
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark4" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark4" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark4" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+    </div>
+  </div>
+  <div class="features-section-mobile">
+    <div class="features-title">
+      <h4 class="neutral-black-color">What makes Nightwatch unique?</h>
+    </div>
+    <div class="features-content carousel carousel-dark carousel-fade" id="carouselExampleDark" data-bs-touch="true"
+    data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="features">
+            <img src="/images1/features.svg" src="Page Object Model">
+            <div class="features-sub-content">
+              <span class="semibold20px neutral-black-color">Page Object Model</span>
+              <span class="regular16px neutral-blacl-color">
+                Upto 1.5x faster test execution than most frameworks with the exact same configuration and setup.
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="features">
+            <img src="/images1/features2.svg" alt="Parallelism">
+            <div class="features-sub-content">
+              <span class="semibold20px neutral-black-color">Advanced Parallelism</span>
+              <span class="regular16px neutral-blacl-color">
+                Fast and easy Page Object Model support to better organise elements
+                and sections, with support fot both CSS and Xpath selectors.
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="features">
+            <img src="/images1/features3.svg" alt="Pause and Debug">
+            <div class="features-sub-content">
+              <span class="semibold20px neutral-black-color">Pause and Debug</span>
+              <span class="regular16px neutral-blacl-color">
+                Pause your tests and check the state of your browser, use DevTools, or try out commands and assertions
+                to easily debug test failures
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="features">
+            <img src="/images1/features4.svg" alt="cloud">
+            <div class="features-sub-content">
+              <span class="semibold20px neutral-black-color">Cloud testing support</span>
+              <span class="regular16px neutral-blacl-color">
+                Nightwatch easily integrates with most cloud testing platforms like BrowserStack, Sauce Labs and more.
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="features">
+            <img src="/images1/features5.svg" alt="No Implicit Waits">
+            <div class="features-sub-content">
+              <span class="semibold20px neutral-black-color">Implicit waits</span>
+              <span class="regular16px neutral-blacl-color">
+                Say goodbye to flaky tests with implicit waits. Write your scripts without waiting for elements to load.
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="features">
+            <img src="/images1/features6.svg" alt="Html Reporter">
+            <div class="features-sub-content">
+              <span class="semibold20px neutral-black-color">HTML reporter</span>
+              <span class="regular16px neutral-blacl-color">
+                Simplified reporting with the integrated HTML reporter that includes test statuses, assertion logs & raw
+                HTTP logs
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
+      </div>
+    </div>
+  </div>
+  <div class="integrations-section">
+    <div class="integrations-title">
+      <h4 class="neutral-black-color">Seamlessly integrate Nightwatch into your setup</h4>
+      <span class="regular16px neutral-black-color">
+        Nightwatch integrates with everything including your CI services, reporters and IDEs.
+      </span>
+    </div>
+    <div class="integrations-content">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active regular16px neutral-black-color" id="reporters-tab" data-bs-toggle="tab"
+            data-bs-target="#reporters-tab-pane" type="button" role="tab" aria-controls="reporters-tab-pane"
+            aria-selected="true"><span class="regular16px neutral-black-color">Reporters</span></button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link regular16px neutral-black-color" id="ci-tab" data-bs-toggle="tab"
+            data-bs-target="#ci-tab-pane" type="button" role="tab" aria-controls="ci-tab-pane"
+            aria-selected="false"><span class="regular16px neutral-black-color">Continous Integrations</span></button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link regular16px neutral-black-color" id="task-tab" data-bs-toggle="tab"
+            data-bs-target="#task-tab-pane" type="button" role="tab" aria-controls="task-tab-pane"
+            aria-selected="false"><span class="regular16px neutral-black-color">Task Runners</span></button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link regular16px neutral-black-color" id="cloud-tab" data-bs-toggle="tab"
+            data-bs-target="#cloud-tab-pane" type="button" role="tab" aria-controls="cloud-tab-pane"
+            aria-selected="false"><span class="regular16px neutral-black-color">Cloud Service Providers</span></button>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent" data-bs-ride="carousel">
+        <div class="tab-pane fade show active" id="reporters-tab-pane" role="tabpanel" aria-labelledby="reporters-tab"
+          tabindex="0">
+          <div class="integration-frameworks-content">
+            <a class="integration-frameworks" href="https://nightwatchjs.org/guide/reporters/use-junit-reporter.html" target="_blank">
+              <img src="/images1/junit.svg" alt="junit">
+              <span class="learnmore">Learn more</span>
+              </a>
+            <a class="integration-frameworks" href="https://nightwatchjs.org/guide/reporters/use-mochawesome-reporter.html" target="_blank">
+              <img src="/images1/mocha.svg" alt="mocha">
+              <span
+                  class="learnmore">Learn more</span>
+            </a>
+            <a class="integration-frameworks" href="https://nightwatchjs.org/guide/reporters/use-nightwatch-allure-reporter.html"
+            target="_blank">
+              <img src="/images1/allure.svg" alt="allure" >
+              <span class="learnmore">Learn more</span>
+            </a>
+            <a class="integration-frameworks" href="https://nightwatchjs.org/guide/reporters/use-html-reporter.html" target="_blank">
+              <img src="/images1/html.svg" alt="Html Reporter"  >
+              <span class="learnmore">Learn more</span>
+            </a>
+            <a class="integration-frameworks" href="https://nightwatchjs.org/guide/reporters/use-json-reporter.html" target="_blank">
+              <img src="/images1/json.svg" alt="Json">
+              <span class="learnmore">Learn more</span>
+            </a>
+            <a class="integration-frameworks" href="https://nightwatchjs.org/guide/reporters/use-teamcity-reporter.html" target="_blank">
+              <img src="/images1/teamcity.svg" alt="Teamcity">
+              <span
+                  class="learnmore">Learn more</span>
+            </a>
+            <a class="integration-frameworks" href="https://nightwatchjs.org/guide/reporters/use-slack-reporter.html" target="_blank">
+              <img src="/images1/slack.svg" alt="Slack"><span class="learnmore">Learn more</span></a>
+            </a>
+            <div class="slider-nav-container"><div class="slider-nav"></div></div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="ci-tab-pane" role="tabpanel" aria-labelledby="ci-tab" tabindex="0">
+          <div class="integration-frameworks-content">
+            <a class="integration-frameworks" href="https://nightwatchjs.org/guide/ci-integrations/run-nightwatch-on-github-actions.html"
+            target="_blank">
+              <img src="/images1/github-actions.svg" alt="Github Actions">
+              <span class="learnmore">Learn more</span>
+            </a>
+            <a class="integration-frameworks" href="https://nightwatchjs.org/guide/ci-integrations/run-nightwatch-on-bamboo.html"
+            target="_blank">
+              <img src="/images1/bamboo.svg" alt="Bamboo">
+              <span class="learnmore">Learn more</span>
+            </a>
+            <a class="integration-frameworks" href="https://nightwatchjs.org/guide/ci-integrations/run-nightwatch-on-azure-pipelines.html"
+            target="_blank">
+              <img src="/images1/azure.svg" alt="Azure">
+              <span class="learnmore">Learn more</span>
+            </a>
+            <a class="integration-frameworks" href="https://nightwatchjs.org/guide/ci-integrations/run-nightwatch-on-circleci.html"
+            target="_blank">
+              <img src="/images1/circleci.svg" alt="CicleCI">
+              <span class="learnmore">Learn more</span>
+            </a>
+            <a class="integration-frameworks" href="https://nightwatchjs.org/guide/ci-integrations/run-nightwatch-on-jenkins.html"
+            target="_blank">
+              <img src="/images1/jenkins.svg" alt="Jenkins"> 
+              <span class="learnmore">Learn more</span>
+            </a>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="task-tab-pane" role="tabpanel" aria-labelledby="task-tab" tabindex="0">
+          <div class="integration-frameworks-content">
+            <a class="integration-frameworks" href="https://nightwatchjs.org/guide/writing-tests/using-mocha.html#using-mocha-as-a-test-runner"
+            target="_blank">
+              <img src="/images1/mocha.svg" alt="Mocha">
+              <span class="learnmore">Learn more</span>
+            </a>
+            <a class="integration-frameworks" href="https://nightwatchjs.org/guide/writing-tests/using-cucumberjs.html#using-cucumberjs-with-nightwatch"
+            target="_blank">
+              <img src="/images1/cucumber.svg" alt="Cucumber">
+              <span class="learnmore">Learn more</span>
+            </a>
+            <a class="integration-frameworks" href="https://nightwatchjs.org">
+              <img src="/images1/ava.svg" alt="Ava">
+              <span class="learnmore">Learn more</span>
+            </a>
+            <a class="integration-frameworks">
+              <img src="/images1/jest.svg" alt="Jest">
+              <span class="learnmore">Learn more</span>
+            </a>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="cloud-tab-pane" role="tabpanel" aria-labelledby="cloud-tab" tabindex="0">
+          <div class="integration-frameworks-content">
+            <a class="integration-frameworks" href="https://nightwatchjs.org/guide/quickstarts/create-and-run-a-test-with-cloud-providers.html#running-on-browserstack" target="_blank">
+              <img src="/images1/browserstack.svg" alt="BrowserStack">
+              <span
+                  class="learnmore">Learn more</span>
+            </a>
+            <a class="integration-frameworks" href="https://nightwatchjs.org/guide/quickstarts/create-and-run-a-test-with-cloud-providers.html#running-on-sauce-labs" target="_blank">
+              <img src="/images1/sauselabs.svg" alt="Sauselabs">
+              <span
+                  class="learnmore">Learn more</span>
+            </a>
+            <a class="integration-frameworks">
+              <img src="/images1/lambdatest.svg" alt="LambdaTest ">
+              <span class="comingsoon">Coming soon</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="integration-mobile">
+    <div class="integrations-title">
+      <h4 class="neutral-black-color">Seamlessly integrate nightwatch into your setup</h4>
+      <span class="regular16px">
+        Nightwatch integrates with everything including your CI services, reporters and IDEs.
+      </span>
+    </div>
+    <img src="/images1/integration-mobile.svg">
+    <a class="button-default button-primary-default" href="https://nightwatchjs.org">
+      <span class="regular16px neutral-white-color">
+        Learn more
+      </span>
+    </a>
+  </div>
+  <div class="community-section">
+    <div class="community-content">
+      <div class="community-title-section">
+        <div class="community-title">
+          <h4 class="neutral-black-color">
+            Powered by the Community, Maintained by Browserstack
+          </h4>
+          <span class="regular16px neutral-black-color">
+            The success of the Nightwatch rests on the shoulders of our community of contributors, promoters and users.
+          </span>
+        </div>
+        <div class="community-members">
+          <img src="/images1/user1.svg" alt="Andrie">
+          <img src="/images1/user2.svg" alt="David">
+          <img src="/images1/user3.svg" alt="Ravi">
+          <img src="/images1/user4.svg" alt="">
+          <img src="/images1/user5.svg" alt="Vaibhav">
+          <img src="/images1/user6.svg" alt="">
+          <img src="/images1/user7.svg" alt="Harshit">
+        </div>
+      </div>
+      <div class="community-subtitle">
+        <span class="regular20px neutral-black-color">
+          Nightwatch has over 1000 forks and 11000 stars on Github.
+        </span>
+        <div class="community-github-info">
+          <a href="https://nightwatchjs.orghttps://github.com/nightwatchjs/nightwatch">
+            <img src="/images1/github_stars.svg" alt="github stars">
+          </a>
+          <a href="https://nightwatchjs.orghttps://github.com/nightwatchjs/nightwatch">
+            <img src="/images1/github_forks.svg" alt="github fork">
+          </a>
+        </div>
+      </div>
+
+      <div class="community-buttons">
+        <a href="https://nightwatchjs.orghttps://github.com/nightwatchjs/nightwatch" class=" button-default button-primary-default">
+          <img src="/images1/github-button.svg" alt="Github logo">
+          <span class="regular16px neutral-white-color">
+            Check out the code
+          </span>
+        </a>
+        <a href="https://nightwatchjs.orghttps://discord.com/invite/SN8Da2X" class="button-default button-secondary-default">
+          <span class="regular16px primary60">Join us on Discord</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="ready-section">
+    <div class="ready-title">
+      <h4 class="neutral-black-color">
+        Ready to try it out?
+      </h4>
+      <span class="regular16px neutral-black-color">
+        Used by everyone--from startups to enterprises and open source projects.
+      </span>
+    </div>
+    <div class="trust">
+      <img src="/images1/zappos.svg" alt="Zappos">
+      <img src="/images1/apache.svg" alt="Apache">
+      <img src="/images1/vue.svg" alt="Vue">
+    </div>
+    <div class="ready-button">
+      <a href="https://nightwatchjs.org/guide/overview/what-is-nightwatch.html"
+        class="button-default button-primary-default">
+        <span class="regular16px neutral-white-color">Get Started</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- footer content -->
+
+<div class="footer-section">
+  <div class="footer-content">
+    <div class="footerlinks">
+      <div class="footer-links-left">
+        <div class="footer-links-frame">
+          <span class="semibold24px neutral-white-color">
+            Nightwatch
+          </span>
+          <div class="footer-sub-links">
+            <a class="footer-links regular16px neutral-white-color" href="/about/">About</a>
+            <a class="footer-links regular16px neutral-white-color" href="https://nightwatchjs.org/blog/"> 
+              Blog
+            </a>
+            <a class="footer-links regular16px neutral-white-color" href="https://nightwatch.substack.com/">
+              Newletter
+            </a>
+            <a class="footer-links regular16px neutral-white-color" href="/about/contribute/">
+              How to contribute
+            </a>
+            <a class="footer-links regular16px neutral-white-color" href="/releases/">
+              Realease History
+            </a>
+          </div>
+        </div>
+        <div class="footer-links-frame">
+          <span class="semibold24px neutral-white-color">
+            Resources
+          </span>
+          <div class="footer-sub-links">
+            <a class="footer-links regular16px neutral-white-color" href="/about/community/">
+              Community Resources
+            </a>
+            <a class="footer-links regular16px neutral-white-color" href="https://github.com/nightwatchjs/nightwatch/issues" rel="noreferrer" target="_blank">
+              Report Issues
+            </a>
+            <a class="footer-links regular16px neutral-white-color" href="https://github.com/nightwatchjs/nightwatch/discussions" rel="noreferrer" target="_blank">
+              Github Discussions
+            </a>
+            <a class="footer-links regular16px neutral-white-color" href="https://stackoverflow.com/questions/tagged/nightwatch.js" rel="noreferrer" target="_blank">
+              Stack Overflow
+            </a>
+            <a class="footer-links regular16px neutral-white-color" href="https://discord.gg/SN8Da2X" rel="noreferrer" target="_blank">
+              Chat with us on Discord
+            </a>
+          </div>
+        </div>
+        <div class="footer-links-frame">
+          <span class="semibold24px neutral-white-color">
+            Get Started
+          </span>
+          <div class="footer-sub-links">
+            <a class="footer-links regular16px neutral-white-color" href="https://nightwatchjs.org/guide/overview/what-is-nightwatch.html">
+              What is Nightwatch?
+            </a>
+            <a class="footer-links regular16px neutral-white-color" href="https://nightwatchjs.org/guide/quickstarts/create-and-run-a-nightwatch-test.html#setup-nightwatch">
+              Set up Nightwatch
+            </a>
+            <a class="footer-links regular16px neutral-white-color" href="https://nightwatchjs.org/guide/quickstarts/create-and-run-a-nightwatch-test.html">
+              Create and run a test
+            </a>
+            <a class="footer-links regular16px neutral-white-color" href="https://nightwatchjs.org/api/">
+              API References
+            </a>
+            <a class="footer-links regular16px neutral-white-color" href="https://nightwatchjs.org/guide/reference/settings.html">
+              Nightwatch Settings
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-links-right">
+        <span class="semibold24px neutral-white-color">
+          Subscribe to Newsletter
+        </span>
+        <span class="regular16px neutral-white-color">
+          Send updates to my inbox*
+        </span>
+        <div class="email-section">
+          <input type="text" placeholder="Enter your email address">
+          <button type="button" class="subscribe regular16px" disabled>
+            Subscribe
+          </button>
+          <!-- <iframe src="https://nightwatch.substack.com/embed" width="76%" height="140px" style="border:0;margin-left:-17px;" id="substack"  frameborder="0" scrolling="no"></iframe> -->
+        </div>
+        <div class="social-links">
+          <a href="https://github.com/nightwatchjs/nightwatch" target="_blank">
+            <img src="/images1/github.svg">
+          </a>
+          <a href="https://www.youtube.com/channel/UCWM6RQiITFc8dZ2l3fNpUbA" target="_blank">
+            <img src="/images1/youtube.svg">
+          </a>
+          <a href="https://twitter.com/nightwatchjs" target="_blank">
+            <img src="/images1/twitter.svg">
+          </a>
+          <a href="https://discord.com/invite/SN8Da2X" target="_blank">
+            <img src="/images1/discord.svg">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="copyright-1">
+        <img src="/images1/nightwatch-browserstack.svg">
+        <div class="footer-info">
+          <span class="regular14px neutral-bluish-grey3">
+            Nightwatch was established in 2014 and was acquired by BrowserStack in 2021.<br>
+            It is now actively maintained by <a href="https://browserstack.com" target="_blank" style="text-decoration: underline !important;">BrowserStack</a> with the help from all our <a href="https://github.com/nightwatchjs/nightwatch/graphs/contributors" target="_blank" style="text-decoration: underline !important;">contributors.</a>
+          </span>
+        </div>
+      </div>
+      <div class="copyright-2">
+        <span class="regular14px neutral-bluish-grey3" style="text-align: center;">
+          © 2022 <a href="https://browserstack.com" target="_blank" style="text-decoration: underline !important;">BrowserStack</a> Limited • Code licensed under the <a rel="noreferrer" href="https://github.com/nightwatchjs/nightwatch/blob/main/LICENSE.md" style="text-decoration: underline !important;">MIT License.</a>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function copytoclipboard(element) {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $(element).hide();
+    $temp.val('npm init nightwatch').select();
+    document.execCommand("copy");
+    $temp.remove();
+    $('.action').css('background', '#0F720B');
+    $('.npm-text').addClass('regular16px').removeClass('npm-text').text('Code copied').css('color', '#FFFFFF');
+    $('.check-circle').css('display', 'block');
+    setTimeout(function () {
+      $('.action').css('background', '#FFFFFF');
+      $(element).show();
+      $('.check-circle').css('display', 'none');
+      $('.npm-install .regular16px').removeClass('regular16px').text('$ npm init nightwatch').addClass('npm-text').css('color', '#787878');
+    }, 5000);
+  }
+
+  $(document).ready(function () {
+
+    function enableSlideSlicker () {
+      if ($(window).width() > 677 && $(window).width() < 1007) {
+        $('.integration-frameworks-content').slick({
+          variableWidth: true,
+          dots: true,
+          infinite: true,
+          mobileFirst: true,
+          arrows : false,
+          autoplay : true,
+          autoplaySpeed : 3000,
+          swipeToSlide : true,
+          responsive: [
+            {
+              breakpoint: 1008,
+              settings: "unslick"
+            }
+          ]
+        });
+      }
+    }
+
+    $(window).resize(function () {
+      enableSlideSlicker ();
+    });
+
+    if ($(window).width() > 678 && $(window).width() < 1007) {
+      enableSlideSlicker ();
+    }
+  });
+</script>

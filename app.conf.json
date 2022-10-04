@@ -397,6 +397,12 @@
       "pageTitle" : "Nightwatch.js |  Node.js powered End-to-End testing framework",
       "title" : "Nightwatch.js",
       "description" : "Write efficient end-to-end tests in Node.js and run them against W3C WebDriver."
+    },
+
+    "index_new" : {
+      "pageTitle" : "Nightwatch.js |  Node.js powered End-to-End testing framework",
+      "title" : "Nightwatch.js",
+      "description" : "Write efficient end-to-end tests in Node.js and run them against W3C WebDriver."
     }
   },
 
