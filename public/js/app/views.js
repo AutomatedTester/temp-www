@@ -117,6 +117,23 @@ domino.views.define('about', function(view) {
 
 });
 
+domino.views.define('index_new', function(view) {
+  this.indexView = function(view_script) {
+    if (domino.views.currentView == 'index_new') {
+      return;
+    }
+
+    view_script.no_render = true;
+    view_script.$container = '#index-container-new';
+    document.title = 'Nightwatch.js | Node.js powered End-to-End testing framework';
+
+    this.initHelper('transition').render();
+    domino.views.currentView = 'index_new';
+    document.documentElement.setAttribute('data-uri', '/index_new');
+  };
+
+});
+
 domino.views.define('releases', function(view) {
 
   this.init = function() {};
