@@ -38,10 +38,10 @@
       </div>
       <div class="nav-links-right">
         <a aria-label="Nightwatch on discord" href="https://discord.com/invite/SN8Da2X" rel="noopener" title="discord" target="_blank">
-          <img src="/images1/nav-github.svg">
+          <img src="/images1/nav-github.svg" alt>
         </a>
         <a href="https://github.com/nightwatchjs/nightwatch" aria-label="Nightwatch on github" target="_blank">
-          <img src="/images1/nav-stars.svg">
+          <img src="/images1/nav-stars.svg" alt>
         </a>
         <div class="nav-item dropdown neutral-white-color">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -86,16 +86,16 @@
                 <span class="primary50">$</span> npm init nightwatch
               </span>
             </div>
-            <a class="button-default copy btn-copy" onclick="copytoclipboard('.copy')">
+            <a class="button-default copy btn-copy" href="#" onclick="copytoclipboard('.copy')">
               <span class="regular16px grey10">
                 Copy
               </span>
             </a>
             <div class="check-circle" style="display: none;">
-              <img src="/images1/check-circle.svg" alt="">
+              <img src="/images1/check-circle.svg" alt>
             </div>
-            <a class="copy-mobile btn-copy" onclick="copytoclipboard('.copy-mobile')">
-              <img src="/images1/copy-mobile.svg" alt="copy">
+            <a class="copy-mobile btn-copy" href="#" onclick="copytoclipboard('.copy-mobile')">
+              <img src="/images1/copy-mobile.svg" alt>
             </a>
           </div>
           <span class="regular16px neutral-white-color">
@@ -317,7 +317,7 @@
     </div>
     <div class="features-content">
       <div class="features">
-        <img src="/images1/features.svg" src="Page Object Model" src="Page Object Model">
+        <img src="/images1/features.svg" alt="Page Object Model">
         <div class="features-sub-content">
           <span class="neutral-black-color">
             <h6>
@@ -384,7 +384,7 @@
         </div>
       </div>
       <div class="features">
-        <img src="/images1/features6.svg">
+        <img src="/images1/features6.svg" alt>
         <div class="features-sub-content">
           <span class="neutral-black-color">
             <h6>
@@ -600,7 +600,7 @@
           <div class="integration-frameworks-content">
             <a class="integration-frameworks" href="https://nightwatchjs.org/guide/reporters/use-junit-reporter.html" target="_blank">
               <img src="/images1/junit.svg" alt="junit">
-              <span class="learnmore">Learn more</span>
+              <span class="learnmore">JUnit</span>
               </a>
             <a class="integration-frameworks" href="https://nightwatchjs.org/guide/reporters/use-mochawesome-reporter.html" target="_blank">
               <img src="/images1/mocha.svg" alt="mocha">
@@ -924,6 +924,7 @@
       $('.check-circle').css('display', 'none');
       $('.npm-install .regular16px').removeClass('regular16px').text('$ npm init nightwatch').addClass('npm-text').css('color', '#787878');
     }, 5000);
+    return false;
   }
 
   $(document).ready(function () {
