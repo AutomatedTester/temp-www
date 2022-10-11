@@ -252,7 +252,9 @@
     gap: 20px;
     width: 100%;
 }
-
+.copy {
+    cursor: pointer;
+}
 .copyright-1 {
     display: flex;
     flex-direction: row;
