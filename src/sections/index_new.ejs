@@ -106,10 +106,13 @@
 
       </div>
       <div class="hero-right">
+        <div class="youtube-video-place embed-responsive embed-responsive-4by3 " data-yt-url="https://www.youtube.com/embed/lTLQJ3tD0xc?rel=0&showinfo=0&autoplay=1">
+          <img src="/images/images1/youtube-bg.svg" async class="play-youtube-video" onclick="videoWrapper()" href="#">
+          </div>
         <!-- <div class="overlay"></div> -->
-        <iframe src="https://www.youtube.com/embed/lTLQJ3tD0xc?wmode=transparent" style="width:100%; height: 354px; z-index: 1;" frameborder="0"
+        <!-- <iframe src="https://www.youtube.com/embed/lTLQJ3tD0xc" style="width:100%; height: 354px; z-index: 1;" frameborder="0"
           allow="autoplay; fullscreen" data-ready="true" loading="lazy">
-        </iframe>
+        </iframe> -->
       </div>
     </div>
   </div>
@@ -945,6 +948,16 @@
       $('.npm-install .regular16px').removeClass('regular16px').text('$ npm init nightwatch').addClass('npm-text').css('color', '#787878');
     }, 5000);
     return false;
+  }
+
+  function videoWrapper() {
+    // Youtube video wrapper
+    var video_wrapper = $('.youtube-video-place');
+    //  Check to see if youtube wrapper exists
+    if(video_wrapper.length){
+    // If user clicks on the video wrapper load the video.
+    video_wrapper.html('<iframe allowfullscreen frameborder="0" style="width:100%; height: 354px;" class="embed-responsive-item" src="' + video_wrapper.data('yt-url') + '"></iframe>');
+    }
   }
 
   $(document).ready(function () {
