@@ -597,12 +597,12 @@ input:focus-visible {
 }
 
 @media screen and (min-width: 1729px) {
-    section[data-page-uri="/index_new"] {
+    section[data-page-uri="/v2"] {
         max-width: 1648px;
         margin-left: auto;
         margin-right: auto;
     }
     .navigation1 .dropdown-menu {
-        margin-left: -120px !important;
+        margin-left: -170px !important;
     }
 }

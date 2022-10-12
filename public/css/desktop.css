@@ -18,7 +18,7 @@
     padding: 80px 40px;
     height: auto;
     gap: 80px;
-    background-image: url('/images1/stars.svg');
+    background-image: url('/images/images1/stars.svg');
 }
 
 .hero-content {
@@ -254,6 +254,9 @@
 }
 .copy {
     cursor: pointer;
+}
+.dropdown-toggle::after {
+    color: var(--neutral-white-color);
 }
 .copyright-1 {
     display: flex;
