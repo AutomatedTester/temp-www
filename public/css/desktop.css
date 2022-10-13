@@ -490,7 +490,10 @@
     display: none;
 
 }
-
+.integration-mobile img {
+    width: 388px;
+    height: 355px;
+}
 .integrations-title {
     display: flex;
     flex-direction: column;
@@ -592,6 +595,8 @@ button[role="button"] {
 }
 
 .copy-mobile {
+    width: 20px;
+    height: 21px;
     display: none;
 }
 
@@ -778,4 +783,27 @@ button[role="button"] {
 }
 .use-theme-bg {
     background: #1B1B1B !important;
+}
+
+.features img {
+    width: 40px;
+    height: 40px;
+}
+.integration-frameworks img {
+    width: 61px;
+    height: 60px;
+}
+.social-links img {
+    width: 40px;
+    height: 28px;
+}
+
+.nightwatch-logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.community-github-info img {
+    width: 106px;
+    height: 40px;
 }
