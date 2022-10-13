@@ -79,10 +79,10 @@
           <div class="action">
             <div class="npm-install">
               <span class="npm-text">
-                <span class="primary50">$</span> npm init nightwatch
+                <span class="primary50">$</span> <span id="npm-command">npm init nightwatch</span>
               </span>
             </div>
-            <div class="button-default copy btn-copy" onclick="copytoclipboard('.copy')">
+            <div class="button-default copy btn-copy" onclick="copyToClipboard('.copy')">
               <span class="regular16px grey10">
                 Copy
               </span>
@@ -90,7 +90,7 @@
             <div class="check-circle" style="display: none;">
               <img loading="auto"  src="/images/images1/check-circle.svg" alt>
             </div>
-            <img class="copy-mobile" loading="auto"  src="/images/images1/copy-mobile.svg" width="20" height="21" onclick="copytoclipboard('.copy-mobile')" alt>
+            <img class="copy-mobile" loading="auto"  src="/images/images1/copy-mobile.svg" width="20" height="21" onclick="copyToClipboard('.copy-mobile')" alt>
           </div>
           <span class="regular16px neutral-white-color">
             <a href="https://nightwatchjs.org/guide/overview/what-is-nightwatch.html"
@@ -899,17 +899,18 @@
   </div>
 </div>
 <script>
-  function copytoclipboard(element) {
-    navigator.clipboard.writeText("npm init nightwatch");
+  function copyToClipboard(element) {
+    const copyValue = $("#npm-command").text();
+    navigator.clipboard.writeText(copyValue);
     $(element).hide();
     $('.action').css('background', '#0F720B');
-    $('.npm-text').addClass('regular16px').removeClass('npm-text').text('Code copied').css('color', '#FFFFFF');
+    $('.npm-install').html('<span class="regular16px" style="color: #FFFFFF">Code copied</span>');
     $('.check-circle').css('display', 'block');
     setTimeout(function () {
       $('.action').css('background', '#FFFFFF');
       $(element).show();
       $('.check-circle').css('display', 'none');
-      $('.npm-install .regular16px').removeClass('regular16px').text('$ npm init nightwatch').addClass('npm-text').css('color', '#787878');
+      $('.npm-install').html(' <span class="npm-text"><span class="primary50">$</span> <span id="npm-command">npm init nightwatch</span></span>');
     }, 5000);
     return false;
   }
