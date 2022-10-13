@@ -1,0 +1,336 @@
+<div class="parallax">
+  <div class="parallax__layer parallax__layer--3">
+    <div id="stars" class="top-stars">&nbsp;</div>
+  </div>
+
+  <div class="parallax__layer parallax__layer--2">
+    <div id="moon" class="top-moon">&nbsp;</div>
+  </div>
+
+  <div class="parallax__layer parallax__layer--1">
+    <div id="clouds" class="top-clouds">&nbsp;</div>
+  </div>
+
+  <div class="parallax__layer parallax__layer--0">
+    <header class="navbar nw-navbar navbar-expand-lg navbar-dark flex-column flex-md-row">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
+                aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand" href="<%= baseUrl %>">
+          <div class="logo-home"></div>
+        </a>
+
+        <div id="navigation" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav mr-auto mt-lg-0">
+            <li class="nav-item"><a class="header-links local-nav" href="<%= baseUrl %>">Home</a></li>
+            <li class="nav-item"><a class="header-links" href="<%= baseUrl %>/guide/overview/what-is-nightwatch.html">Guide</a></li>
+            <li class="nav-item"><a class="header-links" href="<%= baseUrl %>/api/">API Reference</a></li>
+            <li class="nav-item"><a class="header-links" href="<%= baseUrl %>/about/community/">Community</a></li>
+            <li class="nav-item"><a class="header-links" href="https://nightwatchjs.org/blog/">Blog</a></li>
+            <li class="nav-item"><a class="header-links" aria-label="Nightwatch on github" href="https://github.com/nightwatchjs/nightwatch" rel="noopener" title="GitHub"><mat-icon class="mat-icon" role="img" svgicon="logos:github" aria-hidden="true"><svg focusable="false" viewBox="0 0 51.8 50.4" xmlns="http://www.w3.org/2000/svg"><path d="M25.9,0.2C11.8,0.2,0.3,11.7,0.3,25.8c0,11.3,7.3,20.9,17.5,24.3c1.3,0.2,1.7-0.6,1.7-1.2c0-0.6,0-2.6,0-4.8c-7.1,1.5-8.6-3-8.6-3c-1.2-3-2.8-3.7-2.8-3.7c-2.3-1.6,0.2-1.6,0.2-1.6c2.6,0.2,3.9,2.6,3.9,2.6c2.3,3.9,6,2.8,7.5,2.1c0.2-1.7,0.9-2.8,1.6-3.4c-5.7-0.6-11.7-2.8-11.7-12.7c0-2.8,1-5.1,2.6-6.9c-0.3-0.7-1.1-3.3,0.3-6.8c0,0,2.1-0.7,7,2.6c2-0.6,4.2-0.9,6.4-0.9c2.2,0,4.4,0.3,6.4,0.9c4.9-3.3,7-2.6,7-2.6c1.4,3.5,0.5,6.1,0.3,6.8c1.6,1.8,2.6,4.1,2.6,6.9c0,9.8-6,12-11.7,12.6c0.9,0.8,1.7,2.4,1.7,4.7c0,3.4,0,6.2,0,7c0,0.7,0.5,1.5,1.8,1.2c10.2-3.4,17.5-13,17.5-24.3C51.5,11.7,40.1,0.2,25.9,0.2z"></path></svg></mat-icon></a></li>
+          </ul>
+        </div>
+
+        <ul class="navbar-nav ml-md-auto nav navbar-nav navbar-right">
+          <li class="nav-item">
+            <div id="docsearch" style="margin-top: -10px; margin-right: 10px;"></div>
+          </li>
+
+          <li class="nav-item dropdown" style="margin-right: 60px">
+            <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-bs-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="true"><%= version %></a>
+
+            <div class="dropdown-menu dropdown-menu-md-right" aria-labelledby="bd-versions">
+              <a class="dropdown-item active" href="https://nightwatchjs.org/">Latest (<%= version %>)</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="https://v17.nightwatchjs.org/">v1.7</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="https://v09.nightwatchjs.org/">v0.9</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/releases/">All versions</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div id="survey-banner-index" class="survey-banner-beta alert alert-info alert-dismissible fade" role="alert">
+        📣 Webinar: Automated end to end testing simplified with Nightwatch <a href="https://www.browserstack.com/webinars/end-to-end-testing-nightwatch" target="_blank" style="display: inline-block; text-decoration: none; background: white; color: black; padding: 5px; border-radius: 2px; margin-left: 10px; box-shadow: 0px 1px 4px 1px #00000033;">Register Now</a>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="padding: 0 10px;">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </header>
+
+    <section id="index-container-inner" data-page-uri="/">
+      <div id="top-section" class="top-text">
+        <div class="houses-left">
+          <div class="houses-right">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                  <h1>Nightwatch<span>.js</span></h1>
+                  <p>End-to-end testing, the easy way.</p>
+                </div>
+                <div class="col-md-6">
+                  <img class="code-top" src="/images/code-top-new.svg" style="width:525px; height:372px" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="download">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-8 download">
+              <a href="https://nightwatchjs.org/guide/getting-started/installation.html"
+                 class="btn btn-primary btn-lg btn-download">INSTALL<br> (<%= version %>)</a>
+              <a href="https://github.com/nightwatchjs/nightwatch" rel="noreferrer" target="_blank"
+                 class="btn btn-primary btn-lg btn-github">VIEW ON GITHUB</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="index-features">
+        <div class="container">
+          <div class="horizontal-line" style="width:100%"></div>
+          <div class="row overview">
+            <div class="col-sm-12 col-lg-10" style="margin: 10px auto; float: none; text-align: center;">
+              <h2>End-to-End Automation</h2>
+              <p style="font-weight: 100; font-size:22px">
+                <span style="font-weight: 300">Nightwatch.js</span> is an integrated, easy to use <span style="font-weight: 300">End-to-End</span> testing solution for web applications and websites, written in Node.js.
+                It uses the <a href="https://www.w3.org/TR/webdriver/" target="_blank" rel="noreferrer">W3C WebDriver API</a> to drive browsers and perform commands and assertions on DOM elements.
+              </p>
+            </div>
+          </div>
+
+          <div class="horizontal-line"></div>
+          <div class="row features-container">
+            <div class="col-md-5 col-lg-5 col-sm-5 col-xs-5"
+                 style="text-align: right; padding-right: 40px;">
+              <ul class="features">
+                <li class="syntax">
+                  <h3>Clean Syntax</h3>
+                  <p>
+                    Simple but powerful syntax which enables you to write tests very quickly, using Javascript (Node.js) and CSS or Xpath selectors. Typescript is supported as well.
+                  </p>
+                </li>
+
+                <li class="cloudtesting">
+                  <h3>Cloud Testing Support</h3>
+                  <p>
+                    Works with <a href="https://www.browserstack.com" target="_blank" rel="noreferrer">BrowserStack</a> out of the box. Other cloud testing providers, such as <a href="https://saucelabs.com/" rel="noreferrer" target="_blank">SauceLabs</a> or <a href="https://www.lambdatest.com/" rel="noreferrer" target="_blank">LambdaTest</a> are easy to add.
+                  </p>
+                </li>
+
+                <li class="selectors">
+                  <h3>Page Objects Support</h3>
+                  <p>
+                    Fluent and easy to work with Page Object Model support to better organise elements and sections, with support for both CSS or Xpath selectors.
+                  </p>
+                </li>
+
+                <li class="plugins">
+                  <h3>Plugin API</h3>
+                  <p>
+                    Flexible command and assertion framework which makes it easy to implement your own plugins and extend the built-in commands and assertions APIs.
+                  </p>
+                </li>
+
+              </ul>
+            </div>
+            <div class="col-md-2 col-lg-2 col-sm-2 col-xs-2" style="text-align: center;">
+              <div class="vertical-line"></div>
+              <div class="feature-icon syntax"></div>
+              <div class="vertical-line"></div>
+              <div class="feature-icon testrunner"></div>
+              <div class="vertical-line"></div>
+              <div class="feature-icon cloudtesting"></div>
+              <div class="vertical-line"></div>
+              <div class="feature-icon selenium"></div>
+              <div class="vertical-line"></div>
+              <div class="feature-icon selectors"></div>
+              <div class="vertical-line"></div>
+              <div class="feature-icon junit"></div>
+              <div class="vertical-line"></div>
+
+              <div class="feature-icon plugin"></div>
+              <div class="vertical-line"></div>
+            </div>
+
+            <div class="col-md-5 col-lg-5 col-sm-5 col-xs-5" style="text-align: left; padding-right: 0">
+              <ul class="features">
+                <li class="testrunner">
+                  <h3>Test Runner</h3>
+                  <p>
+                    Built-in command-line test runner which runs the tests either sequentially or in parallel, with retries and implicit waits. Also supports grouping of test suites and tags.
+                  </p>
+                </li>
+
+                <li class="selenium">
+                  <h3>WebDriver Service</h3>
+                  <p>
+                    Manages automatically Selenium or WebDriver services (ChromeDriver, GeckoDriver, Edge, Safari) in a separate child process.
+                  </p>
+                </li>
+
+                <li class="junit">
+                  <h3>Continuous Integration</h3>
+                  <p>
+                    JUnit XML reporting is built-in so you can integrate your tests in your build process with systems such as Teamcity, Jenkins, CircleCI etc.
+                  </p>
+                </li>
+
+              </ul>
+            </div><!--/span-->
+          </div><!--/row-->
+          <div class="horizontal-line"></div>
+
+          <div class="row">
+            <div class="social" style="margin-top:30px; margin-bottom:50px; width:200px">
+              <ul>
+                <li>
+                  <span class="github-btn github-stargazers github-btn-large" id="github-btn">
+                    <a class="gh-btn" id="gh-btn" href="https://github.com/nightwatchjs/nightwatch/" rel="noreferrer" target="_blank" aria-label="Star on GitHub"><span class="gh-ico" aria-hidden="true"></span>
+                    <span class="gh-text" id="gh-text">Star</span></a>
+                    <a class="gh-count" href="https://github.com/nightwatchjs/nightwatch/stargazers" target="_blank" aria-label="9,713 stargazers on GitHub" style="display: block;" id="stargazers-count"></a>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div><!--/.container-->
+      </div><!--/.container-->
+
+      <!-- START .example -->
+      <div class="example">
+        <div class="container">
+          <div class="row" style="padding-left: 50px;">
+            <h2>Demo Test</h2>
+            <p>The test below opens the search engine <a href="https://ecosia.org">Ecosia.org</a> and searches for "nightwatch", then verifies
+              if the term first result is the Nightwatch.js website.</p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6">
+              <div class=""><pre data-language="javascript"><code class="language-javascript">
+describe('Demo test Ecosia.org', function() {
+  test('search for nightwatch', function(browser) {
+    browser
+      .url('https://www.ecosia.org/')
+      .waitForElementVisible('body')
+      .assert.titleContains('Ecosia')
+      .assert.visible('input[type=search]')
+      .sendKeys('input[type=search]', 'nightwatch')
+      .assert.visible('button[type=submit]')
+      .click('button[type=submit]')
+      .assert.textContains('.layout__content', 'Nightwatch.js')
+      .end();
+  })
+});</code></pre>
+              </div>
+            </div>
+
+            <div class="col-lg-6 sampleoutput">
+              <div class="screenshot"></div>
+            </div>
+
+          </div>
+        </div> <!-- /.container-->
+
+        <div class="index-features" style="background-color: #000; margin-top: 100px;">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12 col-lg-10" style="max-width: 900px; margin: 0 auto; float: none; text-align: center;">
+                <h2 style="margin-top: 50px">Get started in 60 seconds</h2>
+                <p style="text-align:left; font-weight: 100; font-size:22px; padding:0 100px; color: #f2f2f2;">
+                  Follow this video and run your first Nightwatch test in your selected browsers within a minute (assuming Node.js and NPM are installed)
+                </p>
+              </div>
+            </div>
+
+            <div class="horizontal-line"></div>
+            <div class="row" id="video-container"></div>
+            <div class="row">
+              <div class="" style="max-width: 750px; margin: 30px auto 50px;">
+<pre style="font-size: 22px" data-language="bash" class="language-bash"><code class="language-bash">npm init nightwatch /path/to/new-project</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="twitter">
+          <div class="container">
+            <div class="row twitter-card">
+              <h2>Stay Updated</h2>
+              <p style="margin-top:50px">
+                Follow <a href="https://twitter.com/nightwatchjs" rel="noreferrer" target="_blank">Nightwatch.js</a> on Twitter to reach out and stay updated to new release updates, announcements, and tutorials from our community.
+              </p>
+              <p style="margin-top: 20px; width: 100%; position: relative;background: #fff;z-index: 1;">
+                <a href="https://twitter.com/intent/follow?region=follow_link&screen_name=nightwatchjs&tw_p=followbutton" rel="noreferrer" target="_blank"
+                   class="btn btn-primary btn-lg btn-twitter"><mat-icon class="mat-icon" role="img" svgicon="logos:twitter" aria-hidden="true">
+                    <svg focusable="false" viewBox="0 0 50 59" xmlns="http://www.w3.org/2000/svg"><path d="M50,9.3c-1.8,0.8-3.8,1.4-5.9,1.6c2.1-1.3,3.7-3.3,4.5-5.7c-2,1.2-4.2,2-6.5,2.5c-1.9-2-4.5-3.2-7.5-3.2c-5.7,0-10.3,4.6-10.3,10.3c0,0.8,0.1,1.6,0.3,2.3C16.1,16.7,8.5,12.6,3.5,6.4c-0.9,1.5-1.4,3.3-1.4,5.2c0,3.6,1.8,6.7,4.6,8.5C5,20,3.4,19.6,2,18.8c0,0,0,0.1,0,0.1c0,5,3.5,9.1,8.2,10.1c-0.9,0.2-1.8,0.4-2.7,0.4c-0.7,0-1.3-0.1-1.9-0.2c1.3,4.1,5.1,7,9.6,7.1c-3.5,2.8-7.9,4.4-12.7,4.4c-0.8,0-1.6,0-2.4-0.1c4.5,2.9,9.9,4.6,15.7,4.6c18.9,0,29.2-15.6,29.2-29.2c0-0.4,0-0.9,0-1.3C46.9,13.2,48.6,11.4,50,9.3z"></path>
+                    </svg>
+                  </mat-icon> Follow @nightwatchjs</a>
+              </p>
+              <iframe src="https://nightwatch.substack.com/embed" width="100%" height="320" style="border:0; max-width: 350px; margin: -160px auto 0; background:#fff;" frameborder="0" scrolling="no"></iframe>
+            </div>
+          </div>
+        </div>
+
+        <%/* <div class="nightcloud-container">
+          <div class="container">
+            <div class="row intro">
+              <h3><a href="https://nightcloud.io" target="_blank" title="NightCloud.io – Nightwatch.js dedicated cloud testing platform">NightCloud.io</a></h3>
+              <p>
+                Run and manage your Nightwatch tests<br/>with absolutely no hassle, no config, no
+                nonsense.
+              </p>
+              <p>
+                <a href="https://nightcloud.io" target="_blank" rel="noopener"
+                   class="btn btn-primary btn-lg btn-twitter">Learn
+                  More</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="twitter">
+          <div class="container">
+            <div class="row twitter-card" style="background-color: transparent">
+              <h2>Join the Community</h2>
+              <p style="margin-top:50px">
+                There's a growing body of video guides and articles waiting to be discovered in our <a href="/nightwatchjs.org/about/community/">Community Resources</a> section.<br>
+
+                Join us on the <a href="https://groups.google.com/forum/#!forum/nightwatchjs" target="_blank">Mailing List</a>, <a href="https://twitter.com/nightwatchjs" target="_blank">Twitter</a>, and <a href="https://gitter.im/nightwatchjs/nightwatch" target="_blank">Gitter</a>.
+              </p>
+
+            </div>
+          </div>
+        </div>*/%>
+
+      </div>
+      <!-- END .example -->
+
+    </section>
+
+    <script>
+      window.onGithubResponse = function(response) {
+        var element = document.getElementById('stargazers-count');
+        if (response && response.data && element.innerText === '') {
+          var count = Number(response.data.stargazers_count || '').toLocaleString();
+          element.innerHTML = count;
+        }
+      };
+    </script>
+    <script src="https://api.github.com/repos/nightwatchjs/nightwatch?callback=onGithubResponse"></script>
+    <%- content['_includes_']['footer'] %>
+
+  </div>
+</div>

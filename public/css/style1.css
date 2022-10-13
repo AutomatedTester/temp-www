@@ -597,8 +597,8 @@ input:focus-visible {
 }
 
 @media screen and (min-width: 1729px) {
-    section[data-page-uri="/v2"] {
-        max-width: 1648px;
+    section[data-page-uri="/"] {
+        /*max-width: 1648px;*/
         margin-left: auto;
         margin-right: auto;
     }
@@ -607,7 +607,7 @@ input:focus-visible {
     }
 }
 
-section[data-page-uri="/v2"] p {
+section[data-page-uri="/"] p {
     font-family: var(--font-family);
     font-style: normal;
     font-weight: 400;
