@@ -6,7 +6,7 @@
 
   "docsRepoUrl": "https://github.com/nightwatchjs/nightwatch-docs/",
   "githubRepo": "nightwatchjs/nightwatch",
-  "baseUrl": "https://v2.nightwatchjs.org/",
+  "baseUrl": "https://v2.nightwatchjs.org",
   "apiRepoUrl": "https://github.com",
   "devServerPort": "3001",
   "docsRepoBranch": "versions/2.0",
