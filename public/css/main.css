@@ -1,21 +1,30 @@
 :root {
   /* Headings, logo, search results */
-  --font-family-one: 'Segoe UI', 'Spartan', system-ui, -apple-system, sans-serif;
+  --font-family-one: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
   --font-weight-one-bold: 600;
 
   /* Header, footer, buttons, etc */
-  --font-family-two: 'Segoe UI', 'Spartan', system-ui, -apple-system, sans-serif;
+  --font-family-two: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
   --font-weight-two-medium: 500;
   --font-weight-two-semi-bold: 600;
   --font-weight-two-bold: 600;
 
   /* Post content */
-  --font-family-three: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-family-three: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
   --font-weight-three-regular: 400;
 
   /* Code block, table, small headings, etc */
   --font-family-four: 'Source Code Pro', monospace;
   --font-weight-four-medium: 600;
+  --font-color-dark: #333333;
+  --font-color-light: #FEFBF7;
+
+  /* Font */
+  --font-weight-light: 300;
+  --font-weight-semi-light: 400;
+  --font-weight-regular: 500;
+  --font-weight-semi-bold: 600;
+  --font-family-main: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
 }
 
 html,
@@ -1617,7 +1626,7 @@ footer .logo-home {
 }
 
 footer .footer-content {
-  padding-top: 0px;
+  padding-top: 50px;
 }
 
 footer .logo-home {

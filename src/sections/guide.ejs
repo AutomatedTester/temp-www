@@ -7,19 +7,19 @@
     Sidebar
 ==============================================
 -->
-        <div class="filter-container">
+      <div class="clearfix">
+          <button class="btn btn-link d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#doc-sidebar-nav" aria-controls="doc-sidebar-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                                                                                                            stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
+          </button>
+      </div>
+
+      <nav class="doc-links collapse clearfix nav-fix" id="doc-sidebar-nav">
+      <div class="filter-container">
           <input type="search" id="sidebar-filter" autocomplete="off"  placeholder="Filter by title"/>
           <ul class="filter-list"></ul>
-        </div>
+      </div>
 
-        <div class="clearfix">
-          <button class="btn btn-link d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#doc-sidebar-nav" aria-controls="doc-sidebar-nav" aria-expanded="false" aria-label="Toggle docs navigation">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path></svg>
-          </button>
-        </div>
-
-        <nav class="doc-links collapse clearfix nav-fix" id="doc-sidebar-nav">
           <ul class="nav bs-sidenav">
             <li>
               <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#index-collapse" aria-expanded="false">
@@ -113,7 +113,7 @@
 
                         <div class="collapse" id="configuration-collapse" data-section-url="/guide/configuration/">
                             <ul class="btn-toggle-nav">
-                                <li><a href="/guide/configuration/nightwatch-configuration-file.html">Nightwatch configuration file</a></li>
+                                <li><a href="/guide/configuration/nightwatch-configuration-file.html">Nightwatch config file</a></li>
                                 <li><a href="/guide/configuration/define-test-environments.html">Define test environments</a></li>
                                 <li><a href="/guide/configuration/using-env-variables-in-your-config.html">Use ENV variables</a></li>
                                 <li><a href="/guide/configuration/taking-screenshots-on-fail.html">Take screenshots on test failure</a></li>

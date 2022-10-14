@@ -9,8 +9,9 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 0px;
-    gap: 12px;
+    padding: 0;
+    gap: 15px;
+    margin-right: 20px;
 }
 .hero-section {
     width: 100%;
@@ -629,7 +630,7 @@ button[role="button"] {
 [data-uri="/guide/"] a:focus,
 [data-uri="/api/"] a:focus,
 [data-uri="/about"] a:focus {
-    color: var(--neutral-white-color);
+    /*color: var(--neutral-white-color);*/
 }
 
 .integrations-content .nav-link {
@@ -783,8 +784,7 @@ button[role="button"] {
 }
 
 .nightwatch-logo img {
-    width: 40px;
-    height: 40px;
+    height: 50px;
 }
 
 .community-github-info img {
@@ -829,4 +829,54 @@ button[role="button"] {
 footer .social-links {
     padding-top: 0px;
 }
-  
+
+
+.DocSearch.DocSearch-Button, .search-input {
+    border: 1px solid rgba(98, 98, 98, .7);
+    color: var(--font-color-light);
+    padding: 4px 10px;
+    width: 150px;
+    font-family: var(--font-family-one);
+}
+
+.DocSearch-Button .DocSearch-Search-Icon {
+    color: var(--font-color-light);
+    width: 15px;
+    height: 15px;
+}
+
+.DocSearch-Button:active, .DocSearch-Button:focus, .DocSearch-Button:hover {
+    color: var(--font-color-light)  !important;
+}
+
+.DocSearch-Button-Placeholder {
+    font-size: .9rem;
+}
+.DocSearch-Button-Keys {
+    display: flex !important;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+.DocSearch-Button-Key {
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+    color: var(--font-color-light);
+    top: 0;
+    width: unset;
+    padding-bottom: 0;
+    margin-right: 0;
+    font-size: .7rem;
+    background-color: rgba(0, 0, 0, .75);
+}
+
+.DocSearch-Button-Key:first-of-type {
+    padding-left: .2rem;
+    padding-right: .05rem;
+}
+
+.DocSearch-Button-Key:last-of-type {
+    padding-right: .2rem;
+    padding-left: .05rem;
+}

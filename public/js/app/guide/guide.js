@@ -19,8 +19,14 @@ domino.views.define('guide', function(view) {
   var defaultSection = 'overview';
 
   function renderRightSideBar() {
+
     var rightSideNav = $('#guide-container .right-side-nav');
-    rightSideNav.html('<div class="wrapper"><nav class="main-side-nav"></nav></div>');
+    rightSideNav.html('<div class="wrapper"><h5>On this page</h5><nav class="main-side-nav"></nav><h5>Contribute</h5><a href="" target="_blank" class="contribute nav-link">Edit this page</a><h5>Community</h5><a href="https://discord.com/invite/SN8Da2X" target="_blank" class="nav-link">Join us on Discord</a><a href="https://nightwatchjs.org/blog/" class="nav-link">Read our blog</a><a href="https://github.com/nightwatchjs/nightwatch-docs" target="_blank" class="nav-link">Nightwatch Docs on Github</a></div>');
+
+    var article = $('.page-content:visible .improve-article-bottom');
+    if (article.attr('data-github-link')) {
+      $('#guide-container .right-side-nav .contribute.nav-link').attr('href', article.attr('data-github-link'))
+    }
 
     $('#guide-container .docs-section h3').each(function(index, el) {
       var element = $(el);
@@ -29,6 +35,17 @@ domino.views.define('guide', function(view) {
 
       rightSideNav.find('nav').append('<a class="nav-link" href="#'+ id +'">'+ text +'</a></li>');
     });
+
+    // $(window).on('scroll', function() {
+    //   console.log('ADD SCROLL EVENT')
+    //   $('#guide-container .docs-section h3').each(function() {
+    //       if ($(window).scrollTop() > $(this).offset().top - 200) {
+    //         var id = $(this).attr('id');
+    //         $('nav.main-side-nav a').removeClass('active');
+    //         $('nav.main-side-nav a[href="#'+ id +'"]').addClass('active');
+    //       }
+    //   });
+    // });
   }
 
   function renderGuidePage(view_script, params, cb) {

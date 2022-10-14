@@ -302,7 +302,7 @@ ul.nav .btn-toggle-nav li a {
   line-height: 20px;
 }
 ul.nav .btn-toggle-nav li ul.local-nav li a {
-  padding: 4px 10px 4px 5px;
+  padding: 4px 10px 4px 8px;
 }
 .btn-toggle-nav li a.section {
   color: #2A2A2A;
@@ -314,7 +314,7 @@ ul.nav .btn-toggle-nav li > a {
 }
 
 ul.nav ul.toggle-nav-inner .btn-toggle-nav li a {
-  margin: 4px 10px 4px 30px;
+  margin: 4px 0px 4px 25px;
 }
 
 ul.nav .btn-toggle-nav li a:hover {
