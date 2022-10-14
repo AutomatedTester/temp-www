@@ -613,5 +613,6 @@ section[data-page-uri="/"] p {
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: var(--neutral-black-color);
+    color: var(--neutral-black-color) !important;
 }
+

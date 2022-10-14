@@ -1,66 +1,3 @@
-<!-- navbar -->
-<header class="navigation1 navbar-expand-lg">
-  <div class="container">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="position:absolute; top:24px; left:24px;">
-      <img loading="eager" src="/images/images1/navbar-toggler.svg" alt="" style="width: 24px; height: 24px;">
-    </button>
-    <div class="navigation-content">
-      <a href="/">
-        <div class="nightwatch-logo">
-          <img loading="eager" src="/images/images1/mini_logo.svg" alt="Nightwatch.js"> <span class="nightwatch-title">Nightwatch.js</span>
-        </div>
-      </a>
-      <div class="navigation-links collapse navbar-collapse" id="navbarNavDropdown">
-        <div class="nav-links-left">
-          <div class="nav-item">
-            <a class="regular16px neutral-white-color header-links" href="<%= baseUrl %>/guide/overview/what-is-nightwatch.html">
-              &nbsp;&nbsp;Guide&nbsp;&nbsp;
-            </a>
-          </div>
-          <div class="nav-item">
-            <a class="regular16px neutral-white-color header-links" href="<%= baseUrl %>/api/">
-              <span>
-                &nbsp;&nbsp;API&nbsp;&nbsp;
-              </span>
-            </a>
-          </div>
-          <div class="nav-item">
-            <a class="regular16px neutral-white-color header-links" href="<%= baseUrl %>/about/community/">
-              Community
-            </a>
-          </div>
-          <div class="nav-item">
-            <a class="regular16px neutral-white-color header-links" href="https://nightwatchjs.org/blog/">
-              &nbsp;&nbsp;Blog&nbsp;&nbsp;
-            </a>
-          </div>
-        </div>
-        <div class="nav-links-right">
-          <a aria-label="Nightwatch on discord" href="https://discord.com/invite/SN8Da2X" rel="noopener" title="discord" target="_blank">
-            <img loading="eager"  src="/images/images1/nav-github.svg" style="width: 31px; height: 24px;" alt="">
-          </a>
-          <a href="https://github.com/nightwatchjs/nightwatch" aria-label="Nightwatch on github" target="_blank">
-            <img loading="eager"  src="/images/images1/nav-stars.svg" style="width: 112px; height: 36px;" alt="">
-          </a>
-          <div class="nav-item dropdown neutral-white-color" style="margin-top: -10px;">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              <span class="regular16px neutral-white-color"><%= version %></span>
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item semibold14px" style="color: #914618;" href="https://nightwatchjs.org/">Latest <%= version %></a></li>
-              <li><a class="dropdown-item regular14px" href="https://v17.nightwatchjs.org/">Version 1.7</a></li>
-              <li><a class="dropdown-item regular14px" href="https://v09.nightwatchjs.org/">Version 0.9</a></li>
-              <li><a class="dropdown-item regular14px" href="/releases">All Versions</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-
 <!-- homepage content -->
 <main class="homepage-content">
   <div class="hero-section">
@@ -95,7 +32,7 @@
               <img class="copy-mobile" loading="eager"  src="/images/images1/copy-mobile.svg" onclick="copyToClipboard('.copy-mobile')" alt="">
             </div>
             <span class="regular16px neutral-white-color">
-              <a href="https://nightwatchjs.org/guide/overview/what-is-nightwatch.html"
+              <a href="<%= baseUrl %>/guide/overview/what-is-nightwatch.html"
                 style="text-decoration: underline !important; color: #FFFFFF;">Get started</a> to learn more about Nightwatch JS
             </span>
           </div>
@@ -588,39 +525,39 @@
           <div class="tab-pane fade show active" id="reporters-tab-pane" role="tabpanel" aria-labelledby="reporters-tab"
             tabindex="0">
             <div class="integration-frameworks-content">
-              <a class="integration-frameworks" href="https://nightwatchjs.org/guide/reporters/use-junit-reporter.html">
+              <a class="integration-frameworks" href="<%= baseUrl %>/guide/reporters/use-junit-reporter.html">
                 <img loading="lazy"  src="/images/images1/junit.svg" alt="junit">
                 <span class="regular20px neutral-black-color">JUnit</span>
                 <span class="learnmore">Get Started</span>
                 </a>
-              <a class="integration-frameworks" href="https://nightwatchjs.org/guide/reporters/use-mochawesome-reporter.html">
+              <a class="integration-frameworks" href="<%= baseUrl %>/guide/reporters/use-mochawesome-reporter.html">
                 <img loading="lazy"  src="/images/images1/mocha.svg" alt="mocha">
                 <span class="regular20px neutral-black-color">Mocha</span>
                 <span
                     class="learnmore">Get Started</span>
               </a>
-              <a class="integration-frameworks" href="https://nightwatchjs.org/guide/reporters/use-nightwatch-allure-reporter.html">
+              <a class="integration-frameworks" href="<%= baseUrl %>/guide/reporters/use-nightwatch-allure-reporter.html">
                 <img loading="lazy"  src="/images/images1/allure.svg" alt="allure">
                 <span class="regular20px neutral-black-color">Allure</span>
                 <span class="learnmore">Get Started</span>
               </a>
-              <a class="integration-frameworks" href="https://nightwatchjs.org/guide/reporters/use-html-reporter.html">
+              <a class="integration-frameworks" href="<%= baseUrl %>/guide/reporters/use-html-reporter.html">
                 <img loading="lazy"  src="/images/images1/html.svg" alt="HTML Reporter" >
                 <span class="regular20px neutral-black-color">HTML</span>
                 <span class="learnmore">Get Started</span>
               </a>
-              <a class="integration-frameworks" href="https://nightwatchjs.org/guide/reporters/use-json-reporter.html">
+              <a class="integration-frameworks" href="<%= baseUrl %>/guide/reporters/use-json-reporter.html">
                 <img loading="lazy"  src="/images/images1/json.svg" alt="Json">
                 <span class="regular20px neutral-black-color">JSON</span>
                 <span class="learnmore">Get Started</span>
               </a>
-              <a class="integration-frameworks" href="https://nightwatchjs.org/guide/reporters/use-teamcity-reporter.html">
+              <a class="integration-frameworks" href="<%= baseUrl %>/guide/reporters/use-teamcity-reporter.html">
                 <img loading="lazy"  src="/images/images1/teamcity.svg" alt="Teamcity">
                 <span class="regular20px neutral-black-color">Team City</span>
                 <span
                     class="learnmore">Get Started</span>
               </a>
-              <a class="integration-frameworks" href="https://nightwatchjs.org/guide/reporters/use-slack-reporter.html">
+              <a class="integration-frameworks" href="<%= baseUrl %>/guide/reporters/use-slack-reporter.html">
                 <img loading="lazy"  src="/images/images1/slack.svg" alt="Slack">
                 <span class="regular20px neutral-black-color">Slack</span>
                 <span class="learnmore">Get Started</span>
@@ -630,27 +567,27 @@
           </div>
           <div class="tab-pane fade" id="ci-tab-pane" role="tabpanel" aria-labelledby="ci-tab" tabindex="0">
             <div class="integration-frameworks-content">
-              <a class="integration-frameworks" href="https://nightwatchjs.org/guide/ci-integrations/run-nightwatch-on-github-actions.html" style="width: 203px;">
+              <a class="integration-frameworks" href="<%= baseUrl %>/guide/ci-integrations/run-nightwatch-on-github-actions.html" style="width: 203px;">
                 <img loading="lazy"  src="/images/images1/github-actions.svg" alt="Github Actions">
                 <span class="regular20px neutral-black-color">Github Actions</span>
                 <span class="learnmore">Get Started</span>
               </a>
-              <a class="integration-frameworks" href="https://nightwatchjs.org/guide/ci-integrations/run-nightwatch-on-bamboo.html">
+              <a class="integration-frameworks" href="<%= baseUrl %>/guide/ci-integrations/run-nightwatch-on-bamboo.html">
                 <img loading="lazy"  src="/images/images1/bamboo.svg" alt="Bamboo">
                 <span class="regular20px neutral-black-color">Bamboo</span>
                 <span class="learnmore">Get Started</span>
               </a>
-              <a class="integration-frameworks" href="https://nightwatchjs.org/guide/ci-integrations/run-nightwatch-on-azure-pipelines.html">
+              <a class="integration-frameworks" href="<%= baseUrl %>/guide/ci-integrations/run-nightwatch-on-azure-pipelines.html">
                 <img loading="lazy"  src="/images/images1/azure.svg" alt="Azure">
                 <span class="regular20px neutral-black-color">Azure</span>
                 <span class="learnmore">Get Started</span>
               </a>
-              <a class="integration-frameworks" href="https://nightwatchjs.org/guide/ci-integrations/run-nightwatch-on-circleci.html">
+              <a class="integration-frameworks" href="<%= baseUrl %>/guide/ci-integrations/run-nightwatch-on-circleci.html">
                 <img loading="lazy"  src="/images/images1/circleci.svg" alt="CicleCI">
                 <span class="regular20px neutral-black-color">CircleCI</span>
                 <span class="learnmore">Get Started</span>
               </a>
-              <a class="integration-frameworks" href="https://nightwatchjs.org/guide/ci-integrations/run-nightwatch-on-jenkins.html">
+              <a class="integration-frameworks" href="<%= baseUrl %>/guide/ci-integrations/run-nightwatch-on-jenkins.html">
                 <img loading="lazy"  src="/images/images1/jenkins.svg" alt="Jenkins">
                 <span class="regular20px neutral-black-color">Jenkins</span>
                 <span class="learnmore">Get Started</span>
@@ -659,22 +596,22 @@
           </div>
           <div class="tab-pane fade" id="task-tab-pane" role="tabpanel" aria-labelledby="task-tab" tabindex="0">
             <div class="integration-frameworks-content">
-              <a class="integration-frameworks" href="https://nightwatchjs.org/guide/writing-tests/using-mocha.html#using-mocha-as-a-test-runner">
+              <a class="integration-frameworks" href="<%= baseUrl %>/guide/writing-tests/using-mocha.html#using-mocha-as-a-test-runner">
                 <img loading="lazy"  src="/images/images1/mocha.svg" alt="Mocha">
                 <span class="regular20px neutral-black-color">Mocha</span>
                 <span class="learnmore">Get Started</span>
               </a>
-              <a class="integration-frameworks" href="https://nightwatchjs.org/guide/writing-tests/using-cucumberjs.html#using-cucumberjs-with-nightwatch">
+              <a class="integration-frameworks" href="<%= baseUrl %>/guide/writing-tests/using-cucumberjs.html#using-cucumberjs-with-nightwatch">
                 <img loading="lazy"  src="/images/images1/cucumber.svg" alt="Cucumber">
                 <span class="regular20px neutral-black-color">Cucumber</span>
                 <span class="learnmore">Get Started</span>
               </a>
-              <a class="integration-frameworks" href="https://nightwatchjs.org/guide/overview/whats-new-in-v2.html#-new-programmatic-api-api-programmatic-">
+              <a class="integration-frameworks" href="<%= baseUrl %>/guide/overview/whats-new-in-v2.html#-new-programmatic-api-api-programmatic-">
                 <img loading="lazy"  src="/images/images1/ava.svg" alt="Ava">
                 <span class="regular20px neutral-black-color">Ava</span>
                 <span class="learnmore">Get Started</span>
               </a>
-              <a class="integration-frameworks" href="https://nightwatchjs.org/guide/overview/whats-new-in-v2.html#-new-programmatic-api-api-programmatic-">
+              <a class="integration-frameworks" href="<%= baseUrl %>/guide/overview/whats-new-in-v2.html#-new-programmatic-api-api-programmatic-">
                 <img loading="lazy"  src="/images/images1/jest.svg" alt="Jest">
                 <span class="regular20px neutral-black-color">Jest</span>
                 <span class="learnmore">Get Started</span>
@@ -683,13 +620,13 @@
           </div>
           <div class="tab-pane fade" id="cloud-tab-pane" role="tabpanel" aria-labelledby="cloud-tab" tabindex="0">
             <div class="integration-frameworks-content">
-              <a class="integration-frameworks" href="https://nightwatchjs.org/guide/quickstarts/create-and-run-a-test-with-cloud-providers.html#running-on-browserstack">
+              <a class="integration-frameworks" href="<%= baseUrl %>/guide/quickstarts/create-and-run-a-test-with-cloud-providers.html#running-on-browserstack">
                 <img loading="lazy"  src="/images/images1/browserstack.svg" alt="BrowserStack">
                 <span class="regular20px neutral-black-color">BrowserStack</span>
                 <span
                     class="learnmore">Get Started</span>
               </a>
-              <a class="integration-frameworks" href="https://nightwatchjs.org/guide/quickstarts/create-and-run-a-test-with-cloud-providers.html#running-on-sauce-labs">
+              <a class="integration-frameworks" href="<%= baseUrl %>/guide/quickstarts/create-and-run-a-test-with-cloud-providers.html#running-on-sauce-labs">
                 <img loading="lazy"  src="/images/images1/sauselabs.svg" alt="Sauselabs">
                 <span class="regular20px neutral-black-color">Sauce Labs</span>
                 <span
@@ -716,7 +653,7 @@
       </span>
     </div>
     <img loading="lazy"  src="/images/images1/integration-mobile.svg" alt="nightwatch-integrations">
-    <a class="button-default button-primary-default" href="https://nightwatchjs.org/guide/reporters/use-junit-reporter.html">
+    <a class="button-default button-primary-default" href="<%= baseUrl %>/guide/reporters/use-junit-reporter.html">
       <span class="regular16px neutral-white-color">
         Get Started
       </span>
@@ -791,7 +728,7 @@
         <img loading="lazy"  src="/images/images1/vue.svg" alt="Vue">
       </div>
       <div class="ready-button">
-        <a href="https://nightwatchjs.org/guide/overview/what-is-nightwatch.html"
+        <a href="<%= baseUrl %>/guide/overview/what-is-nightwatch.html"
           class="button-default button-primary-default">
           <span class="regular16px neutral-white-color">Get Started</span>
         </a>
@@ -799,123 +736,6 @@
     </div>
   </div>
 </main>
-
-<!-- footer content -->
-
-<footer class="footer-section">
-  <div class="container">
-    <div class="footer-content">
-      <div class="footerlinks">
-        <div class="footer-links-left">
-          <div class="footer-links-frame">
-            <span class="semibold24px neutral-white-color">
-              Nightwatch
-            </span>
-            <div class="footer-sub-links">
-              <a class="footer-links regular16px neutral-white-color" href="/about/">About</a>
-              <a class="footer-links regular16px neutral-white-color" href="https://nightwatchjs.org/blog/">
-                Blog
-              </a>
-              <a class="footer-links regular16px neutral-white-color" href="https://nightwatch.substack.com/">
-                Newsletter
-              </a>
-              <a class="footer-links regular16px neutral-white-color" href="/about/contribute/">
-                How to contribute
-              </a>
-              <a class="footer-links regular16px neutral-white-color" href="/releases/">
-                Release History
-              </a>
-            </div>
-          </div>
-          <div class="footer-links-frame">
-            <span class="semibold24px neutral-white-color">
-              Resources
-            </span>
-            <div class="footer-sub-links">
-              <a class="footer-links regular16px neutral-white-color" href="/about/community/">
-                Community Resources
-              </a>
-              <a class="footer-links regular16px neutral-white-color" href="https://github.com/nightwatchjs/nightwatch/issues" rel="noreferrer" target="_blank">
-                Report Issues
-              </a>
-              <a class="footer-links regular16px neutral-white-color" href="https://github.com/nightwatchjs/nightwatch/discussions" rel="noreferrer" target="_blank">
-                Github Discussions
-              </a>
-              <a class="footer-links regular16px neutral-white-color" href="https://stackoverflow.com/questions/tagged/nightwatch.js" rel="noreferrer" target="_blank">
-                Stack Overflow
-              </a>
-              <a class="footer-links regular16px neutral-white-color" href="https://discord.gg/SN8Da2X" rel="noreferrer" target="_blank">
-                Chat with us on Discord
-              </a>
-            </div>
-          </div>
-          <div class="footer-links-frame">
-            <span class="semibold24px neutral-white-color">
-              Get Started
-            </span>
-            <div class="footer-sub-links">
-              <a class="footer-links regular16px neutral-white-color" href="https://nightwatchjs.org/guide/overview/what-is-nightwatch.html">
-                What is Nightwatch?
-              </a>
-              <a class="footer-links regular16px neutral-white-color" href="https://nightwatchjs.org/guide/quickstarts/create-and-run-a-nightwatch-test.html#setup-nightwatch">
-                Set up Nightwatch
-              </a>
-              <a class="footer-links regular16px neutral-white-color" href="https://nightwatchjs.org/guide/quickstarts/create-and-run-a-nightwatch-test.html">
-                Run your first test
-              </a>
-              <a class="footer-links regular16px neutral-white-color" href="https://nightwatchjs.org/api/">
-                API Reference
-              </a>
-              <a class="footer-links regular16px neutral-white-color" href="https://nightwatchjs.org/guide/reference/settings.html">
-                Config Settings
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="footer-links-right">
-
-          <span class="semibold24px neutral-white-color">
-            Subscribe to Newsletter
-          </span>
-          <div class="email-section">
-            <iframe loading="lazy" src="https://nightwatch.substack.com/embed" width="100%" height="140px" style="border:0;" id="substack"  frameborder="0" scrolling="no" title="nightwatch-substack"></iframe>
-          </div>
-
-          <div class="social-links">
-            <a href="https://github.com/nightwatchjs/nightwatch" target="_blank">
-              <img loading="lazy"  src="/images/images1/github.svg" alt="Github">
-            </a>
-            <a href="https://www.youtube.com/channel/UCWM6RQiITFc8dZ2l3fNpUbA" target="_blank">
-              <img loading="lazy"  src="/images/images1/youtube.svg" alt="Youtube">
-            </a>
-            <a href="https://twitter.com/nightwatchjs" target="_blank">
-              <img loading="lazy"  src="/images/images1/twitter.svg" alt="Twitter">
-            </a>
-            <a href="https://discord.com/invite/SN8Da2X" target="_blank">
-              <img loading="lazy"  src="/images/images1/discord.svg" alt="Discord">
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-copyright">
-        <div class="copyright-1">
-          <img loading="lazy"  src="/images/images1/nightwatch-browserstack.svg" alt="nightwatch-browserstack" style="width: 71px; height: 26px;">
-          <div class="footer-info">
-            <span class="regular14px neutral-bluish-grey3">
-              Nightwatch was established in 2014 and was acquired by BrowserStack in 2021.<br>
-              It is now actively maintained by <a href="https://browserstack.com" target="_blank" style="text-decoration: underline !important;">BrowserStack</a> with the help from all our <a href="https://github.com/nightwatchjs/nightwatch/graphs/contributors" target="_blank" style="text-decoration: underline !important;">contributors.</a>
-            </span>
-          </div>
-        </div>
-        <div class="copyright-2">
-          <span class="regular14px neutral-bluish-grey3" style="text-align: center;">
-            © 2022 <a href="https://browserstack.com" target="_blank" style="text-decoration: underline !important;">BrowserStack</a> Limited • Code licensed under the <a rel="noreferrer" href="https://github.com/nightwatchjs/nightwatch/blob/main/LICENSE.md" target="_blank" style="text-decoration: underline !important;">MIT License.</a>
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
 
 <script>
   function copyToClipboard(element) {

@@ -333,7 +333,6 @@
     gap: 12px;
     width: 100%;
     overflow: hidden;
-    border-radius: 20px;
 }
 
 .footer-links-right input[type="text"] {
@@ -364,23 +363,6 @@
 .subscribe:focus {
     background: var(--primary30);
 }
-
-.footer-section input[type="text"]::placeholder {
-    font-family: 'Source Sans Pro';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #333333;
-}
-.footer-section input[type="text"]::-ms-input-placeholder {
-    font-family: 'Source Sans Pro';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #333333;
-    }
 
 .footer-info {
     text-align: center;
@@ -628,8 +610,7 @@ button[role="button"] {
 [data-uri^="/guide"] .navigation-links a[href*="/guide/"],
 [data-uri^="/api"] .navigation-links a[href*="/api/"],
 [data-uri^="/blog"] .navigation-links a[href^="/blog"],
-[data-uri^="/about/"]
-[data-uri^="/about/"] .navigation-links a[href^="/about/community"] {
+[data-uri^="/about/community"] .navigation-links a[href*="/about/community"] {
     font-weight: 600;
     border-bottom: 2px solid #D88712;
     padding-bottom: 22px;
@@ -756,6 +737,7 @@ button[role="button"] {
     background: #FFFFFF;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
     border-radius: 3px;
+    margin-top: 12px !important
 }
 .navigation1 .dropdown-menu li {
     height : 36px;
@@ -809,3 +791,42 @@ button[role="button"] {
     width: 106px;
     height: 40px;
 }
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+[data-uri^="/about"] .secondary {
+    margin-top: 0px;
+}
+
+#custom-substack-embed .error {
+    color: #FFFFFF !important
+}
+
+#custom-substack-embed input::placeholder {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+}
+#custom-substack-embed input::-ms-input-placeholder {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+}
+
+[data-uri="/"] body > footer {
+    display: flex;
+}
+
+footer .social-links {
+    padding-top: 0px;
+}
+  
