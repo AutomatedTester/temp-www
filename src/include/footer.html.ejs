@@ -73,13 +73,9 @@
           <span class="semibold24px neutral-white-color">
             Subscribe to Newsletter
           </span>
-          <span class="regular16px neutral-white-color">
-            Send updates to my inbox*
-          </span>
           <div class="email-section">
-            <div id="custom-substack-embed"></div>
+            <iframe loading="lazy" src="https://nightwatch.substack.com/embed" width="80%" height="125px" style="border-radius: 25px;" id="substack"  frameborder="0" scrolling="no" title="nightwatch-substack"></iframe>
           </div>
-
           <div class="social-links">
             <a href="https://github.com/nightwatchjs/nightwatch" target="_blank">
               <img loading="lazy"  src="/images/images1/github.svg" alt="Github">
@@ -115,18 +111,3 @@
     </div>
   </div>
 </footer>
-<script>
-  window.CustomSubstackWidget = {
-   substackUrl: "nightwatch.substack.com",
-   placeholder: "Enter your email address",
-   buttonText: "Subscribe",
-   theme: "custom",
-   colors: {
-     primary: "#914618",
-     input: "#FFFFFF",
-     email: "#333333",
-     text: "#FFFFFF",
-   }
- };
- </script>
- <script src="https://substackapi.com/widget.js" async></script>
