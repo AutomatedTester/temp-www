@@ -2037,7 +2037,8 @@ ul.nav .btn-toggle-nav li a.active {
 
 .doc-container.top-border .doc-sidebar {
   padding-top: 10px;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 section.secondary h2, section.secondary h1 {

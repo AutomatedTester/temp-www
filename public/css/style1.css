@@ -567,3 +567,11 @@ section[data-page-uri="/"] p {
     color: var(--neutral-black-color) !important;
 }
 
+.footer-section a:hover,
+.footer-section a:focus {
+    text-decoration: underline !important;
+}
+
+footer .footer-content {
+    padding-top: 0px;
+}

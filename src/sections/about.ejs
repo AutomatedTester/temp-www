@@ -31,10 +31,15 @@
 
             </li>
             <li>
-              <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle=""
-                data-bs-target="/about/contribute/" aria-expanded="false" href="/about/contribute/">
+              <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+                data-bs-target="#contribute-collapse" aria-expanded="false" href="/about/contribute/">
                 <a href="/about/contribute/">Contributing</a>
               </button>
+              <div class="collapse" id="contribute-collapse" data-section-url="/about/contribute">
+                <ul class="btn-toggle-nav">
+                  <li><a href="/about/contribute/#documentation">Documentation</a></li>
+                </ul>
+              </div>
             </li>
             <li>
               <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
@@ -223,7 +228,7 @@
                 target="_blank">Contributing Guidelines</a> before submitting a new issue.</p>
           </div>
           <div class="docs-sub-section">
-            <h3>Documentation</h3>
+            <h3 id="documentation">Documentation</h3>
 
             <p>Issues with the documentation, such as inconsistencies, typos or mistakes can be reported on the <a
                 href="https://github.com/nightwatchjs/nightwatch-docs" target="_blank">Docs Github repository</a>.</p>

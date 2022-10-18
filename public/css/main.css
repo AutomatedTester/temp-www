@@ -2297,6 +2297,3 @@ p.whatis-logo + p {
 a:hover .fa-angle-right::before {
   color: #fff;
 }
-[data-uri="/"] .footer-section a {
-  text-decoration: underline !important;
-}
