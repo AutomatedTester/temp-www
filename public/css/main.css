@@ -32,8 +32,9 @@ img {
 }
 
 .container {
-  max-width: 1768px;
-  width: auto;
+  /*max-width: 1768px;*/
+  max-width: 1648px;
+  /*width: auto;*/
 }
 
 .page-content {
@@ -2286,4 +2287,7 @@ p.whatis-logo + p {
 }
 a:hover .fa-angle-right::before {
   color: #fff;
+}
+[data-uri="/"] .footer-section a {
+  text-decoration: underline !important;
 }
