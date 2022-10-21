@@ -366,8 +366,10 @@
 }
 
 .footer-info {
-    text-align: center;
+    text-align: left;
     align-items: center;
+    max-width: 560px;
+    padding-top: 50px;
 }
 
 .capabilities-section {
@@ -836,7 +838,7 @@ footer .social-links {
     color: var(--font-color-light);
     padding: 4px 10px;
     width: 150px;
-    font-family: var(--font-family-one);
+    font-family: var(--font-family-main);
 }
 
 .DocSearch-Button .DocSearch-Search-Icon {

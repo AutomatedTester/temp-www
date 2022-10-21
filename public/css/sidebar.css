@@ -315,6 +315,8 @@ ul.nav .btn-toggle-nav li > a {
 
 ul.nav ul.toggle-nav-inner .btn-toggle-nav li a {
   margin: 4px 0px 4px 25px;
+  line-height: 18px;
+  padding: 4px 4px 4px 9px;
 }
 
 ul.nav .btn-toggle-nav li a:hover {

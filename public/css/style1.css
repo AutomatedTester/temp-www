@@ -3,29 +3,6 @@
    License: none (public domain)
 */
 
-:root {
-    /* colors */
-    --primary-color : #502D17;
-    --secondary-color : #794422;
-    --secondary-orange-color : #F4BD71;
-    --secondary-herobg-color : #1B1B1B;
-    --neutral-white-color : #FFFFFF;
-    --neutral-black-color : #333333;
-    --neutral-bluish-grey1 : #F0F4F7;
-    --neutral-bluish-grey2 : #F2F2F2;
-    --neutral-bluish-grey3 : #EEEEEE;
-    --primary60 : #914618;
-    --primary50 : #A76B46; 
-    --blue60 : #1D5BBF;
-    --primary10 : #F4EDE8;
-    --primary20 : #DDC6B7;
-    --primary30 : #CCAA95;
-    --primary80 : #673211;
-
-    /* font family */
-    --font-family : 'Source Sans Pro';
-
-}
 .primary-color {
     color:  var(--primary-color);
 }
@@ -88,7 +65,7 @@ h1 {
     line-height: 84px;
 }
 
-h2 { 
+h2 {
     font-family: var(--font-family);
     font-style: normal;
     font-weight: 600;
@@ -96,8 +73,6 @@ h2 {
     line-height: 72px;
 }
 
-section.secondary h1,
-section.secondary h2,
 h3 {
     font-family: var(--font-family);
     font-style: normal;
@@ -106,7 +81,6 @@ h3 {
     line-height: 60px;
 }
 
-section.secondary h3,
 h4 {
     font-family: var(--font-family);
     font-style: normal;
@@ -115,7 +89,6 @@ h4 {
     line-height: 48px;
 }
 
-section.secondary h4,
 h5 {
     font-family: var(--font-family);
     font-style: normal;
@@ -131,8 +104,6 @@ h6 {
     font-size: 20px;
     line-height: 32px;
 }
-
-
 
 .regular42px {
     font-family: var(--font-family);
