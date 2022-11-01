@@ -501,7 +501,12 @@
       <div class="integrations-content">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
           <li class="nav-item" role="presentation">
-            <button class="nav-link active regular16px neutral-black-color" id="reporters-tab" data-bs-toggle="tab"
+            <button class="nav-link active regular16px neutral-black-color" id="task-tab" data-bs-toggle="tab"
+                    data-bs-target="#task-tab-pane" type="button" role="tab" aria-controls="task-tab-pane"
+                    aria-selected="false"><span class="regular16px neutral-black-color">Test Runners</span></button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link regular16px neutral-black-color" id="reporters-tab" data-bs-toggle="tab"
               data-bs-target="#reporters-tab-pane" type="button" role="tab" aria-controls="reporters-tab-pane"
               aria-selected="true"><span class="regular16px neutral-black-color">Reporters</span></button>
           </li>
@@ -511,18 +516,37 @@
               aria-selected="false"><span class="regular16px neutral-black-color">Continuous Integration</span></button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link regular16px neutral-black-color" id="task-tab" data-bs-toggle="tab"
-              data-bs-target="#task-tab-pane" type="button" role="tab" aria-controls="task-tab-pane"
-              aria-selected="false"><span class="regular16px neutral-black-color">Test Runners</span></button>
-          </li>
-          <li class="nav-item" role="presentation">
             <button class="nav-link regular16px neutral-black-color" id="cloud-tab" data-bs-toggle="tab"
               data-bs-target="#cloud-tab-pane" type="button" role="tab" aria-controls="cloud-tab-pane"
               aria-selected="false"><span class="regular16px neutral-black-color">Cloud Test Providers</span></button>
           </li>
         </ul>
         <div class="tab-content" id="myTabContent" data-bs-ride="carousel">
-          <div class="tab-pane fade show active" id="reporters-tab-pane" role="tabpanel" aria-labelledby="reporters-tab"
+          <div class="tab-pane fade show active" id="task-tab-pane" role="tabpanel" aria-labelledby="task-tab" tabindex="0">
+            <div class="integration-frameworks-content">
+              <a class="integration-frameworks" href="<%= baseUrl %>/guide/writing-tests/using-mocha.html#using-mocha-as-a-test-runner">
+                <img loading="lazy"  src="/images/images1/mocha.svg" alt="Mocha">
+                <span class="regular20px neutral-black-color">Mocha</span>
+                <span class="learnmore">Get Started</span>
+              </a>
+              <a class="integration-frameworks" href="<%= baseUrl %>/guide/writing-tests/using-cucumberjs.html#using-cucumberjs-with-nightwatch">
+                <img loading="lazy"  src="/images/images1/cucumber.svg" alt="Cucumber">
+                <span class="regular20px neutral-black-color">Cucumber</span>
+                <span class="learnmore">Get Started</span>
+              </a>
+              <a class="integration-frameworks" href="<%= baseUrl %>/guide/third-party-test-runners/ava.html">
+                <img loading="lazy"  src="/images/images1/ava.svg" alt="Ava">
+                <span class="regular20px neutral-black-color">Ava</span>
+                <span class="learnmore">Get Started</span>
+              </a>
+              <a class="integration-frameworks" href="<%= baseUrl %>/guide/third-party-test-runners/jest.html">
+                <img loading="lazy"  src="/images/images1/jest.svg" alt="Jest">
+                <span class="regular20px neutral-black-color">Jest</span>
+                <span class="learnmore">Get Started</span>
+              </a>
+            </div>
+          </div>
+          <div class="tab-pane fade"  id="reporters-tab-pane" role="tabpanel" aria-labelledby="reporters-tab"
             tabindex="0">
             <div class="integration-frameworks-content">
               <a class="integration-frameworks" href="<%= baseUrl %>/guide/reporters/use-junit-reporter.html">
@@ -565,6 +589,7 @@
               <div class="slider-nav-container"><div class="slider-nav"></div></div>
             </div>
           </div>
+
           <div class="tab-pane fade" id="ci-tab-pane" role="tabpanel" aria-labelledby="ci-tab" tabindex="0">
             <div class="integration-frameworks-content">
               <a class="integration-frameworks" href="<%= baseUrl %>/guide/ci-integrations/run-nightwatch-on-github-actions.html" style="width: 203px;">
@@ -594,30 +619,7 @@
               </a>
             </div>
           </div>
-          <div class="tab-pane fade" id="task-tab-pane" role="tabpanel" aria-labelledby="task-tab" tabindex="0">
-            <div class="integration-frameworks-content">
-              <a class="integration-frameworks" href="<%= baseUrl %>/guide/writing-tests/using-mocha.html#using-mocha-as-a-test-runner">
-                <img loading="lazy"  src="/images/images1/mocha.svg" alt="Mocha">
-                <span class="regular20px neutral-black-color">Mocha</span>
-                <span class="learnmore">Get Started</span>
-              </a>
-              <a class="integration-frameworks" href="<%= baseUrl %>/guide/writing-tests/using-cucumberjs.html#using-cucumberjs-with-nightwatch">
-                <img loading="lazy"  src="/images/images1/cucumber.svg" alt="Cucumber">
-                <span class="regular20px neutral-black-color">Cucumber</span>
-                <span class="learnmore">Get Started</span>
-              </a>
-              <a class="integration-frameworks" href="<%= baseUrl %>/guide/third-party-test-runners/ava.html">
-                <img loading="lazy"  src="/images/images1/ava.svg" alt="Ava">
-                <span class="regular20px neutral-black-color">Ava</span>
-                <span class="learnmore">Get Started</span>
-              </a>
-              <a class="integration-frameworks" href="<%= baseUrl %>/guide/third-party-test-runners/jest.html">
-                <img loading="lazy"  src="/images/images1/jest.svg" alt="Jest">
-                <span class="regular20px neutral-black-color">Jest</span>
-                <span class="learnmore">Get Started</span>
-              </a>
-            </div>
-          </div>
+
           <div class="tab-pane fade" id="cloud-tab-pane" role="tabpanel" aria-labelledby="cloud-tab" tabindex="0">
             <div class="integration-frameworks-content">
               <a class="integration-frameworks" href="<%= baseUrl %>/guide/quickstarts/create-and-run-a-test-with-cloud-providers.html#running-on-browserstack">

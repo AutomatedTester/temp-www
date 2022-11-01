@@ -1707,4 +1707,24 @@
         <loc>https://nightwatchjs.org/guide/ci-integrations/run-nightwatch-on-circleci.html</loc>
         <lastmod>2022-09-23</lastmod>
     </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/component-testing/testing-react-components.html</loc>
+        <lastmod>2022-11-01</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/component-testing/introduction.html</loc>
+        <lastmod>2022-11-01</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/component-testing/vite-plugin.html</loc>
+        <lastmod>2022-11-01</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/component-testing/write-jsx-react-tests.html</loc>
+        <lastmod>2022-11-01</lastmod>
+    </url>
 </urlset>

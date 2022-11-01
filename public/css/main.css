@@ -1,10 +1,11 @@
 :root {
   /* Headings, logo, search results */
-  --font-family-one: 'Spartan', 'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  /*--font-family-one: 'Source Sans Pro', 'Segoe UI', system-ui, -apple-system, Helvetica, Arial, sans-serif;*/
+  --font-family-one: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   --font-weight-one-bold: 600;
 
   /* Header, footer, buttons, etc */
-  --font-family-two: 'Spartan', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-family-two: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   --font-weight-two-medium: 500;
   --font-weight-two-semi-bold: 600;
   --font-weight-two-bold: 600;
@@ -302,7 +303,7 @@ section.secondary h3 span{
 
 .secondary h4 {
   font-weight: 300;
-  margin: 30px 0 10px;
+  margin: 10px 0 10px;
   font-size: 24px;
 }
 
@@ -896,6 +897,22 @@ span.since {
   background: #fff;
 }
 
+[data-uri^="/guide/"] .apimethod {
+  padding: 10px;
+  margin: 0 0 10px 0;
+}
+[data-uri^="/guide/"] .apimethod h4 {
+  margin-top: 10px;
+  border-bottom: 1px solid #ddd;
+}
+[data-uri^="/guide/"] .apimethod h5 {
+  font-size: 20px;
+  margin-top: 10px;
+}
+[data-uri^="/guide/"] .apimethod p {
+  margin-bottom: 0;
+}
+
 .apimethod h3 {
   padding-left: 10px;
   padding-bottom: 5px;
@@ -1442,7 +1459,7 @@ ul.features li.introspect {
 }
 [data-page-uri="/gettingstarted"] .docs-section p:not([class]),
 [data-page-uri="/guide"] .docs-section p:not([class]) {
-  margin: 15px 0 25px;
+  margin: 0px 0 25px;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -1494,6 +1511,8 @@ code {
   border-radius: 5px;
   background-color: #f1f1f1;
   padding: 2px 8px;
+  font-size: .9;
+  color: #555;
 }
 
 .alert-warning code, .alert-info code {

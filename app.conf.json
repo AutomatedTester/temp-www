@@ -33,7 +33,6 @@
         "overview" : {
           "pages": [
             "what-is-nightwatch",
-            "what-is-webdriver",
             "whats-new-in-v2",
             "whats-new"
           ],
@@ -150,7 +149,6 @@
             "global-test-hooks",
             "using-xpath-selectors",
             "write-complex-user-actions",
-            "write-component-tests-for-react",
             "write-nodejs-unit-integration-tests",
             "chrome-devtools-recorder"
           ],
@@ -162,12 +160,9 @@
         "running-tests": {
           "pages": [
             "using-the-cli-test-runner",
-            "choosing-a-test-runner",
-            "specifying-test-sources",
             "skipping-disabling-tests",
             "parallel-running",
             "programmatic-api",
-            "controlling-test-failure-behaviour",
             "filtering-by-test-tags",
             "using-with-test-groups",
             "catch-js-exceptions",
@@ -176,17 +171,6 @@
           ],
           "vars": {
             "pageHeader": "Running Tests"
-          }
-        },
-
-        "component-tests": {
-          "pages": [
-            "overview",
-            "react",
-            "vue"
-          ],
-          "vars": {
-            "pageHeader": "Write Component Tests"
           }
         },
 
@@ -245,14 +229,8 @@
         "using-nightwatch": {
           "pages": [
             "accessibility-testing",
-            "simulating-complex-user-actions",
             "taking-screenshots",
-            "page-loading-strategies",
-            "working-with-cookies",
-            "working-with-form-elements",
-            "working-with-file-uploads-and-downloads",
-            "working-with-shadow-root-elements",
-            "testing-single-sign-on-sso"
+            "working-with-shadow-root-elements"
           ],
           "vars": {
             "pageHeader": "Using Nightwatch"
@@ -280,6 +258,21 @@
           ],
           "vars": {
             "pageHeader": "Using Page Objects"
+          }
+        },
+
+        "component-testing": {
+          "pages": [
+            "introduction",
+            "debugging",
+            "vite-plugin",
+            "testing-react-components",
+            "write-jsx-react-tests",
+            "testing-vue-components",
+            "storybook-component-testing"
+          ],
+          "vars": {
+            "pageHeader": "Component Testing"
           }
         },
 
