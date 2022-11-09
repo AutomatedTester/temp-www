@@ -205,6 +205,7 @@ select.version-dropdown {
 pre.language-typescript,
 pre.language-javascript {
   border-width: .1em !important;
+  padding-bottom: 20px !important;
 }
 
 .secondary {
