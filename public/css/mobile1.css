@@ -186,7 +186,6 @@
     }
     .trust {
         gap: 28px;
-        justify-content: unset;
     }
     .trust img {
         width : 100px;

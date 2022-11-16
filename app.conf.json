@@ -2,11 +2,11 @@
   "NIGHTWATCH_LIB_PATH": "../nightwatch/lib/",
   "NIGHTWATCH_DOCS_PATH": "../nightwatch-docs/",
   "OUTPUT_FOLDER": "../nightwatchjs.org/",
-  "NIGHTWATCH_VERSION": "2.3.9",
+  "NIGHTWATCH_VERSION": "2.5.0",
 
   "docsRepoUrl": "https://github.com/nightwatchjs/nightwatch-docs/",
   "githubRepo": "nightwatchjs/nightwatch",
-  "baseUrl": "https://v2.nightwatchjs.org",
+  "baseUrl": "https://nightwatchjs.org",
   "apiRepoUrl": "https://github.com",
   "devServerPort": "3001",
   "docsRepoBranch": "versions/2.0",
