@@ -3,7 +3,6 @@
   "NIGHTWATCH_DOCS_PATH": "../nightwatch-docs/",
   "OUTPUT_FOLDER": "../nightwatchjs.org/",
   "NIGHTWATCH_VERSION": "2.5.0",
-
   "docsRepoUrl": "https://github.com/nightwatchjs/nightwatch-docs/",
   "githubRepo": "nightwatchjs/nightwatch",
   "baseUrl": "https://nightwatchjs.org",
