@@ -1716,6 +1716,11 @@
     </url>
 
     <url>
+        <loc>https://nightwatchjs.org/guide/api/within.html</loc>
+        <lastmod>2023-01-03</lastmod>
+    </url>
+
+    <url>
         <loc>https://nightwatchjs.org/guide/component-testing/write-jsx-react-tests.html</loc>
         <lastmod>2022-11-01</lastmod>
     </url>
