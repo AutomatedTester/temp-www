@@ -274,41 +274,33 @@
     </url>
 
     <url>
-        <loc>https://nightwatchjs.org/blog/nightwatch-user-survey-results-2021.html</loc>
+        <loc>https://nightwatchjs.org/blog/test-your-react-components-with-nightwatch-and-testing-library/</loc>
 
-
-        <lastmod>2022-08-27</lastmod>
+        <lastmod>2023-01-08</lastmod>
     </url>
     <url>
-        <loc>https://nightwatchjs.org/blog/nightwatch-v2-beta-is-available.html</loc>
+        <loc>https://nightwatchjs.org/blog/publish-your-nightwatch-html-report-on-github-pages/</loc>
 
-
-        <lastmod>2022-08-27</lastmod>
+        <lastmod>2023-01-08</lastmod>
     </url>
     <url>
-        <loc>https://nightwatchjs.org/blog/nightwatch-v2-alpha-is-released.html</loc>
+        <loc>https://nightwatchjs.org/blog/new-nightwatch-visual-studio-code-extension/</loc>
 
+        <lastmod>2023-01-08</lastmod>
+    </url>
 
-        <lastmod>2022-08-27</lastmod>
+    <url>
+        <loc>https://nightwatchjs.org/blog/component-driven-development-with-storybook-and-nightwatch/</loc>
+
+        <lastmod>2023-01-08</lastmod>
     </url>
     <url>
-        <loc>https://nightwatchjs.org/blog/test_engineering.html</loc>
+        <loc>https://nightwatchjs.org/blog/component-driven-development-with-storybook-and-nightwatch/</loc>
 
-
-        <lastmod>2022-08-27</lastmod>
+        <lastmod>2023-01-08</lastmod>
     </url>
-    <url>
-        <loc>https://nightwatchjs.org/blog/a-first-look-at-nightwatch-v2.html</loc>
 
 
-        <lastmod>2022-08-27</lastmod>
-    </url>
-    <url>
-        <loc>https://nightwatchjs.org/blog/nightwatch-has-joined-the-browserstack-family.html</loc>
-
-
-        <lastmod>2022-08-27</lastmod>
-    </url>
 
     <url>
         <loc>https://nightwatchjs.org/guide/nightwatch-cli/command-line-options.html</loc>

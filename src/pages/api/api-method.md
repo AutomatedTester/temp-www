@@ -88,11 +88,13 @@ For more info on working with DOM elements in Nightwatch, refer to the <a href="
 </div>
 {% endif %}
 
+{% if !method.exampleLink %}
 {% if method.example %}
 <h3>Example</h3>
 <div class="sample-test">
 {% autoescape false %}<pre class="line-numbers language-javascript"><code class="language-javascript">{{method.example}}</code></pre>{% endautoescape %}
 </div>
+{% endif %}
 {% endif %}
 
 {% if method.exampleLink %}
