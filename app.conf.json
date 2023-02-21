@@ -236,6 +236,23 @@
           }
         },
 
+
+        "mobile-app-testing": {
+          "pages": [
+            "introduction",
+            "installation",
+            "introduction-writing-tests",
+            "selectors",
+            "commands",
+            "assertions",
+            "running-tests",
+            "debug-tests"
+          ],
+          "vars": {
+            "pageHeader": "Mobile App Testing"
+          }
+        },
+
         "third-party-test-runners": {
           "pages": [
             "cucumber-cli-as-a-test-runner",
