@@ -199,6 +199,9 @@ ul.nav.bs-sidenav .nav button > a:hover {
     max-width: 870px;
   }
   #apimethod-container .doc-main-body {
+    max-width: 1150px;
+  }
+  #apimethod-container .doc-main-body .sample-test {
     max-width: 1070px;
   }
 }

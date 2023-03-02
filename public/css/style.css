@@ -701,6 +701,7 @@ section[data-page-uri] {
   margin: 0;
   padding-top: 0;
   font-size: 24px;
+  line-height: 30px;
 }
 #community-content article h4 {
   margin: 5px 0;

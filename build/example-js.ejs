@@ -1,13 +1,5 @@
-<html>
-<head>
-    <script>
-      document.domain = 'nightwatchjs.org';
-    </script>
-    <script src="https://unpkg.com/@stackblitz/sdk@1/bundles/sdk.umd.js"></script>
-</head>
-<body>
-<script>
-  StackBlitzSDK.openProject(
+StackBlitzSDK.embedProject(
+  'embed-stackblitz',
     // Payload:
     {
       files: {
@@ -21,7 +13,7 @@
     <% if (editorOnly) { } else { %> "start": "nightwatch test/<%- name %>.js --env stackblitz"<% } %>
   },
   "dependencies": {<% if (editorOnly) { } else { %>
-    "nightwatch": "2.3.0",
+    "nightwatch": "latest",
     "serve-handler": "^6.1.3",
     "chromedriver": "^103.0.0"<% } %>
   }
@@ -69,7 +61,7 @@ module.exports = {
           });
 
           server.listen(3000, () => {
-            console.log('Running at http://localhost:3000');
+            console.log('HTML report available at http://localhost:3000. Click on the Preview tab; make sure to enable third-party cookies for nightwatchjs.org in order to view it.');
           });
           done();
         }
@@ -96,19 +88,15 @@ module.exports = {
 
     // Options
     {
-      newWindow: false,
+      clickToLoad: false,
       hideNavigation: true,
       hideExplorer: <% if (editorOnly) { %>true<% } else { %> false <% } %>,
       terminalHeight: <% if (editorOnly) { %>0<% } else { %> 45 <% } %>,
       showSidebar: false,
+      height:550,
       view: <% if (editorOnly) { %>'editor'<% } else { %> 'both'<% } %>,
-      openFile: 'test/<%- name %>.js'
+      openFile: 'test/<%- name %>.js',
+      view: 'editor'
+      //view: (document.body.clientWidth > 1550 || navigator.userAgent.indexOf('Chrome') > 0) ? 'both' : 'editor'
     }
   );
-  window.onbeforeunload = function(e) {
-    e.returnValue = null
-  }
-</script>
-</body>
-</html>
-

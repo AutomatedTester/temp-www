@@ -1724,4 +1724,43 @@
         <loc>https://nightwatchjs.org/guide/component-testing/write-jsx-react-tests.html</loc>
         <lastmod>2022-11-01</lastmod>
     </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/mobile-app-testing/installation.html</loc>
+        <lastmod>2023-03-03</lastmod>
+    </url>
+    <url>
+        <loc>https://nightwatchjs.org/guide/mobile-app-testing/introduction.html</loc>
+        <lastmod>2023-03-03</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/mobile-app-testing/introduction-writing-tests.html</loc>
+        <lastmod>2023-03-03</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/mobile-app-testing/selectors.html</loc>
+        <lastmod>2023-03-03</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/mobile-app-testing/commands.html</loc>
+        <lastmod>2023-03-03</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/mobile-app-testing/assertions.html</loc>
+        <lastmod>2023-03-03</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/mobile-app-testing/running-tests.html</loc>
+        <lastmod>2023-03-03</lastmod>
+    </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/mobile-app-testing/debug-tests.html</loc>
+        <lastmod>2023-03-03</lastmod>
+    </url>
 </urlset>

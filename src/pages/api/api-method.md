@@ -7,7 +7,7 @@
 
   {% autoescape false %}{{method.descr}}{% endautoescape %}
 
-{% if method.api == 'protocol.cdp' %}
+{% if method.api == 'https://nightwatchjs.org/guide/cdp' %}
 {% autoescape false %}
 <p class="alert alert-warning"><code>{{method.name}}()</code> is only available when using Chrome or Edge drivers.</p>
 {% endautoescape %}{% endif %}
@@ -44,6 +44,27 @@ For more info on working with DOM elements in Nightwatch, refer to the <a href="
 
 {% endif %}
 
+{% if !method.exampleLink %}{% if method.example %}
+<h3>Example</h3>
+<div class="sample-test">
+{% autoescape false %}<pre class="line-numbers language-javascript"><code class="language-javascript">{{method.example}}</code></pre>{% endautoescape %}
+</div>{% endif %}{% endif %}
+{% if method.exampleLink %}
+<h3>Example <a style="font-size: 18px; float: right" target="_blank" href="https://nightwatchjs.org/__examples/{{method.name}}.html"><button style="line-height: 30px">Open in New Window</button></a></h3>
+<div style="width: 100%; max-width: none; min-height: 550px" class="sample-test"><div id="embed-stackblitz"></div></div>
+<script src="/__examples/{{method.name}}.js"></script>
+
+Or run locally with:
+
+<div class="sample-test" style="max-width: none">
+{% autoescape false %}<pre class="hide-indicator language-bash"><code class="language-bash">git clone https://github.com/nightwatchjs/nightwatch-examples.git
+cd nightwatch-examples
+npm install
+npx nightwatch {{method.exampleLink}}
+</code></pre>{% endautoescape %}
+</div>
+<a target="_blank" href="https://github.com/nightwatchjs/nightwatch-examples"><button>View on Github</button></a>
+{% endif %}
 
 <h3>Parameters</h3>
 <div class="table-responsive">
@@ -86,34 +107,6 @@ For more info on working with DOM elements in Nightwatch, refer to the <a href="
       </tbody>
     </table>
 </div>
-{% endif %}
-
-{% if !method.exampleLink %}
-{% if method.example %}
-<h3>Example</h3>
-<div class="sample-test">
-{% autoescape false %}<pre class="line-numbers language-javascript"><code class="language-javascript">{{method.example}}</code></pre>{% endautoescape %}
-</div>
-{% endif %}
-{% endif %}
-
-{% if method.exampleLink %}
-<h3>Example</h3>
-<div class="sample-test">
-<iframe width="100%" height="500" src="/__examples/{{method.name}}.html"></iframe>
-</div>
-
-
-Or run locally with:
-
-<div class="sample-test">
-{% autoescape false %}<pre class="hide-indicator language-bash"><code class="language-bash">git clone https://github.com/nightwatchjs/nightwatch-examples.git
-cd nightwatch-examples
-npm install
-npx nightwatch tests{{method.exampleLink}} --env chrome
-</code></pre>{% endautoescape %}
-</div>
-<a target="_blank" href="https://github.com/nightwatchjs/nightwatch-examples"><button>View on Github</button></a>
 {% endif %}
 
 {% if method.more %}
