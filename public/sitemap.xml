@@ -1763,4 +1763,9 @@
         <loc>https://nightwatchjs.org/guide/mobile-app-testing/debug-tests.html</loc>
         <lastmod>2023-03-03</lastmod>
     </url>
+
+    <url>
+        <loc>https://nightwatchjs.org/guide/writing-tests/visual-regression-testing.html</loc>
+        <lastmod>2023-03-03</lastmod>
+    </url>
 </urlset>
