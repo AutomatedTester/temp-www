@@ -602,6 +602,21 @@
 
         <lastmod>2022-08-27</lastmod>
     </url>
+
+    <url><loc>https://nightwatchjs.org/api/appium/getContext.html</loc><lastmod>2023-03-13</lastmod></url>
+    <url><loc>https://nightwatchjs.org/api/appium/getContexts.html</loc><lastmod>2023-03-13</lastmod></url>
+    <url><loc>https://nightwatchjs.org/api/appium/getCurrentActivity.html</loc><lastmod>2023-03-13</lastmod></url>
+    <url><loc>https://nightwatchjs.org/api/appium/getCurrentPackage.html</loc><lastmod>2023-03-13</lastmod></url>
+    <url><loc>https://nightwatchjs.org/api/appium/getGeolocation.html</loc><lastmod>2023-03-13</lastmod></url>
+    <url><loc>https://nightwatchjs.org/api/appium/getOrientation.html</loc><lastmod>2023-03-13</lastmod></url>
+    <url><loc>https://nightwatchjs.org/api/appium/hideKeyboard.html</loc><lastmod>2023-03-13</lastmod></url>
+    <url><loc>https://nightwatchjs.org/api/appium/isKeyboardShown.html</loc><lastmod>2023-03-13</lastmod></url>
+    <url><loc>https://nightwatchjs.org/api/appium/longPressKeyCode.html</loc><lastmod>2023-03-13</lastmod></url>
+    <url><loc>https://nightwatchjs.org/api/appium/pressKeyCode.html</loc><lastmod>2023-03-13</lastmod></url>
+    <url><loc>https://nightwatchjs.org/api/appium/setContext.html</loc><lastmod>2023-03-13</lastmod></url>
+    <url><loc>https://nightwatchjs.org/api/appium/setGeolocation.html</loc><lastmod>2023-03-13</lastmod></url>
+    <url><loc>https://nightwatchjs.org/api/appium/startActivity.html</loc><lastmod>2023-03-13</lastmod></url>
+
     <url>
         <loc>https://nightwatchjs.org/api/session.html</loc>
 

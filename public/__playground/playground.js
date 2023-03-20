@@ -72,18 +72,6 @@ describe('To-Do List End-to-End Test', function() {
   beforeEach(browser => browser.navigateTo('https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe'));
   afterEach(browser => browser.end());
   
-  it('Using .frame() with ID', function (browser) {
-    const frameId = 0;
-
-    browser
-      .ensure.ableToSwitchToFrame(frameId)
-      .frame(frameId, function (result) {
-        console.log(result);
-      })
-      .assert.visible('#editor-container')
-      .end();
-  });
-
   // with css selector
   it('Using .frame() test with CSS selector', function (browser) {
     const frameId = 'iframe.interactive';
@@ -97,7 +85,7 @@ describe('To-Do List End-to-End Test', function() {
       .end();
   });
   
-  it('Using frameElement example ', function (browser) {
+  it('Using frameElement example', function (browser) {
     const frameElement = 'iframe.interactive';
   
     browser

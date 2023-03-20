@@ -22,7 +22,8 @@
     ["api/element-commands/", "commands"],
     ["api/assertions/", "assertions"],
     ["api/client-commands/", "commands"],
-    ["api/protocol/", "protocol"]
+    ["api/protocol/", "protocol"],
+    ["api/protocol/appium/", "appium"]
   ],
 
   "sections": {
