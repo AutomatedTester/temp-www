@@ -151,7 +151,8 @@
             "write-complex-user-actions",
             "write-nodejs-unit-integration-tests",
             "chrome-devtools-recorder",
-            "visual-regression-testing"
+            "visual-regression-testing",
+            "api-testing"
           ],
           "vars": {
             "pageHeader": "Writing Tests"
