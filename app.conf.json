@@ -1,7 +1,7 @@
 {
-  "NIGHTWATCH_LIB_PATH": "../nightwatch/lib/",
-  "NIGHTWATCH_DOCS_PATH": "../nightwatch-docs/",
-  "OUTPUT_FOLDER": "../nightwatchjs.org/",
+  "NIGHTWATCH_LIB_PATH": ".site/nightwatch/lib/",
+  "NIGHTWATCH_DOCS_PATH": ".site/nightwatch-docs/",
+  "OUTPUT_FOLDER": ".site/nightwatchjs.org/",
   "NIGHTWATCH_VERSION": "2.5.3",
   "docsRepoUrl": "https://github.com/nightwatchjs/nightwatch-docs/",
   "githubRepo": "nightwatchjs/nightwatch",
@@ -9,28 +9,60 @@
   "apiRepoUrl": "https://github.com",
   "devServerPort": "3001",
   "docsRepoBranch": "versions/2.0",
-
   "apiFileList": [
-    ["api/expect/assertions/element/", "expect"],
-    ["api/expect/assertions/elements/", "expect"],
-    ["api/expect/cookie.js", "expect"],
-    ["api/expect/element.js", "expect"],
-    ["api/expect/elements.js", "expect"],
-    ["api/expect/title.js", "expect"],
-    ["api/expect/url.js", "expect"],
-
-    ["api/element-commands/", "commands"],
-    ["api/assertions/", "assertions"],
-    ["api/client-commands/", "commands"],
-    ["api/protocol/", "protocol"],
-    ["api/protocol/appium/", "appium"]
+    [
+      "api/expect/assertions/element/",
+      "expect"
+    ],
+    [
+      "api/expect/assertions/elements/",
+      "expect"
+    ],
+    [
+      "api/expect/cookie.js",
+      "expect"
+    ],
+    [
+      "api/expect/element.js",
+      "expect"
+    ],
+    [
+      "api/expect/elements.js",
+      "expect"
+    ],
+    [
+      "api/expect/title.js",
+      "expect"
+    ],
+    [
+      "api/expect/url.js",
+      "expect"
+    ],
+    [
+      "api/element-commands/",
+      "commands"
+    ],
+    [
+      "api/assertions/",
+      "assertions"
+    ],
+    [
+      "api/client-commands/",
+      "commands"
+    ],
+    [
+      "api/protocol/",
+      "protocol"
+    ],
+    [
+      "api/protocol/appium/",
+      "appium"
+    ]
   ],
-
   "sections": {
-    "guide" : {
+    "guide": {
       "subsections": {
-
-        "overview" : {
+        "overview": {
           "pages": [
             "what-is-nightwatch",
             "whats-new-in-v2",
@@ -40,8 +72,7 @@
             "pageHeader": "Nightwatch Overview"
           }
         },
-
-        "quickstarts" : {
+        "quickstarts": {
           "pages": [
             "create-and-run-a-nightwatch-test",
             "create-and-run-a-test-with-selenium-server",
@@ -51,8 +82,7 @@
             "pageHeader": "Quickstarts"
           }
         },
-
-        "ci-integrations" : {
+        "ci-integrations": {
           "pages": [
             "run-nightwatch-on-jenkins",
             "run-nightwatch-on-github-actions",
@@ -65,8 +95,7 @@
             "pageHeader": "CI Integrations"
           }
         },
-
-        "nightwatch-cli" : {
+        "nightwatch-cli": {
           "pages": [
             "command-line-options"
           ],
@@ -74,8 +103,7 @@
             "pageHeader": "Nightwatch CLI Runner"
           }
         },
-
-        "reference" : {
+        "reference": {
           "pages": [
             "settings",
             "defaults"
@@ -84,8 +112,6 @@
             "pageHeader": "Configuration Reference"
           }
         },
-
-
         "concepts": {
           "pages": [
             "what-is-end-to-end-testing",
@@ -101,7 +127,6 @@
             "pageHeader": "Concepts"
           }
         },
-
         "browser-drivers": {
           "pages": [
             "geckodriver",
@@ -113,7 +138,6 @@
             "pageHeader": "Browser Drivers"
           }
         },
-
         "contributing": {
           "pages": [
             "index",
@@ -123,7 +147,6 @@
             "pageHeader": "Contributing"
           }
         },
-
         "how-to-guides": {
           "pages": [
             "index"
@@ -132,7 +155,6 @@
             "pageHeader": "How-to Guides"
           }
         },
-
         "writing-tests": {
           "pages": [
             "test-syntax-bdd",
@@ -158,7 +180,6 @@
             "pageHeader": "Writing Tests"
           }
         },
-
         "running-tests": {
           "pages": [
             "using-the-cli-test-runner",
@@ -175,7 +196,6 @@
             "pageHeader": "Running Tests"
           }
         },
-
         "debugging-tests": {
           "pages": [
             "overview",
@@ -186,7 +206,6 @@
             "pageHeader": "Debugging Tests"
           }
         },
-
         "mobile-web-testing": {
           "pages": [
             "with-appium",
@@ -196,7 +215,6 @@
             "pageHeader": "Mobile Web Testing"
           }
         },
-
         "network-requests": {
           "pages": [
             "capture-network-calls",
@@ -207,7 +225,6 @@
             "pageHeader": "Network Requests"
           }
         },
-
         "configuration": {
           "pages": [
             "define-test-environments",
@@ -227,7 +244,6 @@
             "pageHeader": "Configuration"
           }
         },
-
         "using-nightwatch": {
           "pages": [
             "accessibility-testing",
@@ -238,8 +254,6 @@
             "pageHeader": "Using Nightwatch"
           }
         },
-
-
         "mobile-app-testing": {
           "pages": [
             "introduction",
@@ -255,7 +269,6 @@
             "pageHeader": "Mobile App Testing"
           }
         },
-
         "third-party-test-runners": {
           "pages": [
             "cucumber-cli-as-a-test-runner",
@@ -267,7 +280,6 @@
             "pageHeader": "Configuration"
           }
         },
-
         "using-page-objects": {
           "pages": [
             "getting-started",
@@ -279,7 +291,6 @@
             "pageHeader": "Using Page Objects"
           }
         },
-
         "component-testing": {
           "pages": [
             "introduction",
@@ -294,7 +305,6 @@
             "pageHeader": "Component Testing"
           }
         },
-
         "reporters": {
           "pages": [
             "create-custom-reporter",
@@ -310,7 +320,6 @@
             "pageHeader": "Using Reporters"
           }
         },
-
         "extending-nightwatch": {
           "pages": [
             "adding-custom-commands",
@@ -322,8 +331,6 @@
             "pageHeader": "Extending Nightwatch"
           }
         },
-
-
         "migrating-to-nightwatch": {
           "pages": [
             "from-protractor",
@@ -333,7 +340,6 @@
             "pageHeader": "Migrating to Nightwatch"
           }
         },
-
         "resources": {
           "pages": [
             "list-of-integrations"
@@ -343,18 +349,18 @@
           }
         }
       },
-      "pageTitle" : "Developer Guide | Nightwatch.js",
-      "title" : "Developer Guide",
-      "description" : "In depth guides on how to use Nightwatch to write and execute tests."
+      "pageTitle": "Developer Guide | Nightwatch.js",
+      "title": "Developer Guide",
+      "description": "In depth guides on how to use Nightwatch to write and execute tests."
     },
-    "api" : {
+    "api": {
       "subsections": {
-        "index":  {
+        "index": {
           "vars": {
             "pageHeader": ""
           }
         },
-        "commands":  {
+        "commands": {
           "vars": {
             "pageHeader": ""
           }
@@ -364,12 +370,12 @@
             "pageHeader": ""
           }
         },
-        "expect":  {
+        "expect": {
           "vars": {
             "pageHeader": ""
           }
         },
-        "useractions":  {
+        "useractions": {
           "vars": {
             "pageHeader": ""
           }
@@ -390,70 +396,68 @@
           }
         },
         "assert": {
-          "vars": {
-          }
+          "vars": {}
         }
       },
-      "pageTitle" : "API Reference | Nightwatch.js",
-      "title" : "API Reference",
-      "description" : "Complete reference of the Nightwatch commands and assertions."
+      "pageTitle": "API Reference | Nightwatch.js",
+      "title": "API Reference",
+      "description": "Complete reference of the Nightwatch commands and assertions."
     },
-    "about" : {
-      "subsections": ["contribute", "community"],
-      "pageTitle" : "About | Nightwatch.js",
-      "title" : "About",
-      "description" : "How to get in touch with the team, and where to submit bugs and feature requests."
+    "about": {
+      "subsections": [
+        "contribute",
+        "community"
+      ],
+      "pageTitle": "About | Nightwatch.js",
+      "title": "About",
+      "description": "How to get in touch with the team, and where to submit bugs and feature requests."
     },
-
-    "index" : {
-      "pageTitle" : "Nightwatch.js |  Node.js powered End-to-End testing framework",
-      "title" : "Nightwatch.js",
-      "description" : "Write efficient end-to-end tests in Node.js and run them against W3C WebDriver."
+    "index": {
+      "pageTitle": "Nightwatch.js |  Node.js powered End-to-End testing framework",
+      "title": "Nightwatch.js",
+      "description": "Write efficient end-to-end tests in Node.js and run them against W3C WebDriver."
     }
   },
-
-  "pageSrcFolders" : ["guide", "api"],
+  "pageSrcFolders": [
+    "guide",
+    "api"
+  ],
   "pages": {
-    "Using-nightwatch" : {
-      "using-nightwatch" : "guide/using-nightwatch/using-nightwatch.md",
-      "writing-tests" : "guide/using-nightwatch/writing-tests.md",
-      "using-bdd-describe" : "guide/using-nightwatch/using-bdd-describe.md",
-      "test-hooks" : "guide/using-nightwatch/test-hooks.md",
-      "async-setup-teardown" : "guide/using-nightwatch/async-setup-teardown.md",
-      "global-setup-teardown" : "guide/using-nightwatch/global-setup-teardown.md",
-      "external-globals" : "guide/using-nightwatch/external-globals.md"
+    "Using-nightwatch": {
+      "using-nightwatch": "guide/using-nightwatch/using-nightwatch.md",
+      "writing-tests": "guide/using-nightwatch/writing-tests.md",
+      "using-bdd-describe": "guide/using-nightwatch/using-bdd-describe.md",
+      "test-hooks": "guide/using-nightwatch/test-hooks.md",
+      "async-setup-teardown": "guide/using-nightwatch/async-setup-teardown.md",
+      "global-setup-teardown": "guide/using-nightwatch/global-setup-teardown.md",
+      "external-globals": "guide/using-nightwatch/external-globals.md"
     },
-
-    "Working-with-page-objects" : {
-      "using-page-objects" : "guide/working-with-page-objects/using-page-objects.md",
-      "po-elements" : "guide/working-with-page-objects/po-elements.md",
-      "po-sections" : "guide/working-with-page-objects/po-sections.md",
-      "po-mixins" : "guide/working-with-page-objects/po-mixins.md"
+    "Working-with-page-objects": {
+      "using-page-objects": "guide/working-with-page-objects/using-page-objects.md",
+      "po-elements": "guide/working-with-page-objects/po-elements.md",
+      "po-sections": "guide/working-with-page-objects/po-sections.md",
+      "po-mixins": "guide/working-with-page-objects/po-mixins.md"
     },
-
-    "Running-tests" : {
-      "running-tests" : "guide/running-tests/running-tests.md",
-      "runner-options" : "guide/running-tests/runner-options.md",
-      "test-environments" : "guide/running-tests/test-environments.md",
-      "test-groups" : "guide/running-tests/test-groups.md",
-      "test-tags" : "guide/running-tests/test-tags.md",
-      "disabling-tests" : "guide/running-tests/disabling-tests.md",
-      "run-parallel" : "guide/running-tests/run-parallel.md",
-      "using-grunt" : "guide/running-tests/using-grunt.md",
-      "using-mocha" : "guide/running-tests/using-mocha.md",
-      "programmatic-api" : "guide/running-tests/programmatic-api.md"
+    "Running-tests": {
+      "running-tests": "guide/running-tests/running-tests.md",
+      "runner-options": "guide/running-tests/runner-options.md",
+      "test-environments": "guide/running-tests/test-environments.md",
+      "test-groups": "guide/running-tests/test-groups.md",
+      "test-tags": "guide/running-tests/test-tags.md",
+      "disabling-tests": "guide/running-tests/disabling-tests.md",
+      "run-parallel": "guide/running-tests/run-parallel.md",
+      "using-grunt": "guide/running-tests/using-grunt.md",
+      "using-mocha": "guide/running-tests/using-mocha.md",
+      "programmatic-api": "guide/running-tests/programmatic-api.md"
     },
-
-    "Extending" : {
-      "custom-commands" : "guide/extending-nightwatch/custom-commands.md",
-      "custom-assertions" : "guide/extending-nightwatch/custom-assertions.md",
-      "custom-reporter" : "guide/extending-nightwatch/custom-reporter.md"
+    "Extending": {
+      "custom-commands": "guide/extending-nightwatch/custom-commands.md",
+      "custom-assertions": "guide/extending-nightwatch/custom-assertions.md",
+      "custom-reporter": "guide/extending-nightwatch/custom-reporter.md"
     },
-
-    "Unit-testing" : {
-      "writing-unit-tests" : "guide/unit-testing/writing-unit-tests.md"
+    "Unit-testing": {
+      "writing-unit-tests": "guide/unit-testing/writing-unit-tests.md"
     },
-
     "Api-reference": {
       "expect-api": "api/expect.md",
       "assert-api": "api/assertions.md",
@@ -466,5 +470,4 @@
       "expect-url": "api/expect/url.md"
     }
   }
-
 }
